@@ -5,5 +5,6 @@
         public DomainException(string message) : base(message)
         {
         }
+
     }
 }

@@ -18,7 +18,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         {
             CPF = CPF;
             Telefone = telefone ?? throw new DomainException($"Telefone é obrigatorio");
-            Email = email;
+            Email = email ?? throw new DomainException($"Email é obrigatorio");
             Nome = nome;
         }
 
@@ -45,11 +45,15 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
                 throw new DomainException($"Nome incorreto {nome}, verifique antes de criar");
 
         }
+        internal static Dados Create(string cpf, string telefone, string email, string nome)
+        {
+            return new Dados(cpf, telefone, email, nome);
+        }
+
 
         public Dados()
         {
 
         }
     }
-}
 }
