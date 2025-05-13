@@ -7,22 +7,31 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Motorista
     {
-        public Guid Id_motorista { get; private set; }
+        public Guid IdMotorista { get; private set; }
 
         public string Plano { get; private set; }
 
-        public Dados Dados_cpf { get; private set; }
+        public Dados DadosCpf { get; private set; }
 
-        public Motorista(string plano, Dados dados_cpf)
+        public Motorista(string plano, Dados dadosCpf)
         {
-            Id_motorista = Guid.NewGuid();
+            IdMotorista = Guid.NewGuid();
             Plano = plano;
-            Dados_cpf = dados_cpf;
+            DadosCpf = dadosCpf;
+        }
+        
+        public void AtribuirDados(string cpf, string telefone, string email, string nome)
+        {
+            if (DadosCpf != null)
+                throw new InvalidOperationException("Este motorista já possui dados.");
+
+            DadosCpf = Dados.Create(cpf, telefone, email, nome, motorista: this);
         }
 
-        internal static Motorista Create(string plano, Dados dados_cpf)
+
+        internal static Motorista Create(string plano, Dados dadosCpf)
         {
-            return new Motorista(plano, dados_cpf);
+            return new Motorista(plano, dadosCpf);
         }
 
 

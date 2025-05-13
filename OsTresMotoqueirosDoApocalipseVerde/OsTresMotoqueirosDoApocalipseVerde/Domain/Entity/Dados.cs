@@ -1,59 +1,55 @@
-﻿using OsTresMotoqueirosDoApocalipseVerde.Domain.Exceptions;
-using System.Text.RegularExpressions;
-using System.Xml.Linq;
+﻿using OsTresMotoqueirosDoApocalipseVerde.Domain.Entity;
+using OsTresMotoqueirosDoApocalipseVerde.Domain.Exceptions;
 
-namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
+public class Dados
 {
-    public class Dados
+    public Guid Id { get; private set; }
+    public string CPF { get; private set; }
+    public string Telefone { get; private set; }
+    public string Email { get; private set; }
+    public string Nome { get; private set; }
+
+    // Relacionamentos
+    public Guid? FuncionarioId { get; private set; }
+    public virtual Funcionario Funcionario { get; private set; }
+
+    public Guid? MotoristaId { get; private set; }
+    public virtual Motorista Motorista { get; private set; }
+
+    private Dados(string cpf, string telefone, string email, string nome)
     {
-        public string CPF { get; private set; }
+        Id = Guid.NewGuid();
+        CPF = cpf;
+        Telefone = telefone;
+        Email = email;
+        Nome = nome;
+    }
+    public static Dados Create(string cpf, string telefone, string email, string nome, Funcionario funcionario = null, Motorista motorista = null)
+    {
+        if (funcionario != null && motorista != null)
+            throw new DomainException("Dados não podem estar vinculados a um funcionário e a um motorista ao mesmo tempo.");
 
-        public string Telefone { get; private set; }
+        if (funcionario == null && motorista == null)
+            throw new DomainException("Dados devem estar vinculados a um funcionário ou a um motorista.");
 
-        public string Email { get; private set; }
+        var dados = new Dados(cpf, telefone, email, nome);
 
-        public string Nome { get; set; }
-
-        public Dados(string CPF, string telefone, string email, string nome)
+        if (funcionario != null)
         {
-            CPF = CPF;
-            Telefone = telefone ?? throw new DomainException($"Telefone é obrigatorio");
-            Email = email ?? throw new DomainException($"Email é obrigatorio");
-            Nome = nome;
+            dados.Funcionario = funcionario;
+            dados.FuncionarioId = funcionario.IdFuncionario;
         }
 
-        private void ValidateCPF(string CPF)
+        if (motorista != null)
         {
-            if (string.IsNullOrWhiteSpace(CPF))
-                throw new DomainException("CPF é obrigatório");
-
-            if (CPF.Length < 11)
-                throw new DomainException($"CPF incorreto: {CPF}. Verifique antes de criar.");
-
-            var regex = new Regex(@"^\d{11}$", RegexOptions.IgnoreCase);
-
-            if (!regex.IsMatch(CPF))
-                throw new DomainException($"CPF inválido: {CPF}");
+            dados.Motorista = motorista;
+            dados.MotoristaId = motorista.IdMotorista;
         }
+        return dados;
+    }
 
-        private void VerifyNome(string nome)
-        {
-            if (string.IsNullOrWhiteSpace(nome))
-                throw new DomainException($"Nome é obrigatorio");
+    public Dados()
+    {
 
-            if (nome.Length > 3)
-                throw new DomainException($"Nome incorreto {nome}, verifique antes de criar");
-
-        }
-        internal static Dados Create(string cpf, string telefone, string email, string nome)
-        {
-            return new Dados(cpf, telefone, email, nome);
-        }
-
-
-        public Dados()
-        {
-
-        }
     }
 }
