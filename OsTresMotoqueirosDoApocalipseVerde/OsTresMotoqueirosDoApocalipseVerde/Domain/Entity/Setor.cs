@@ -17,6 +17,10 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 
         public string Descricao { get; set; }
 
+        //Relacionamento N..N
+        private readonly List<Moto> _motos = new();
+        public virtual IReadOnlyCollection<Moto> Motos => _motos.AsReadOnly();
+
         public Setor(int quantidadeMoto, int capacidade, long areaSetor, string nomeSetor, string descricao)
         {
             IdSetor = Guid.NewGuid();
@@ -26,6 +30,15 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
             NomeSetor = nomeSetor;
             Descricao = descricao;
         }
+
+        public Moto AddMoto(string placa, string chassi, string condicao, float latitude, float longitude, Guid modeloId, Guid setorId, Guid motoristaId)
+        {
+            var moto = Moto.Create(placa, chassi, condicao, longitude, latitude, modeloId, setorId, motoristaId);
+            _motos.Add(moto);
+
+            return moto;
+        }
+
 
         private void ValidadorCapacidade(int capacidade)
         {
@@ -51,7 +64,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 
         public Setor()
         {
-
+            _motos = new List<Moto>();
         }
     }
 }

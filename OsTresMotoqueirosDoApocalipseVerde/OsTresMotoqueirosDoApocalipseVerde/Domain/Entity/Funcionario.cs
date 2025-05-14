@@ -10,15 +10,18 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 
         public Cargo Cargo { get; private set; }
 
-        public Filial IdFilial { get; private set; }
+        //Relacionamento
+        public Guid FilialId { get; private set; }
+        public Filial Filial { get; private set; }
+
 
         public Dados DadosCpf { get; private set; }
 
-        public Funcionario(Cargo cargo, Filial idFilial, Dados dadosCpf)
+        public Funcionario(Cargo cargo, Guid filialId, Dados dadosCpf)
         {
             IdFuncionario = Guid.NewGuid();
             Cargo = cargo;
-            IdFilial = idFilial;
+            FilialId = filialId;
             DadosCpf = dadosCpf;
         }
         
@@ -31,9 +34,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         }
 
 
-        internal static Funcionario Create(Cargo cargo, Filial idFilial, Dados dadosCpf)
+        internal static Funcionario Create(Cargo cargo, Guid filialId, Dados dadosCpf)
         {
-            return new Funcionario(cargo, idFilial, dadosCpf);
+            return new Funcionario(cargo, filialId, dadosCpf);
         }
 
 

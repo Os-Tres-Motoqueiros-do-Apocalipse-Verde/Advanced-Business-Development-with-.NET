@@ -24,9 +24,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         private readonly List<Moto> _motos = new();
         public virtual IReadOnlyCollection<Moto> Motos => _motos.AsReadOnly();
 
-        public Moto AddMoto( string placa, string chassi, string condicao, float latitude, float longitude)
+        public Moto AddMoto( string placa, string chassi, string condicao, float latitude, float longitude, Guid modeloId, Guid setorId, Guid motoristaId)
         {
-            var moto = Moto.Create( placa, chassi, condicao, longitude, latitude);
+            var moto = Moto.Create( placa, chassi, condicao, longitude, latitude, modeloId, setorId, motoristaId);
             _motos.Add(moto);
 
             return moto;
@@ -59,20 +59,14 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 
         }
 
-        internal static Modelo Create(Guid idModelo, string nomeModelo, Frenagem frenagem, SistemaPartida sistemaPartida, float tanque, TipoCombustivel tipoCombustivel, float consumo, Moto moto = null)
-        {
-            var modelo = new Modelo(idModelo, nomeModelo, frenagem, sistemaPartida, tanque, tipoCombustivel, consumo, moto);
+        internal static Modelo Create(string nomeModelo, Frenagem frenagem, SistemaPartida sistemaPartida, float tanque, TipoCombustivel tipoCombustivel, float consumo) {
 
-            if (moto != null)
-            {
-                modelo.moto = moto;
-                modelo.MotoId = moto.IdMoto;
-            }
-            return modelo;
+            return new Modelo(nomeModelo, frenagem, sistemaPartida, tanque, tipoCombustivel, consumo);
         }
 
         public Modelo()
         {
+            _motos = new List<Moto>();
 
         }
     }

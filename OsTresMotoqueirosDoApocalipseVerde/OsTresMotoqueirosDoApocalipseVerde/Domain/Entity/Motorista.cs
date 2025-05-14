@@ -11,13 +11,15 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 
         public string Plano { get; private set; }
 
-        public Dados DadosCpf { get; private set; }
+        // Relacionamento 
+        public Guid DadosId { get; private set; }
+        public virtual Dados DadosCpf { get; private set; }
 
-        public Motorista(string plano, Dados dadosCpf)
+        public Motorista(string plano, Guid dadosId)
         {
             IdMotorista = Guid.NewGuid();
             Plano = plano;
-            DadosCpf = dadosCpf;
+            DadosId = dadosId;
         }
         
         public void AtribuirDados(string cpf, string telefone, string email, string nome)
@@ -29,9 +31,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         }
 
 
-        internal static Motorista Create(string plano, Dados dadosCpf)
+        internal static Motorista Create(string plano, Guid dadosId)
         {
-            return new Motorista(plano, dadosCpf);
+            return new Motorista(plano, dadosId);
         }
 
 

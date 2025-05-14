@@ -15,7 +15,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 
         public float Latitude { get; set; }
 
-        public float Longitute { get; set; }
+        public float Longitude { get; set; }
 
         //Relacionamento 1..1
         public Guid ModeloId { get; private set; }
@@ -27,31 +27,41 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         public Guid MotoristaId { get; private set; }
         public virtual Motorista IdMotorista { get; set; }
 
+        //Relacionamento N..N
+        private readonly List<Situacao> _situacoes = new();
+        public virtual IReadOnlyCollection<Situacao> Situacoes => _situacoes.AsReadOnly();
 
-        public Situacao IdSituacao { get; set; }
-
-        public Moto(string placa, string chassi, string condicao, float latitude, float longitude, Guid idModelo, Guid idSetor, Guid idMotorista, Situacao idSituacao)
+        public Moto(string placa, string chassi, string condicao, float latitude, float longitude, Guid modeloId, Guid setorId, Guid motoristaId)
         {
             IdMoto = Guid.NewGuid();
             Placa = placa;
             Chassi = chassi;
-            Condicao = condicao ?? throw new DomainException($"condição é obrigatorio");
+            Condicao = condicao;
             Latitude = latitude;
-            Longitute = longitude;
-            ModeloId = idModelo;
-            SetorId = idSetor;
-            MotoristaId = idMotorista;
+            Longitude = longitude;
+            ModeloId = modeloId;
+            SetorId = setorId;
+            MotoristaId = motoristaId;
         }
 
-        internal static Moto Create(string placa, string chassi, string condicao, float latitude, float longitude, Guid modeloId)
+        public Situacao AddSituacao(string nome, string descricao, Status status)
         {
-            return new Moto(placa, chassi, condicao, latitude, longitude);
+            var situacao = Situacao.Create(nome, descricao, status);
+            _situacoes.Add(situacao);
+
+            return situacao;
+        }
+
+        internal static Moto Create(string placa, string chassi, string condicao, float latitude, float longitude, Guid modeloId, Guid setorId, Guid motoristaId)
+        {
+            return new Moto(placa, chassi, condicao, latitude, longitude, modeloId, setorId, motoristaId);
         }
 
 
         public Moto()
         {
-
+            _situacoes = new List<Situacao>();
         }
+
     }
 }
