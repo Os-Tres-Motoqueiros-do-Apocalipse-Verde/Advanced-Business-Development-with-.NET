@@ -1,35 +1,49 @@
 ﻿using OsTresMotoqueirosDoApocalipseVerde.Domain.Enum;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Exceptions;
+using System.IO;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Modelo
     {
-        public Guid Id_Modelo { get; private set; }
+        public Guid IdModelo { get; private set; }
 
         public string NomeModelo { get; private set; }
 
-        public string Freagem { get; private set; }
+        public Frenagem Frenagem { get; private set; }
 
-        public string SistemaPartida { get; set; }
+        public SistemaPartida SistemaPartida { get; set; }
 
-        public long Tanque { get; set; }
+        public float Tanque { get; set; }
 
         public TipoCombustivel TipoCombustivel { get; set; }
 
-        public long Consumo { get; set; }
+        public float Consumo { get; set; }
 
-        public Modelo(string nomeModelo, string freagem, string sistemaPartida, long tanque, TipoCombustivel tipoCombustivel, long consumo)
+        //Relacionamento 1..N
+        private readonly List<Moto> _motos = new();
+        public virtual IReadOnlyCollection<Moto> Motos => _motos.AsReadOnly();
+
+        public Moto AddMoto( string placa, string chassi, string condicao, float latitude, float longitude)
+        {
+            var moto = Moto.Create( placa, chassi, condicao, longitude, latitude);
+            _motos.Add(moto);
+
+            return moto;
+        }
+
+
+        public Modelo(string nomeModelo, Frenagem frenagem, SistemaPartida sistemaPartida, float tanque, TipoCombustivel tipoCombustivel, float consumo)
         {
            NomeModelo = nomeModelo ?? throw new DomainException($"Nome é obrigatorio");
-           Freagem = freagem;
+           Frenagem = frenagem;
            SistemaPartida = sistemaPartida;
            Tanque = tanque;
            TipoCombustivel = tipoCombustivel;
            Consumo = consumo;
         }
 
-        private void ValidadorTanque(long tanque)
+        private void ValidadorTanque(float tanque)
         {
 
             if (tanque < 10)
@@ -45,9 +59,16 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 
         }
 
-        internal static Modelo Create(string nomeModelo, string freagem, string sistemaPartida, long tanque, TipoCombustivel tipoCombustivel, long consumo)
+        internal static Modelo Create(Guid idModelo, string nomeModelo, Frenagem frenagem, SistemaPartida sistemaPartida, float tanque, TipoCombustivel tipoCombustivel, float consumo, Moto moto = null)
         {
-            return new Modelo(nomeModelo, freagem, sistemaPartida, tanque, tipoCombustivel, consumo);
+            var modelo = new Modelo(idModelo, nomeModelo, frenagem, sistemaPartida, tanque, tipoCombustivel, consumo, moto);
+
+            if (moto != null)
+            {
+                modelo.moto = moto;
+                modelo.MotoId = moto.IdMoto;
+            }
+            return modelo;
         }
 
         public Modelo()

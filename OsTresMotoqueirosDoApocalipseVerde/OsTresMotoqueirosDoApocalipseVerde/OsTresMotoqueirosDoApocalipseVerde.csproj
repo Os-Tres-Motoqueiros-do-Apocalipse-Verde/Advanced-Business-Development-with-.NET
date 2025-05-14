@@ -21,9 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Application\DTOs\" />
+    <Folder Include="Application\Validador\" />
+    <Folder Include="Application\UseCases\" />
     <Folder Include="Infrastructure\Context\" />
     <Folder Include="Infrastructure\Mapping\" />
-    <Folder Include="Infrastructure\PersistenceRepositories\" />
+    <Folder Include="Infrastructure\Persistence\" />
   </ItemGroup>
 
 </Project>
