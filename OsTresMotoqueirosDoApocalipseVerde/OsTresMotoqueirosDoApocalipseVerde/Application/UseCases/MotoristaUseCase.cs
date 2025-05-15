@@ -21,7 +21,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCases
         {
             var dados = await _repositoryDados.GetByIdAsync(createMotoristaRequest.DadosId) /*?? throw new Exception("Brand invalid")*/;
 
-            var motorista = dados.AddMotorista(createMotoristaRequest.Plano);
+            var motorista = new Motorista(createMotoristaRequest.Plano, dados.Id);
+            motorista.AtribuirDados(dados.CPF, dados.Telefone, dados.Email, dados.Nome);
+
 
             await _repositoryMotorista.AddAsync(motorista);
 
@@ -46,6 +48,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCases
             return new CreatedMotoristaResponse { Plano = motorista.Plano };
         }
 
-        public void UpdateMotorista(Guid IdMotorista, Motorista)
+        public void UpdateMotorista(Guid IdMotorista, Motorista motorista)
+        {
+            
+        }
     }
 }
