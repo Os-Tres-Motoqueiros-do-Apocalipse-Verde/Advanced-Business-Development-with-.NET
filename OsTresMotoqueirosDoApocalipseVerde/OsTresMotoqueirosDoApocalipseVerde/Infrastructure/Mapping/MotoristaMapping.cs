@@ -24,7 +24,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
                 .IsRequired();
 
             builder
-                .HasOne(m => m.DadosCpf)
+                .HasOne(m => m.Dados)
                 .WithMany()
                 .HasForeignKey(m => m.DadosId)
                 .OnDelete(DeleteBehavior.Restrict);

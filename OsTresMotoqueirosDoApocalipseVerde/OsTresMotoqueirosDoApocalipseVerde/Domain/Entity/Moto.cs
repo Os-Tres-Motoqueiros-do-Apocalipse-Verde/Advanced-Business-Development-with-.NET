@@ -22,10 +22,10 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         public virtual Modelo Modelo { get; private set; }
 
         public Guid SetorId { get; private set; }
-        public virtual Setor IdSetor { get; set; }
+        public virtual Setor Setor { get; set; }
 
         public Guid MotoristaId { get; private set; }
-        public virtual Motorista IdMotorista { get; set; }
+        public virtual Motorista Motorista { get; set; }
 
         //Relacionamento N..N
         private readonly List<Situacao> _situacoes = new();

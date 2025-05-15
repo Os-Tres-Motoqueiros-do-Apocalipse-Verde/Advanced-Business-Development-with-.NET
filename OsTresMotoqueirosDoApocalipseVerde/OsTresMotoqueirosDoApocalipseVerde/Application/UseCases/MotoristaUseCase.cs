@@ -22,7 +22,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCases
             var dados = await _repositoryDados.GetByIdAsync(createMotoristaRequest.DadosId) /*?? throw new Exception("Brand invalid")*/;
 
             var motorista = new Motorista(createMotoristaRequest.Plano, dados.Id);
-            motorista.AtribuirDados(dados.CPF, dados.Telefone, dados.Email, dados.Nome);
+            motorista.AtribuirDados(dados.CPF, dados.Telefone, dados.Email, dados.Senha, dados.Nome);
 
 
             await _repositoryMotorista.AddAsync(motorista);

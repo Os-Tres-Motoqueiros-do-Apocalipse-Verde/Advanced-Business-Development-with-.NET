@@ -21,7 +21,10 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         private readonly List<Moto> _motos = new();
         public virtual IReadOnlyCollection<Moto> Motos => _motos.AsReadOnly();
 
-        public Setor(int quantidadeMoto, int capacidade, long areaSetor, string nomeSetor, string descricao)
+        public Guid PatioId { get; private set; }
+        public virtual Dados Patio { get; private set; }
+
+        public Setor(int quantidadeMoto, int capacidade, long areaSetor, string nomeSetor, string descricao, Guid patioId)
         {
             IdSetor = Guid.NewGuid();
             QuantidadeMoto = quantidadeMoto;
@@ -29,6 +32,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
             AreaSetor = areaSetor;
             NomeSetor = nomeSetor;
             Descricao = descricao;
+            PatioId = patioId;
         }
 
         public Moto AddMoto(string placa, string chassi, string condicao, float latitude, float longitude, Guid modeloId, Guid setorId, Guid motoristaId)
@@ -56,9 +60,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 
         }
 
-        internal static Setor Create(int quantidadeMoto, int capacidade, long areaSetor, string nomeSetor, string descricao)
+        internal static Setor Create(int quantidadeMoto, int capacidade, long areaSetor, string nomeSetor, string descricao, Guid patioId)
         {
-            return new Setor(quantidadeMoto, capacidade, areaSetor, nomeSetor, descricao);
+            return new Setor(quantidadeMoto, capacidade, areaSetor, nomeSetor, descricao, patioId);
         }
 
 

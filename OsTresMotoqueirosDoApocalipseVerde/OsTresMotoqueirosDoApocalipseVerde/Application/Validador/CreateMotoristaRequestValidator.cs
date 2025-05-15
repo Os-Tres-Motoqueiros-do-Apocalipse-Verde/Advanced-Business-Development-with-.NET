@@ -8,10 +8,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.Validador
         public CreateMotoristaRequestValidator()
         {
             RuleFor(m => m.Plano)
-                .NotEmpty()
-                .WithMessage("O plano é obrigatório.")
-                .MaximumLength(20)
-                .WithMessage("O plano deve ter no máximo 20 caracteres.");
+                .IsInEnum()
+                .WithMessage("O plano selecionado é inválido.");
 
             RuleFor(m => m.DadosId)
                 .NotEmpty()

@@ -14,29 +14,29 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         public Guid FilialId { get; private set; }
         public Filial Filial { get; private set; }
 
+        public Guid DadosId { get; private set; }
+        public virtual Dados Dados { get; private set; }
 
-        public Dados DadosCpf { get; private set; }
-
-        public Funcionario(Cargo cargo, Guid filialId, Dados dadosCpf)
+        public Funcionario(Cargo cargo, Guid filialId, Guid dadosId)
         {
             IdFuncionario = Guid.NewGuid();
             Cargo = cargo;
             FilialId = filialId;
-            DadosCpf = dadosCpf;
+            DadosId = dadosId;
         }
         
-        public void AtribuirDados(string cpf, string telefone, string email, string nome)
+        public void AtribuirDados(string cpf, string telefone, string email, string senha, string nome)
         {
-            if (DadosCpf != null)
+            if (Dados != null)
                 throw new InvalidOperationException("Este funcionário já possui dados.");
 
-            DadosCpf = Dados.Create(cpf, telefone, email, nome, funcionario: this);
+            Dados = Dados.Create(cpf, telefone, email, senha, nome, funcionario: this);
         }
 
 
-        internal static Funcionario Create(Cargo cargo, Guid filialId, Dados dadosCpf)
+        internal static Funcionario Create(Cargo cargo, Guid filialId, Guid dadosId)
         {
-            return new Funcionario(cargo, filialId, dadosCpf);
+            return new Funcionario(cargo, filialId, dadosId);
         }
 
 
