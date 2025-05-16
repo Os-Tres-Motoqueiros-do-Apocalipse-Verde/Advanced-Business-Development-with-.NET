@@ -22,7 +22,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         public virtual IReadOnlyCollection<Moto> Motos => _motos.AsReadOnly();
 
         public Guid PatioId { get; private set; }
-        public virtual Dados Patio { get; private set; }
+        public virtual Patio? Patio { get; private set; }
 
         public Setor(int quantidadeMoto, int capacidade, long areaSetor, string nomeSetor, string descricao, Guid patioId)
         {

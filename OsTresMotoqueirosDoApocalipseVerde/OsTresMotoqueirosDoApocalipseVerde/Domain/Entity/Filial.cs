@@ -9,24 +9,28 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         public Guid IdFilial { get; private set; }
 
         public string NomeFilial { get; private set; }
-
-        public Funcionario IdResponsavel { get; set; }
+        
+        public Guid ResponsavelId { get; private set; }
+        public virtual Funcionario Responsavel { get; private set; }
+        
 
         //Relacionamento 1..N
         private readonly List<Funcionario> _funcionarios = new();
         public virtual IReadOnlyCollection<Funcionario> Funcionarios => _funcionarios.AsReadOnly();
 
-        public Patio Patio { get; set; }
+        public Guid PatioId { get; private set; }
+        public virtual Patio Patio { get; private set; }
+        
+        public Guid EnderecoId { get; private set; }
+        public virtual Endereco Endereco { get; private set; }
 
-        public Endereco Endereco { get; set; }
-
-        public Filial(string nomeFilial, Funcionario idResposavel, Patio patio, Endereco endereco)
+        public Filial(string nomeFilial, Guid responsavelId, Guid patioId, Guid enderecoId)
         {
             IdFilial = Guid.NewGuid();
             NomeFilial = nomeFilial;
-            IdResponsavel = idResposavel;
-            Patio = patio;
-            Endereco = endereco;
+            ResponsavelId = responsavelId;
+            PatioId = patioId;
+            EnderecoId = enderecoId;
         }
 
         public Funcionario AddFuncionario(Cargo cargo, Guid filialId, Guid dadosId){ 
@@ -43,26 +47,16 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 
             Endereco = Endereco.Create(numero, estado, codigoPais, codigoPostal, complemento, rua, filial: this);
         }
+        
 
-        private void VerificadorCapacidade(int capacidadeMoto)
+        internal static Filial Create(string nomeFilial, Funcionario responsavel, Guid patioId, Guid enderecoId)
         {
-            if (capacidadeMoto > 10)
-                throw new DomainException($"A capacidade do patio esta errada {capacidadeMoto}, verifique antes de criar");
-        }
-
-        private void VerificadorArea(int areaPatio)
-        {
-            if (areaPatio > 10)
-                throw new DomainException($"A area do patio esta errada: {areaPatio}, verifique antes de criar");
-        }
-
-        internal static Filial Create(string nomeFilial, Funcionario idResponsavel, Patio idPatio, Endereco endereco)
-        {
-            if (idResponsavel.Cargo != Cargo.Gerente)
+            if (responsavel.Cargo != Cargo.Gerente)
                 throw new DomainException("O responsável pela filial deve ter o cargo de Gerente.");
 
-            return new Filial(nomeFilial, idResponsavel, idPatio, endereco);
+            return new Filial(nomeFilial, responsavel.IdFuncionario, patioId, enderecoId);
         }
+
 
 
         public Filial()

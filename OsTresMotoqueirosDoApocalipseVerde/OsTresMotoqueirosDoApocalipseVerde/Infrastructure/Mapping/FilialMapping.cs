@@ -24,13 +24,13 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
                 .HasMaxLength(150);
 
             builder
-                .Property(f => f.IdResponsavel)
+                .Property(f => f.ResponsavelId)
                 .IsRequired();
 
             builder
-                .HasOne(f => f.IdResponsavel)
+                .HasOne(f => f.ResponsavelId)
                 .WithMany()
-                .HasForeignKey(f => f.IdResponsavel)
+                .HasForeignKey(f => f.ResponsavelId)
                 .OnDelete(DeleteBehavior.Restrict);
 
 

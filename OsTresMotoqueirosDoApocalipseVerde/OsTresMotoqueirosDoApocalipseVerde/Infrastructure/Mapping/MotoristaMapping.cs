@@ -16,8 +16,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
 
             builder
                 .Property(m => m.Plano)
-                .IsRequired()                      // NOT NULL no banco
-                .HasMaxLength(20);                // Limite de caracteres
+                .IsRequired()                      
+                .HasMaxLength(20);                
 
             builder
                 .Property(m => m.DadosId)

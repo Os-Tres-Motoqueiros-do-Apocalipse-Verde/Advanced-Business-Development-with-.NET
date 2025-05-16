@@ -20,10 +20,10 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
                 .HasMaxLength(30);
 
             builder
-               .HasMany(p => p.Setores)
-               .WithOne(p => p.Patio)
-               .HasForeignKey(p => p.IdPatio)
-               .OnDelete(DeleteBehavior.Restrict);
+                .HasMany(p => p.Setores)
+                .WithOne(p => p.Patio)
+                .HasForeignKey(p => p.PatioId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder
              .Metadata
