@@ -41,14 +41,14 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCases
             }).ToList();
         }
 
-        public async Task<CreatedMotoristaResponse> GetByIdAsync(Guid IdMotorista)
+        public async Task<CreatedMotoristaResponse> GetByIdAsync(long IdMotorista)
         {
             var motorista = _repositoryMotorista.GetByIdAsync(IdMotorista).Result;
 
             return new CreatedMotoristaResponse { Plano = motorista.Plano };
         }
 
-        public void UpdateMotorista(Guid IdMotorista, Motorista motorista)
+        public void UpdateMotorista(long IdMotorista, Motorista motorista)
         {
             
         }

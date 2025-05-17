@@ -5,7 +5,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Setor
     {
-        public Guid IdSetor { get; private set; }
+        public long IdSetor { get; private set; }
 
         public int QuantidadeMoto { get; private set; }
 
@@ -21,12 +21,11 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         private readonly List<Moto> _motos = new();
         public virtual IReadOnlyCollection<Moto> Motos => _motos.AsReadOnly();
 
-        public Guid PatioId { get; private set; }
+        public long PatioId { get; private set; }
         public virtual Patio? Patio { get; private set; }
 
-        public Setor(int quantidadeMoto, int capacidade, long areaSetor, string nomeSetor, string descricao, Guid patioId)
+        public Setor(int quantidadeMoto, int capacidade, long areaSetor, string nomeSetor, string descricao, long patioId)
         {
-            IdSetor = Guid.NewGuid();
             QuantidadeMoto = quantidadeMoto;
             Capacidade = capacidade;
             AreaSetor = areaSetor;
@@ -35,7 +34,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
             PatioId = patioId;
         }
 
-        public Moto AddMoto(string placa, string chassi, string condicao, float latitude, float longitude, Guid modeloId, Guid setorId, Guid motoristaId)
+        public Moto AddMoto(string placa, string chassi, string condicao, float latitude, float longitude, long modeloId, long setorId, long motoristaId)
         {
             var moto = Moto.Create(placa, chassi, condicao, longitude, latitude, modeloId, setorId, motoristaId);
             _motos.Add(moto);
@@ -60,7 +59,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 
         }
 
-        internal static Setor Create(int quantidadeMoto, int capacidade, long areaSetor, string nomeSetor, string descricao, Guid patioId)
+        internal static Setor Create(int quantidadeMoto, int capacidade, long areaSetor, string nomeSetor, string descricao, long patioId)
         {
             return new Setor(quantidadeMoto, capacidade, areaSetor, nomeSetor, descricao, patioId);
         }

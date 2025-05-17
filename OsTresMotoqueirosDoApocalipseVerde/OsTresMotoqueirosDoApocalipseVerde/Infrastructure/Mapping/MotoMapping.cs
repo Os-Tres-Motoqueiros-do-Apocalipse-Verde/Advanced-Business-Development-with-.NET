@@ -44,33 +44,23 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
 
 
             builder
-                .Property(m => m.Modelo)
-                .IsRequired();
-
-            builder
                 .HasOne(m => m.Modelo)
                 .WithMany()
-                .HasForeignKey(m => m.Modelo)
+                .HasForeignKey(m => m.ModeloId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder
-                .Property(m => m.Setor)
-                .IsRequired();
 
             builder
                 .HasOne(m => m.Setor)
                 .WithMany()
-                .HasForeignKey(m => m.Setor)
+                .HasForeignKey(m => m.SetorId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder
-                .Property(m => m.Motorista)
-                .IsRequired();
 
             builder
                 .HasOne(m => m.Motorista)
                 .WithMany()
-                .HasForeignKey(m => m.Motorista)
+                .HasForeignKey(m => m.MotoristaId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

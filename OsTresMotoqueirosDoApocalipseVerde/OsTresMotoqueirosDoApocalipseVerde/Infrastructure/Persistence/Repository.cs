@@ -14,7 +14,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Persistence
             _dbSet = _context.Set<T>();
         }
 
-        public async Task<T?> GetByIdAsync(Guid id)
+        public async Task<T?> GetByIdAsync(long id)
         {
             return await _dbSet.FindAsync(id);
         }

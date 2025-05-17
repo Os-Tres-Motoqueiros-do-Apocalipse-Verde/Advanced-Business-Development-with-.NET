@@ -5,7 +5,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Situacao
     {
-        public Guid IdSituacao { get; private set; }
+        public long IdSituacao { get; private set; }
 
         public string Nome { get; private set; }
 
@@ -19,13 +19,12 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 
         public Situacao(string nome, string descricao, Status status)
         {
-            IdSituacao = Guid.NewGuid();
             Nome = nome ?? throw new DomainException($"Nome é obrigatorio");
             Descricao = descricao;
             Status = status;
         }
 
-        public Moto AddMoto(string placa, string chassi, string condicao, float latitude, float longitude, Guid modeloId, Guid setorId, Guid motoristaId)
+        public Moto AddMoto(string placa, string chassi, string condicao, float latitude, float longitude, long modeloId, long setorId, long motoristaId)
         {
             var moto = Moto.Create(placa, chassi, condicao, latitude, longitude, modeloId, setorId, motoristaId);
             _motos.Add(moto);

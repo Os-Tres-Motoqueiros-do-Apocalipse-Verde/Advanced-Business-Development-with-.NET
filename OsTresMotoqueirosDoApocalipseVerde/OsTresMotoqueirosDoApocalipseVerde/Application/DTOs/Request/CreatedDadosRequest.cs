@@ -4,7 +4,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request
 {
     public class CreatedDadosRequest
     {
-        public Guid Id { get; set; }
+        public long Id { get; set; }
         public string CPF { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }
@@ -12,7 +12,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request
         public string Senha { get; set; }
         public string Nome { get; set; }
 
-        public Guid FuncionarioId { get; set; }
-        public Guid MotoristaId { get; set; }
+        public long FuncionarioId { get; set; }
+        public long MotoristaId { get; set; }
     }
 }

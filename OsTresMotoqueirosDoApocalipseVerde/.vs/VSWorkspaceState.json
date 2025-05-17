@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\OsTresMotoqueirosDoApocalipseVerde",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Application",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Domain",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entity",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Infrastructure",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Infrastructure\\Mapping"
+  ],
+  "SelectedNode": "\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entity\\Funcionario.cs",
+  "PreviewInSolutionExplorer": false
+}

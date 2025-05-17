@@ -6,34 +6,40 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Filial
     {
-        public Guid IdFilial { get; private set; }
+        public long IdFilial { get; private set; }
 
         public string NomeFilial { get; private set; }
         
-        public Guid ResponsavelId { get; private set; }
-        public virtual Funcionario Responsavel { get; private set; }
+        public virtual long ResponsavelId { get; private set; }
         
 
         //Relacionamento 1..N
         private readonly List<Funcionario> _funcionarios = new();
         public virtual IReadOnlyCollection<Funcionario> Funcionarios => _funcionarios.AsReadOnly();
 
-        public Guid PatioId { get; private set; }
-        public virtual Patio Patio { get; private set; }
         
-        public Guid EnderecoId { get; private set; }
+        public long EnderecoId { get; private set; }
         public virtual Endereco Endereco { get; private set; }
 
-        public Filial(string nomeFilial, Guid responsavelId, Guid patioId, Guid enderecoId)
+        public Filial(string nomeFilial, long responsavelId, long enderecoId)
         {
-            IdFilial = Guid.NewGuid();
             NomeFilial = nomeFilial;
             ResponsavelId = responsavelId;
-            PatioId = patioId;
             EnderecoId = enderecoId;
         }
 
-        public Funcionario AddFuncionario(Cargo cargo, Guid filialId, Guid dadosId){ 
+        public void ResponsavelGerente()
+        {
+            var gerente = _funcionarios.SingleOrDefault(f => f.Cargo == Cargo.Gerente);
+
+            if (gerente == null)
+                throw new DomainException("Nenhum funcionário com cargo de Gerente foi encontrado na filial.");
+
+            ResponsavelId = gerente.IdFuncionario;
+        }
+
+
+        public Funcionario AddFuncionario(Cargo cargo, long filialId, long dadosId){ 
             var funcionario = Funcionario.Create(cargo, filialId, dadosId);
             _funcionarios.Add(funcionario);
 
@@ -49,12 +55,10 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         }
         
 
-        internal static Filial Create(string nomeFilial, Funcionario responsavel, Guid patioId, Guid enderecoId)
+        internal static Filial Create(string nomeFilial, long responsavelId, long enderecoId)
         {
-            if (responsavel.Cargo != Cargo.Gerente)
-                throw new DomainException("O responsável pela filial deve ter o cargo de Gerente.");
 
-            return new Filial(nomeFilial, responsavel.IdFuncionario, patioId, enderecoId);
+            return new Filial(nomeFilial, responsavelId , enderecoId);
         }
 
 

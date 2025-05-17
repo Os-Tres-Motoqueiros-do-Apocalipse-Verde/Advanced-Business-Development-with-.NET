@@ -8,17 +8,16 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Motorista
     {
-        public Guid IdMotorista { get; private set; }
+        public long IdMotorista { get; private set; }
 
         public Plano Plano { get; private set; }
 
         // Relacionamento 
-        public Guid DadosId { get; private set; }
+        public long DadosId { get; private set; }
         public virtual Dados Dados { get; private set; }
 
-        public Motorista(Plano plano, Guid dadosId)
+        public Motorista(Plano plano, long dadosId)
         {
-            IdMotorista = Guid.NewGuid();
             Plano = plano;
             DadosId = dadosId;
         }
@@ -32,7 +31,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         }
 
 
-        internal static Motorista Create(Plano plano, Guid dadosId)
+        internal static Motorista Create(Plano plano, long dadosId)
         {
             return new Motorista(plano, dadosId);
         }

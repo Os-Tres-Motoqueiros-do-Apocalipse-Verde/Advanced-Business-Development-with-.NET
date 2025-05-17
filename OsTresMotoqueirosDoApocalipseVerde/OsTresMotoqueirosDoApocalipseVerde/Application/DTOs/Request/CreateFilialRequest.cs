@@ -2,7 +2,7 @@
 {
     public class CreateFilialRequest
     {
-        public Guid IdFilial { get; set; }
+        public long IdFilial { get; set; }
         public string NomeFilial { get; set; }
         public string Estado { get; set; }
         public string CodigoPais { get; set; }
@@ -10,6 +10,6 @@
         public string Complemento { get; set; }
         public string Rua { get; set; }
 
-        public Guid FilialId { get; set; }
+        public long FilialId { get; set; }
     }
 }

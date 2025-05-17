@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 public class Dados
 {
-    public Guid Id { get; private set; }
+    public long Id { get; private set; }
     public string CPF { get; private set; }
     public string Telefone { get; private set; }
     public string Email { get; private set; }
@@ -12,15 +12,15 @@ public class Dados
     public string Nome { get; private set; }
 
     // Relacionamentos
-    public Guid? FuncionarioId { get; private set; }
+    public long? FuncionarioId { get; private set; }
     public virtual Funcionario Funcionario { get; private set; }
 
-    public Guid? MotoristaId { get; private set; }
+    public long? MotoristaId { get; private set; }
     public virtual Motorista Motorista { get; private set; }
 
     private Dados(string cpf, string telefone, string email, string senha, string nome)
     {
-        Id = Guid.NewGuid();
+       
         CPF = cpf;
         Telefone = telefone;
         Email = email;

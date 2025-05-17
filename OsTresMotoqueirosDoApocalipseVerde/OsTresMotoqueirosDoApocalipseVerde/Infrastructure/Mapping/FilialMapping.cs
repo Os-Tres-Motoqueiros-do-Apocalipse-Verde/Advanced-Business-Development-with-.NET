@@ -25,33 +25,14 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
 
             builder
                 .Property(f => f.ResponsavelId)
-                .IsRequired();
+                .IsRequired()
+                .HasMaxLength(7);
 
-            builder
-                .HasOne(f => f.ResponsavelId)
-                .WithMany()
-                .HasForeignKey(f => f.ResponsavelId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-
-            builder
-                .Property(f => f.Endereco)
-                .IsRequired();
 
             builder
                 .HasOne(f => f.Endereco)
                 .WithMany()
-                .HasForeignKey(f => f.Endereco)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            builder
-                .Property(f => f.Patio)
-                .IsRequired();
-
-            builder
-                .HasOne(f => f.Patio)
-                .WithMany()
-                .HasForeignKey(f => f.Patio)
+                .HasForeignKey(f => f.EnderecoId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder

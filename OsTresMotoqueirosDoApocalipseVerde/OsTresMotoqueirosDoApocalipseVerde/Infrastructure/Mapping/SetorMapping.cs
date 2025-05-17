@@ -42,9 +42,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
                 .Property(s => s.Descricao)
                 .HasMaxLength(250);
             
-            builder
-                .Property(s => s.PatioId)
-                .IsRequired();
 
             builder
                 .HasOne(s => s.Patio)

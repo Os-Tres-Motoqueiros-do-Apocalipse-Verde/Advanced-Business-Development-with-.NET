@@ -22,7 +22,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde
             {
                 swagger.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = builder.Configuration["Swagger:Api Mottu"],
+                    Title = builder.Configuration["Swagger:Title"],
                     Description = "Api para o challeng, responsaveis são o grupo Os Tres Motoqueiros Do Apocalipse Verde",
                     Contact = new OpenApiContact
                     {
@@ -39,7 +39,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde
 
             builder.Services.AddDbContext<MottuContext>(options =>
             {
-                options.UseOracle(builder.Configuration.GetConnectionString("OracleMotto"))
+                options.UseOracle(builder.Configuration.GetConnectionString("OracleMottu"))
                 .UseLazyLoadingProxies();
             }); 
 

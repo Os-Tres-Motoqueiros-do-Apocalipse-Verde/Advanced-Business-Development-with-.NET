@@ -5,7 +5,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Moto
     {
-        public Guid IdMoto { get; private set; }
+        public long IdMoto { get; private set; }
 
         public string Placa { get; private set; }
 
@@ -18,22 +18,21 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         public float Longitude { get; set; }
 
         //Relacionamento 1..1
-        public Guid ModeloId { get; private set; }
+        public long ModeloId { get; private set; }
         public virtual Modelo Modelo { get; private set; }
 
-        public Guid SetorId { get; private set; }
+        public long SetorId { get; private set; }
         public virtual Setor Setor { get; set; }
 
-        public Guid MotoristaId { get; private set; }
+        public long MotoristaId { get; private set; }
         public virtual Motorista Motorista { get; set; }
 
         //Relacionamento N..N
         private readonly List<Situacao> _situacoes = new();
         public virtual IReadOnlyCollection<Situacao> Situacoes => _situacoes.AsReadOnly();
 
-        public Moto(string placa, string chassi, string condicao, float latitude, float longitude, Guid modeloId, Guid setorId, Guid motoristaId)
+        public Moto(string placa, string chassi, string condicao, float latitude, float longitude, long modeloId, long setorId, long motoristaId)
         {
-            IdMoto = Guid.NewGuid();
             Placa = placa;
             Chassi = chassi;
             Condicao = condicao;
@@ -52,7 +51,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
             return situacao;
         }
 
-        internal static Moto Create(string placa, string chassi, string condicao, float latitude, float longitude, Guid modeloId, Guid setorId, Guid motoristaId)
+        internal static Moto Create(string placa, string chassi, string condicao, float latitude, float longitude, long modeloId, long setorId, long motoristaId)
         {
             return new Moto(placa, chassi, condicao, latitude, longitude, modeloId, setorId, motoristaId);
         }

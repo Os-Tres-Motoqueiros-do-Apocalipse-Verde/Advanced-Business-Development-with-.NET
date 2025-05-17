@@ -30,14 +30,11 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
              .FindNavigation(nameof(Patio.Setores))!
              .SetPropertyAccessMode(PropertyAccessMode.Field);
 
-            builder
-                .Property(p => p.FilialId)
-                .IsRequired();
 
             builder
                 .HasOne(p => p.Filial)
                 .WithMany()
-                .HasForeignKey(p => p.Filial)
+                .HasForeignKey(p => p.FilialId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

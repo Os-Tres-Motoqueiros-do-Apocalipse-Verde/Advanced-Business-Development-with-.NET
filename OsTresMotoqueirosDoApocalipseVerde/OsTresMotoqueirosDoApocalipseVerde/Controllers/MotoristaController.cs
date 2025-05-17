@@ -59,7 +59,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         [ProducesResponseType((int)HttpStatusCode.ServiceUnavailable)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<ActionResult<CreatedMotoristaResponse>> GetMotorista(Guid id)
+        public async Task<ActionResult<CreatedMotoristaResponse>> GetMotorista(long id)
         {
             var motorista = await _MotoristaUseCase.GetByIdAsync(id);
 
@@ -84,7 +84,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         [ProducesResponseType((int)HttpStatusCode.ServiceUnavailable)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> PutMotorista(Guid id, Motorista motorista)
+        public async Task<IActionResult> PutMotorista(long id, Motorista motorista)
         {
             if (id != motorista.IdMotorista)
             {

@@ -4,8 +4,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response
 {
     public class CreatedMotoristaResponse
     {
-        public Guid IdMotorista { get; set; }
+        public long IdMotorista { get; set; }
         public Plano Plano { get; set; }
-        public Guid DadosId { get; set; }
+        public long DadosId { get; set; }
     }
 }

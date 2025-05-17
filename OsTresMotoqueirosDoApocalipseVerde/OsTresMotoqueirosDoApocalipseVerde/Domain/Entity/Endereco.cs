@@ -4,7 +4,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Endereco
     {
-        public Guid IdEndereco { get; private set; }
+        public long IdEndereco { get; private set; }
 
         public int Numero { get; private set; }
 
@@ -18,12 +18,11 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 
         public string Rua { get; set; }
 
-        public Guid? FilialId { get; private set; }
+        public long? FilialId { get; private set; }
         public virtual Filial Filial { get; private set; }
 
         public Endereco(int numero, string estado, string codigoPais, string codigoPostal, string complemento, string rua)
         {
-            IdEndereco = Guid.NewGuid();
             Numero = numero;
             Estado = estado ?? throw new DomainException($"Endereco é obrigatorio");
             CodigoPais = codigoPais ?? throw new DomainException($"O codigo do pais é obrigatorio");
