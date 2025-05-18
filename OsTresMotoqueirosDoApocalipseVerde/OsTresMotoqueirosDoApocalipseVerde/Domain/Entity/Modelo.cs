@@ -6,7 +6,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Modelo
     {
-        public long IdModelo { get; private set; }
+        public int IdModelo { get; private set; }
 
         public string NomeModelo { get; private set; }
 
@@ -24,9 +24,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         private readonly List<Moto> _motos = new();
         public virtual IReadOnlyCollection<Moto> Motos => _motos.AsReadOnly();
 
-        public Moto AddMoto( string placa, string chassi, string condicao, float latitude, float longitude, long modeloId, long setorId, long motoristaId)
+        public Moto AddMoto( string placa, string chassi, string condicao, float latitude, float intitude, int modeloId, int setorId, int motoristaId)
         {
-            var moto = Moto.Create( placa, chassi, condicao, longitude, latitude, modeloId, setorId, motoristaId);
+            var moto = Moto.Create( placa, chassi, condicao, intitude, latitude, modeloId, setorId, motoristaId);
             _motos.Add(moto);
 
             return moto;
@@ -51,7 +51,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 
         }
 
-        private void ValidadorConsumo(long consumo)
+        private void ValidadorConsumo(int consumo)
         {
 
             if (consumo < 10)

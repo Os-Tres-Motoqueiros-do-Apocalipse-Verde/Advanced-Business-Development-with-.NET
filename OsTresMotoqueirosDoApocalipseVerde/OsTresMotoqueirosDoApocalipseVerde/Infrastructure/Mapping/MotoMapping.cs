@@ -16,6 +16,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
 
             builder
                 .Property(m => m.IdMoto)
+                .ValueGeneratedOnAdd()
                 .IsRequired()
                 .HasMaxLength(16);
 
@@ -38,7 +39,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
                 .HasMaxLength(5);
 
             builder
-                .Property(m => m.Longitude)
+                .Property(m => m.intitude)
                 .IsRequired()
                 .HasMaxLength(5);
 

@@ -6,11 +6,11 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Filial
     {
-        public long IdFilial { get; private set; }
+        public int IdFilial { get; private set; }
 
         public string NomeFilial { get; private set; }
         
-        public virtual long ResponsavelId { get; private set; }
+        public virtual int ResponsavelId { get; private set; }
         
 
         //Relacionamento 1..N
@@ -18,10 +18,10 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         public virtual IReadOnlyCollection<Funcionario> Funcionarios => _funcionarios.AsReadOnly();
 
         
-        public long EnderecoId { get; private set; }
+        public int EnderecoId { get; private set; }
         public virtual Endereco Endereco { get; private set; }
 
-        public Filial(string nomeFilial, long responsavelId, long enderecoId)
+        public Filial(string nomeFilial, int responsavelId, int enderecoId)
         {
             NomeFilial = nomeFilial;
             ResponsavelId = responsavelId;
@@ -39,7 +39,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         }
 
 
-        public Funcionario AddFuncionario(Cargo cargo, long filialId, long dadosId){ 
+        public Funcionario AddFuncionario(Cargo cargo, int filialId, int dadosId){ 
             var funcionario = Funcionario.Create(cargo, filialId, dadosId);
             _funcionarios.Add(funcionario);
 
@@ -55,7 +55,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         }
         
 
-        internal static Filial Create(string nomeFilial, long responsavelId, long enderecoId)
+        internal static Filial Create(string nomeFilial, int responsavelId, int enderecoId)
         {
 
             return new Filial(nomeFilial, responsavelId , enderecoId);

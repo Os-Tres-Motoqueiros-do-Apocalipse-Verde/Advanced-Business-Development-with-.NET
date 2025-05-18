@@ -5,13 +5,13 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Setor
     {
-        public long IdSetor { get; private set; }
+        public int IdSetor { get; private set; }
 
         public int QuantidadeMoto { get; private set; }
 
         public int Capacidade { get; private set; }
 
-        public long AreaSetor { get; set; }
+        public int AreaSetor { get; set; }
 
         public string NomeSetor { get; set; }
 
@@ -21,10 +21,10 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         private readonly List<Moto> _motos = new();
         public virtual IReadOnlyCollection<Moto> Motos => _motos.AsReadOnly();
 
-        public long PatioId { get; private set; }
+        public int PatioId { get; private set; }
         public virtual Patio? Patio { get; private set; }
 
-        public Setor(int quantidadeMoto, int capacidade, long areaSetor, string nomeSetor, string descricao, long patioId)
+        public Setor(int quantidadeMoto, int capacidade, int areaSetor, string nomeSetor, string descricao, int patioId)
         {
             QuantidadeMoto = quantidadeMoto;
             Capacidade = capacidade;
@@ -34,9 +34,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
             PatioId = patioId;
         }
 
-        public Moto AddMoto(string placa, string chassi, string condicao, float latitude, float longitude, long modeloId, long setorId, long motoristaId)
+        public Moto AddMoto(string placa, string chassi, string condicao, float latitude, float intitude, int modeloId, int setorId, int motoristaId)
         {
-            var moto = Moto.Create(placa, chassi, condicao, longitude, latitude, modeloId, setorId, motoristaId);
+            var moto = Moto.Create(placa, chassi, condicao, intitude, latitude, modeloId, setorId, motoristaId);
             _motos.Add(moto);
 
             return moto;
@@ -51,7 +51,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 
         }
 
-        private void ValidadorArea(long areaSetor)
+        private void ValidadorArea(int areaSetor)
         {
 
             if (areaSetor < 10)
@@ -59,7 +59,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 
         }
 
-        internal static Setor Create(int quantidadeMoto, int capacidade, long areaSetor, string nomeSetor, string descricao, long patioId)
+        internal static Setor Create(int quantidadeMoto, int capacidade, int areaSetor, string nomeSetor, string descricao, int patioId)
         {
             return new Setor(quantidadeMoto, capacidade, areaSetor, nomeSetor, descricao, patioId);
         }

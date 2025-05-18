@@ -3,14 +3,14 @@
     "",
     "\\OsTresMotoqueirosDoApocalipseVerde",
     "\\OsTresMotoqueirosDoApocalipseVerde\\Application",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response",
     "\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCases",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validador",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Controllers",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Domain",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entity",
     "\\OsTresMotoqueirosDoApocalipseVerde\\Infrastructure",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Infrastructure\\Context"
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Infrastructure\\Mapping",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Infrastructure\\Persistence"
   ],
-  "SelectedNode": "\\OsTresMotoqueirosDoApocalipseVerde\\Program.cs",
+  "SelectedNode": "\\OsTresMotoqueirosDoApocalipseVerde\\obj",
   "PreviewInSolutionExplorer": false
 }

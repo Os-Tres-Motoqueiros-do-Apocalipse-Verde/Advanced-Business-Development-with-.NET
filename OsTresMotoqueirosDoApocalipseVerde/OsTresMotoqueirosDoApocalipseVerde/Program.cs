@@ -8,6 +8,7 @@ using OsTresMotoqueirosDoApocalipseVerde.Domain.Entity;
 using OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Context;
 using OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Persistence;
 using OsTresMotoqueirosDoApocalipseVerde.Application.Validador;
+using System.Text.Json.Serialization;
 
 
 
@@ -19,6 +20,11 @@ namespace OsTresMotoqueirosDoApocalipseVerde
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                });
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(swagger =>
@@ -66,7 +72,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde
             builder.Services.AddScoped<CreatePatioRequestValidator>();
             builder.Services.AddScoped<CreateSetorRequestValidator>();  
             builder.Services.AddScoped<CreateSituacaoRequestValidator>();
-            
+
+            builder.Services.AddScoped<DadosUseCase>();
             builder.Services.AddScoped<FilialUseCase>();
             builder.Services.AddScoped<FuncionarioUseCase>();
             builder.Services.AddScoped<MotoristaUseCase>();

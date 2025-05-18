@@ -5,7 +5,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Moto
     {
-        public long IdMoto { get; private set; }
+        public int IdMoto { get; private set; }
 
         public string Placa { get; private set; }
 
@@ -15,29 +15,29 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 
         public float Latitude { get; set; }
 
-        public float Longitude { get; set; }
+        public float intitude { get; set; }
 
         //Relacionamento 1..1
-        public long ModeloId { get; private set; }
+        public int ModeloId { get; private set; }
         public virtual Modelo Modelo { get; private set; }
 
-        public long SetorId { get; private set; }
+        public int SetorId { get; private set; }
         public virtual Setor Setor { get; set; }
 
-        public long MotoristaId { get; private set; }
+        public int MotoristaId { get; private set; }
         public virtual Motorista Motorista { get; set; }
 
         //Relacionamento N..N
         private readonly List<Situacao> _situacoes = new();
         public virtual IReadOnlyCollection<Situacao> Situacoes => _situacoes.AsReadOnly();
 
-        public Moto(string placa, string chassi, string condicao, float latitude, float longitude, long modeloId, long setorId, long motoristaId)
+        public Moto(string placa, string chassi, string condicao, float latitude, float intitude, int modeloId, int setorId, int motoristaId)
         {
             Placa = placa;
             Chassi = chassi;
             Condicao = condicao;
             Latitude = latitude;
-            Longitude = longitude;
+            intitude = intitude;
             ModeloId = modeloId;
             SetorId = setorId;
             MotoristaId = motoristaId;
@@ -51,9 +51,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
             return situacao;
         }
 
-        internal static Moto Create(string placa, string chassi, string condicao, float latitude, float longitude, long modeloId, long setorId, long motoristaId)
+        internal static Moto Create(string placa, string chassi, string condicao, float latitude, float intitude, int modeloId, int setorId, int motoristaId)
         {
-            return new Moto(placa, chassi, condicao, latitude, longitude, modeloId, setorId, motoristaId);
+            return new Moto(placa, chassi, condicao, latitude, intitude, modeloId, setorId, motoristaId);
         }
 
 

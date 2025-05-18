@@ -1,10 +1,10 @@
 ﻿using OsTresMotoqueirosDoApocalipseVerde.Domain.Entity;
+using System.IO;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request
 {
-    public class CreatedDadosRequest
+    public class CreateDadosRequest
     {
-        public long Id { get; set; }
         public string CPF { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }
@@ -12,7 +12,5 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request
         public string Senha { get; set; }
         public string Nome { get; set; }
 
-        public long FuncionarioId { get; set; }
-        public long MotoristaId { get; set; }
     }
 }

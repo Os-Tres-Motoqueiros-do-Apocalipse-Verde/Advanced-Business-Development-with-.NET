@@ -3,7 +3,7 @@ using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Application.Validador
 {
-    public class CreateMotoristaRequestValidator : AbstractValidator<CreatedMotoristaRequest>
+    public class CreateMotoristaRequestValidator : AbstractValidator<CreateMotoristaRequest>
     {
         public CreateMotoristaRequestValidator()
         {

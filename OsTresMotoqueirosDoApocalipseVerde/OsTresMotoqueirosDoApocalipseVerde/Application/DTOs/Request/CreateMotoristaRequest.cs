@@ -3,10 +3,10 @@ using System.IO;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request
 {
-    public class CreatedMotoristaRequest
+    public class CreateMotoristaRequest
     {
-        public long IdMotorista { get; set; }
+        public int IdMotorista { get; set; }
         public Plano Plano { get; set; }
-        public long DadosId { get; set; }
+        public int DadosId { get; set; }
     }
 }

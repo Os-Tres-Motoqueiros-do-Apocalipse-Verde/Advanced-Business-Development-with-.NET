@@ -6,16 +6,16 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Context
 {
     public class MottuContext(DbContextOptions<MottuContext> options) : DbContext(options)
     {
-        public DbSet<Motorista> Dados { get; set; }
-        public DbSet<Motorista> Endereco { get; set; }
-        public DbSet<Motorista> Filial { get; set; }
-        public DbSet<Motorista> Funcionario { get; set; }
-        public DbSet<Motorista> Modelo { get; set; }
-        public DbSet<Motorista> Moto { get; set; }
+        public DbSet<Dados> Dados { get; set; }
+        public DbSet<Endereco> Enderecos { get; set; }
+        public DbSet<Filial> Filiais { get; set; }
+        public DbSet<Funcionario> Funcionarios { get; set; }
+        public DbSet<Modelo> Modelos { get; set; }
+        public DbSet<Moto> Motos { get; set; }
         public DbSet<Motorista> Motoristas { get; set; }
-        public DbSet<Motorista> Patio { get; set; }
-        public DbSet<Motorista> Setor { get; set; }
-        public DbSet<Motorista> Situacao { get; set; }
+        public DbSet<Patio> Patios { get; set; }
+        public DbSet<Setor> Setores { get; set; }
+        public DbSet<Situacao> Situacoes { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

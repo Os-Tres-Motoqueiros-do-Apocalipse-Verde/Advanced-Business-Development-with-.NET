@@ -4,7 +4,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Endereco
     {
-        public long IdEndereco { get; private set; }
+        public int IdEndereco { get; private set; }
 
         public int Numero { get; private set; }
 
@@ -18,7 +18,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 
         public string Rua { get; set; }
 
-        public long? FilialId { get; private set; }
+        public int? FilialId { get; private set; }
         public virtual Filial Filial { get; private set; }
 
         public Endereco(int numero, string estado, string codigoPais, string codigoPostal, string complemento, string rua)

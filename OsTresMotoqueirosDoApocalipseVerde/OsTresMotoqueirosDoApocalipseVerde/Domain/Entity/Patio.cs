@@ -5,7 +5,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Patio
     {
-        public long IdPatio { get; private set; }
+        public int IdPatio { get; private set; }
 
         public int TotalMotos { get; private set; }
 
@@ -14,14 +14,14 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         public int AreaPatio { get; set; }
 
         // Relacionamento 
-        public long FilialId { get; private set; }
+        public int FilialId { get; private set; }
         public virtual Filial Filial { get; private set; }
 
         private readonly List<Setor> _setores = new();
         public virtual IReadOnlyCollection<Setor> Setores => _setores.AsReadOnly();
 
 
-        public Patio( int totalMotos, int capacidadeMoto, int areaPatio, long filialId)
+        public Patio( int totalMotos, int capacidadeMoto, int areaPatio, int filialId)
         {
             TotalMotos = totalMotos;
             CapacidadeMoto = capacidadeMoto;
@@ -29,7 +29,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
             FilialId = filialId;
         }
 
-        public Setor AddSetor(int quantidadeMoto, int capacidade, long areaSetor, string nomeSetor, string descricao, long patioId)
+        public Setor AddSetor(int quantidadeMoto, int capacidade, int areaSetor, string nomeSetor, string descricao, int patioId)
         {
             var setor = Setor.Create(quantidadeMoto, capacidade, areaSetor, nomeSetor, descricao, patioId);
             _setores.Add(setor);
@@ -49,7 +49,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
                 throw new DomainException($"A area do patio esta errada: {areaPatio}, verifique antes de criar");
         }
 
-        internal static Patio Create(int totalMotos, int capacidadeMoto, int areaPatio, long filialId)
+        internal static Patio Create(int totalMotos, int capacidadeMoto, int areaPatio, int filialId)
         {
             return new Patio(totalMotos, capacidadeMoto, areaPatio, filialId);
         }

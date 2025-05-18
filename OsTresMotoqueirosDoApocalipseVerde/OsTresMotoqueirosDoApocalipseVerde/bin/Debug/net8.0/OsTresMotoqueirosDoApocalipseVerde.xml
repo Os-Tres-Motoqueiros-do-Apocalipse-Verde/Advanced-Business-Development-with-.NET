@@ -4,6 +4,28 @@
         <name>OsTresMotoqueirosDoApocalipseVerde</name>
     </assembly>
     <members>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController.GetDados">
+            <summary>
+            Get todos os Dados
+            </summary>
+            <returns>Retorna a lista de dados</returns>
+            <response code="200">Dados found</response>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController.GetDados(System.Int32)">
+            <summary>
+            Get dados por id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController.Putdados(System.Int32,Dados)">
+            <summary>
+            Update dados
+            </summary>
+            <param name="id"></param>
+            <param name="dados"></param>
+            <returns></returns>
+        </member>
         <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.GetMotoristas">
             <summary>
             Get todos os Motoristas
@@ -11,14 +33,14 @@
             <returns>Retorna a lista de motoristas</returns>
             <response code="200">Motoristas found</response>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.GetMotorista(System.Int64)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.GetMotorista(System.Int32)">
             <summary>
             Get motorista por id
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.PutMotorista(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Domain.Entity.Motorista)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.PutMotorista(System.Int32,OsTresMotoqueirosDoApocalipseVerde.Domain.Entity.Motorista)">
             <summary>
             Update motorista
             </summary>

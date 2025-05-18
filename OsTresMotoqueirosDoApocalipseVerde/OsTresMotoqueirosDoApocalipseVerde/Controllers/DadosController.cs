@@ -12,44 +12,43 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Tags("CRUD Motorista")]
-    public class MotoristaController : ControllerBase
+    [Tags("CRUD Dados")]
+    public class DadosController : ControllerBase
     {
-        private readonly IRepository<Motorista> _repositoryMotorista;
 
         private readonly IRepository<Dados> _repositoryDados;
 
-        private readonly MotoristaUseCase _MotoristaUseCase;
+        private readonly DadosUseCase _DadosUseCase;
 
-        private readonly CreateMotoristaRequestValidator _validationMotorista;
+        private readonly CreateDadosRequestValidator _validationDados;
 
-        public MotoristaController(IRepository<Motorista> repositoryMotorista, IRepository<Dados> repositoryDados, MotoristaUseCase motoristaUseCase, CreateMotoristaRequestValidator validationMotorista)
+        public DadosController(IRepository<Dados> repositoryDados,  DadosUseCase dadosUseCase, CreateDadosRequestValidator validationDados)
         {
-            _repositoryMotorista = repositoryMotorista;
+
             _repositoryDados = repositoryDados;
-            _MotoristaUseCase = motoristaUseCase;
-            _validationMotorista = validationMotorista;
+            _DadosUseCase = dadosUseCase;
+            _validationDados = validationDados;
         }
 
-        // GET: api/Motoristas
+        // GET: api/Dados
         /// <summary>
-        /// Get todos os Motoristas
+        /// Get todos os Dados
         /// </summary>
-        /// <returns>Retorna a lista de motoristas</returns>
-        /// <response code="200">Motoristas found</response>
+        /// <returns>Retorna a lista de dados</returns>
+        /// <response code="200">Dados found</response>
         [HttpGet]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.ServiceUnavailable)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IEnumerable<CreateMotoristaResponse>> GetMotoristas()
+        public async Task<IEnumerable<CreateDadosResponse>> GetDados()
         {
-            return await _MotoristaUseCase.GetAllMotoristaAsync();
+            return await _DadosUseCase.GetAllDadosAsync();
         }
 
-        // GET: api/Motoristas/2
+        // GET: api/Dados/2
         /// <summary>
-        /// Get motorista por id
+        /// Get dados por id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -59,24 +58,24 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         [ProducesResponseType((int)HttpStatusCode.ServiceUnavailable)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<ActionResult<CreateMotoristaResponse>> GetMotorista(int id)
+        public async Task<ActionResult<CreateDadosResponse>> GetDados(int id)
         {
-            var motorista = await _MotoristaUseCase.GetByIdAsync(id);
+            var dados = await _DadosUseCase.GetByIdAsync(id);
 
-            if (motorista == null)
+            if (dados == null)
             {
                 return NotFound();
             }
 
-            return motorista;
+            return dados;
         }
 
-        // PUT: api/Motoristas/2
+        // PUT: api/Dados/2
         /// <summary>
-        /// Update motorista
+        /// Update dados
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="motorista"></param>
+        /// <param name="dados"></param>
         /// <returns></returns>
         [HttpPut("{id}")]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
@@ -84,31 +83,31 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         [ProducesResponseType((int)HttpStatusCode.ServiceUnavailable)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> PutMotorista(int id, Motorista motorista)
+        public async Task<IActionResult> Putdados(int id, Dados dados)
         {
-            if (id != motorista.IdMotorista)
+            if (id != dados.Id)
             {
                 return BadRequest();
             }
-
-            _repositoryMotorista.Update(motorista);
+            
+            _repositoryDados.Update(dados);
 
             return NoContent();
         }
 
-        // POST: api/Motoristas
+        // POST: api/dados
         [HttpPost]
         [ProducesResponseType((int)HttpStatusCode.Created)]
         [ProducesResponseType((int)HttpStatusCode.ServiceUnavailable)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<ActionResult<Motorista>> PostMotorista(CreateMotoristaRequest createMotoristaRequest)
+        public async Task<ActionResult<Dados>> PostDados(CreateDadosRequest createDadosRequest)
         {
-            _validationMotorista.ValidateAndThrow(createMotoristaRequest);
-          
-            var motoristaResponse = await _MotoristaUseCase.CreateMotorista(createMotoristaRequest);
-       
-            return CreatedAtAction("GetMotorista", new { id = motoristaResponse.IdMotorista }, motoristaResponse);
+            _validationDados.ValidateAndThrow(createDadosRequest);
+
+            var dadosResponse = await _DadosUseCase.CreateDados(createDadosRequest);
+
+            return CreatedAtAction("GetDados", new { id = dadosResponse.Id }, dadosResponse);
         }
     }
 }

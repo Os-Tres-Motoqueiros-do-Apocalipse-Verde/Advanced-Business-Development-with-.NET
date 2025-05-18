@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OsTresMotoqueirosDoApocalipseVerde")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74f521c8469406a5d9bdada66932f57e7d9ee2bb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e158a84972348deefee423c1e1564dd89b05eb6")]
 [assembly: System.Reflection.AssemblyProductAttribute("OsTresMotoqueirosDoApocalipseVerde")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OsTresMotoqueirosDoApocalipseVerde")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

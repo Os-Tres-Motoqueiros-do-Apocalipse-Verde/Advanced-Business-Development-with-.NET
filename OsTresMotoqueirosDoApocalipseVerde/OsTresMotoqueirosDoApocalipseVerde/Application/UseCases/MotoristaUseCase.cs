@@ -17,9 +17,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCases
             _repositoryDados = repositoryDados;
         }
 
-        public async Task<CreatedMotoristaResponse> CreateMotorista(CreatedMotoristaRequest createMotoristaRequest)
+        public async Task<CreateMotoristaResponse> CreateMotorista(CreateMotoristaRequest createMotoristaRequest)
         {
-            var dados = await _repositoryDados.GetByIdAsync(createMotoristaRequest.DadosId) /*?? throw new Exception("Brand invalid")*/;
+            var dados = await _repositoryDados.GetByIdAsync(createMotoristaRequest.DadosId);
 
             var motorista = new Motorista(createMotoristaRequest.Plano, dados.Id);
             motorista.AtribuirDados(dados.CPF, dados.Telefone, dados.Email, dados.Senha, dados.Nome);
@@ -27,28 +27,29 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCases
 
             await _repositoryMotorista.AddAsync(motorista);
 
-            return new CreatedMotoristaResponse { IdMotorista = motorista.IdMotorista, Plano = motorista.Plano };
+            return new CreateMotoristaResponse { IdMotorista = motorista.IdMotorista, Plano = motorista.Plano, DadosId = motorista.DadosId };
         }
 
-        public async Task<List<CreatedMotoristaResponse>> GetAllMotoristaAsync()
+        public async Task<List<CreateMotoristaResponse>> GetAllMotoristaAsync()
         {
             var motoristas = await _repositoryMotorista.GetAllAsync();
 
-            return motoristas.Select(b => new CreatedMotoristaResponse
+            return motoristas.Select(b => new CreateMotoristaResponse
             {
                 IdMotorista = b.IdMotorista,
                 Plano = b.Plano,
+                DadosId = b.DadosId
             }).ToList();
         }
 
-        public async Task<CreatedMotoristaResponse> GetByIdAsync(long IdMotorista)
+        public async Task<CreateMotoristaResponse> GetByIdAsync(int IdMotorista)
         {
             var motorista = _repositoryMotorista.GetByIdAsync(IdMotorista).Result;
 
-            return new CreatedMotoristaResponse { Plano = motorista.Plano };
+            return new CreateMotoristaResponse { IdMotorista = motorista.IdMotorista, Plano = motorista.Plano, DadosId = motorista.DadosId };
         }
 
-        public void UpdateMotorista(long IdMotorista, Motorista motorista)
+        public void UpdateMotorista(int IdMotorista, Motorista motorista)
         {
             
         }

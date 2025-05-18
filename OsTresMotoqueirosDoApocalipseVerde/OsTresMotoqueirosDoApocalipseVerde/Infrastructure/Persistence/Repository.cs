@@ -14,7 +14,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Persistence
             _dbSet = _context.Set<T>();
         }
 
-        public async Task<T?> GetByIdAsync(long id)
+        public async Task<T?> GetByIdAsync(int id)
         {
             return await _dbSet.FindAsync(id);
         }
@@ -24,7 +24,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Persistence
         {
             if (entity == null) throw new ArgumentNullException(nameof(entity));
             await _dbSet.AddAsync(entity);
+            await _context.SaveChangesAsync();
         }
+
 
         public void Update(T entity) => _dbSet.Update(entity);
 

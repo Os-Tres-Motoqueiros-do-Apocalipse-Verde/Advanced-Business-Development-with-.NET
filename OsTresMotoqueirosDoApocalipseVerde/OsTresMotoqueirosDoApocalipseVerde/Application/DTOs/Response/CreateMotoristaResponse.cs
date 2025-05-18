@@ -2,10 +2,10 @@
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response
 {
-    public class CreatedMotoristaResponse
+    public class CreateMotoristaResponse
     {
-        public long IdMotorista { get; set; }
+        public int IdMotorista { get; set; }
         public Plano Plano { get; set; }
-        public long DadosId { get; set; }
+        public int DadosId { get; set; }
     }
 }

@@ -6,18 +6,18 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Funcionario
     {
-        public long IdFuncionario { get; private set; }
+        public int IdFuncionario { get; private set; }
 
         public Cargo Cargo { get; private set; }
 
         //Relacionamento
-        public long FilialId { get; private set; }
+        public int FilialId { get; private set; }
         public virtual Filial Filial { get; private set; }
 
-        public long DadosId { get; private set; }
+        public int DadosId { get; private set; }
         public virtual Dados Dados { get; private set; }
 
-        public Funcionario(Cargo cargo, long filialId, long dadosId)
+        public Funcionario(Cargo cargo, int filialId, int dadosId)
         {
             Cargo = cargo;
             FilialId = filialId;
@@ -29,11 +29,11 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
             if (Dados != null)
                 throw new InvalidOperationException("Este funcionário já possui dados.");
 
-            Dados = Dados.Create(cpf, telefone, email, senha, nome, funcionario: this);
+            Dados = Dados.Create(cpf, telefone, email, senha, nome);
         }
 
 
-        internal static Funcionario Create(Cargo cargo, long filialId, long dadosId)
+        internal static Funcionario Create(Cargo cargo, int filialId, int dadosId)
         {
             return new Funcionario(cargo, filialId, dadosId);
         }

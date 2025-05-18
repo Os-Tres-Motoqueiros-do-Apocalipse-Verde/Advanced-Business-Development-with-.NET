@@ -15,6 +15,11 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
                 .HasKey(m => m.IdModelo);
 
             builder
+                .Property(m => m.IdModelo)
+                .IsRequired()
+                .ValueGeneratedOnAdd();
+
+            builder
                 .Property(m => m.NomeModelo)
                 .IsRequired()
                 .HasMaxLength(15);

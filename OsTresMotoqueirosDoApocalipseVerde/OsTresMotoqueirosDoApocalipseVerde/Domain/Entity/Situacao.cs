@@ -5,7 +5,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Situacao
     {
-        public long IdSituacao { get; private set; }
+        public int IdSituacao { get; private set; }
 
         public string Nome { get; private set; }
 
@@ -24,9 +24,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
             Status = status;
         }
 
-        public Moto AddMoto(string placa, string chassi, string condicao, float latitude, float longitude, long modeloId, long setorId, long motoristaId)
+        public Moto AddMoto(string placa, string chassi, string condicao, float latitude, float intitude, int modeloId, int setorId, int motoristaId)
         {
-            var moto = Moto.Create(placa, chassi, condicao, latitude, longitude, modeloId, setorId, motoristaId);
+            var moto = Moto.Create(placa, chassi, condicao, latitude, intitude, modeloId, setorId, motoristaId);
             _motos.Add(moto);
 
             return moto;
