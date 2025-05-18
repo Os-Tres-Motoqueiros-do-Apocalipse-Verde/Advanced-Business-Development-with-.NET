@@ -32,7 +32,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCases
 
         public async Task<List<CreatedMotoristaResponse>> GetAllMotoristaAsync()
         {
-            var motoristas = _repositoryMotorista.GetAllAsync().Result.ToList();
+            var motoristas = await _repositoryMotorista.GetAllAsync();
 
             return motoristas.Select(b => new CreatedMotoristaResponse
             {

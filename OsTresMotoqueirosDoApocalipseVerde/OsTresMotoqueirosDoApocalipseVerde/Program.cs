@@ -7,6 +7,9 @@ using OsTresMotoqueirosDoApocalipseVerde.Application.UseCases;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Entity;
 using OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Context;
 using OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Persistence;
+using OsTresMotoqueirosDoApocalipseVerde.Application.Validador;
+
+
 
 namespace OsTresMotoqueirosDoApocalipseVerde
 {
@@ -54,16 +57,15 @@ namespace OsTresMotoqueirosDoApocalipseVerde
             builder.Services.AddScoped<IRepository<Setor>, Repository<Setor>>();
             builder.Services.AddScoped<IRepository<Situacao>, Repository<Situacao>>(); 
 
-            builder.Services.AddScoped<CreatedDadosRequest>();
-            builder.Services.AddScoped<CreatedMotoristaRequest>();
-            builder.Services.AddScoped<CreateEnderecoRequest>();
-            builder.Services.AddScoped<CreateFilialRequest>();
-            builder.Services.AddScoped<CreateFuncionarioRequest>();
-            builder.Services.AddScoped<CreateModeloRequest>();
-            builder.Services.AddScoped<CreateMotoRequest>();
-            builder.Services.AddScoped<CreatePatioRequest>();
-            builder.Services.AddScoped<CreateSetorRequest>();
-            builder.Services.AddScoped<CreateSituacaoRequest>();
+
+            builder.Services.AddScoped<CreateDadosRequestValidator>();
+            builder.Services.AddScoped<CreateMotoristaRequestValidator>();
+            builder.Services.AddScoped<CreateFuncionarioRequestValidator>();
+            builder.Services.AddScoped<CreateModeloRequestValidator>();
+            builder.Services.AddScoped<CreateMotoRequestValidator>();
+            builder.Services.AddScoped<CreatePatioRequestValidator>();
+            builder.Services.AddScoped<CreateSetorRequestValidator>();  
+            builder.Services.AddScoped<CreateSituacaoRequestValidator>();
             
             builder.Services.AddScoped<FilialUseCase>();
             builder.Services.AddScoped<FuncionarioUseCase>();

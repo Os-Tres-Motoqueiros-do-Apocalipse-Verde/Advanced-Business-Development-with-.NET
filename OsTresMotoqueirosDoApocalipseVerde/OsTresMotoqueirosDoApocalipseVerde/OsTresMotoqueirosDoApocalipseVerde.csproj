@@ -5,7 +5,6 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 
-		<!-- Geração da documentação XML -->
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<DocumentationFile>bin\Debug\net8.0\OsTresMotoqueirosDoApocalipseVerde.xml</DocumentationFile>
 		<NoWarn>$(NoWarn);1591</NoWarn>

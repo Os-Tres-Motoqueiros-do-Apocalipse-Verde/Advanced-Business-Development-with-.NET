@@ -12,7 +12,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Tags("CRUD Car")]
+    [Tags("CRUD Motorista")]
     public class MotoristaController : ControllerBase
     {
         private readonly IRepository<Motorista> _repositoryMotorista;

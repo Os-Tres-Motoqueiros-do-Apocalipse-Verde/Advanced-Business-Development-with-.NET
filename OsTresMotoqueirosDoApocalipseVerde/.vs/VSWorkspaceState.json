@@ -3,12 +3,14 @@
     "",
     "\\OsTresMotoqueirosDoApocalipseVerde",
     "\\OsTresMotoqueirosDoApocalipseVerde\\Application",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request",
     "\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Domain",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entity",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCases",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validador",
     "\\OsTresMotoqueirosDoApocalipseVerde\\Infrastructure",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Infrastructure\\Mapping"
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Infrastructure\\Context"
   ],
-  "SelectedNode": "\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entity\\Funcionario.cs",
+  "SelectedNode": "\\OsTresMotoqueirosDoApocalipseVerde\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
