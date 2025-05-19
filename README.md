@@ -1,6 +1,7 @@
 <div align="center">
   
-# Entrega de .NET
+# Entrega de Advanced Business Development with .NET
+
 
 </div>
 
@@ -37,12 +38,20 @@ Todas as rotas estão disponíveis no controlador, por Exemplo:
 
 ## 🧰 Tecnologias Utilizadas
 
-- ✅ **ASP.NET Core Web API** – Framework principal da aplicação
-- ✅ **Oracle Database** – Banco de dados relacional
-- ✅ **Entity Framework Core** – ORM para integração com Oracle
-- ✅ **FluentValidation** – Validação de dados de entrada
-- ✅ **Swagger (Swashbuckle)** – Documentação da API
-- ✅ **C# 10 / .NET 8**
+- **ASP.NET Core 8**
+- **Entity Framework Core 8**
+  - `Microsoft.EntityFrameworkCore`
+  - `Microsoft.EntityFrameworkCore.Design`
+  - `Microsoft.EntityFrameworkCore.Tools`
+  - `Microsoft.EntityFrameworkCore.Proxies`
+- **Oracle.EntityFrameworkCore** — Suporte ao Oracle Database
+- **FluentValidation.AspNetCore** — Validação de dados via FluentValidation
+- **Swagger (Swashbuckle.AspNetCore)** — Documentação da API REST
+- **Camadas de arquitetura**:
+  - `Domain` (entidades e regras de negócio)
+  - `Application` (DTOs, casos de uso)
+  - `Infrastructure` (acesso a dados, contexto EF)
+  - `API` (controllers e endpoints)
 
 ---
 
@@ -50,12 +59,20 @@ Todas as rotas estão disponíveis no controlador, por Exemplo:
 
 ### ✅ Pré-requisitos
 
-- [.NET SDK 8.0+](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
-- [Oracle Database 12c+](https://www.oracle.com/database/)
-- Oracle Client Tools (como Oracle.ManagedDataAccess)
+- .NET SDK 8.0 ou superior
+- Banco de dados Oracle instalado ou acesso a instância remota
+- Ferramenta como DBeaver, Oracle SQL Developer, etc. para gerenciar o Oracle
+- Git
 - Editor de código (Visual Studio ou VS Code)
 
 ---
+
+### 📦 Clonar o projeto
+
+```bash
+git clone https://github.com/Os-Tres-Motoqueiros-do-Apocalipse-Verde/Advanced-Business-Development-with-.NET.git
+cd Advanced-Business-Development-with-.NET
+```
 
 
 
