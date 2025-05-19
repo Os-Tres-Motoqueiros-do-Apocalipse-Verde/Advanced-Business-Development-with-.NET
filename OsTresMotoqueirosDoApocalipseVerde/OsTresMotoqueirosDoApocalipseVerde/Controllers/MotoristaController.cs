@@ -73,28 +73,25 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
 
         // PUT: api/Motoristas/2
         /// <summary>
-        /// Update motorista
+        /// PUT motorista por id
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="motorista"></param>
         /// <returns></returns>
         [HttpPut("{id}")]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.NoContent)]
-        [ProducesResponseType((int)HttpStatusCode.ServiceUnavailable)]
-        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> PutMotorista(int id, Motorista motorista)
+        public async Task<IActionResult> PutMotorista(int id, CreateMotoristaRequest updateRequest)
         {
-            if (id != motorista.IdMotorista)
-            {
-                return BadRequest();
-            }
+            var sucesso = await _MotoristaUseCase.UpdateMotoristaAsync(id, updateRequest);
 
-            _repositoryMotorista.Update(motorista);
+            if (!sucesso)
+                return NotFound();
 
             return NoContent();
         }
+
+
 
         // POST: api/Motoristas
         [HttpPost]
@@ -110,5 +107,28 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
        
             return CreatedAtAction("GetMotorista", new { id = motoristaResponse.IdMotorista }, motoristaResponse);
         }
+
+        // DELETE: api/Motorista/5
+        /// <summary>
+        /// Deleta um motorista pelo ID
+        /// </summary>
+        /// <param name="id">ID do motorista</param>
+        /// <returns>NoContent se deletado com sucesso, NotFound se não existir</returns>
+        [HttpDelete("{id}")]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
+        [ProducesResponseType((int)HttpStatusCode.ServiceUnavailable)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> DeleteMotorista(int id)
+        {
+            var sucesso = await _MotoristaUseCase.DeleteMotoristaAsync(id);
+
+            if (!sucesso)
+                return NotFound();
+
+            return NoContent();
+        }
+
     }
 }

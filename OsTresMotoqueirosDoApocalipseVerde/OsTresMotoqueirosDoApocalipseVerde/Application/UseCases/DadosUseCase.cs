@@ -69,9 +69,36 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCases
             };
         }
 
-        public void UpdateDados(int id, Dados dados)
+        public async Task<bool> UpdateDadosAsync(int id, CreateDadosRequest updateRequest)
         {
-            
+            var dados = await _repositoryDados.GetByIdAsync(id);
+            if (dados == null)
+                return false;
+
+            dados.CPF = updateRequest.CPF;
+            dados.Telefone = updateRequest.Telefone;
+            dados.Email = updateRequest.Email;
+            dados.Senha = updateRequest.Senha;
+            dados.Nome = updateRequest.Nome;
+
+            await _repositoryDados.UpdateAsync(dados);
+
+            return true;
+        }
+
+
+
+        public async Task<bool> DeleteDadosAsync(int id)
+        {
+            var dados = await _repositoryDados.GetByIdAsync(id);
+
+            if (dados == null)
+            {
+                return false;
+            }
+
+            _repositoryDados.DeleteAsync(dados);
+            return true;
         }
     }
 }

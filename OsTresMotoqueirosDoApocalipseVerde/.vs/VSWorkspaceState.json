@@ -11,6 +11,6 @@
     "\\OsTresMotoqueirosDoApocalipseVerde\\Infrastructure\\Mapping",
     "\\OsTresMotoqueirosDoApocalipseVerde\\Infrastructure\\Persistence"
   ],
-  "SelectedNode": "\\OsTresMotoqueirosDoApocalipseVerde\\obj",
+  "SelectedNode": "\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCases\\MotoristaUseCase.cs",
   "PreviewInSolutionExplorer": false
 }

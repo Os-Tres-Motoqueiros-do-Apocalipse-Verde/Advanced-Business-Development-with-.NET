@@ -70,31 +70,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
             return dados;
         }
 
-        // PUT: api/Dados/2
-        /// <summary>
-        /// Update dados
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="dados"></param>
-        /// <returns></returns>
-        [HttpPut("{id}")]
-        [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        [ProducesResponseType((int)HttpStatusCode.NoContent)]
-        [ProducesResponseType((int)HttpStatusCode.ServiceUnavailable)]
-        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
-        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> Putdados(int id, Dados dados)
-        {
-            if (id != dados.Id)
-            {
-                return BadRequest();
-            }
-            
-            _repositoryDados.Update(dados);
-
-            return NoContent();
-        }
-
         // POST: api/dados
         [HttpPost]
         [ProducesResponseType((int)HttpStatusCode.Created)]
@@ -108,6 +83,48 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
             var dadosResponse = await _DadosUseCase.CreateDados(createDadosRequest);
 
             return CreatedAtAction("GetDados", new { id = dadosResponse.Id }, dadosResponse);
+        }
+
+        // PUT: api/Dados/2
+        /// <summary>
+        /// PUT Dados por id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpPut("{id}")]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> PutDados(int id, CreateDadosRequest updateRequest)
+        {
+            var sucesso = await _DadosUseCase.UpdateDadosAsync(id, updateRequest);
+
+            if (!sucesso)
+                return NotFound();
+
+            return NoContent();
+        }
+
+        // DELETE: api/Dados/5
+        /// <summary>
+        /// Deleta um dados pelo ID
+        /// </summary>
+        /// <param name="id">ID do motorista</param>
+        /// <returns>NoContent se deletado com sucesso, NotFound se não existir</returns>
+        [HttpDelete("{id}")]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
+        [ProducesResponseType((int)HttpStatusCode.ServiceUnavailable)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> DeleteDados(int id)
+        {
+            var sucesso = await _DadosUseCase.DeleteDadosAsync(id);
+
+            if (!sucesso)
+                return NotFound();
+
+            return NoContent();
         }
     }
 }

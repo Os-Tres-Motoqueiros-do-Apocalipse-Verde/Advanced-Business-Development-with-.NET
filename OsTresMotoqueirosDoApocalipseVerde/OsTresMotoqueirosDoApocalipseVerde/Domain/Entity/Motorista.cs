@@ -10,11 +10,11 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
     {
         public int IdMotorista { get; private set; }
 
-        public Plano Plano { get; private set; }
+        public Plano Plano { get; set; }
 
         // Relacionamento 
-        public int DadosId { get; private set; }
-        public virtual Dados Dados { get; private set; }
+        public int DadosId { get;  set; }
+        public virtual Dados Dados { get; set; }
 
         public Motorista(Plano plano, int dadosId)
         {

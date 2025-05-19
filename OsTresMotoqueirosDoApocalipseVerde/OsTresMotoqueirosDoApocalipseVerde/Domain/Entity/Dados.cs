@@ -6,11 +6,11 @@ public class Dados
 {
 
     public int Id { get; private set; }
-    public string CPF { get; private set; }
-    public string Telefone { get; private set; }
-    public string Email { get; private set; }
-    public string Senha { get; private set; }
-    public string Nome { get; private set; }
+    public string CPF { get;  set; }
+    public string Telefone { get;  set; }
+    public string Email { get;  set; }
+    public string Senha { get;  set; }
+    public string Nome { get;  set; }
 
 
     public Dados(string cpf, string telefone, string email, string senha, string nome)

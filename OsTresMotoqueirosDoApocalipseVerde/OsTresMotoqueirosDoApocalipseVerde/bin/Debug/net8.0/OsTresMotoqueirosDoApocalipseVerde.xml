@@ -18,13 +18,19 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController.Putdados(System.Int32,Dados)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController.PutDados(System.Int32,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateDadosRequest)">
             <summary>
-            Update dados
+            PUT Dados por id
             </summary>
             <param name="id"></param>
-            <param name="dados"></param>
             <returns></returns>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController.DeleteDados(System.Int32)">
+            <summary>
+            Deleta um dados pelo ID
+            </summary>
+            <param name="id">ID do motorista</param>
+            <returns>NoContent se deletado com sucesso, NotFound se não existir</returns>
         </member>
         <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.GetMotoristas">
             <summary>
@@ -40,13 +46,19 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.PutMotorista(System.Int32,OsTresMotoqueirosDoApocalipseVerde.Domain.Entity.Motorista)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.PutMotorista(System.Int32,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateMotoristaRequest)">
             <summary>
-            Update motorista
+            PUT motorista por id
             </summary>
             <param name="id"></param>
-            <param name="motorista"></param>
             <returns></returns>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.DeleteMotorista(System.Int32)">
+            <summary>
+            Deleta um motorista pelo ID
+            </summary>
+            <param name="id">ID do motorista</param>
+            <returns>NoContent se deletado com sucesso, NotFound se não existir</returns>
         </member>
     </members>
 </doc>
