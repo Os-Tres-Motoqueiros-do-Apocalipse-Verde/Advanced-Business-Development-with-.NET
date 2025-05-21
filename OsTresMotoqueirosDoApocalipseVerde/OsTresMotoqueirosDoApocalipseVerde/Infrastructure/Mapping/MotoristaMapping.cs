@@ -9,14 +9,13 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
         public void Configure(EntityTypeBuilder<Motorista> builder)
         {
             builder
-                .ToTable("MOTORISTA");  
+                .ToTable("MOTORISTA");
 
             builder
                 .HasKey(m => m.IdMotorista);
 
             builder
                 .Property(m => m.IdMotorista)
-                .ValueGeneratedOnAdd()
                 .HasColumnName("ID_MOTORISTA");
 
 
@@ -24,8 +23,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
                 .Property(m => m.Plano)
                 .HasColumnName("PLANO")
                 .HasConversion<string>()
-                .IsRequired()                      
-                .HasMaxLength(20);                
+                .IsRequired()
+                .HasMaxLength(20);
 
             builder
                 .Property(m => m.DadosId)

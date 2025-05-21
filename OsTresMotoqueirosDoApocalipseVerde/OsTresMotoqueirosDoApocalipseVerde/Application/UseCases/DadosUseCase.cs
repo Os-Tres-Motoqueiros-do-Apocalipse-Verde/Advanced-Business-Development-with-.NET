@@ -28,7 +28,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCases
 
             return new CreateDadosResponse
             {
-
                 CPF = dados.CPF,
                 Telefone = dados.Telefone,
                 Email = dados.Email,

@@ -1,11 +1,14 @@
 ﻿using OsTresMotoqueirosDoApocalipseVerde.Domain.Enum;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Exceptions;
+using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
+
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Filial
     {
+        [Key]
         public int IdFilial { get; private set; }
 
         public string NomeFilial { get; private set; }

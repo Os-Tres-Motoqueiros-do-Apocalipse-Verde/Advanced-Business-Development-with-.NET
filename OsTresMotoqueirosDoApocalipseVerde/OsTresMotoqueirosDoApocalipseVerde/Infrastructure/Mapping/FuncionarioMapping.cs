@@ -16,7 +16,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
 
             builder
                 .Property(f => f.IdFuncionario)
-                .ValueGeneratedOnAdd()
                 .IsRequired();
 
             builder

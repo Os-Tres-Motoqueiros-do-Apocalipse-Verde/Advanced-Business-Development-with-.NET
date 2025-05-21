@@ -20,17 +20,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new DadosMapping());
-            modelBuilder.ApplyConfiguration(new EnderecoMapping());
-            modelBuilder.ApplyConfiguration(new FilialMapping());
-            modelBuilder.ApplyConfiguration(new FuncionarioMapping());
-            modelBuilder.ApplyConfiguration(new ModeloMapping());
-            modelBuilder.ApplyConfiguration(new MotoMapping());
-            modelBuilder.ApplyConfiguration(new MotoristaMapping());
-            modelBuilder.ApplyConfiguration(new PatioMapping());
-            modelBuilder.ApplyConfiguration(new SetorMapping());
-            modelBuilder.ApplyConfiguration(new SituacaoMapping());
-
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(MottuContext).Assembly);
         }
+
     }
 }

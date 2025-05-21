@@ -13,14 +13,13 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
 
             builder
                 .HasKey(d => d.Id);
-                
+
 
 
             builder
                 .Property(d => d.Id)
                 .HasColumnName("ID_DADOS")
                 .IsRequired()
-                .ValueGeneratedOnAdd()
                 .HasMaxLength(15);
 
             builder
@@ -32,8 +31,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
             builder
                 .Property(d => d.Telefone)
                 .HasColumnName("TELEFONE")
-                .IsRequired()                      
-                .HasMaxLength(13);                
+                .IsRequired()
+                .HasMaxLength(13);
 
             builder
                 .Property(d => d.Email)

@@ -1,10 +1,12 @@
 ﻿using OsTresMotoqueirosDoApocalipseVerde.Domain.Enum;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Exceptions;
+using System.ComponentModel.DataAnnotations;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Situacao
     {
+        [Key]
         public int IdSituacao { get; private set; }
 
         public string Nome { get; private set; }

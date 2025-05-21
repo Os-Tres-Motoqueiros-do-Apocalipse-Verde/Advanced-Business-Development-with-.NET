@@ -16,7 +16,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
 
             builder
                 .Property(s => s.IdSituacao)
-                .ValueGeneratedOnAdd()
                 .IsRequired()
                 .HasMaxLength(14);
             

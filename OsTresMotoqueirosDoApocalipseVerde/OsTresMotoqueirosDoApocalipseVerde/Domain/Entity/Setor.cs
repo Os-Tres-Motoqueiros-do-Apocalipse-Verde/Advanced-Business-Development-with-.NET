@@ -1,10 +1,12 @@
 ﻿using OsTresMotoqueirosDoApocalipseVerde.Domain.Exceptions;
 using System.Text.RegularExpressions;
+using System.ComponentModel.DataAnnotations;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Setor
     {
+        [Key]
         public int IdSetor { get; private set; }
 
         public int QuantidadeMoto { get; private set; }

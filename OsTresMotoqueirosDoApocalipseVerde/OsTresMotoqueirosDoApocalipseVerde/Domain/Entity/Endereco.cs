@@ -1,9 +1,11 @@
 ﻿using OsTresMotoqueirosDoApocalipseVerde.Domain.Exceptions;
+using System.ComponentModel.DataAnnotations;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Endereco
     {
+        [Key]
         public int IdEndereco { get; private set; }
 
         public int Numero { get; private set; }

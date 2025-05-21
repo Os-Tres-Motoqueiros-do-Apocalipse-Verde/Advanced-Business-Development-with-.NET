@@ -3,17 +3,24 @@ using OsTresMotoqueirosDoApocalipseVerde.Domain.Exceptions;
 using System.Numerics;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Motorista
     {
-        public int IdMotorista { get; private set; }
+        [Key]
+        [Required]
+        public int Id { get; set; }
 
+        [Required]
+        [EnumDataType(typeof(Plano))]
         public Plano Plano { get; set; }
 
         // Relacionamento 
-        public int DadosId { get;  set; }
+        [ForeignKey("Dados")]
+        public int? DadosId { get;  set; }
         public virtual Dados Dados { get; set; }
 
         public Motorista(Plano plano, int dadosId)

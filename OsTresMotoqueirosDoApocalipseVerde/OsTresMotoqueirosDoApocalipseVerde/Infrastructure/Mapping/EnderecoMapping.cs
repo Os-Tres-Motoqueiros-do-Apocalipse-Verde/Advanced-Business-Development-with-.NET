@@ -16,7 +16,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
 
             builder
                 .Property(e => e.IdEndereco)
-                .ValueGeneratedOnAdd()
                 .IsRequired()
                 .HasMaxLength(20);
 

@@ -1,11 +1,13 @@
 ﻿using OsTresMotoqueirosDoApocalipseVerde.Domain.Enum;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Exceptions;
 using System.IO;
+using System.ComponentModel.DataAnnotations;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Modelo
     {
+        [Key]
         public int IdModelo { get; private set; }
 
         public string NomeModelo { get; private set; }

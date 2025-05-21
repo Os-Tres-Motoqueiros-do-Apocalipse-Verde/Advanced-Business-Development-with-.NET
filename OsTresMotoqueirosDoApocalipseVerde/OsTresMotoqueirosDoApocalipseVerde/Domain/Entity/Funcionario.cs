@@ -1,11 +1,13 @@
 ﻿using OsTresMotoqueirosDoApocalipseVerde.Domain.Enum;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Exceptions;
 using System.Text.RegularExpressions;
+using System.ComponentModel.DataAnnotations;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 {
     public class Funcionario
     {
+        [Key]
         public int IdFuncionario { get; private set; }
 
         public Cargo Cargo { get; private set; }
