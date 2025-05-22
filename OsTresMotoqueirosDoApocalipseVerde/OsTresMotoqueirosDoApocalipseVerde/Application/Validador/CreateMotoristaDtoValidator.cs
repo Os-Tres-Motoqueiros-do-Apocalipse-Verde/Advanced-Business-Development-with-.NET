@@ -3,9 +3,9 @@ using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Application.Validador
 {
-    public class CreateMotoristaRequestValidator : AbstractValidator<CreateMotoristaRequest>
+    public class CreateMotoristaDtoValidator : AbstractValidator<CreateMotoristaDto>
     {
-        public CreateMotoristaRequestValidator()
+        public CreateMotoristaDtoValidator()
         {
             RuleFor(m => m.Plano)
                 .IsInEnum()

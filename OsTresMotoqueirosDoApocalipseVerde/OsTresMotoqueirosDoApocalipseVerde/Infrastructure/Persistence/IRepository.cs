@@ -1,9 +1,11 @@
-﻿namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Persistence
+﻿using System.Linq.Expressions;
+
+namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Persistence
 {
     public interface IRepository<T> where T : class
     {
-        Task<T?> GetByIdAsync(int id);
         Task<IEnumerable<T>> GetAllAsync();
+        Task<T> GetByIdAsync(int id);
         Task AddAsync(T entity);
         Task UpdateAsync(T entity);
         Task DeleteAsync(T entity);

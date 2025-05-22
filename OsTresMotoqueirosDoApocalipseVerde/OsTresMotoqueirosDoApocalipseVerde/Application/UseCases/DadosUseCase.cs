@@ -1,33 +1,39 @@
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
-using OsTresMotoqueirosDoApocalipseVerde.Domain.Entity;
+using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
+using OsTresMotoqueirosDoApocalipseVerde.Domain.Enum;
 using OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Persistence;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCases
 {
     public class DadosUseCase
     {
-        private readonly IRepository<Dados> _repositoryDados;
+        private readonly IRepository<Dados> _dadosRepository;
 
-        public DadosUseCase(IRepository<Dados> repositoryDados)
+        public DadosUseCase(IRepository<Dados> dadosRepository)
         {
-            _repositoryDados = repositoryDados;
+            _dadosRepository = dadosRepository;
         }
 
-        public async Task<CreateDadosResponse> CreateDados(CreateDadosRequest createDadosRequest)
+        public async Task<ReadDadosDto> CreateAsync(CreateDadosDto dto)
         {
-            var dados = new Dados(
-                createDadosRequest.CPF,
-                createDadosRequest.Telefone,
-                createDadosRequest.Email,
-                createDadosRequest.Senha,
-                createDadosRequest.Nome
-            );
 
-            await _repositoryDados.AddAsync(dados);
-
-            return new CreateDadosResponse
+            var dados = new Dados
             {
+                CPF = dto.CPF,
+                Telefone = dto.Telefone,
+                Email = dto.Email,
+                Senha = dto.Senha,
+                Nome = dto.Nome
+
+            };
+
+            await _dadosRepository.AddAsync(dados);
+
+            return new ReadDadosDto
+            {
+                Id = dados.Id,
                 CPF = dados.CPF,
                 Telefone = dados.Telefone,
                 Email = dados.Email,
@@ -36,11 +42,10 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCases
             };
         }
 
-        public async Task<List<CreateDadosResponse>> GetAllDadosAsync()
+        public async Task<IEnumerable<ReadDadosDto>> GetAllAsync()
         {
-            var dados = await _repositoryDados.GetAllAsync();
-
-            return dados.Select(d => new CreateDadosResponse
+            var dados = await _dadosRepository.GetAllAsync();
+            return dados.Select(d => new ReadDadosDto
             {
                 Id = d.Id,
                 CPF = d.CPF,
@@ -48,18 +53,17 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCases
                 Email = d.Email,
                 Senha = d.Senha,
                 Nome = d.Nome
-            }).ToList();
+            });
         }
 
-        public async Task<CreateDadosResponse> GetByIdAsync(int id)
+        public async Task<ReadDadosDto> GetByIdAsync(int id)
         {
-            var dados = await _repositoryDados.GetByIdAsync(id);
+            var dados = await _dadosRepository.GetByIdAsync(id);
+            if (dados == null) return null;
 
-            if (dados == null)
-                return null; 
-
-            return new CreateDadosResponse
+            return new ReadDadosDto
             {
+                Id = dados.Id,
                 CPF = dados.CPF,
                 Telefone = dados.Telefone,
                 Email = dados.Email,
@@ -68,35 +72,27 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCases
             };
         }
 
-        public async Task<bool> UpdateDadosAsync(int id, CreateDadosRequest updateRequest)
+        public async Task<bool> UpdateAsync(int id, UpdateDadosDto dto)
         {
-            var dados = await _repositoryDados.GetByIdAsync(id);
-            if (dados == null)
-                return false;
+            var dados = await _dadosRepository.GetByIdAsync(id);
+            if (dados == null) return false;
 
-            dados.CPF = updateRequest.CPF;
-            dados.Telefone = updateRequest.Telefone;
-            dados.Email = updateRequest.Email;
-            dados.Senha = updateRequest.Senha;
-            dados.Nome = updateRequest.Nome;
+            dados.CPF = dto.CPF;
+            dados.Telefone = dto.Telefone;
+            dados.Email = dto.Email;
+            dados.Senha = dto.Senha;
+            dados.Nome = dto.Nome;
 
-            await _repositoryDados.UpdateAsync(dados);
-
+            await _dadosRepository.UpdateAsync(dados);
             return true;
         }
 
-
-
-        public async Task<bool> DeleteDadosAsync(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
-            var dados = await _repositoryDados.GetByIdAsync(id);
+            var dados = await _dadosRepository.GetByIdAsync(id);
+            if (dados == null) return false;
 
-            if (dados == null)
-            {
-                return false;
-            }
-
-            _repositoryDados.DeleteAsync(dados);
+            await _dadosRepository.DeleteAsync(dados);
             return true;
         }
     }

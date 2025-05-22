@@ -3,9 +3,9 @@ using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Application.Validador
 {
-    public class CreateDadosRequestValidator : AbstractValidator<CreateDadosRequest>
+    public class CreateDadosDtoValidator : AbstractValidator<CreateDadosDto>
     {
-        public CreateDadosRequestValidator()
+        public CreateDadosDtoValidator()
         {
             RuleFor(d => d.CPF)
                 .NotEmpty()

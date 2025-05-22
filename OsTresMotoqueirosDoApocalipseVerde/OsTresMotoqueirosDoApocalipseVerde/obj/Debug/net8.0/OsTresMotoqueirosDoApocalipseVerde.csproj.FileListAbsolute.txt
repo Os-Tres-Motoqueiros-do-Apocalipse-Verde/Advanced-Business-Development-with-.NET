@@ -488,3 +488,4 @@ D:\2TDSPM\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseV
 D:\2TDSPM\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\OsTresMotoqueirosDoApocalipseVerde.pdb
 D:\2TDSPM\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\OsTresMotoqueirosDoApocalipseVerde.genruntimeconfig.cache
 D:\2TDSPM\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\ref\OsTresMotoqueirosDoApocalipseVerde.dll
+C:\Users\L14\Documents\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

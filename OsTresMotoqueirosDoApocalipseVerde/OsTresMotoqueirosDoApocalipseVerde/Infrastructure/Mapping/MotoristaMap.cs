@@ -1,10 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.EntityFrameworkCore;
-using OsTresMotoqueirosDoApocalipseVerde.Domain.Entity;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
 {
-    public class MotoristaMapping : IEntityTypeConfiguration<Motorista>
+    public class MotoristaMap : IEntityTypeConfiguration<Motorista>
     {
         public void Configure(EntityTypeBuilder<Motorista> builder)
         {
@@ -12,23 +12,20 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
                 .ToTable("MOTORISTA");
 
             builder
-                .HasKey(m => m.IdMotorista);
+                .HasKey(m => m.Id);
 
             builder
-                .Property(m => m.IdMotorista)
-                .HasColumnName("ID_MOTORISTA");
+                .Property(m => m.Id);
 
 
             builder
                 .Property(m => m.Plano)
-                .HasColumnName("PLANO")
                 .HasConversion<string>()
                 .IsRequired()
                 .HasMaxLength(20);
 
             builder
                 .Property(m => m.DadosId)
-                .HasColumnName("ID_DADOS")
                 .IsRequired();
 
             builder
@@ -36,6 +33,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
                 .WithMany()
                 .HasForeignKey(m => m.DadosId)
                 .OnDelete(DeleteBehavior.Restrict);
+
         }
     }
 }

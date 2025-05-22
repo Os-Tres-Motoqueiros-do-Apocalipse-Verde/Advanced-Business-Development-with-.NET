@@ -3,11 +3,7 @@
     "",
     "\\OsTresMotoqueirosDoApocalipseVerde",
     "\\OsTresMotoqueirosDoApocalipseVerde\\Application",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCases",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Controllers",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Domain",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entity",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Infrastructure",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Infrastructure\\Context",
     "\\OsTresMotoqueirosDoApocalipseVerde\\Infrastructure\\Mapping",
     "\\OsTresMotoqueirosDoApocalipseVerde\\Infrastructure\\Persistence"
   ],

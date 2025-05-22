@@ -1,81 +1,99 @@
-﻿using Microsoft.EntityFrameworkCore;
-using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
+﻿using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
-using OsTresMotoqueirosDoApocalipseVerde.Domain.Entity;
+using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
+using OsTresMotoqueirosDoApocalipseVerde.Domain.Enum;
 using OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Persistence;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCases
 {
     public class MotoristaUseCase
     {
-        private readonly IRepository<Motorista> _repositoryMotorista;
+        private readonly IRepository<Motorista> _motoristaRepository;
+        private readonly IRepository<Dados> _dadosRepository;
 
-        private readonly IRepository<Dados> _repositoryDados;
-
-        public MotoristaUseCase(IRepository<Motorista> repositoryMotorista, IRepository<Dados> repositoryDados)
+        public MotoristaUseCase(IRepository<Motorista> motoristaRepository, IRepository<Dados> dadosRepository)
         {
-            _repositoryMotorista = repositoryMotorista;
-            _repositoryDados = repositoryDados;
+            _motoristaRepository = motoristaRepository;
+            _dadosRepository = dadosRepository;
         }
 
-        public async Task<CreateMotoristaResponse> CreateMotorista(CreateMotoristaRequest createMotoristaRequest)
+        public async Task<ReadMotoristaDto> CreateAsync(CreateMotoristaDto dto)
         {
-            var dados = await _repositoryDados.GetByIdAsync(createMotoristaRequest.DadosId);
+            Dados dados = null;
 
-            var motorista = new Motorista(createMotoristaRequest.Plano, dados.Id);
-            motorista.AtribuirDados(dados.CPF, dados.Telefone, dados.Email, dados.Senha, dados.Nome);
-
-
-            await _repositoryMotorista.AddAsync(motorista);
-
-            return new CreateMotoristaResponse { IdMotorista = motorista.IdMotorista, Plano = motorista.Plano, DadosId = motorista.DadosId };
-        }
-
-        public async Task<List<CreateMotoristaResponse>> GetAllMotoristaAsync()
-        {
-            var motoristas = await _repositoryMotorista.GetAllAsync();
-
-            return motoristas.Select(b => new CreateMotoristaResponse
+            if (dto.Dados != null)
             {
-                IdMotorista = b.IdMotorista,
-                Plano = b.Plano,
-                DadosId = b.DadosId
-            }).ToList();
+                dados = new Dados
+                {
+                    CPF = dto.Dados.CPF,
+                    Telefone = dto.Dados.Telefone,
+                    Email = dto.Dados.Email,
+                    Senha = dto.Dados.Senha,
+                    Nome = dto.Dados.Nome
+                };
+
+                await _dadosRepository.AddAsync(dados);
+            }
+
+            var motorista = new Motorista
+            {
+                Plano = (Plano)dto.Plano,
+                Dados = dados,
+                DadosId = dados?.Id
+            };
+
+            await _motoristaRepository.AddAsync(motorista);
+
+            return new ReadMotoristaDto
+            {
+                IdMotorista = motorista.Id,
+                Plano = motorista.Plano,
+                DadosId = motorista.DadosId
+            };
         }
 
-        public async Task<CreateMotoristaResponse> GetByIdAsync(int IdMotorista)
+        public async Task<IEnumerable<ReadMotoristaDto>> GetAllAsync()
         {
-            var motorista = _repositoryMotorista.GetByIdAsync(IdMotorista).Result;
-
-            return new CreateMotoristaResponse { IdMotorista = motorista.IdMotorista, Plano = motorista.Plano, DadosId = motorista.DadosId };
+            var motoristas = await _motoristaRepository.GetAllAsync();
+            return motoristas.Select(m => new ReadMotoristaDto
+            {
+                IdMotorista = m.Id,
+                Plano = m.Plano,
+                DadosId = m.DadosId
+            });
         }
 
-        public async Task<bool> UpdateMotoristaAsync(int id, CreateMotoristaRequest updateRequest)
+        public async Task<ReadMotoristaDto> GetByIdAsync(int id)
         {
-            var motorista = await _repositoryMotorista.GetByIdAsync(id);
-            if (motorista == null)
-                return false;
+            var motorista = await _motoristaRepository.GetByIdAsync(id);
+            if (motorista == null) return null;
 
-            motorista.Plano = updateRequest.Plano;
-            motorista.DadosId = updateRequest.DadosId;
+            return new ReadMotoristaDto
+            {
+                IdMotorista = motorista.Id,
+                Plano = motorista.Plano,
+                DadosId = motorista.DadosId
+            };
+        }
 
-            await _repositoryMotorista.UpdateAsync(motorista);
+        public async Task<bool> UpdateAsync(int id, UpdateMotoristaDto dto)
+        {
+            var motorista = await _motoristaRepository.GetByIdAsync(id);
+            if (motorista == null) return false;
 
+            motorista.Plano = (Plano)dto.Plano;
+            motorista.DadosId = dto.DadosId;
+
+            await _motoristaRepository.UpdateAsync(motorista);
             return true;
         }
 
-
-
-        public async Task<bool> DeleteMotoristaAsync(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
-            var motorista = await _repositoryMotorista.GetByIdAsync(id);
+            var motorista = await _motoristaRepository.GetByIdAsync(id);
+            if (motorista == null) return false;
 
-            if (motorista == null)
-            {
-                return false;
-            }
-
-            _repositoryMotorista.DeleteAsync(motorista);
+            await _motoristaRepository.DeleteAsync(motorista);
             return true;
         }
     }
