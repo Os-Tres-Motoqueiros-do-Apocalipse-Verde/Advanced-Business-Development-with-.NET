@@ -1,15 +1,11 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Os tres motoqueiros do apocalipse verde",
-    "description": "Api para o challeng, responsaveis são o grupo Os Tres Motoqueiros Do Apocalipse Verde",
-    "contact": {
-      "name": "Luiz Henrique Neri",
-      "email": "luizhneri12@gmail.com"
-    }
+    "title": "OsTresMotoqueirosDoApocalipseVerde",
+    "version": "1.0"
   },
   "paths": {
-    "/api/Dados": {
+    "/Dados": {
       "post": {
         "tags": [
           "Dados"
@@ -45,12 +41,38 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReadDadosDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReadDadosDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReadDadosDto"
+                  }
+                }
+              }
+            }
           }
         }
       }
     },
-    "/api/Dados/{id}": {
+    "/Dados/{id}": {
       "get": {
         "tags": [
           "Dados"
@@ -134,7 +156,7 @@
         }
       }
     },
-    "/api/Motorista": {
+    "/Motorista": {
       "post": {
         "tags": [
           "Motorista"
@@ -170,12 +192,38 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReadMotoristaDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReadMotoristaDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReadMotoristaDto"
+                  }
+                }
+              }
+            }
           }
         }
       }
     },
-    "/api/Motorista/{id}": {
+    "/Motorista/{id}": {
       "get": {
         "tags": [
           "Motorista"
@@ -289,6 +337,9 @@
         "additionalProperties": false
       },
       "CreateMotoristaDto": {
+        "required": [
+          "plano"
+        ],
         "type": "object",
         "properties": {
           "plano": {
@@ -298,19 +349,63 @@
             "type": "integer",
             "format": "int32",
             "nullable": true
-          },
-          "dados": {
-            "$ref": "#/components/schemas/CreateDadosDto"
           }
         },
         "additionalProperties": false
       },
       "Plano": {
         "enum": [
-          "MottuCompleto",
-          "MottuConquiste"
+          0,
+          1
         ],
-        "type": "string"
+        "type": "integer",
+        "format": "int32"
+      },
+      "ReadDadosDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cpf": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "senha": {
+            "type": "string",
+            "nullable": true
+          },
+          "nome": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReadMotoristaDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "plano": {
+            "$ref": "#/components/schemas/Plano"
+          },
+          "dados": {
+            "$ref": "#/components/schemas/ReadDadosDto"
+          }
+        },
+        "additionalProperties": false
       },
       "UpdateDadosDto": {
         "type": "object",
@@ -339,6 +434,9 @@
         "additionalProperties": false
       },
       "UpdateMotoristaDto": {
+        "required": [
+          "plano"
+        ],
         "type": "object",
         "properties": {
           "plano": {
@@ -346,8 +444,7 @@
           },
           "dadosId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           }
         },
         "additionalProperties": false

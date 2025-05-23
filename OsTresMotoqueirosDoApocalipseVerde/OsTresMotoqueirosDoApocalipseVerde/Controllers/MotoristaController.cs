@@ -1,54 +1,90 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
-using OsTresMotoqueirosDoApocalipseVerde.Application.UseCases;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs;
+using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
+using OsTresMotoqueirosDoApocalipseVerde.Infraestructure;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class MotoristaController : ControllerBase
     {
-        private readonly MotoristaUseCase _useCase;
+        private AppDbContext _context;
+        private IMapper _mapper;
 
-        public MotoristaController(MotoristaUseCase useCase)
+        public MotoristaController(AppDbContext context, IMapper mapper)
         {
-            _useCase = useCase;
+            _context = context;
+            _mapper = mapper;
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateMotoristaDto dto)
+        public IActionResult AdicionarMotorista([FromBody] CreateMotoristaDto motoristaDto)
         {
-            var result = await _useCase.CreateAsync(dto);
-            return CreatedAtAction(nameof(GetById), new { id = result.IdMotorista }, result);
+            Motorista motorista = _mapper.Map<Motorista>(motoristaDto);
+
+            _context.Motorista.Add(motorista);
+            _context.SaveChanges();
+
+            _context.Entry(motorista).Reference(m => m.Dados).Load();
+
+            var readMotoristaDto = _mapper.Map<ReadMotoristaDto>(motorista);
+            return CreatedAtAction(nameof(RecuperarMotoristaPorId), new { Id = motorista.Id }, readMotoristaDto);
+
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public IEnumerable<ReadMotoristaDto> RecuperarMotoristas()
         {
-            var result = await _useCase.GetAllAsync();
-            return Ok(result);
+            var motoristas = _context.Motorista
+                .Include(m => m.Dados) 
+                .ToList();
+
+            return _mapper.Map<List<ReadMotoristaDto>>(motoristas);
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public IActionResult RecuperarMotoristaPorId(int id)
         {
-            var result = await _useCase.GetByIdAsync(id);
-            if (result == null) return NotFound();
-            return Ok(result);
+            var motorista = _context.Motorista
+                .Include(m => m.Dados) 
+                .FirstOrDefault(m => m.Id == id);
+
+            if (motorista == null)
+            {
+                return NotFound();
+            }
+
+            var motoristaDto = _mapper.Map<ReadMotoristaDto>(motorista);
+            return Ok(motoristaDto);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] UpdateMotoristaDto dto)
+        public IActionResult AtualizarMotorista(int id, [FromBody] UpdateMotoristaDto motoristaDto)
         {
-            var success = await _useCase.UpdateAsync(id, dto);
-            return success ? NoContent() : NotFound();
+            Motorista motorista = _context.Motorista.FirstOrDefault(motoristas => motoristas.Id == id);
+            if (motorista == null)
+            {
+                return NotFound();
+            }
+            _mapper.Map(motoristaDto, motorista);
+            _context.SaveChanges();
+            return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public IActionResult DeleteMotorista(int id)
         {
-            var success = await _useCase.DeleteAsync(id);
-            return success ? NoContent() : NotFound();
+            Motorista motorista = _context.Motorista.FirstOrDefault(motorista => motorista.Id == id);
+            if (motorista == null)
+            {
+                return NotFound();
+            }
+            _context.Remove(motorista);
+            _context.SaveChanges();
+            return NoContent();
         }
     }
 }

@@ -2,11 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\OsTresMotoqueirosDoApocalipseVerde",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Application",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Infrastructure\\Context",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Infrastructure\\Mapping",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Infrastructure\\Persistence"
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Migrations"
   ],
-  "SelectedNode": "\\OsTresMotoqueirosDoApocalipseVerde.sln",
+  "SelectedNode": "\\OsTresMotoqueirosDoApocalipseVerde\\obj",
   "PreviewInSolutionExplorer": false
 }

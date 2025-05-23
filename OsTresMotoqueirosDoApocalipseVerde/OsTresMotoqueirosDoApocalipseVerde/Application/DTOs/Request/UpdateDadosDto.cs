@@ -1,4 +1,4 @@
-using OsTresMotoqueirosDoApocalipseVerde.Domain.Entity;
+using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
 using System.ComponentModel.DataAnnotations;
 using System.IO;
 

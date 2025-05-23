@@ -1,11 +1,16 @@
+﻿using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Enum;
 using System.ComponentModel.DataAnnotations;
 
-namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request
+namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs
 {
     public class UpdateMotoristaDto
     {
+        [Required]
+        [EnumDataType(typeof(Plano))]
         public Plano Plano { get; set; }
-        public int? DadosId { get; set; }
+
+        // Foreign key
+        public int DadosId { get; set; }
     }
 }

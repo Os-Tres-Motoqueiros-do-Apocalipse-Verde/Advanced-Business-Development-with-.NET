@@ -1,54 +1,81 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
-using OsTresMotoqueirosDoApocalipseVerde.Application.UseCases;
+using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
+using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
+using OsTresMotoqueirosDoApocalipseVerde.Infraestructure;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class DadosController : ControllerBase
     {
-        private readonly DadosUseCase _useCase;
+        private AppDbContext _context;
+        private IMapper _mapper;
 
-        public DadosController(DadosUseCase useCase)
+        public DadosController(AppDbContext context, IMapper mapper)
         {
-            _useCase = useCase;
+            _context = context;
+            _mapper = mapper;
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateDadosDto dto)
+        public IActionResult AdicionarDados([FromBody] CreateDadosDto dadosDto)
         {
-            var result = await _useCase.CreateAsync(dto);
-            return CreatedAtAction(nameof(GetById), new { id = result.Id }, result);
+            Dados dados = _mapper.Map<Dados>(dadosDto);
+            _context.Dados.Add(dados);
+            _context.SaveChanges();
+
+            var readDadosDto = _mapper.Map<ReadDadosDto>(dados);
+            return CreatedAtAction(nameof(RecuperarDadosPorId), new { Id = dados.Id }, readDadosDto);
+
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public IEnumerable<ReadDadosDto> RecuperarDados()
         {
-            var result = await _useCase.GetAllAsync();
-            return Ok(result);
+            return _mapper.Map<List<ReadDadosDto>>(_context.Dados.ToList());
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public IActionResult RecuperarDadosPorId(int id)
         {
-            var result = await _useCase.GetByIdAsync(id);
-            if (result == null) return NotFound();
-            return Ok(result);
+            Dados dados = _context.Dados.FirstOrDefault(dados => dados.Id == id);
+            if (dados != null)
+            {
+                ReadDadosDto dadosDto = _mapper.Map<ReadDadosDto>(dados);
+                return Ok(dadosDto);
+            }
+            return NotFound();
         }
 
+
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] UpdateDadosDto dto)
+        public IActionResult AtualizarDados(int id, [FromBody] UpdateDadosDto dadosDto)
         {
-            var success = await _useCase.UpdateAsync(id, dto);
-            return success ? NoContent() : NotFound();
+            Dados dados = _context.Dados.FirstOrDefault(dados => dados.Id == id);
+            if (dados == null)
+            {
+                return NotFound();
+            }
+            _mapper.Map(dadosDto, dados);
+            _context.SaveChanges();
+            return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public IActionResult DeleteDados(int id)
         {
-            var success = await _useCase.DeleteAsync(id);
-            return success ? NoContent() : NotFound();
+            Dados dados = _context.Dados.FirstOrDefault(dados => dados.Id == id);
+            if (dados == null)
+            {
+                return NotFound();
+            }
+            _context.Remove(dados);
+            _context.SaveChanges();
+            return NoContent();
         }
     }
 }

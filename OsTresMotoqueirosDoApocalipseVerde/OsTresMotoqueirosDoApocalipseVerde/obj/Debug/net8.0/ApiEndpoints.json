@@ -1,14 +1,14 @@
 [
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController",
-    "Method": "Create",
-    "RelativePath": "api/Dados",
+    "Method": "AdicionarDados",
+    "RelativePath": "Dados",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
+        "Name": "dadosDto",
         "Type": "OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateDadosDto",
         "IsRequired": true
       }
@@ -17,18 +17,28 @@
   },
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController",
-    "Method": "GetAll",
-    "RelativePath": "api/Dados",
+    "Method": "RecuperarDados",
+    "RelativePath": "Dados",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response.ReadDadosDto, OsTresMotoqueirosDoApocalipseVerde, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController",
-    "Method": "GetById",
-    "RelativePath": "api/Dados/{id}",
+    "Method": "RecuperarDadosPorId",
+    "RelativePath": "Dados/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -43,8 +53,8 @@
   },
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController",
-    "Method": "Update",
-    "RelativePath": "api/Dados/{id}",
+    "Method": "AtualizarDados",
+    "RelativePath": "Dados/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -55,7 +65,7 @@
         "IsRequired": true
       },
       {
-        "Name": "dto",
+        "Name": "dadosDto",
         "Type": "OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.UpdateDadosDto",
         "IsRequired": true
       }
@@ -64,8 +74,8 @@
   },
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController",
-    "Method": "Delete",
-    "RelativePath": "api/Dados/{id}",
+    "Method": "DeleteDados",
+    "RelativePath": "Dados/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -80,15 +90,15 @@
   },
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController",
-    "Method": "Create",
-    "RelativePath": "api/Motorista",
+    "Method": "AdicionarMotorista",
+    "RelativePath": "Motorista",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateMotoristaDto",
+        "Name": "motoristaDto",
+        "Type": "OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.CreateMotoristaDto",
         "IsRequired": true
       }
     ],
@@ -96,18 +106,28 @@
   },
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController",
-    "Method": "GetAll",
-    "RelativePath": "api/Motorista",
+    "Method": "RecuperarMotoristas",
+    "RelativePath": "Motorista",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.ReadMotoristaDto, OsTresMotoqueirosDoApocalipseVerde, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController",
-    "Method": "GetById",
-    "RelativePath": "api/Motorista/{id}",
+    "Method": "RecuperarMotoristaPorId",
+    "RelativePath": "Motorista/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -122,8 +142,8 @@
   },
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController",
-    "Method": "Update",
-    "RelativePath": "api/Motorista/{id}",
+    "Method": "AtualizarMotorista",
+    "RelativePath": "Motorista/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -134,8 +154,8 @@
         "IsRequired": true
       },
       {
-        "Name": "dto",
-        "Type": "OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.UpdateMotoristaDto",
+        "Name": "motoristaDto",
+        "Type": "OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.UpdateMotoristaDto",
         "IsRequired": true
       }
     ],
@@ -143,8 +163,8 @@
   },
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController",
-    "Method": "Delete",
-    "RelativePath": "api/Motorista/{id}",
+    "Method": "DeleteMotorista",
+    "RelativePath": "Motorista/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
