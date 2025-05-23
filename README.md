@@ -1,7 +1,7 @@
 <div align="center">
 
 # Entrega de Advanced Business Development with .NET
-## Os Tres Motoqueiros do Apocalipse Verde
+## Os Tres Boqueteiros do Apocalipse Verde
 
 </div>
 
