@@ -8,7 +8,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.Profiles
     {
         public MotoristaProfile()
         {
-            CreateMap<CreateMotoristaDto, Motorista>();
+            CreateMap<CreateMotoristaDto, Motorista>()
+                 .ForMember(dest => dest.Id, opt => opt.Ignore()); ;
 
             CreateMap<Motorista, ReadMotoristaDto>()
                 .ForMember(dest => dest.Dados, opt => opt.MapFrom(src => src.Dados));

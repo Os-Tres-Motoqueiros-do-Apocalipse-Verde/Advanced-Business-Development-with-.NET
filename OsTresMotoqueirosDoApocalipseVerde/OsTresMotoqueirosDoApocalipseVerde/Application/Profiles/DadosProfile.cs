@@ -11,7 +11,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.Profiles
     {
         public DadosProfile()
         {
-            CreateMap<CreateDadosDto, Dados>();
+            CreateMap<CreateDadosDto, Dados>()
+                 .ForMember(dest => dest.Id, opt => opt.Ignore()); ;
             CreateMap<Dados, ReadDadosDto>();
             CreateMap<UpdateDadosDto, Dados>();
 

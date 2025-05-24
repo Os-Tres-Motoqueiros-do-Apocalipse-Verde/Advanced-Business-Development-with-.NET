@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
@@ -12,8 +11,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
     [Route("[controller]")]
     public class DadosController : ControllerBase
     {
-        private AppDbContext _context;
-        private IMapper _mapper;
+        private readonly AppDbContext _context;
+        private readonly IMapper _mapper;
 
         public DadosController(AppDbContext context, IMapper mapper)
         {
@@ -24,13 +23,13 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         [HttpPost]
         public IActionResult AdicionarDados([FromBody] CreateDadosDto dadosDto)
         {
-            Dados dados = _mapper.Map<Dados>(dadosDto);
+            var dados = _mapper.Map<Dados>(dadosDto);
+
             _context.Dados.Add(dados);
             _context.SaveChanges();
 
             var readDadosDto = _mapper.Map<ReadDadosDto>(dados);
             return CreatedAtAction(nameof(RecuperarDadosPorId), new { Id = dados.Id }, readDadosDto);
-
         }
 
         [HttpGet]
@@ -42,20 +41,19 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         [HttpGet("{id}")]
         public IActionResult RecuperarDadosPorId(int id)
         {
-            Dados dados = _context.Dados.FirstOrDefault(dados => dados.Id == id);
+            var dados = _context.Dados.FirstOrDefault(d => d.Id == id);
             if (dados != null)
             {
-                ReadDadosDto dadosDto = _mapper.Map<ReadDadosDto>(dados);
+                var dadosDto = _mapper.Map<ReadDadosDto>(dados);
                 return Ok(dadosDto);
             }
             return NotFound();
         }
 
-
         [HttpPut("{id}")]
         public IActionResult AtualizarDados(int id, [FromBody] UpdateDadosDto dadosDto)
         {
-            Dados dados = _context.Dados.FirstOrDefault(dados => dados.Id == id);
+            var dados = _context.Dados.FirstOrDefault(d => d.Id == id);
             if (dados == null)
             {
                 return NotFound();
@@ -68,7 +66,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteDados(int id)
         {
-            Dados dados = _context.Dados.FirstOrDefault(dados => dados.Id == id);
+            var dados = _context.Dados.FirstOrDefault(d => d.Id == id);
             if (dados == null)
             {
                 return NotFound();
