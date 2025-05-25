@@ -13,7 +13,10 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [],
+    "Tags": [
+      "CRUD Modelo"
+    ]
   },
   {
     "ContainingType": "ModeloController",
@@ -33,6 +36,9 @@
         ],
         "StatusCode": 200
       }
+    ],
+    "Tags": [
+      "CRUD Modelo"
     ]
   },
   {
@@ -49,7 +55,10 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [],
+    "Tags": [
+      "CRUD Modelo"
+    ]
   },
   {
     "ContainingType": "ModeloController",
@@ -65,7 +74,10 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [],
+    "Tags": [
+      "CRUD Modelo"
+    ]
   },
   {
     "ContainingType": "MotoController",
@@ -81,7 +93,10 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [],
+    "Tags": [
+      "CRUD Moto"
+    ]
   },
   {
     "ContainingType": "MotoController",
@@ -101,6 +116,9 @@
         ],
         "StatusCode": 200
       }
+    ],
+    "Tags": [
+      "CRUD Moto"
     ]
   },
   {
@@ -117,7 +135,10 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [],
+    "Tags": [
+      "CRUD Moto"
+    ]
   },
   {
     "ContainingType": "MotoController",
@@ -133,7 +154,10 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [],
+    "Tags": [
+      "CRUD Moto"
+    ]
   },
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController",
@@ -149,7 +173,10 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [],
+    "Tags": [
+      "CRUD Dados"
+    ]
   },
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController",
@@ -169,6 +196,9 @@
         ],
         "StatusCode": 200
       }
+    ],
+    "Tags": [
+      "CRUD Dados"
     ]
   },
   {
@@ -185,7 +215,10 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [],
+    "Tags": [
+      "CRUD Dados"
+    ]
   },
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController",
@@ -206,7 +239,10 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [],
+    "Tags": [
+      "CRUD Dados"
+    ]
   },
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController",
@@ -222,7 +258,10 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [],
+    "Tags": [
+      "CRUD Dados"
+    ]
   },
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController",
@@ -238,7 +277,10 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [],
+    "Tags": [
+      "CRUD Motorista"
+    ]
   },
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController",
@@ -258,6 +300,9 @@
         ],
         "StatusCode": 200
       }
+    ],
+    "Tags": [
+      "CRUD Motorista"
     ]
   },
   {
@@ -274,7 +319,10 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [],
+    "Tags": [
+      "CRUD Motorista"
+    ]
   },
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController",
@@ -295,7 +343,10 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [],
+    "Tags": [
+      "CRUD Motorista"
+    ]
   },
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController",
@@ -311,6 +362,9 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [],
+    "Tags": [
+      "CRUD Motorista"
+    ]
   }
 ]

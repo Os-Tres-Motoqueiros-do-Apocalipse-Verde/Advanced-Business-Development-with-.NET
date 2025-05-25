@@ -4,12 +4,5 @@
         <name>OsTresMotoqueirosDoApocalipseVerde</name>
     </assembly>
     <members>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController.RecuperarModelo">
-            <summary>
-            Get all modelos
-            </summary>
-            <returns>Returnar lista de Modelos</returns>
-            <response code="200">modelos found</response>
-        </member>
     </members>
 </doc>

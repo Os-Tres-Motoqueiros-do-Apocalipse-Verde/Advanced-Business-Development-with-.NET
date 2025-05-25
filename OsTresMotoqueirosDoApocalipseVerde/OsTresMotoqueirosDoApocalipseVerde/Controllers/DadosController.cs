@@ -9,7 +9,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    [Tags("CRUD Modelo")]
+    [Tags("CRUD Dados")]
     public class DadosController : ControllerBase
     {
         private readonly AppDbContext _context;

@@ -8,6 +8,7 @@ using OsTresMotoqueirosDoApocalipseVerde.Infraestructure;
 
 [ApiController]
 [Route("api/[controller]")]
+[Tags("CRUD Moto")]
 public class MotoController : ControllerBase
 {
     private readonly AppDbContext _context;

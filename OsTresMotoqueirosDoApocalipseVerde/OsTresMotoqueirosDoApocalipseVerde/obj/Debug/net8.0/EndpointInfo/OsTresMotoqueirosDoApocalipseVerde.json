@@ -8,7 +8,7 @@
     "/Dados": {
       "post": {
         "tags": [
-          "Dados"
+          "CRUD Dados"
         ],
         "requestBody": {
           "content": {
@@ -37,7 +37,7 @@
       },
       "get": {
         "tags": [
-          "Dados"
+          "CRUD Dados"
         ],
         "responses": {
           "200": {
@@ -75,7 +75,7 @@
     "/Dados/{id}": {
       "get": {
         "tags": [
-          "Dados"
+          "CRUD Dados"
         ],
         "parameters": [
           {
@@ -96,7 +96,7 @@
       },
       "put": {
         "tags": [
-          "Dados"
+          "CRUD Dados"
         ],
         "parameters": [
           {
@@ -136,7 +136,7 @@
       },
       "delete": {
         "tags": [
-          "Dados"
+          "CRUD Dados"
         ],
         "parameters": [
           {
@@ -159,7 +159,7 @@
     "/api/Modelo": {
       "post": {
         "tags": [
-          "Modelo"
+          "CRUD Modelo"
         ],
         "requestBody": {
           "content": {
@@ -188,7 +188,7 @@
       },
       "get": {
         "tags": [
-          "Modelo"
+          "CRUD Modelo"
         ],
         "responses": {
           "200": {
@@ -226,7 +226,7 @@
     "/api/Modelo/{id}": {
       "get": {
         "tags": [
-          "Modelo"
+          "CRUD Modelo"
         ],
         "parameters": [
           {
@@ -247,7 +247,7 @@
       },
       "delete": {
         "tags": [
-          "Modelo"
+          "CRUD Modelo"
         ],
         "parameters": [
           {
@@ -270,7 +270,7 @@
     "/api/Moto": {
       "post": {
         "tags": [
-          "Moto"
+          "CRUD Moto"
         ],
         "requestBody": {
           "content": {
@@ -299,7 +299,7 @@
       },
       "get": {
         "tags": [
-          "Moto"
+          "CRUD Moto"
         ],
         "responses": {
           "200": {
@@ -337,7 +337,7 @@
     "/api/Moto/{id}": {
       "get": {
         "tags": [
-          "Moto"
+          "CRUD Moto"
         ],
         "parameters": [
           {
@@ -358,7 +358,7 @@
       },
       "delete": {
         "tags": [
-          "Moto"
+          "CRUD Moto"
         ],
         "parameters": [
           {
@@ -381,7 +381,7 @@
     "/Motorista": {
       "post": {
         "tags": [
-          "Motorista"
+          "CRUD Motorista"
         ],
         "requestBody": {
           "content": {
@@ -410,7 +410,7 @@
       },
       "get": {
         "tags": [
-          "Motorista"
+          "CRUD Motorista"
         ],
         "responses": {
           "200": {
@@ -448,7 +448,7 @@
     "/Motorista/{id}": {
       "get": {
         "tags": [
-          "Motorista"
+          "CRUD Motorista"
         ],
         "parameters": [
           {
@@ -469,7 +469,7 @@
       },
       "put": {
         "tags": [
-          "Motorista"
+          "CRUD Motorista"
         ],
         "parameters": [
           {
@@ -509,7 +509,7 @@
       },
       "delete": {
         "tags": [
-          "Motorista"
+          "CRUD Motorista"
         ],
         "parameters": [
           {

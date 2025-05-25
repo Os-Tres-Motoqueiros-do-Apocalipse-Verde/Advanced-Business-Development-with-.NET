@@ -9,6 +9,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Tags("CRUD Motorista")]
     public class MotoristaController : ControllerBase
     {
         private AppDbContext _context;

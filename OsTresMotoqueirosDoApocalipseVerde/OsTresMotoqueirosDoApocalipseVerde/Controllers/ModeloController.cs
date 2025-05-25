@@ -7,6 +7,7 @@ using OsTresMotoqueirosDoApocalipseVerde.Infraestructure;
 
 [ApiController]
 [Route("api/[controller]")]
+[Tags("CRUD Modelo")]
 public class ModeloController : ControllerBase
 {
     private readonly AppDbContext _context;
