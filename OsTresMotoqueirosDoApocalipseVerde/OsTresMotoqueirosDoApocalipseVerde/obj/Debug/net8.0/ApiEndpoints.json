@@ -1,14 +1,150 @@
 [
   {
+    "ContainingType": "ModeloController",
+    "Method": "Create",
+    "RelativePath": "api/Modelo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateModeloDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModeloController",
+    "Method": "GetAll",
+    "RelativePath": "api/Modelo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ReadModeloDto, OsTresMotoqueirosDoApocalipseVerde, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ModeloController",
+    "Method": "GetById",
+    "RelativePath": "api/Modelo/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModeloController",
+    "Method": "Delete",
+    "RelativePath": "api/Modelo/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MotoController",
+    "Method": "Create",
+    "RelativePath": "api/Moto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.CreateMotoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MotoController",
+    "Method": "GetAll",
+    "RelativePath": "api/Moto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response.ReadMotoDto, OsTresMotoqueirosDoApocalipseVerde, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MotoController",
+    "Method": "GetById",
+    "RelativePath": "api/Moto/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MotoController",
+    "Method": "Delete",
+    "RelativePath": "api/Moto/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController",
-    "Method": "AdicionarDados",
+    "Method": "Create",
     "RelativePath": "Dados",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dadosDto",
+        "Name": "dadosdto",
         "Type": "OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateDadosDto",
         "IsRequired": true
       }
@@ -17,7 +153,7 @@
   },
   {
     "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController",
-    "Method": "RecuperarDados",
+    "Method": "RecuperarModelo",
     "RelativePath": "Dados",
     "HttpMethod": "GET",
     "IsController": true,
@@ -25,7 +161,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response.ReadDadosDto, OsTresMotoqueirosDoApocalipseVerde, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ReadModeloDto, OsTresMotoqueirosDoApocalipseVerde, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

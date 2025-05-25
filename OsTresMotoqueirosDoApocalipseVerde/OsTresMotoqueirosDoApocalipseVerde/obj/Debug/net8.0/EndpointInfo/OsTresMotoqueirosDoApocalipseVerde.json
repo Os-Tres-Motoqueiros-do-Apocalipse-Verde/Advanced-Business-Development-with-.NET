@@ -47,7 +47,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ReadDadosDto"
+                    "$ref": "#/components/schemas/ReadModeloDto"
                   }
                 }
               },
@@ -55,7 +55,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ReadDadosDto"
+                    "$ref": "#/components/schemas/ReadModeloDto"
                   }
                 }
               },
@@ -63,7 +63,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ReadDadosDto"
+                    "$ref": "#/components/schemas/ReadModeloDto"
                   }
                 }
               }
@@ -137,6 +137,228 @@
       "delete": {
         "tags": [
           "Dados"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Modelo": {
+      "post": {
+        "tags": [
+          "Modelo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateModeloDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateModeloDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateModeloDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Modelo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReadModeloDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReadModeloDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReadModeloDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Modelo/{id}": {
+      "get": {
+        "tags": [
+          "Modelo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Modelo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Moto": {
+      "post": {
+        "tags": [
+          "Moto"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMotoDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMotoDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMotoDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Moto"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReadMotoDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReadMotoDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReadMotoDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Moto/{id}": {
+      "get": {
+        "tags": [
+          "Moto"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Moto"
         ],
         "parameters": [
           {
@@ -336,6 +558,89 @@
         },
         "additionalProperties": false
       },
+      "CreateModeloDto": {
+        "type": "object",
+        "properties": {
+          "nomeModelo": {
+            "type": "string",
+            "nullable": true
+          },
+          "frenagem": {
+            "enum": [
+              "FreioADisco",
+              "FreioATambor",
+              "FreioCombinado",
+              "FreioABS",
+              "FreioHidraulico"
+            ],
+            "type": "string"
+          },
+          "sistemaPartida": {
+            "enum": [
+              "PartidaEletrica",
+              "PartidaPedal",
+              "PartidaHibrida",
+              "PartidaManualComEmbreagem",
+              "PartidaStartStop",
+              "PartidaAutomatica",
+              "PartidaCombustaoAuxiliar"
+            ],
+            "type": "string"
+          },
+          "tanque": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoCombustivel": {
+            "enum": [
+              "Gasolina",
+              "Etanol",
+              "Diesel",
+              "Flex",
+              "Eletrico",
+              "Gás",
+              "Hibrido"
+            ],
+            "type": "string"
+          },
+          "consumo": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateMotoDto": {
+        "type": "object",
+        "properties": {
+          "placa": {
+            "type": "string",
+            "nullable": true
+          },
+          "chassi": {
+            "type": "string",
+            "nullable": true
+          },
+          "condicao": {
+            "type": "string",
+            "nullable": true
+          },
+          "latitude": {
+            "type": "string",
+            "nullable": true
+          },
+          "longitude": {
+            "type": "string",
+            "nullable": true
+          },
+          "modeloId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateMotoristaDto": {
         "required": [
           "plano"
@@ -343,7 +648,11 @@
         "type": "object",
         "properties": {
           "plano": {
-            "$ref": "#/components/schemas/Plano"
+            "enum": [
+              "MottuCompleto",
+              "MottuConquiste"
+            ],
+            "type": "string"
           },
           "dadosId": {
             "type": "integer",
@@ -352,14 +661,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "Plano": {
-        "enum": [
-          0,
-          1
-        ],
-        "type": "integer",
-        "format": "int32"
       },
       "ReadDadosDto": {
         "type": "object",
@@ -391,6 +692,95 @@
         },
         "additionalProperties": false
       },
+      "ReadModeloDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nomeModelo": {
+            "type": "string",
+            "nullable": true
+          },
+          "frenagem": {
+            "enum": [
+              "FreioADisco",
+              "FreioATambor",
+              "FreioCombinado",
+              "FreioABS",
+              "FreioHidraulico"
+            ],
+            "type": "string"
+          },
+          "sistemaPartida": {
+            "enum": [
+              "PartidaEletrica",
+              "PartidaPedal",
+              "PartidaHibrida",
+              "PartidaManualComEmbreagem",
+              "PartidaStartStop",
+              "PartidaAutomatica",
+              "PartidaCombustaoAuxiliar"
+            ],
+            "type": "string"
+          },
+          "tanque": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoCombustivel": {
+            "enum": [
+              "Gasolina",
+              "Etanol",
+              "Diesel",
+              "Flex",
+              "Eletrico",
+              "Gás",
+              "Hibrido"
+            ],
+            "type": "string"
+          },
+          "consumo": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReadMotoDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "placa": {
+            "type": "string",
+            "nullable": true
+          },
+          "chassi": {
+            "type": "string",
+            "nullable": true
+          },
+          "condicao": {
+            "type": "string",
+            "nullable": true
+          },
+          "latitude": {
+            "type": "string",
+            "nullable": true
+          },
+          "longitude": {
+            "type": "string",
+            "nullable": true
+          },
+          "modelo": {
+            "$ref": "#/components/schemas/ReadModeloDto"
+          }
+        },
+        "additionalProperties": false
+      },
       "ReadMotoristaDto": {
         "type": "object",
         "properties": {
@@ -399,7 +789,11 @@
             "format": "int32"
           },
           "plano": {
-            "$ref": "#/components/schemas/Plano"
+            "enum": [
+              "MottuCompleto",
+              "MottuConquiste"
+            ],
+            "type": "string"
           },
           "dados": {
             "$ref": "#/components/schemas/ReadDadosDto"
@@ -440,7 +834,11 @@
         "type": "object",
         "properties": {
           "plano": {
-            "$ref": "#/components/schemas/Plano"
+            "enum": [
+              "MottuCompleto",
+              "MottuConquiste"
+            ],
+            "type": "string"
           },
           "dadosId": {
             "type": "integer",

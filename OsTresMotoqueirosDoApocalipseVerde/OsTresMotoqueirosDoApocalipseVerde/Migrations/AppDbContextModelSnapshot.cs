@@ -22,9 +22,17 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Migrations
 
             OracleModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.HasSequence<int>("DADOS_SEQ");
+            modelBuilder.HasSequence<int>("DADOS_SEQ")
+                .StartsAt(1000L);
 
-            modelBuilder.HasSequence<int>("MOTORISTA_SEQ");
+            modelBuilder.HasSequence<int>("MODELO_SEQ")
+                .StartsAt(1000L);
+
+            modelBuilder.HasSequence<int>("MOTO_SEQ")
+                .StartsAt(1000L);
+
+            modelBuilder.HasSequence<int>("MOTORISTA_SEQ")
+                .StartsAt(1000L);
 
             modelBuilder.Entity("Dados", b =>
                 {
@@ -69,6 +77,101 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Migrations
                     b.ToTable("DADOS", (string)null);
                 });
 
+            modelBuilder.Entity("OsTresMotoqueirosDoApocalipseVerde.Domain.Entities.Modelo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("ID_MODELO")
+                        .HasDefaultValueSql("MODELO_SEQ.NEXTVAL");
+
+                    b.Property<int>("Consumo")
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("CONSUMO");
+
+                    b.Property<string>("Frenagem")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("NVARCHAR2(50)")
+                        .HasColumnName("FRENAGEM");
+
+                    b.Property<string>("NomeModelo")
+                        .IsRequired()
+                        .HasMaxLength(25)
+                        .HasColumnType("NVARCHAR2(25)")
+                        .HasColumnName("NOME_MODELO");
+
+                    b.Property<string>("SistemaPartida")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("NVARCHAR2(100)")
+                        .HasColumnName("SIS_PARTIDA");
+
+                    b.Property<int>("Tanque")
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("TANQUE");
+
+                    b.Property<string>("TipoCombustivel")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("NVARCHAR2(50)")
+                        .HasColumnName("TIPO_COMBUSTIVEL");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MODELO", (string)null);
+                });
+
+            modelBuilder.Entity("OsTresMotoqueirosDoApocalipseVerde.Domain.Entities.Moto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("ID_MOTO")
+                        .HasDefaultValueSql("MOTO_SEQ.NEXTVAL");
+
+                    b.Property<string>("Chassi")
+                        .IsRequired()
+                        .HasMaxLength(17)
+                        .HasColumnType("NVARCHAR2(17)")
+                        .HasColumnName("CHASSI");
+
+                    b.Property<string>("Condicao")
+                        .IsRequired()
+                        .HasMaxLength(8)
+                        .HasColumnType("NVARCHAR2(8)")
+                        .HasColumnName("CONDICAO");
+
+                    b.Property<string>("Latitude")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("NVARCHAR2(5)")
+                        .HasColumnName("LATITUDE");
+
+                    b.Property<string>("Longitude")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("NVARCHAR2(5)")
+                        .HasColumnName("LONGITUDE");
+
+                    b.Property<int?>("ModeloId")
+                        .IsRequired()
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("ID_MODELO");
+
+                    b.Property<string>("Placa")
+                        .IsRequired()
+                        .HasMaxLength(7)
+                        .HasColumnType("NVARCHAR2(7)")
+                        .HasColumnName("PLACA");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ModeloId");
+
+                    b.ToTable("MOTO", (string)null);
+                });
+
             modelBuilder.Entity("OsTresMotoqueirosDoApocalipseVerde.Domain.Entities.Motorista", b =>
                 {
                     b.Property<int>("Id")
@@ -93,6 +196,17 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Migrations
                     b.HasIndex("DadosId");
 
                     b.ToTable("MOTORISTA", (string)null);
+                });
+
+            modelBuilder.Entity("OsTresMotoqueirosDoApocalipseVerde.Domain.Entities.Moto", b =>
+                {
+                    b.HasOne("OsTresMotoqueirosDoApocalipseVerde.Domain.Entities.Modelo", "Modelo")
+                        .WithMany()
+                        .HasForeignKey("ModeloId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Modelo");
                 });
 
             modelBuilder.Entity("OsTresMotoqueirosDoApocalipseVerde.Domain.Entities.Motorista", b =>

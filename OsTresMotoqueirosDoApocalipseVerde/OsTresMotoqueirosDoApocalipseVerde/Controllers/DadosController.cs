@@ -9,6 +9,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Tags("CRUD Modelo")]
     public class DadosController : ControllerBase
     {
         private readonly AppDbContext _context;
@@ -21,9 +22,14 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         }
 
         [HttpPost]
-        public IActionResult AdicionarDados([FromBody] CreateDadosDto dadosDto)
+        public IActionResult Create([FromBody] CreateDadosDto dadosdto)
         {
-            var dados = _mapper.Map<Dados>(dadosDto);
+            var dados = _mapper.Map<Dados>(dadosdto);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
             _context.Dados.Add(dados);
             _context.SaveChanges();
@@ -33,10 +39,13 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<ReadDadosDto> RecuperarDados()
+        public ActionResult<IEnumerable<ReadModeloDto>> RecuperarModelo()
         {
-            return _mapper.Map<List<ReadDadosDto>>(_context.Dados.ToList());
+            var modelos = _context.Modelo.ToList();
+            var modelosDto = _mapper.Map<List<ReadModeloDto>>(modelos);
+            return Ok(modelosDto);
         }
+
 
         [HttpGet("{id}")]
         public IActionResult RecuperarDadosPorId(int id)

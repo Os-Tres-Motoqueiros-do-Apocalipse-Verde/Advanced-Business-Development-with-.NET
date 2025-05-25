@@ -488,7 +488,6 @@ D:\2TDSPM\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseV
 D:\2TDSPM\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\OsTresMotoqueirosDoApocalipseVerde.pdb
 D:\2TDSPM\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\OsTresMotoqueirosDoApocalipseVerde.genruntimeconfig.cache
 D:\2TDSPM\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\ref\OsTresMotoqueirosDoApocalipseVerde.dll
-C:\Users\L14\Documents\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\labsfiap\Downloads\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\bin\Debug\net8.0\OsTresMotoqueirosDoApocalipseVerde.xml
 C:\Users\labsfiap\Downloads\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\OsTresMotoqueirosDoApocalipseVerde.csproj.AssemblyReference.cache
 C:\Users\labsfiap\Downloads\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\OsTresMotoqueirosDoApocalipseVerde.GeneratedMSBuildEditorConfig.editorconfig
@@ -987,3 +986,9 @@ D:\2TDSPM\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseV
 D:\2TDSPM\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\2TDSPM\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\2TDSPM\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\L14\Documents\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\L14\Documents\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\L14\Documents\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\L14\Documents\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\L14\Documents\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\L14\Documents\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
