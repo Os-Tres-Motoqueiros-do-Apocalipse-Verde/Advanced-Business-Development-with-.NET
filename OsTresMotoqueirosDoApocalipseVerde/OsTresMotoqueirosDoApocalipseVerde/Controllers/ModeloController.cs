@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
-using OsTresMotoqueirosDoApocalipseVerde.Infraestructure;
+using OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context;
 
 [ApiController]
 [Route("api/[controller]")]

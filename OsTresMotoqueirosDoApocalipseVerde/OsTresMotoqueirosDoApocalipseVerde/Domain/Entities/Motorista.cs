@@ -8,16 +8,33 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public long Id { get; set; }
 
-        [Required]
-        [EnumDataType(typeof(Plano))]
         public Plano Plano { get; set; }
 
-        // Foreign key
-        [ForeignKey("Dados")]
-        public int? DadosId { get; set; }
+        // Chave estrangeira
+        public long? DadosId { get; set; }
         public virtual Dados Dados { get; set; }
+
+        private Motorista(Plano plano, long? dadosId)
+        {
+            Plano = plano;
+            DadosId = dadosId;
+        }
+
+        public void Atualizar(Plano plano, long? dadosId)
+        {
+            Plano = plano;
+            DadosId = dadosId;
+        }
+
+
+        internal static Motorista Create(Plano plano, long? dadosId)
+        {
+            return new Motorista(plano, dadosId);
+        }
+
+        public Motorista() { }
     }
 
 }

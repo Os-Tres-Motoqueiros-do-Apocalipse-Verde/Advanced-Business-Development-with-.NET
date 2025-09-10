@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
-using OsTresMotoqueirosDoApocalipseVerde.Infraestructure;
+using OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context;
 
 [ApiController]
 [Route("api/[controller]")]

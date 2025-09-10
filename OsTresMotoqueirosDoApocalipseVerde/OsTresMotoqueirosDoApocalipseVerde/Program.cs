@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Enum;
-using OsTresMotoqueirosDoApocalipseVerde.Infraestructure;
+using OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context;
 using System.Reflection;
 using System.Text.Json.Serialization;
 

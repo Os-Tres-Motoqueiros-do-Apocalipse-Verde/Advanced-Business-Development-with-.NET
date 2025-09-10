@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\OsTresMotoqueirosDoApocalipseVerde",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping"
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Domain",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities"
   ],
-  "SelectedNode": "\\OsTresMotoqueirosDoApocalipseVerde.sln",
+  "SelectedNode": "\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Moto.cs",
   "PreviewInSolutionExplorer": false
 }

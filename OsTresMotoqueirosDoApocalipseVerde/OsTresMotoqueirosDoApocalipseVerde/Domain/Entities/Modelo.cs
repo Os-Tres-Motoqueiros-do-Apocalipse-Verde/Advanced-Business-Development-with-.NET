@@ -8,23 +8,43 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
-
-        [Required]
+        public long Id { get; set; }
         public string NomeModelo { get; set; }
 
         public Frenagem Frenagem { get; set; }
 
         public SistemaPartida SistemaPartida { get; set; }
-
-        [Required]
         public int Tanque { get; set; }
-
-        [Required]
         public TipoCombustivel TipoCombustivel { get; set; }
-
-        [Required]
         public int Consumo { get; set; }
+
+        private Modelo(string nomeModelo, Frenagem frenagem, SistemaPartida sistemaPartida, int tanque, TipoCombustivel tipoCombustivel, int consumo)
+        {
+            NomeModelo = nomeModelo;
+            Frenagem = frenagem;
+            SistemaPartida = sistemaPartida;
+            Tanque = tanque;
+            TipoCombustivel = tipoCombustivel;
+            Consumo= consumo;
+        }
+
+        public void Atualizar(string nomeModelo, Frenagem frenagem, SistemaPartida sistemaPartida, int tanque, TipoCombustivel tipoCombustivel, int consumo)
+        {
+            NomeModelo = nomeModelo;
+            Frenagem = frenagem;
+            SistemaPartida = sistemaPartida;
+            Tanque = tanque;
+            TipoCombustivel = tipoCombustivel;
+            Consumo = consumo;
+        }
+
+
+        internal static Modelo Create(string nomeModelo, Frenagem frenagem, SistemaPartida sistemaPartida, int tanque, TipoCombustivel tipoCombustivel, int consumo)
+        {
+            return new Modelo(nomeModelo, frenagem, sistemaPartida, tanque, tipoCombustivel, consumo);
+        }
+
+        public Modelo() { }
 
     }
 }

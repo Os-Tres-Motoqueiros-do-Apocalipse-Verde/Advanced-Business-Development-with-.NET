@@ -2,7 +2,7 @@
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
 using System.Data;
 
-namespace OsTresMotoqueirosDoApocalipseVerde.Infraestructure
+namespace OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context
 {
     public class AppDbContext : DbContext
     {

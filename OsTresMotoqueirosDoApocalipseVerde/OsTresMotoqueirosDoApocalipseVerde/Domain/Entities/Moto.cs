@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using NetTopologySuite.Geometries;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
@@ -7,20 +8,60 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public long Id { get; set; }
 
-        [Required]
         public string Placa { get; set; }
-
-        [Required]
         public string Chassi { get; set; }
 
         public string Condicao { get; set; }
-        public string Latitude { get; set; }
-        public string Longitude { get; set; }
+        public Geometry LocalizacaoMoto { get; set; }
 
-        [ForeignKey("Modelo")]
-        public int? ModeloId { get; set; }
+
+        // Chaves estrangeiras
+        public long? MotoristaId { get; set; }
+        public virtual Motorista Motorista { get; set; }
+
+        public long? ModeloId { get; set; }
         public virtual Modelo Modelo { get; set; }
+
+        public long? SetorId { get; set; }
+        public virtual Setor Setor { get; set; }
+
+        public long? SituacaoId { get; set; }
+        public virtual Situacao Situacao { get; set; }
+
+
+
+        private Moto(string placa, string chassi, string condicao, Geometry localizacaoMoto, int? motoristaId, int? modeloId, int? setorId, int? situacaoId)
+        {
+            Placa = placa;
+            Chassi = chassi;
+            Condicao = condicao;
+            LocalizacaoMoto = localizacaoMoto;
+            MotoristaId = motoristaId;
+            ModeloId = modeloId;
+            SetorId = setorId;
+            SituacaoId = situacaoId;
+        }
+
+        public void Atualizar(string placa, string chassi, string condicao, Geometry localizacaoMoto, int? motoristaId, int? modeloId, int? setorId, int? situacaoId)
+        {
+            Placa = placa;
+            Chassi = chassi;
+            Condicao = condicao;
+            LocalizacaoMoto = localizacaoMoto;
+            MotoristaId = motoristaId;
+            ModeloId = modeloId;
+            SetorId = setorId;
+            SituacaoId = situacaoId;
+        }
+
+
+        internal static Moto Create(string placa, string chassi, string condicao, Geometry localizacaoMoto, int? motoristaId, int? modeloId, int? setorId, int? situacaoId)
+        {
+            return new Moto(placa, chassi, condicao, localizacaoMoto, motoristaId, modeloId, setorId, situacaoId);
+        }
+
+        public Moto() { }
     }
 }

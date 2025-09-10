@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
-using OsTresMotoqueirosDoApocalipseVerde.Infraestructure;
+using OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
 {
