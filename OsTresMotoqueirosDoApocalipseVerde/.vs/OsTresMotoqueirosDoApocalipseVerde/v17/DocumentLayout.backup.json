@@ -3,12 +3,224 @@
   "WorkspaceRootPath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\entities\\endereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\domain\\entities\\endereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\infraestructure\\mapping\\regiaomapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\infraestructure\\mapping\\regiaomapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\controllers\\situacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\controllers\\situacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\controllers\\regiaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\controllers\\regiaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\controllers\\enderecocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\controllers\\enderecocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createsituacaoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createsituacaoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createsetorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createsetorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createregiaoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createregiaoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createpatioresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createpatioresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createmotoristaresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createmotoristaresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createmodeloresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createmodeloresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createfuncionarioresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createfuncionarioresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createfilialresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createfilialresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createenderecoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createenderecoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createdadosresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\createdadosresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\createregiaorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\createregiaorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\createmotoristarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\createmotoristarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\createmodelorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\createmodelorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\createdadosrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\createdadosrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\validators\\createsituacaodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\validators\\createsituacaodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\validators\\createsetordtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\validators\\createsetordtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\validators\\createregiaodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\validators\\createregiaodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\validators\\createpatiodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\validators\\createpatiodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\validators\\createmotodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\validators\\createmotodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\validators\\createmodelodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\validators\\createmodelodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\validators\\createfuncionariodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\validators\\createfuncionariodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\validators\\createfilialdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\validators\\createfilialdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\validators\\createdadosdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\validators\\createdadosdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\validators\\createenderecodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\validators\\createenderecodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\entities\\dados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\domain\\entities\\dados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\entities\\endereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\domain\\entities\\endereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\usecase\\situacaousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\usecase\\situacaousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\usecase\\setorusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\usecase\\setorusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\usecase\\regiaousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\usecase\\regiaousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\usecase\\patiousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\usecase\\patiousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\usecase\\modelousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\usecase\\modelousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\usecase\\funcionariousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\usecase\\funcionariousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\usecase\\filialusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\usecase\\filialusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\usecase\\enderecousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\usecase\\enderecousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\usecase\\dadosusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\usecase\\dadosusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\usecase\\motousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\usecase\\motousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\infraestructure\\mapping\\motomapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\infraestructure\\mapping\\motomapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\infraestructure\\mapping\\modelomapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\infraestructure\\mapping\\modelomapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\infraestructure\\mapping\\funcionariomapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\infraestructure\\mapping\\funcionariomapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\infraestructure\\mapping\\filialmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\infraestructure\\mapping\\filialmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\infraestructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\infraestructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\infraestructure\\repositores\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\infraestructure\\repositores\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\infraestructure\\repositores\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\infraestructure\\repositores\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\exceptions\\domainexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\domain\\exceptions\\domainexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\enum\\tipocombustivel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\domain\\enum\\tipocombustivel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\enum\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\domain\\enum\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\enum\\sistemapartida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\domain\\enum\\sistemapartida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\enum\\plano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\domain\\enum\\plano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\enum\\frenagem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\domain\\enum\\frenagem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\enum\\cargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +229,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\entities\\situacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\domain\\entities\\situacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\entities\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\domain\\entities\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\entities\\regiao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\domain\\entities\\regiao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\entities\\patio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\domain\\entities\\patio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\entities\\motorista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,20 +263,8 @@
       "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\domain\\entities\\filial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\entities\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\domain\\entities\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\entities\\patio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\domain\\entities\\patio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\controllers\\modelocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,20 +275,12 @@
       "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\controllers\\dadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\infraestructure\\mapping\\modelomapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\infraestructure\\mapping\\modelomapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\controllers\\motocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\controllers\\motocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\controllers\\motoristacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\controllers\\motoristacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\readmodelodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,40 +291,8 @@
       "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\readmotodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\createmotodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\createmotodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\updatemodelodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\updatemodelodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\createmodelodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\createmodelodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\enum\\frenagem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\domain\\enum\\frenagem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\createdadosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\createdadosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\infraestructure\\mapping\\motoristamap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\infraestructure\\mapping\\motoristamap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\domain\\enum\\tipocombustivel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\domain\\enum\\tipocombustivel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\profiles\\motoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\profiles\\motoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\profiles\\modeloprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\profiles\\modeloprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\readmotoristadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -131,44 +303,8 @@
       "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\response\\readdadosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\profiles\\dadosprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\profiles\\dadosprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\profiles\\motoristaprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\profiles\\motoristaprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\infraestructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\infraestructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\updatemotodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\updatemotodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\infraestructure\\mapping\\motomapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\infraestructure\\mapping\\motomapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\infraestructure\\mapping\\dadosmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\infraestructure\\mapping\\dadosmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\validators\\createdadosdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\validators\\createdadosdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\updatemotoristadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\updatemotoristadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\updatedadosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\updatedadosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|d:\\2tdspx\\luiz\\advanced-business-development-with-.net\\ostresmotoqueirosdoapocalipseverde\\ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\createmotoristadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{855F985A-FA6C-43AA-9D06-0B27BB4566D6}|OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj|solutionrelative:ostresmotoqueirosdoapocalipseverde\\application\\dtos\\request\\createmotoristadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -178,193 +314,581 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Cargo.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Cargo.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Cargo.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Cargo.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Cargo.cs",
+              "DocumentIndex": 0,
+              "Title": "RegiaoMapping.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\RegiaoMapping.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\RegiaoMapping.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\RegiaoMapping.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\RegiaoMapping.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T18:30:00.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Setor.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Setor.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Setor.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Setor.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Setor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T16:49:25.144Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Program.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Program.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Program.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Program.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAIBZwDYAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T18:59:30.335Z",
+              "WhenOpened": "2025-09-12T18:40:53.732Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Dados.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Dados.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Dados.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Dados.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Dados.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "Title": "SituacaoController.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\SituacaoController.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\SituacaoController.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\SituacaoController.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\SituacaoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T18:16:21.118Z",
+              "WhenOpened": "2025-09-12T18:40:12.452Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "RegiaoController.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\RegiaoController.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\RegiaoController.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\RegiaoController.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\RegiaoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:39:52.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EnderecoController.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\EnderecoController.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\EnderecoController.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\EnderecoController.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\EnderecoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:39:29.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateSituacaoResponse.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateSituacaoResponse.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateSituacaoResponse.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateSituacaoResponse.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateSituacaoResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:38:59.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateSetorResponse.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateSetorResponse.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateSetorResponse.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateSetorResponse.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateSetorResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:38:38.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateRegiaoResponse.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateRegiaoResponse.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateRegiaoResponse.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateRegiaoResponse.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateRegiaoResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:38:23.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CreatePatioResponse.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreatePatioResponse.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreatePatioResponse.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreatePatioResponse.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreatePatioResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:38:03.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateMotoristaResponse.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateMotoristaResponse.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateMotoristaResponse.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateMotoristaResponse.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateMotoristaResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:37:41.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateModeloResponse.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateModeloResponse.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateModeloResponse.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateModeloResponse.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateModeloResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:37:18.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateFuncionarioResponse.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateFuncionarioResponse.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateFuncionarioResponse.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateFuncionarioResponse.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateFuncionarioResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:37:01.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CreateFilialResponse.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateFilialResponse.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateFilialResponse.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateFilialResponse.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateFilialResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:36:40.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CreateEnderecoResponse.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateEnderecoResponse.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateEnderecoResponse.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateEnderecoResponse.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateEnderecoResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:36:21.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CreateDadosResponse.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateDadosResponse.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateDadosResponse.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateDadosResponse.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\CreateDadosResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:36:02.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CreateRegiaoRequest.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateRegiaoRequest.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateRegiaoRequest.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateRegiaoRequest.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateRegiaoRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:35:22.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CreateMotoristaRequest.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateMotoristaRequest.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateMotoristaRequest.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateMotoristaRequest.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateMotoristaRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:34:51.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CreateModeloRequest.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateModeloRequest.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateModeloRequest.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateModeloRequest.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateModeloRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:34:29.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CreateDadosRequest.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateDadosRequest.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateDadosRequest.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateDadosRequest.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateDadosRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:33:59.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CreateSituacaoDtoValidator.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateSituacaoDtoValidator.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateSituacaoDtoValidator.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateSituacaoDtoValidator.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateSituacaoDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:26:26.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CreateSetorDtoValidator.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateSetorDtoValidator.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateSetorDtoValidator.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateSetorDtoValidator.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateSetorDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:26:08.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CreateRegiaoDtoValidator.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateRegiaoDtoValidator.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateRegiaoDtoValidator.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateRegiaoDtoValidator.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateRegiaoDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:25:47.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CreatePatioDtoValidator.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreatePatioDtoValidator.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreatePatioDtoValidator.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreatePatioDtoValidator.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreatePatioDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:25:29.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CreateMotoDtoValidator.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateMotoDtoValidator.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateMotoDtoValidator.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateMotoDtoValidator.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateMotoDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:25:06.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CreateModeloDtoValidator.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateModeloDtoValidator.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateModeloDtoValidator.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateModeloDtoValidator.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateModeloDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:24:33.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CreateFuncionarioDtoValidator.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateFuncionarioDtoValidator.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateFuncionarioDtoValidator.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateFuncionarioDtoValidator.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateFuncionarioDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:23:18.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CreateFilialDtoValidator.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateFilialDtoValidator.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateFilialDtoValidator.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateFilialDtoValidator.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateFilialDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:22:56.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CreateEnderecoDtoValidator.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateEnderecoDtoValidator.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateEnderecoDtoValidator.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateEnderecoDtoValidator.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateEnderecoDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T18:22:13.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "PatioUseCase.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\PatioUseCase.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\PatioUseCase.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\PatioUseCase.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\PatioUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T19:53:01.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ModeloUseCase.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\ModeloUseCase.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\ModeloUseCase.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\ModeloUseCase.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\ModeloUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T19:52:37.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "FuncionarioUseCase.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\FuncionarioUseCase.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\FuncionarioUseCase.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\FuncionarioUseCase.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\FuncionarioUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T19:52:26.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CreateDadosDtoValidator.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateDadosDtoValidator.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateDadosDtoValidator.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateDadosDtoValidator.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateDadosDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:02:18.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
               "Title": "Endereco.cs",
               "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Endereco.cs",
               "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Endereco.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Endereco.cs*",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Endereco.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Endereco.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Endereco.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAmwCcAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-24T18:16:25.609Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Filial.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Filial.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Filial.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Filial.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Filial.cs",
+              "DocumentIndex": 28,
+              "Title": "Dados.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Dados.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Dados.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Dados.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Dados.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwCYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T18:16:21.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "RegiaoUseCase.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\RegiaoUseCase.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\RegiaoUseCase.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\RegiaoUseCase.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\RegiaoUseCase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T18:16:26.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T19:54:08.056Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Funcionario.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Funcionario.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Funcionario.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Funcionario.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Funcionario.cs",
+              "DocumentIndex": 31,
+              "Title": "SetorUseCase.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\SetorUseCase.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\SetorUseCase.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\SetorUseCase.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\SetorUseCase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T18:16:27.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T19:54:15.28Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Modelo.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Modelo.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Modelo.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Modelo.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Modelo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T18:52:24.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Moto.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Moto.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Moto.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Moto.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Moto.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAswEAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T18:52:15.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Situacao.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Situacao.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Situacao.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Situacao.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Situacao.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA1wCUAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T16:49:26.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Motorista.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Motorista.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Motorista.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Motorista.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Motorista.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA1wBYAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T18:16:28.062Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Patio.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Patio.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Patio.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Patio.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Patio.cs",
+              "DocumentIndex": 30,
+              "Title": "SituacaoUseCase.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\SituacaoUseCase.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\SituacaoUseCase.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\SituacaoUseCase.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\SituacaoUseCase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T18:52:01.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T19:54:27.936Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ModeloController.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\ModeloController.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\ModeloController.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\ModeloController.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\ModeloController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
+              "DocumentIndex": 36,
+              "Title": "FilialUseCase.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\FilialUseCase.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\FilialUseCase.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\FilialUseCase.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\FilialUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:40:50.153Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T19:52:09.227Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "DadosController.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\DadosController.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\DadosController.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\DadosController.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\DadosController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAmwC0AAAAiAAAAAAAAAA==",
+              "DocumentIndex": 37,
+              "Title": "EnderecoUseCase.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\EnderecoUseCase.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\EnderecoUseCase.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\EnderecoUseCase.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\EnderecoUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T12:47:29.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T19:51:22.879Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 38,
+              "Title": "DadosUseCase.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\DadosUseCase.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\DadosUseCase.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\DadosUseCase.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\DadosUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T19:51:04.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "MotoUseCase.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\MotoUseCase.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\MotoUseCase.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\MotoUseCase.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\MotoUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T19:50:43.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "FuncionarioMapping.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\FuncionarioMapping.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\FuncionarioMapping.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\FuncionarioMapping.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\FuncionarioMapping.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T19:48:56.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "FilialMapping.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\FilialMapping.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\FilialMapping.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\FilialMapping.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\FilialMapping.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T19:48:55.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Repositores\\Repository.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Repositores\\Repository.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Repositores\\Repository.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Repositores\\Repository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T19:45:42.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Repositores\\IRepository.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Repositores\\IRepository.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Repositores\\IRepository.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Repositores\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T19:45:28.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Context\\AppDbContext.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T18:59:28.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
               "Title": "ModeloMapping.cs",
               "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\ModeloMapping.cs",
               "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\ModeloMapping.cs",
@@ -372,168 +896,167 @@
               "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\ModeloMapping.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAUwB8AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:50:31.177Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T19:50:31.177Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "OsTresMotoqueirosDoApocalipseVerde.csproj.user",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj.user",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj.user",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj.user",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj.user",
+              "DocumentIndex": 40,
+              "Title": "MotoMapping.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\MotoMapping.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\MotoMapping.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\MotoMapping.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\MotoMapping.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwCMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T18:52:20.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "DomainException.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Exceptions\\DomainException.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Exceptions\\DomainException.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Exceptions\\DomainException.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Exceptions\\DomainException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
-              "WhenOpened": "2025-09-10T16:42:51.38Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "MotoController.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\MotoController.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\MotoController.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\MotoController.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\MotoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:27:07.026Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T19:44:29.465Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "MotoristaController.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\MotoristaController.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\MotoristaController.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\MotoristaController.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\MotoristaController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAUwAsAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 51,
+              "Title": "Status.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Status.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Status.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Status.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Status.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:40:53.712Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T19:44:21.93Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 52,
+              "Title": "SistemaPartida.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\SistemaPartida.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\SistemaPartida.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\SistemaPartida.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\SistemaPartida.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T19:44:20.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Plano.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Plano.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Plano.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Plano.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Plano.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T19:44:19.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Program.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Program.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Program.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADYAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T18:59:30.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\appsettings.json",
               "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\appsettings.json",
               "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\appsettings.json",
               "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\appsettings.json",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAwAAABdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-25T22:30:39.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-25T22:30:39.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ReadModeloDto.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadModeloDto.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadModeloDto.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadModeloDto.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadModeloDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "DocumentIndex": 58,
+              "Title": "Regiao.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Regiao.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Regiao.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Regiao.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Regiao.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:24:32.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T18:37:10.175Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ReadMotoDto.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadMotoDto.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadMotoDto.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadMotoDto.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadMotoDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 59,
+              "Title": "Patio.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Patio.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Patio.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Patio.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Patio.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAACwAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:23:26.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T18:52:01.759Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "CreateMotoDto.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateMotoDto.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateMotoDto.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateMotoDto.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateMotoDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "DocumentIndex": 60,
+              "Title": "Motorista.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Motorista.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Motorista.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Motorista.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Motorista.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACQAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:13:56.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T18:16:28.062Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "UpdateModeloDto.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\UpdateModeloDto.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\UpdateModeloDto.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\UpdateModeloDto.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\UpdateModeloDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 61,
+              "Title": "Moto.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Moto.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Moto.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Moto.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Moto.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAowDMAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:16:29.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T18:52:15.945Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "CreateModeloDto.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateModeloDto.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateModeloDto.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateModeloDto.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateModeloDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 57,
+              "Title": "Setor.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Setor.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Setor.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Setor.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Setor.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCoAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:14:28.986Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T16:49:25.144Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Frenagem.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Frenagem.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Frenagem.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Frenagem.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Frenagem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 62,
+              "Title": "Modelo.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Modelo.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Modelo.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Modelo.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Modelo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T00:11:22.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T18:52:24.895Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "CreateDadosDto.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateDadosDto.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateDadosDto.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateDadosDto.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateDadosDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:14:18.036Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "MotoristaMap.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\MotoristaMap.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\MotoristaMap.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\MotoristaMap.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\MotoristaMap.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBgAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:51:55.35Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 50,
               "Title": "TipoCombustivel.cs",
               "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\TipoCombustivel.cs",
               "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\TipoCombustivel.cs",
@@ -541,38 +1064,167 @@
               "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\TipoCombustivel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T20:52:45.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T20:52:45.254Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "MotoProfile.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Profiles\\MotoProfile.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Profiles\\MotoProfile.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Profiles\\MotoProfile.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Profiles\\MotoProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 63,
+              "Title": "Funcionario.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Funcionario.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Funcionario.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Funcionario.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Funcionario.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA5wB0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:21:38.908Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T18:16:27.204Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ModeloProfile.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Profiles\\ModeloProfile.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Profiles\\ModeloProfile.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Profiles\\ModeloProfile.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Profiles\\ModeloProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 64,
+              "Title": "Filial.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Filial.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Filial.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Filial.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Filial.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwBMAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:21:46.668Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T18:16:26.49Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 56,
+              "Title": "Situacao.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Situacao.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Situacao.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Situacao.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities\\Situacao.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wCUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T16:49:26.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Cargo.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Cargo.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Cargo.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Cargo.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Cargo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T18:30:00.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Frenagem.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Frenagem.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Frenagem.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Frenagem.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Domain\\Enum\\Frenagem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T00:11:22.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "ModeloController.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\ModeloController.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\ModeloController.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\ModeloController.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\ModeloController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:40:50.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "DadosController.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\DadosController.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\DadosController.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\DadosController.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\DadosController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAmwC0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T12:47:29.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "OsTresMotoqueirosDoApocalipseVerde.csproj.user",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj.user",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj.user",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj.user",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj.user",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
+              "WhenOpened": "2025-09-10T16:42:51.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "MotoController.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\MotoController.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\MotoController.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\MotoController.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\MotoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:27:07.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "MotoristaController.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\MotoristaController.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\MotoristaController.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Controllers\\MotoristaController.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Controllers\\MotoristaController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAUwAsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:40:53.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "ReadModeloDto.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadModeloDto.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadModeloDto.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadModeloDto.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadModeloDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:24:32.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "ReadMotoDto.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadMotoDto.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadMotoDto.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadMotoDto.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadMotoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:23:26.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "MotoristaMap.cs",
+              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\MotoristaMap.cs",
+              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\MotoristaMap.cs",
+              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\MotoristaMap.cs",
+              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\MotoristaMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T19:51:55.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
               "Title": "ReadMotoristaDto.cs",
               "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadMotoristaDto.cs",
               "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadMotoristaDto.cs",
@@ -580,12 +1232,11 @@
               "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadMotoristaDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:23:17.644Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T19:23:17.644Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 74,
               "Title": "ReadDadosDto.cs",
               "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadDadosDto.cs",
               "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadDadosDto.cs",
@@ -593,77 +1244,11 @@
               "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response\\ReadDadosDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:24:31.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T19:24:31.707Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "DadosProfile.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Profiles\\DadosProfile.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Profiles\\DadosProfile.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Profiles\\DadosProfile.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Profiles\\DadosProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:19:23.49Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "MotoristaProfile.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Profiles\\MotoristaProfile.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Profiles\\MotoristaProfile.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Profiles\\MotoristaProfile.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Profiles\\MotoristaProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:19:18.138Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\AppDbContext.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\AppDbContext.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T18:59:28.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "UpdateMotoDto.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\UpdateMotoDto.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\UpdateMotoDto.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\UpdateMotoDto.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\UpdateMotoDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:16:46.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "MotoMapping.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\MotoMapping.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\MotoMapping.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\MotoMapping.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\MotoMapping.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwCMAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T18:52:20.826Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 75,
               "Title": "DadosMap.cs",
               "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\DadosMap.cs",
               "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\DadosMap.cs",
@@ -671,60 +1256,7 @@
               "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping\\DadosMap.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAQwDYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:59:20.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "CreateDadosDtoValidator.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateDadosDtoValidator.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateDadosDtoValidator.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateDadosDtoValidator.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateDadosDtoValidator.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAUwA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:02:18.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "UpdateMotoristaDto.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\UpdateMotoristaDto.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\UpdateMotoristaDto.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\UpdateMotoristaDto.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\UpdateMotoristaDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:16:59.86Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "UpdateDadosDto.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\UpdateDadosDto.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\UpdateDadosDto.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\UpdateDadosDto.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\UpdateDadosDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:16:49.298Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "CreateMotoristaDto.cs",
-              "DocumentMoniker": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateMotoristaDto.cs",
-              "RelativeDocumentMoniker": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateMotoristaDto.cs",
-              "ToolTip": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateMotoristaDto.cs",
-              "RelativeToolTip": "OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request\\CreateMotoristaDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:15:07.161Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T19:59:20.606Z"
             }
           ]
         }

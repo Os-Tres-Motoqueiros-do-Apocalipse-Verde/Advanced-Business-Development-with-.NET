@@ -1,6 +1,6 @@
 ﻿namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response
 {
-    public class CreateFilialResponse
+    public class CreateModeloResponse
     {
     }
 }

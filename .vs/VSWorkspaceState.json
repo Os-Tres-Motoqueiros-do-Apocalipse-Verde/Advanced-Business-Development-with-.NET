@@ -1,8 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\OsTresMotoqueirosDoApocalipseVerde"
+    "\\OsTresMotoqueirosDoApocalipseVerde",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities"
   ],
-  "SelectedNode": "\\OsTresMotoqueirosDoApocalipseVerde",
+  "SelectedNode": "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\Validators\\CreateEnderecoDtoValidator.cs",
   "PreviewInSolutionExplorer": false
 }
