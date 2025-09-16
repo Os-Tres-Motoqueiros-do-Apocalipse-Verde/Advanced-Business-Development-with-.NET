@@ -4,7 +4,7 @@ using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
 {
-    public class ModeloMap : IEntityTypeConfiguration<Modelo>
+    public class ModeloMapping : IEntityTypeConfiguration<Modelo>
     {
         public void Configure(EntityTypeBuilder<Modelo> builder)
         {
@@ -55,6 +55,12 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
                 .Property(d => d.Consumo)
                 .HasColumnName("CONSUMO")
                 .IsRequired();
+
+            builder
+                .HasOne(e => e.Moto)
+                .WithOne(f => f.Modelo)
+                .HasForeignKey<Moto>(f => f.ModeloId)
+                .OnDelete(DeleteBehavior.Restrict);
 
         }
     }

@@ -18,6 +18,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
         public TipoCombustivel TipoCombustivel { get; set; }
         public int Consumo { get; set; }
 
+        public virtual Moto Moto { get; set; }
+
         private Modelo(string nomeModelo, Frenagem frenagem, SistemaPartida sistemaPartida, int tanque, TipoCombustivel tipoCombustivel, int consumo)
         {
             NomeModelo = nomeModelo;

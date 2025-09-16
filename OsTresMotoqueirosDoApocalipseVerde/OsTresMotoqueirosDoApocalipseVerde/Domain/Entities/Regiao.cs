@@ -13,7 +13,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
         public Geometry Localizacao { get; set; }
         public double Area { get; private set; }
 
-
+        public virtual Patio Patio { get; set; }
+        public virtual Setor Setor { get; set; }
 
         private Regiao(Geometry localizacao)
         {

@@ -15,6 +15,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
 
         public Status Status { get; set; }
 
+        public virtual Moto Moto { get; set; }
+
         private Situacao(string nome, string descricao, Status status)
         {
             Nome = nome;

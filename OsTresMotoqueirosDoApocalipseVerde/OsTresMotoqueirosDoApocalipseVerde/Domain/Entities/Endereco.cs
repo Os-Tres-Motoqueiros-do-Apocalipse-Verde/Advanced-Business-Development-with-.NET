@@ -20,6 +20,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
         public string Complemento { get; set; }
         public string Rua {  get; set; }
 
+        public virtual Filial Filial { get; set; }
+
         private Endereco(int numero, string estado, string codigoPais, string codigoPostal, string complemento, string rua) 
         {
             Numero = numero;

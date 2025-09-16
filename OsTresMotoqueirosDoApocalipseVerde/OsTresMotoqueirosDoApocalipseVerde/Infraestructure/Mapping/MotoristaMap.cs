@@ -34,8 +34,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
 
             builder
                 .HasOne(m => m.Dados)
-                .WithMany()
-                .HasForeignKey(m => m.DadosId)
+                .WithOne(m => m.Motorista)
+                .HasForeignKey<Motorista>(m => m.DadosId)
                 .OnDelete(DeleteBehavior.Restrict);
 
         }

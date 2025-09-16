@@ -18,6 +18,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
         public virtual Endereco Endereco { get; set; }
 
         public virtual ICollection<Funcionario> Funcionarios { get; private set; } = new List<Funcionario>();
+        public virtual ICollection<Patio> Patios { get; private set; } = new List<Patio>();
+
 
 
         private Filial(string nomeFilial, long? enderecoId)

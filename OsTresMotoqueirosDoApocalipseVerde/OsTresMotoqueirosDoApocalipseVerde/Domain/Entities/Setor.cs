@@ -23,6 +23,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
         public long? RegiaoId { get; set; }
         public virtual Regiao Regiao { get; set; }
 
+        public virtual Moto Moto { get; set; }
+
         private Setor(int qtdMoto, int capacidade, string nomeSetor, string descricao, string cor, long? patioId, long? regiaoId)
         {
             QtdMoto = qtdMoto;

@@ -14,6 +14,9 @@ public class Dados
     public string Senha { get; set; }
     public string Nome { get; set; }
 
+    public virtual Funcionario Funcionario { get; set; }
+    public virtual Motorista Motorista { get; set; }
+
     private Dados(string cpf, string telefone, string email, string senha, string nome)
     {
         CPF = cpf;
