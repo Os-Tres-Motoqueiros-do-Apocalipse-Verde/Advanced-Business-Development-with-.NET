@@ -1,6 +1,7 @@
 ﻿using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
+using OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 {

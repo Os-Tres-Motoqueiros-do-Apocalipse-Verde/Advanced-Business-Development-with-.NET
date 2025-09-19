@@ -9,6 +9,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response
         [EnumDataType(typeof(Cargo))]
         public Cargo Cargo { get; set; }
 
-        public CreateFilialResponse Filial { get; set; }
+        public long? Filial { get; set; }
     }
 }

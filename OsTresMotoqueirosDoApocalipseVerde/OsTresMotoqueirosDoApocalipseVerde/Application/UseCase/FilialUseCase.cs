@@ -1,102 +1,98 @@
-﻿namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
+﻿using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
+using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
+using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
+using OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context;
+
+namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 {
     public class FilialUseCase
     {
-        private readonly IRepository<Endereco> _repository;
+        private readonly IRepository<Filial> _repository;
         private readonly AppDbContext _context;
 
-        public EnderecoUseCase(IRepository<Endereco> repository, AppDbContext context)
+        public FilialUseCase(IRepository<Filial> repository, AppDbContext context)
         {
             _repository = repository;
             _context = context;
         }
 
-        public async Task<CreateEnderecoRequest> CreateEnderecoAsync(CreateEnderecoRequest request)
+        public async Task<CreateFilialRequest> CreateFilialAsync(CreateFilialRequest request)
         {
-            var endereco = Endereco.Create(
-                request.Numero,
-                request.Estado,
-                request.CodigoPais,
-                request.CodigoPostal,
-                request.Complemento,
-                request.Rua
+            var filial = Filial.Create(
+                request.NomeFilial,
+                request.EnderecoId
             );
 
-            await _repository.AddAsync(endereco);
+            await _repository.AddAsync(filial);
             await _repository.SaveChangesAsync();
 
-            return new CreateEnderecoResponse
+            return new CreateFilialResponse
             {
-                Id = endereco.Id,
-                Numero = endereco.Numero,
-                Estado = endereco.Estado,
-                CodigoPais = endereco.CodigoPais,
-                CodigoPostal = endereco.CodigoPostal,
-                Complemento = endereco.Complemento,
-                Rua = endereco.Rua
+                Id = filial.Id,
+                Numero = filial.NomeFilial
             };
         }
 
-        public async Task<List<CreateEnderecoResponse>> GetAllEnderecoAsync()
+        public async Task<List<CreateFilialResponse>> GetAllFilialAsync()
         {
-            var endereco = await _repository.GetAllAsync();
+            var filial = await _repository.GetAllAsync();
 
 
-            return endereco.Select(e => new CreateEnderecoResponse
+            return filial.Select(f => new CreateFilialResponse
             {
-                Id = e.Id,
-                Numero = e.Numero,
-                Estado = e.Estado,
-                CodigoPais = e.CodigoPais,
-                CodigoPostal = e.CodigoPostal,
-                Complemento = e.Complemento,
-                Rua = e.Rua,
+                Id = f.Id,
+                Numero = f.NomeFilial,
+                Estado = f.EstadoId
             }).ToList();
         }
 
-        public async Task<CreateEnderecoResponse?> GetByIdAsync(long id)
+        public async Task<CreateFilialResponse?> GetByIdAsync(long id)
         {
-            var endereco = await _repository.GetByIdAsync(id);
-            if (endereco == null) return null;
+            var filial = await _context.Filial
+                .Include(f => f.Endereco)
+                .FirstOrDefaultAsync(f => f.Id == id);
 
-            return new CreateEnderecoResponse
+            if (filial == null) return null;
+
+            return new CreateFilialResponse
             {
-                Id = endereco.Id,
-                Numero = endereco.Numero,
-                Estado = endereco.Estado,
-                CodigoPais = endereco.CodigoPais,
-                CodigoPostal = endereco.CodigoPostal,
-                Complemento = endereco.Complemento,
-                Rua = endereco.Rua
+                Id = filial.Id,
+                NomeFilial = filial.NomeFilial,
+                Endereco = filial.Endereco == null ? null : new CreateEnderecoResponse
+                {
+                    Id = filial.Endereco.Id,
+                    Numero = filial.Endereco.Numero,
+                    Estado = filial.Endereco.Estado,
+                    CodigoPais = filial.Endereco.CodigoPais,
+                    CodigoPostal = filial.Endereco.CodigoPostal,
+                    Complemento = filial.Endereco.Complemento,
+                    Rua = filial.Endereco.Rua
+                }
             };
         }
 
 
-        public async Task<bool> UpdateEnderecoAsync(long id, CreateEnderecoRequest request)
+        public async Task<bool> UpdateFilialAsync(long id, CreateFilialRequest request)
         {
-            var endereco = await _repository.GetByIdAsync(id);
-            if (endereco == null) return false;
+            var filial = await _repository.GetByIdAsync(id);
+            if (filial == null) return false;
 
-            endereco.Atualizar(
-                request.Numero,
-                request.Estado,
-                request.CodigoPais,
-                request.CodigoPostal,
-                request.Complemento,
-                request.Rua
+            filial.Atualizar(
+                request.NomeFilial,
+                request.EnderecoId
             );
 
-            _repository.Update(endereco);
+            _repository.Update(filial);
             await _repository.SaveChangesAsync();
             return true;
         }
 
-        public async Task<bool> DeleteEnderecoAsync(long id)
+        public async Task<bool> DeleteFilialAsync(long id)
         {
-            var endereco = await _repository.GetByIdAsync(id);
-            if (endereco == null) return false;
+            var filial = await _repository.GetByIdAsync(id);
+            if (filial == null) return false;
 
-            _repository.Delete(endereco);
+            _repository.Delete(filial);
             await _repository.SaveChangesAsync();
             return true;
         }
