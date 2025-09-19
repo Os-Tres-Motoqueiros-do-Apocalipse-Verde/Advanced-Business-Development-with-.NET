@@ -20,6 +20,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
         public long? RegiaoId { get; set; }
         public virtual Regiao Regiao { get; set; }
 
+        public virtual ICollection<Setor> Setores { get; private set; } = new List<Setor>();
+
         private Patio(int totalMotos, int capacidadeMoto, long? filialId, long? regiaoId)
         {
             TotalMotos = totalMotos;

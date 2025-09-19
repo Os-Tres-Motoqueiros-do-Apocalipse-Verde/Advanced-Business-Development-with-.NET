@@ -9,10 +9,11 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
 
+        public string NomeSetor { get; set; }
+
         public int QtdMoto { get; set; }
         public int Capacidade { get; set; }
 
-        public string NomeSetor { get; set; }
         public string Descricao { get; set; }
         public string Cor {  get; set; }
 
@@ -25,30 +26,32 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
 
         public virtual Moto Moto { get; set; }
 
-        private Setor(int qtdMoto, int capacidade, string nomeSetor, string descricao, string cor, long? patioId, long? regiaoId)
+        private Setor(string nomeSetor, int qtdMoto, int capacidade, string descricao, string cor, long? regiaoId, long? patioId)
         {
+            NomeSetor = nomeSetor;
             QtdMoto = qtdMoto;
             Capacidade = capacidade;
-            NomeSetor = nomeSetor;
             Descricao = descricao;
-            PatioId = patioId;
             RegiaoId = regiaoId;
+            PatioId = patioId;
+            
         }
 
-        public void Atualizar(int qtdMoto, int capacidade, string nomeSetor, string descricao, string cor, long? patioId, long? regiaoId)
+        public void Atualizar(string nomeSetor, int qtdMoto, int capacidade, string descricao, string cor, long? regiaoId, long? patioId)
         {
+            NomeSetor = nomeSetor;
             QtdMoto = qtdMoto;
             Capacidade = capacidade;
-            NomeSetor = nomeSetor;
             Descricao = descricao;
-            PatioId = patioId;
             RegiaoId = regiaoId;
+            PatioId = patioId;
+            
         }
 
 
-        internal static Setor Create(int qtdMoto, int capacidade, string nomeSetor, string descricao, string cor, long? patioId, long? regiaoId)
+        internal static Setor Create(string nomeSetor, int qtdMoto, int capacidade, string descricao, string cor, long? patioId, long? regiaoId)
         {
-            return new Setor(qtdMoto, capacidade, nomeSetor, descricao, cor, patioId, regiaoId);
+            return new Setor(nomeSetor, qtdMoto, capacidade, descricao, cor, patioId, regiaoId);
         }
 
         public Setor() { }
