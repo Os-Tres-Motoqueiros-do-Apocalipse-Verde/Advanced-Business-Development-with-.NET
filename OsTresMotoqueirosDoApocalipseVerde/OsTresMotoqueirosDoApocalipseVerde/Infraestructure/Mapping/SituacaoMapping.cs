@@ -36,12 +36,12 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
                 .Property(s => s.Status)
                 .IsRequired()
                 .HasConversion<string>()
-                .HasColumnName("STATUS")
+                .HasColumnName("STATUS");
 
             builder
                 .HasOne(s => s.Moto)
                 .WithOne(m => m.Situacao)
-                .HasForeignKey<Moto>(m => m.MotoId)
+                .HasForeignKey<Moto>(m => m.SituacaoId)
                 .OnDelete(DeleteBehavior.Restrict);
 
 

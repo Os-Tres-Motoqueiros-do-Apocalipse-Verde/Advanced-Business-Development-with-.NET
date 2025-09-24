@@ -10,24 +10,25 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
 
-        public Geometry Localizacao { get; set; }
+        
+        public Point Localizacao { get; set; }
         public double Area { get; private set; }
 
         public virtual Patio Patio { get; set; }
         public virtual Setor Setor { get; set; }
 
-        private Regiao(Geometry localizacao)
+        private Regiao(Point localizacao)
         {
             Localizacao = localizacao;
         }
 
-        public void Atualizar(Geometry localizacao)
+        public void Atualizar(Point localizacao)
         {
             Localizacao = localizacao;
         }
 
 
-        internal static Regiao Create(Geometry localizacao)
+        internal static Regiao Create(Point localizacao)
         {
             return new Regiao(localizacao);
         }

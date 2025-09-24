@@ -14,7 +14,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
         public string Chassi { get; set; }
 
         public string Condicao { get; set; }
-        public Geometry LocalizacaoMoto { get; set; }
+        
+        public Point LocalizacaoMoto { get; set; }
 
 
         // Chaves estrangeiras
@@ -32,7 +33,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
 
 
 
-        private Moto(string placa, string chassi, string condicao, Geometry localizacaoMoto, int? motoristaId, int? modeloId, int? setorId, int? situacaoId)
+        private Moto(string placa, string chassi, string condicao, Point localizacaoMoto, long? motoristaId, long? modeloId, long? setorId, long? situacaoId)
         {
             Placa = placa;
             Chassi = chassi;
@@ -44,7 +45,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
             SituacaoId = situacaoId;
         }
 
-        public void Atualizar(string placa, string chassi, string condicao, Geometry localizacaoMoto, int? motoristaId, int? modeloId, int? setorId, int? situacaoId)
+        public void Atualizar(string placa, string chassi, string condicao, Point localizacaoMoto, long? motoristaId, long? modeloId, long? setorId, long? situacaoId)
         {
             Placa = placa;
             Chassi = chassi;
@@ -57,9 +58,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
         }
 
 
-        internal static Moto Create(string placa, string chassi, string condicao, Geometry localizacaoMoto, int? motoristaId, int? modeloId, int? setorId, int? situacaoId)
+        internal static Moto Create(string placa, string chassi, string condicao, Point localizacaoMoto, long? motoristaId, long? modeloId, long? setorId, long? situacaoId)
         {
-            return new Moto(placa, chassi, condicao, localizacaoMoto, motoristaId, modeloId, setorId, situacaoId);
+            return new Moto(placa, chassi, condicao, localizacaoMoto, motoristaId, setorId, situacaoId, modeloId);
         }
 
         public Moto() { }

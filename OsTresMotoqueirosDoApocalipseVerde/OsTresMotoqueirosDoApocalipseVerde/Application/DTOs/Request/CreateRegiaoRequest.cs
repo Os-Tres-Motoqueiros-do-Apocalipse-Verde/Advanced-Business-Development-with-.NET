@@ -1,8 +1,10 @@
-﻿namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request
+﻿using NetTopologySuite.Geometries;
+
+namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request
 {
     public class CreateRegiaoRequest
     {
-        public Geometry Localizacao {  get; set; }
+        public Point Localizacao {  get; set; }
         public double Area { get; set; }
 
     }

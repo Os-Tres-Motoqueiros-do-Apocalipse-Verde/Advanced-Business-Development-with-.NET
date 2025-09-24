@@ -2,6 +2,7 @@
 {
     public class CreateSetorResponse
     {
+        public long? Id { get; set; }
         public string NomeSetor { get; set; }
 
         public int QtdMoto { get; set; }

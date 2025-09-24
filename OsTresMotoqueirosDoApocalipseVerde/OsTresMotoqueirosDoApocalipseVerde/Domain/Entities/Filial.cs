@@ -28,7 +28,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
             EnderecoId = enderecoId;
         }
 
-        public void Atualizar(string nomeFilial, int? enderecoId)
+        public void Atualizar(string nomeFilial, long? enderecoId)
         {
             NomeFilial = nomeFilial;
             EnderecoId = enderecoId;

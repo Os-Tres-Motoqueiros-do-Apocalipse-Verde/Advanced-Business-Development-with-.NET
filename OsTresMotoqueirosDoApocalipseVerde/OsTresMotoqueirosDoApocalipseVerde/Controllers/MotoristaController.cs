@@ -1,90 +1,92 @@
-﻿using AutoMapper;
+﻿using System.Net;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs;
-using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
-using OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context;
+using FluentValidation;
+using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
+using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
+using OsTresMotoqueirosDoApocalipseVerde.Application.UseCase;
+using OsTresMotoqueirosDoApocalipseVerde.Application.Validators;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
 {
+    [Route("api/[controller]")]
     [ApiController]
-    [Route("[controller]")]
     [Tags("CRUD Motorista")]
     public class MotoristaController : ControllerBase
     {
-        private AppDbContext _context;
-        private IMapper _mapper;
+        private readonly MotoristaUseCase _motoristaUseCase;
+        private readonly CreateMotoristaDtoValidator _validationMotorista;
 
-        public MotoristaController(AppDbContext context, IMapper mapper)
+        public MotoristaController(
+            MotoristaUseCase motoristaUseCase,
+            CreateMotoristaDtoValidator validationMotorista)
         {
-            _context = context;
-            _mapper = mapper;
-        }
-
-        [HttpPost]
-        public IActionResult AdicionarMotorista([FromBody] CreateMotoristaDto motoristaDto)
-        {
-            Motorista motorista = _mapper.Map<Motorista>(motoristaDto);
-
-            _context.Motorista.Add(motorista);
-            _context.SaveChanges();
-
-            _context.Entry(motorista).Reference(m => m.Dados).Load();
-
-            var readMotoristaDto = _mapper.Map<ReadMotoristaDto>(motorista);
-            return CreatedAtAction(nameof(RecuperarMotoristaPorId), new { Id = motorista.Id }, readMotoristaDto);
-
+            _motoristaUseCase = motoristaUseCase;
+            _validationMotorista = validationMotorista;
         }
 
         [HttpGet]
-        public IEnumerable<ReadMotoristaDto> RecuperarMotoristas()
+        [ProducesResponseType(typeof(IEnumerable<CreateMotoristaResponse>), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> GetMotoristas()
         {
-            var motoristas = _context.Motorista
-                .Include(m => m.Dados) 
-                .ToList();
-
-            return _mapper.Map<List<ReadMotoristaDto>>(motoristas);
+            var motoristas = await _motoristaUseCase.GetAllMotoristaAsync();
+            return Ok(motoristas);
         }
 
         [HttpGet("{id}")]
-        public IActionResult RecuperarMotoristaPorId(int id)
+        [ProducesResponseType(typeof(CreateMotoristaResponse), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        public async Task<IActionResult> GetMotorista(long id)
         {
-            var motorista = _context.Motorista
-                .Include(m => m.Dados) 
-                .FirstOrDefault(m => m.Id == id);
-
+            var motorista = await _motoristaUseCase.GetByIdAsync(id);
             if (motorista == null)
-            {
                 return NotFound();
+
+            return Ok(motorista);
+        }
+
+        [HttpPost]
+        [ProducesResponseType(typeof(CreateMotoristaResponse), (int)HttpStatusCode.Created)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> PostMotorista([FromBody] CreateMotoristaRequest request)
+        {
+            var result = ((IValidator<CreateMotoristaRequest>)_validationMotorista).Validate(request);
+            if (!result.IsValid)
+            {
+                return BadRequest(result.Errors);
             }
 
-            var motoristaDto = _mapper.Map<ReadMotoristaDto>(motorista);
-            return Ok(motoristaDto);
+            var motoristaResponse = await _motoristaUseCase.CreateMotoristaAsync(request);
+            return CreatedAtAction(nameof(GetMotorista), new { id = motoristaResponse.Id }, motoristaResponse);
         }
 
         [HttpPut("{id}")]
-        public IActionResult AtualizarMotorista(int id, [FromBody] UpdateMotoristaDto motoristaDto)
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> PutMotorista(long id, [FromBody] CreateMotoristaRequest request)
         {
-            Motorista motorista = _context.Motorista.FirstOrDefault(motoristas => motoristas.Id == id);
-            if (motorista == null)
+            var result = ((IValidator<CreateMotoristaRequest>)_validationMotorista).Validate(request);
+            if (!result.IsValid)
             {
-                return NotFound();
+                return BadRequest(result.Errors);
             }
-            _mapper.Map(motoristaDto, motorista);
-            _context.SaveChanges();
+
+            var updated = await _motoristaUseCase.UpdateMotoristaAsync(id, request);
+            if (!updated)
+                return NotFound();
+
             return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteMotorista(int id)
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        public async Task<IActionResult> DeleteMotorista(long id)
         {
-            Motorista motorista = _context.Motorista.FirstOrDefault(motorista => motorista.Id == id);
-            if (motorista == null)
-            {
+            var deleted = await _motoristaUseCase.DeleteMotoristaAsync(id);
+            if (!deleted)
                 return NotFound();
-            }
-            _context.Remove(motorista);
-            _context.SaveChanges();
+
             return NoContent();
         }
     }

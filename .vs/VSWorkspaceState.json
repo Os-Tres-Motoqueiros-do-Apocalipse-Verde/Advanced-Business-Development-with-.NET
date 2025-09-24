@@ -6,11 +6,11 @@
     "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application",
     "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs",
     "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Request",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\DTOs\\Response",
     "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Domain\\Entities",
-    "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure"
+    "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Mapping",
+    "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Infraestructure\\Repositores"
   ],
-  "SelectedNode": "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\Application\\UseCase\\FuncionarioUseCase.cs",
+  "SelectedNode": "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
   "PreviewInSolutionExplorer": false
 }

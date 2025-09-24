@@ -1,7 +1,10 @@
+using NetTopologySuite.Geometries;
+
 namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response
 {
     public class CreateMotoResponse
     {
+        public long? Id { get; set; }
         public string Placa { get; set; }
         public string Chassi { get; set; }
         public string Condicao { get; set; }
@@ -12,6 +15,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response
 
         public long? MotoristaId { get; set; }
         public long? SetorId { get; set; }
-        public long? Setor { get; set; }
+
+        public long? SituacaoId { get; set; }
     }
 }

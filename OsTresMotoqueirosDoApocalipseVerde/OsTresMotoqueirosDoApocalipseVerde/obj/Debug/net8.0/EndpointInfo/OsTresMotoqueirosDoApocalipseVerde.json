@@ -5,39 +5,10 @@
     "version": "1.0"
   },
   "paths": {
-    "/Dados": {
-      "post": {
-        "tags": [
-          "CRUD Dados"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateDadosDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateDadosDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateDadosDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
+    "/api/Filial": {
       "get": {
         "tags": [
-          "CRUD Dados"
+          "CRUD Filial"
         ],
         "responses": {
           "200": {
@@ -47,7 +18,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ReadModeloDto"
+                    "$ref": "#/components/schemas/CreateFilialResponse"
                   }
                 }
               },
@@ -55,7 +26,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ReadModeloDto"
+                    "$ref": "#/components/schemas/CreateFilialResponse"
                   }
                 }
               },
@@ -63,8 +34,74 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ReadModeloDto"
+                    "$ref": "#/components/schemas/CreateFilialResponse"
                   }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CRUD Filial"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFilialRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFilialRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFilialRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateFilialResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateFilialResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateFilialResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -72,10 +109,10 @@
         }
       }
     },
-    "/Dados/{id}": {
+    "/api/Filial/{id}": {
       "get": {
         "tags": [
-          "CRUD Dados"
+          "CRUD Filial"
         ],
         "parameters": [
           {
@@ -84,19 +121,56 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateFilialResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateFilialResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateFilialResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       },
       "put": {
         "tags": [
-          "CRUD Dados"
+          "CRUD Filial"
         ],
         "parameters": [
           {
@@ -105,7 +179,7 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
           }
         ],
@@ -113,30 +187,70 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateDadosDto"
+                "$ref": "#/components/schemas/CreateFilialRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateDadosDto"
+                "$ref": "#/components/schemas/CreateFilialRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateDadosDto"
+                "$ref": "#/components/schemas/CreateFilialRequest"
               }
             }
           }
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       },
       "delete": {
         "tags": [
-          "CRUD Dados"
+          "CRUD Filial"
         ],
         "parameters": [
           {
@@ -145,50 +259,41 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
     },
-    "/api/Modelo": {
-      "post": {
-        "tags": [
-          "CRUD Modelo"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateModeloDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateModeloDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateModeloDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
+    "/api/Funcionario": {
       "get": {
         "tags": [
-          "CRUD Modelo"
+          "CRUD Funcionario"
         ],
         "responses": {
           "200": {
@@ -198,7 +303,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ReadModeloDto"
+                    "$ref": "#/components/schemas/CreateFuncionarioResponse"
                   }
                 }
               },
@@ -206,7 +311,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ReadModeloDto"
+                    "$ref": "#/components/schemas/CreateFuncionarioResponse"
                   }
                 }
               },
@@ -214,8 +319,74 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ReadModeloDto"
+                    "$ref": "#/components/schemas/CreateFuncionarioResponse"
                   }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CRUD Funcionario"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFuncionarioRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFuncionarioRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFuncionarioRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateFuncionarioResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateFuncionarioResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateFuncionarioResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -223,10 +394,10 @@
         }
       }
     },
-    "/api/Modelo/{id}": {
+    "/api/Funcionario/{id}": {
       "get": {
         "tags": [
-          "CRUD Modelo"
+          "CRUD Funcionario"
         ],
         "parameters": [
           {
@@ -235,19 +406,136 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateFuncionarioResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateFuncionarioResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateFuncionarioResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "CRUD Funcionario"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFuncionarioRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFuncionarioRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFuncionarioRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       },
       "delete": {
         "tags": [
-          "CRUD Modelo"
+          "CRUD Funcionario"
         ],
         "parameters": [
           {
@@ -256,47 +544,38 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
     },
     "/api/Moto": {
-      "post": {
-        "tags": [
-          "CRUD Moto"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateMotoDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateMotoDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateMotoDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
       "get": {
         "tags": [
           "CRUD Moto"
@@ -309,7 +588,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ReadMotoDto"
+                    "$ref": "#/components/schemas/CreateMotoResponse"
                   }
                 }
               },
@@ -317,7 +596,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ReadMotoDto"
+                    "$ref": "#/components/schemas/CreateMotoResponse"
                   }
                 }
               },
@@ -325,8 +604,74 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ReadMotoDto"
+                    "$ref": "#/components/schemas/CreateMotoResponse"
                   }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CRUD Moto"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMotoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMotoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMotoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateMotoResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateMotoResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateMotoResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -346,13 +691,130 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateMotoResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateMotoResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateMotoResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "CRUD Moto"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMotoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMotoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMotoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       },
@@ -367,47 +829,38 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
     },
-    "/Motorista": {
-      "post": {
-        "tags": [
-          "CRUD Motorista"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateMotoristaDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateMotoristaDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateMotoristaDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
+    "/api/Motorista": {
       "get": {
         "tags": [
           "CRUD Motorista"
@@ -420,7 +873,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ReadMotoristaDto"
+                    "$ref": "#/components/schemas/CreateMotoristaResponse"
                   }
                 }
               },
@@ -428,7 +881,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ReadMotoristaDto"
+                    "$ref": "#/components/schemas/CreateMotoristaResponse"
                   }
                 }
               },
@@ -436,8 +889,74 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ReadMotoristaDto"
+                    "$ref": "#/components/schemas/CreateMotoristaResponse"
                   }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CRUD Motorista"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMotoristaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMotoristaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMotoristaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateMotoristaResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateMotoristaResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateMotoristaResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -445,7 +964,7 @@
         }
       }
     },
-    "/Motorista/{id}": {
+    "/api/Motorista/{id}": {
       "get": {
         "tags": [
           "CRUD Motorista"
@@ -457,13 +976,50 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateMotoristaResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateMotoristaResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateMotoristaResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       },
@@ -478,7 +1034,7 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
           }
         ],
@@ -486,24 +1042,64 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateMotoristaDto"
+                "$ref": "#/components/schemas/CreateMotoristaRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateMotoristaDto"
+                "$ref": "#/components/schemas/CreateMotoristaRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateMotoristaDto"
+                "$ref": "#/components/schemas/CreateMotoristaRequest"
               }
             }
           }
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       },
@@ -518,13 +1114,888 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Patio": {
+      "get": {
+        "tags": [
+          "CRUD Patio"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CreatePatioResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CreatePatioResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CreatePatioResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CRUD Patio"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePatioRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePatioRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePatioRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatePatioResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatePatioResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatePatioResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Patio/{id}": {
+      "get": {
+        "tags": [
+          "CRUD Patio"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatePatioResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatePatioResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatePatioResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "CRUD Patio"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePatioRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePatioRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePatioRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CRUD Patio"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Setor": {
+      "get": {
+        "tags": [
+          "CRUD Setor"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CreateSetorResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CreateSetorResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CreateSetorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CRUD Setor"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSetorRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSetorRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSetorRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateSetorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateSetorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateSetorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Setor/{id}": {
+      "get": {
+        "tags": [
+          "CRUD Setor"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateSetorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateSetorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateSetorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "CRUD Setor"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSetorRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSetorRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSetorRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CRUD Setor"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Situacao": {
+      "get": {
+        "tags": [
+          "CRUD Situacao"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CreateSituacaoResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CreateSituacaoResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CreateSituacaoResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CRUD Situacao"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSituacaoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSituacaoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSituacaoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateSituacaoResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateSituacaoResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateSituacaoResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Situacao/{id}": {
+      "get": {
+        "tags": [
+          "CRUD Situacao"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateSituacaoResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateSituacaoResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateSituacaoResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "CRUD Situacao"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSituacaoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSituacaoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSituacaoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CRUD Situacao"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -532,142 +2003,107 @@
   },
   "components": {
     "schemas": {
-      "CreateDadosDto": {
+      "Coordinate": {
         "type": "object",
         "properties": {
-          "cpf": {
-            "type": "string",
-            "nullable": true
+          "x": {
+            "type": "number",
+            "format": "double"
           },
-          "telefone": {
-            "type": "string",
-            "nullable": true
+          "y": {
+            "type": "number",
+            "format": "double"
           },
-          "email": {
-            "type": "string",
-            "nullable": true
+          "z": {
+            "type": "number",
+            "format": "double"
           },
-          "senha": {
-            "type": "string",
-            "nullable": true
+          "m": {
+            "type": "number",
+            "format": "double"
           },
+          "coordinateValue": {
+            "$ref": "#/components/schemas/Coordinate"
+          },
+          "isValid": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CoordinateEqualityComparer": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "CoordinateSequence": {
+        "type": "object",
+        "properties": {
+          "dimension": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "measures": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "spatial": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "ordinates": {
+            "$ref": "#/components/schemas/Ordinates"
+          },
+          "hasZ": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "hasM": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "zOrdinateIndex": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "mOrdinateIndex": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "first": {
+            "$ref": "#/components/schemas/Coordinate"
+          },
+          "last": {
+            "$ref": "#/components/schemas/Coordinate"
+          },
+          "count": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CoordinateSequenceFactory": {
+        "type": "object",
+        "properties": {
+          "ordinates": {
+            "$ref": "#/components/schemas/Ordinates"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateDadosRequest": {
+        "type": "object",
+        "properties": {
           "nome": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateModeloDto": {
-        "type": "object",
-        "properties": {
-          "nomeModelo": {
-            "type": "string",
-            "nullable": true
-          },
-          "frenagem": {
-            "enum": [
-              "FreioADisco",
-              "FreioATambor",
-              "FreioCombinado",
-              "FreioABS",
-              "FreioHidraulico"
-            ],
-            "type": "string"
-          },
-          "sistemaPartida": {
-            "enum": [
-              "PartidaEletrica",
-              "PartidaPedal",
-              "PartidaHibrida",
-              "PartidaManualComEmbreagem",
-              "PartidaStartStop",
-              "PartidaAutomatica",
-              "PartidaCombustaoAuxiliar"
-            ],
-            "type": "string"
-          },
-          "tanque": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "tipoCombustivel": {
-            "enum": [
-              "Gasolina",
-              "Etanol",
-              "Diesel",
-              "Flex",
-              "Eletrico",
-              "Gás",
-              "Hibrido"
-            ],
-            "type": "string"
-          },
-          "consumo": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateMotoDto": {
-        "type": "object",
-        "properties": {
-          "placa": {
-            "type": "string",
-            "nullable": true
-          },
-          "chassi": {
-            "type": "string",
-            "nullable": true
-          },
-          "condicao": {
-            "type": "string",
-            "nullable": true
-          },
-          "latitude": {
-            "type": "string",
-            "nullable": true
-          },
-          "longitude": {
-            "type": "string",
-            "nullable": true
-          },
-          "modeloId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateMotoristaDto": {
-        "required": [
-          "plano"
-        ],
-        "type": "object",
-        "properties": {
-          "plano": {
-            "enum": [
-              "MottuCompleto",
-              "MottuConquiste"
-            ],
-            "type": "string"
-          },
-          "dadosId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ReadDadosDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
           },
           "cpf": {
             "type": "string",
@@ -684,168 +2120,1107 @@
           "senha": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateDadosResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
           },
           "nome": {
             "type": "string",
             "nullable": true
+          },
+          "cpf": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "senha": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "ReadModeloDto": {
+      "CreateEnderecoRequest": {
         "type": "object",
         "properties": {
-          "id": {
+          "numero": {
             "type": "integer",
             "format": "int32"
           },
-          "nomeModelo": {
+          "estado": {
             "type": "string",
             "nullable": true
           },
-          "frenagem": {
-            "enum": [
-              "FreioADisco",
-              "FreioATambor",
-              "FreioCombinado",
-              "FreioABS",
-              "FreioHidraulico"
-            ],
-            "type": "string"
+          "codigoPais": {
+            "type": "string",
+            "nullable": true
           },
-          "sistemaPartida": {
-            "enum": [
-              "PartidaEletrica",
-              "PartidaPedal",
-              "PartidaHibrida",
-              "PartidaManualComEmbreagem",
-              "PartidaStartStop",
-              "PartidaAutomatica",
-              "PartidaCombustaoAuxiliar"
-            ],
-            "type": "string"
+          "codigoPostal": {
+            "type": "string",
+            "nullable": true
           },
-          "tanque": {
-            "type": "integer",
-            "format": "int32"
+          "complemento": {
+            "type": "string",
+            "nullable": true
           },
-          "tipoCombustivel": {
-            "enum": [
-              "Gasolina",
-              "Etanol",
-              "Diesel",
-              "Flex",
-              "Eletrico",
-              "Gás",
-              "Hibrido"
-            ],
-            "type": "string"
-          },
-          "consumo": {
-            "type": "integer",
-            "format": "int32"
+          "rua": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "ReadMotoDto": {
+      "CreateEnderecoResponse": {
         "type": "object",
         "properties": {
           "id": {
             "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "numero": {
+            "type": "integer",
             "format": "int32"
           },
-          "placa": {
+          "estado": {
             "type": "string",
             "nullable": true
           },
-          "chassi": {
+          "codigoPais": {
             "type": "string",
             "nullable": true
           },
-          "condicao": {
+          "codigoPostal": {
             "type": "string",
             "nullable": true
           },
-          "latitude": {
+          "complemento": {
             "type": "string",
             "nullable": true
           },
-          "longitude": {
+          "rua": {
             "type": "string",
             "nullable": true
-          },
-          "modelo": {
-            "$ref": "#/components/schemas/ReadModeloDto"
           }
         },
         "additionalProperties": false
       },
-      "ReadMotoristaDto": {
+      "CreateFilialRequest": {
+        "type": "object",
+        "properties": {
+          "nomeFilial": {
+            "type": "string",
+            "nullable": true
+          },
+          "endereco": {
+            "$ref": "#/components/schemas/CreateEnderecoRequest"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateFilialResponse": {
         "type": "object",
         "properties": {
           "id": {
             "type": "integer",
-            "format": "int32"
+            "format": "int64",
+            "nullable": true
           },
-          "plano": {
+          "nomeFilial": {
+            "type": "string",
+            "nullable": true
+          },
+          "endereco": {
+            "$ref": "#/components/schemas/CreateEnderecoResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateFuncionarioRequest": {
+        "type": "object",
+        "properties": {
+          "dados": {
+            "$ref": "#/components/schemas/CreateDadosRequest"
+          },
+          "cargo": {
             "enum": [
-              "MottuCompleto",
-              "MottuConquiste"
+              "Gerente",
+              "Mecânico",
+              "Vendedor",
+              "Auxiliar",
+              "Analista"
             ],
             "type": "string"
+          },
+          "filialId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateFuncionarioResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
           },
           "dados": {
-            "$ref": "#/components/schemas/ReadDadosDto"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateDadosDto": {
-        "type": "object",
-        "properties": {
-          "cpf": {
-            "type": "string",
-            "nullable": true
+            "$ref": "#/components/schemas/CreateDadosResponse"
           },
-          "telefone": {
-            "type": "string",
-            "nullable": true
+          "cargo": {
+            "enum": [
+              "Gerente",
+              "Mecânico",
+              "Vendedor",
+              "Auxiliar",
+              "Analista"
+            ],
+            "type": "string"
           },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "senha": {
-            "type": "string",
-            "nullable": true
-          },
-          "nome": {
-            "type": "string",
+          "filialId": {
+            "type": "integer",
+            "format": "int64",
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "UpdateMotoristaDto": {
-        "required": [
-          "plano"
-        ],
+      "CreateModeloRequest": {
         "type": "object",
         "properties": {
+          "nomeModelo": {
+            "type": "string",
+            "nullable": true
+          },
+          "frenagem": {
+            "enum": [
+              "FreioADisco",
+              "FreioATambor",
+              "FreioCombinado",
+              "FreioABS",
+              "FreioHidraulico"
+            ],
+            "type": "string"
+          },
+          "sistemaPartida": {
+            "enum": [
+              "PartidaEletrica",
+              "PartidaPedal",
+              "PartidaHibrida",
+              "PartidaManualComEmbreagem",
+              "PartidaStartStop",
+              "PartidaAutomatica",
+              "PartidaCombustaoAuxiliar"
+            ],
+            "type": "string"
+          },
+          "tanque": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoCombustivel": {
+            "enum": [
+              "Gasolina",
+              "Etanol",
+              "Diesel",
+              "Flex",
+              "Eletrico",
+              "Gás",
+              "Hibrido"
+            ],
+            "type": "string"
+          },
+          "consumo": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateModeloResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "nomeModelo": {
+            "type": "string",
+            "nullable": true
+          },
+          "frenagem": {
+            "enum": [
+              "FreioADisco",
+              "FreioATambor",
+              "FreioCombinado",
+              "FreioABS",
+              "FreioHidraulico"
+            ],
+            "type": "string"
+          },
+          "sistemaPartida": {
+            "enum": [
+              "PartidaEletrica",
+              "PartidaPedal",
+              "PartidaHibrida",
+              "PartidaManualComEmbreagem",
+              "PartidaStartStop",
+              "PartidaAutomatica",
+              "PartidaCombustaoAuxiliar"
+            ],
+            "type": "string"
+          },
+          "tanque": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoCombustivel": {
+            "enum": [
+              "Gasolina",
+              "Etanol",
+              "Diesel",
+              "Flex",
+              "Eletrico",
+              "Gás",
+              "Hibrido"
+            ],
+            "type": "string"
+          },
+          "consumo": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateMotoRequest": {
+        "type": "object",
+        "properties": {
+          "placa": {
+            "type": "string",
+            "nullable": true
+          },
+          "chassi": {
+            "type": "string",
+            "nullable": true
+          },
+          "condicao": {
+            "type": "string",
+            "nullable": true
+          },
+          "localizacaoMoto": {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          "modelo": {
+            "$ref": "#/components/schemas/CreateModeloRequest"
+          },
+          "motoristaId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "setorId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "situacaoId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateMotoResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "placa": {
+            "type": "string",
+            "nullable": true
+          },
+          "chassi": {
+            "type": "string",
+            "nullable": true
+          },
+          "condicao": {
+            "type": "string",
+            "nullable": true
+          },
+          "localizacaoMoto": {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          "modelo": {
+            "$ref": "#/components/schemas/CreateModeloResponse"
+          },
+          "motoristaId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "setorId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "situacaoId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateMotoristaRequest": {
+        "type": "object",
+        "properties": {
+          "dados": {
+            "$ref": "#/components/schemas/CreateDadosRequest"
+          },
           "plano": {
             "enum": [
               "MottuCompleto",
               "MottuConquiste"
             ],
             "type": "string"
-          },
-          "dadosId": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false
+      },
+      "CreateMotoristaResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "dados": {
+            "$ref": "#/components/schemas/CreateDadosResponse"
+          },
+          "plano": {
+            "enum": [
+              "MottuCompleto",
+              "MottuConquiste"
+            ],
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreatePatioRequest": {
+        "type": "object",
+        "properties": {
+          "totalMotos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "capacidadeMoto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "regiao": {
+            "$ref": "#/components/schemas/CreateRegiaoRequest"
+          },
+          "filialId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreatePatioResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "totalMotos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "capacidadeMoto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "regiao": {
+            "$ref": "#/components/schemas/CreateRegiaoResponse"
+          },
+          "filialId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateRegiaoRequest": {
+        "type": "object",
+        "properties": {
+          "localizacao": {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          "area": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateRegiaoResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "localizacao": {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          "area": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateSetorRequest": {
+        "type": "object",
+        "properties": {
+          "nomeSetor": {
+            "type": "string",
+            "nullable": true
+          },
+          "qtdMoto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "capacidade": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descricao": {
+            "type": "string",
+            "nullable": true
+          },
+          "cor": {
+            "type": "string",
+            "nullable": true
+          },
+          "regiao": {
+            "$ref": "#/components/schemas/CreateRegiaoRequest"
+          },
+          "patioId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateSetorResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "nomeSetor": {
+            "type": "string",
+            "nullable": true
+          },
+          "qtdMoto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "capacidade": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descricao": {
+            "type": "string",
+            "nullable": true
+          },
+          "cor": {
+            "type": "string",
+            "nullable": true
+          },
+          "regiao": {
+            "$ref": "#/components/schemas/CreateRegiaoResponse"
+          },
+          "patioId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateSituacaoRequest": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "descricao": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "enum": [
+              "Ativo",
+              "Inativo",
+              "Manutencao"
+            ],
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateSituacaoResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "descricao": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "enum": [
+              "Ativo",
+              "Inativo",
+              "Manutencao"
+            ],
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Dimension": {
+        "enum": [
+          "Point",
+          "Curve",
+          "Surface",
+          "Collapse",
+          "Dontcare",
+          "True",
+          "False"
+        ],
+        "type": "string"
+      },
+      "ElevationModel": {
+        "type": "object",
+        "properties": {
+          "extent": {
+            "$ref": "#/components/schemas/Envelope"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Envelope": {
+        "type": "object",
+        "properties": {
+          "isNull": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "width": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "height": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "diameter": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "minX": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "maxX": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "minY": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "maxY": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "area": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "minExtent": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "maxExtent": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "centre": {
+            "$ref": "#/components/schemas/Coordinate"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Geometry": {
+        "type": "object",
+        "properties": {
+          "factory": {
+            "$ref": "#/components/schemas/GeometryFactory"
+          },
+          "userData": {
+            "nullable": true
+          },
+          "srid": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "geometryType": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "ogcGeometryType": {
+            "$ref": "#/components/schemas/OgcGeometryType"
+          },
+          "precisionModel": {
+            "$ref": "#/components/schemas/PrecisionModel"
+          },
+          "coordinate": {
+            "$ref": "#/components/schemas/Coordinate"
+          },
+          "coordinates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Coordinate"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "numPoints": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "numGeometries": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "isSimple": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isValid": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isEmpty": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "area": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "length": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "centroid": {
+            "$ref": "#/components/schemas/Point"
+          },
+          "interiorPoint": {
+            "$ref": "#/components/schemas/Point"
+          },
+          "pointOnSurface": {
+            "$ref": "#/components/schemas/Point"
+          },
+          "dimension": {
+            "$ref": "#/components/schemas/Dimension"
+          },
+          "boundary": {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          "boundaryDimension": {
+            "$ref": "#/components/schemas/Dimension"
+          },
+          "envelope": {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          "envelopeInternal": {
+            "$ref": "#/components/schemas/Envelope"
+          },
+          "isRectangle": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GeometryFactory": {
+        "type": "object",
+        "properties": {
+          "precisionModel": {
+            "$ref": "#/components/schemas/PrecisionModel"
+          },
+          "coordinateSequenceFactory": {
+            "$ref": "#/components/schemas/CoordinateSequenceFactory"
+          },
+          "srid": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "elevationModel": {
+            "$ref": "#/components/schemas/ElevationModel"
+          },
+          "geometryServices": {
+            "$ref": "#/components/schemas/NtsGeometryServices"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GeometryOverlay": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "GeometryRelate": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "NtsGeometryServices": {
+        "type": "object",
+        "properties": {
+          "geometryOverlay": {
+            "$ref": "#/components/schemas/GeometryOverlay"
+          },
+          "geometryRelate": {
+            "$ref": "#/components/schemas/GeometryRelate"
+          },
+          "coordinateEqualityComparer": {
+            "$ref": "#/components/schemas/CoordinateEqualityComparer"
+          },
+          "defaultSRID": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "defaultCoordinateSequenceFactory": {
+            "$ref": "#/components/schemas/CoordinateSequenceFactory"
+          },
+          "defaultPrecisionModel": {
+            "$ref": "#/components/schemas/PrecisionModel"
+          },
+          "defaultElevationModel": {
+            "$ref": "#/components/schemas/ElevationModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OgcGeometryType": {
+        "enum": [
+          "Point",
+          "LineString",
+          "Polygon",
+          "MultiPoint",
+          "MultiLineString",
+          "MultiPolygon",
+          "GeometryCollection",
+          "CircularString",
+          "CompoundCurve",
+          "CurvePolygon",
+          "MultiCurve",
+          "MultiSurface",
+          "Curve",
+          "Surface",
+          "PolyhedralSurface",
+          "TIN"
+        ],
+        "type": "string"
+      },
+      "Ordinates": {
+        "enum": [
+          "None",
+          "X",
+          "Y",
+          "XY",
+          "Z",
+          "XYZ",
+          "Spatial4",
+          "Spatial5",
+          "Spatial6",
+          "Spatial7",
+          "Spatial8",
+          "Spatial9",
+          "Spatial10",
+          "Spatial11",
+          "Spatial12",
+          "Spatial13",
+          "Spatial14",
+          "Spatial15",
+          "Spatial16",
+          "AllSpatialOrdinates",
+          "M",
+          "XYM",
+          "XYZM",
+          "Measure2",
+          "Measure3",
+          "Measure4",
+          "Measure5",
+          "Measure6",
+          "Measure7",
+          "Measure8",
+          "Measure9",
+          "Measure10",
+          "Measure11",
+          "Measure12",
+          "Measure13",
+          "Measure14",
+          "Measure15",
+          "Measure16",
+          "AllMeasureOrdinates",
+          "AllOrdinates"
+        ],
+        "type": "string"
+      },
+      "Point": {
+        "type": "object",
+        "properties": {
+          "factory": {
+            "$ref": "#/components/schemas/GeometryFactory"
+          },
+          "userData": {
+            "nullable": true
+          },
+          "srid": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "precisionModel": {
+            "$ref": "#/components/schemas/PrecisionModel"
+          },
+          "numGeometries": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "isSimple": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isValid": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "area": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "length": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "centroid": {
+            "$ref": "#/components/schemas/Point"
+          },
+          "interiorPoint": {
+            "$ref": "#/components/schemas/Point"
+          },
+          "pointOnSurface": {
+            "$ref": "#/components/schemas/Point"
+          },
+          "envelope": {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          "envelopeInternal": {
+            "$ref": "#/components/schemas/Envelope"
+          },
+          "isRectangle": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "coordinateSequence": {
+            "$ref": "#/components/schemas/CoordinateSequence"
+          },
+          "coordinates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Coordinate"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "numPoints": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "isEmpty": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "dimension": {
+            "$ref": "#/components/schemas/Dimension"
+          },
+          "boundaryDimension": {
+            "$ref": "#/components/schemas/Dimension"
+          },
+          "x": {
+            "type": "number",
+            "format": "double"
+          },
+          "y": {
+            "type": "number",
+            "format": "double"
+          },
+          "coordinate": {
+            "$ref": "#/components/schemas/Coordinate"
+          },
+          "geometryType": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "ogcGeometryType": {
+            "$ref": "#/components/schemas/OgcGeometryType"
+          },
+          "boundary": {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          "z": {
+            "type": "number",
+            "format": "double"
+          },
+          "m": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrecisionModel": {
+        "type": "object",
+        "properties": {
+          "isFloating": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "maximumSignificantDigits": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "scale": {
+            "type": "number",
+            "format": "double"
+          },
+          "gridSize": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "precisionModelType": {
+            "$ref": "#/components/schemas/PrecisionModels"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrecisionModels": {
+        "enum": [
+          "Floating",
+          "FloatingSingle",
+          "Fixed"
+        ],
+        "type": "string"
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": { }
       }
     }
   }

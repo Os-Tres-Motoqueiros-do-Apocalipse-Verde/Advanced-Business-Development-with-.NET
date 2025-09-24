@@ -1,25 +1,24 @@
-using FluentValidation;
+﻿using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
-using OsTresMotoqueirosDoApocalipseVerde.Domain.Enum;
 using OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context;
 using System.Reflection;
 using System.Text.Json.Serialization;
-
+using NetTopologySuite;
 
 var builder = WebApplication.CreateBuilder(args);
-
 
 builder.Configuration.AddEnvironmentVariables();
 
 var connectionString = builder.Configuration["ConnectionStrings:OracleMottu"];
 
-
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseOracle(connectionString));
-
+    options.UseOracle(connectionString, o =>
+        o.UseNetTopologySuite()
+    )
+);
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
@@ -55,7 +54,6 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 var app = builder.Build();
-
 
 if (app.Environment.IsDevelopment())
 {

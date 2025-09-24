@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 
-public class CreateDadosDtoValidator : AbstractValidator<CreateDadosDto>
+public class CreateDadosDtoValidator : AbstractValidator<CreateDadosRequest>
 {
     public CreateDadosDtoValidator()
     {

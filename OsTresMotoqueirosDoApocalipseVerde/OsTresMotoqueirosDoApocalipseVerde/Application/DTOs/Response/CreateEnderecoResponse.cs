@@ -2,6 +2,7 @@
 {
     public class CreateEnderecoResponse
     {
+        public long? Id { get; set; }
         public int Numero { get; set; }
         public string Estado { get; set; }
         public string CodigoPais { get; set; }

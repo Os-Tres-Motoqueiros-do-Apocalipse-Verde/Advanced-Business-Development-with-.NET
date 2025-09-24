@@ -1,62 +1,93 @@
-﻿using AutoMapper;
+﻿using System.Net;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs;
+using FluentValidation;
+using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
-using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
-using OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context;
+using OsTresMotoqueirosDoApocalipseVerde.Application.UseCase;
+using OsTresMotoqueirosDoApocalipseVerde.Application.Validators;
 
-[ApiController]
-[Route("api/[controller]")]
-[Tags("CRUD Moto")]
-public class MotoController : ControllerBase
+namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
 {
-    private readonly AppDbContext _context;
-    private readonly IMapper _mapper;
-
-    public MotoController(AppDbContext context, IMapper mapper)
+    [Route("api/[controller]")]
+    [ApiController]
+    [Tags("CRUD Moto")]
+    public class MotoController : ControllerBase
     {
-        _context = context;
-        _mapper = mapper;
-    }
+        private readonly MotoUseCase _motoUseCase;
+        private readonly CreateMotoDtoValidator _validationMoto;
 
-    [HttpPost]
-    public IActionResult Create(CreateMotoDto dto)
-    {
-        var moto = _mapper.Map<Moto>(dto);
-        _context.Moto.Add(moto);
-        _context.SaveChanges();
+        public MotoController(
+            MotoUseCase motoUseCase,
+            CreateMotoDtoValidator validationMoto)
+        {
+            _motoUseCase = motoUseCase;
+            _validationMoto = validationMoto;
+        }
 
-        var readDto = _mapper.Map<ReadMotoDto>(
-            _context.Moto.Include(m => m.Modelo).First(m => m.Id == moto.Id)
-        );
-        return CreatedAtAction(nameof(GetById), new { id = moto.Id }, readDto);
-    }
+        [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<CreateMotoResponse>), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> GetMotos()
+        {
+            var filiais = await _motoUseCase.GetAllMotoAsync();
+            return Ok(filiais);
+        }
 
-    [HttpGet]
-    public ActionResult<IEnumerable<ReadMotoDto>> GetAll()
-    {
-        var motos = _context.Moto.Include(m => m.Modelo).ToList();
-        return Ok(_mapper.Map<IEnumerable<ReadMotoDto>>(motos));
-    }
+        [HttpGet("{id}")]
+        [ProducesResponseType(typeof(CreateMotoResponse), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        public async Task<IActionResult> GetMoto(long id)
+        {
+            var moto = await _motoUseCase.GetByIdAsync(id);
+            if (moto == null)
+                return NotFound();
 
-    [HttpGet("{id}")]
-    public IActionResult GetById(int id)
-    {
-        var moto = _context.Moto.Include(m => m.Modelo).FirstOrDefault(m => m.Id == id);
-        if (moto == null) return NotFound();
+            return Ok(moto);
+        }
 
-        return Ok(_mapper.Map<ReadMotoDto>(moto));
-    }
+        [HttpPost]
+        [ProducesResponseType(typeof(CreateMotoResponse), (int)HttpStatusCode.Created)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> PostMoto([FromBody] CreateMotoRequest request)
+        {
+            var result = ((IValidator<CreateMotoRequest>)_validationMoto).Validate(request);
+            if (!result.IsValid)
+            {
+                return BadRequest(result.Errors);
+            }
 
-    [HttpDelete("{id}")]
-    public IActionResult Delete(int id)
-    {
-        var moto = _context.Moto.Find(id);
-        if (moto == null) return NotFound();
+            var motoResponse = await _motoUseCase.CreateMotoAsync(request);
+            return CreatedAtAction(nameof(GetMoto), new { id = motoResponse.Id }, motoResponse);
+        }
 
-        _context.Moto.Remove(moto);
-        _context.SaveChanges();
-        return NoContent();
+        [HttpPut("{id}")]
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> PutMoto(long id, [FromBody] CreateMotoRequest request)
+        {
+            var result = ((IValidator<CreateMotoRequest>)_validationMoto).Validate(request);
+            if (!result.IsValid)
+            {
+                return BadRequest(result.Errors);
+            }
+
+            var updated = await _motoUseCase.UpdateMotoAsync(id, request);
+            if (!updated)
+                return NotFound();
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        public async Task<IActionResult> DeleteMoto(long id)
+        {
+            var deleted = await _motoUseCase.DeleteMotoAsync(id);
+            if (!deleted)
+                return NotFound();
+
+            return NoContent();
+        }
     }
 }

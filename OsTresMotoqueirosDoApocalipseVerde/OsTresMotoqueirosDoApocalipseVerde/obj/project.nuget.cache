@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XTq7RFzke30=",
+  "dgSpecHash": "tAM/F7a5PCY=",
   "success": true,
-  "projectFilePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+  "projectFilePath": "D:\\2TDSPX\\Luiz\\net\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\labsfiap\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

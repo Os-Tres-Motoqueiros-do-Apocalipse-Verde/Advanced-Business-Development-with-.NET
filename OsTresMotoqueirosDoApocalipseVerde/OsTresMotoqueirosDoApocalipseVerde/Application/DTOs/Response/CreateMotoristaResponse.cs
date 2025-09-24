@@ -1,9 +1,11 @@
 ﻿using OsTresMotoqueirosDoApocalipseVerde.Domain.Enum;
+using System.ComponentModel.DataAnnotations;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response
 {
     public class CreateMotoristaResponse
     {
+        public long? Id { get; set; }
         public CreateDadosResponse Dados { get; set; }
 
         [EnumDataType(typeof(Plano))]

@@ -2,6 +2,7 @@
 {
     public class CreatePatioResponse
     {
+        public long? Id { get; set; }
         public int TotalMotos { get; set; }
         public int CapacidadeMoto { get; set; }
 
