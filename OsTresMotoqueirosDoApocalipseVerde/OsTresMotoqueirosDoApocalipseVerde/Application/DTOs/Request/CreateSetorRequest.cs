@@ -10,9 +10,9 @@
         public string Descricao { get; set; }
         public string Cor {  get; set; }
 
-        public CreateRegiaoRequest Regiao { get; set; }
+        public string Localizacao { get; set; }
 
-        public long? PatioId { get; set; }
+        public long PatioId { get; set; }
 
     }
 }

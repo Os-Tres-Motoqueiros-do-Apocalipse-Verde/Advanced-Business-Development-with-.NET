@@ -1,4 +1,4 @@
-using GB1.Infrastructure.Repositories;
+
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
@@ -64,7 +64,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 
             foreach (var motorista in motoristas)
             {
-                var dados = await _dadosRepository.GetByIdAsync(motorista.DadosId.Value);
+                var dados = await _dadosRepository.GetByIdAsync(motorista.DadosId);
 
                 response.Add(new CreateMotoristaResponse
                 {
@@ -89,7 +89,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             var motorista = await _motoristaRepository.GetByIdAsync(id);
             if (motorista == null) return null;
 
-            var dados = await _dadosRepository.GetByIdAsync(motorista.DadosId.Value);
+            var dados = await _dadosRepository.GetByIdAsync(motorista.DadosId);
 
             return new CreateMotoristaResponse
             {
@@ -111,7 +111,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             var motorista = await _motoristaRepository.GetByIdAsync(id);
             if (motorista == null) return false;
 
-            var dados = await _dadosRepository.GetByIdAsync(motorista.DadosId.Value);
+            var dados = await _dadosRepository.GetByIdAsync(motorista.DadosId);
             if (dados == null) return false;
 
             dados.Atualizar(
@@ -143,14 +143,11 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             _motoristaRepository.Delete(motorista);
             await _motoristaRepository.SaveChangesAsync();
 
-            if (dadosId.HasValue)
+            var dados = await _dadosRepository.GetByIdAsync(dadosId);
+            if (dados != null)
             {
-                var dados = await _dadosRepository.GetByIdAsync(dadosId.Value);
-                if (dados != null)
-                {
-                    _dadosRepository.Delete(dados);
-                    await _dadosRepository.SaveChangesAsync();
-                }
+                _dadosRepository.Delete(dados);
+                await _dadosRepository.SaveChangesAsync();
             }
 
             return true;

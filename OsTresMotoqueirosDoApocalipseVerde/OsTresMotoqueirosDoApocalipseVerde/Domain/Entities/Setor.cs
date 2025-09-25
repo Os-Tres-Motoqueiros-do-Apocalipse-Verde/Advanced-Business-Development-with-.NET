@@ -6,7 +6,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
     public class Setor
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Id { get; set; }
 
         public string NomeSetor { get; set; }
@@ -17,41 +17,40 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
         public string Descricao { get; set; }
         public string Cor {  get; set; }
 
-        // Chave estrangeira
-        public long? PatioId { get; set; }
-        public virtual Patio Patio { get; set; }
+        public string Localizacao { get; set; }
 
-        public long? RegiaoId { get; set; }
-        public virtual Regiao Regiao { get; set; }
+        // Chave estrangeira
+        public long PatioId { get; set; }
+        public virtual Patio Patio { get; set; }
 
         public virtual Moto Moto { get; set; }
 
-        private Setor(string nomeSetor, int qtdMoto, int capacidade, string descricao, string cor, long? regiaoId, long? patioId)
+        private Setor(string nomeSetor, int qtdMoto, int capacidade, string descricao, string cor, string localizacao, long patioId)
         {
             NomeSetor = nomeSetor;
             QtdMoto = qtdMoto;
             Capacidade = capacidade;
             Descricao = descricao;
-            RegiaoId = regiaoId;
+            Localizacao = localizacao;
             PatioId = patioId;
             
         }
 
-        public void Atualizar(string nomeSetor, int qtdMoto, int capacidade, string descricao, string cor, long? regiaoId, long? patioId)
+        public void Atualizar(string nomeSetor, int qtdMoto, int capacidade, string descricao, string cor, string localizacao, long patioId)
         {
             NomeSetor = nomeSetor;
             QtdMoto = qtdMoto;
             Capacidade = capacidade;
             Descricao = descricao;
-            RegiaoId = regiaoId;
+            Localizacao = localizacao;
             PatioId = patioId;
             
         }
 
 
-        internal static Setor Create(string nomeSetor, int qtdMoto, int capacidade, string descricao, string cor, long? patioId, long? regiaoId)
+        internal static Setor Create(string nomeSetor, int qtdMoto, int capacidade, string descricao, string cor, string localizacao, long patioId)
         {
-            return new Setor(nomeSetor, qtdMoto, capacidade, descricao, cor, patioId, regiaoId);
+            return new Setor(nomeSetor, qtdMoto, capacidade, descricao, cor, localizacao, patioId);
         }
 
         public Setor() { }

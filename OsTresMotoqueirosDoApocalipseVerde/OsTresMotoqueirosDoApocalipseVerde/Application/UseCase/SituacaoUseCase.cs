@@ -1,4 +1,4 @@
-﻿using GB1.Infrastructure.Repositories;
+﻿
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;

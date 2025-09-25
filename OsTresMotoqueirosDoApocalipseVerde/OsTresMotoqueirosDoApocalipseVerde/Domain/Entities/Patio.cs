@@ -7,41 +7,42 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
     public class Patio
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Id { get; set; }
 
         public int TotalMotos { get; set; }
         public int CapacidadeMoto { get; set; }
 
+        public string Localizacao { get; set; }
+
         // Chave estrangeira
-        public long? FilialId { get; set; }
+        public long FilialId { get; set; }
         public virtual Filial Filial { get; set; }
 
-        public long? RegiaoId { get; set; }
-        public virtual Regiao Regiao { get; set; }
 
         public virtual ICollection<Setor> Setores { get; private set; } = new List<Setor>();
 
-        private Patio(int totalMotos, int capacidadeMoto, long? filialId, long? regiaoId)
+        private Patio(int totalMotos, int capacidadeMoto, string localizacao, long filialId)
         {
             TotalMotos = totalMotos;
             CapacidadeMoto = capacidadeMoto;
+            Localizacao = localizacao;
             FilialId = filialId;
-            RegiaoId = regiaoId;
+            
         }
 
-        public void Atualizar(int totalMotos, int capacidadeMoto, long? filialId, long? regiaoId)
+        public void Atualizar(int totalMotos, int capacidadeMoto, string localizacao, long filialId)
         {
             TotalMotos = totalMotos;
             CapacidadeMoto = capacidadeMoto;
+            Localizacao = localizacao;
             FilialId = filialId;
-            RegiaoId = regiaoId;
         }
 
 
-        internal static Patio Create(int totalMotos, int capacidadeMoto, long? filialId, long? regiaoId)
+        internal static Patio Create(int totalMotos, int capacidadeMoto, string localizacao, long filialId)
         {
-            return new Patio(totalMotos, capacidadeMoto, filialId, regiaoId);
+            return new Patio(totalMotos, capacidadeMoto, localizacao, filialId);
         }
 
         public Patio() { }

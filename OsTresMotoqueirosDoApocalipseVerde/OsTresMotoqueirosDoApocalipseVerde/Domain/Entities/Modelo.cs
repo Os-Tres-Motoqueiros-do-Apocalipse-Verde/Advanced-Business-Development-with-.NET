@@ -7,7 +7,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
     public class Modelo
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Id { get; set; }
         public string NomeModelo { get; set; }
 

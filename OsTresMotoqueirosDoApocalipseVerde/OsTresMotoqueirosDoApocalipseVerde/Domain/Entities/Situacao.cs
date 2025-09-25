@@ -7,7 +7,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
     public class Situacao
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Id { get; set; }
         public string Nome { get; set; }
 

@@ -29,14 +29,14 @@ public class PatioMapping : IEntityTypeConfiguration<Patio>
             .HasColumnName("CAPACIDADE_MOTO");
 
         builder
+            .Property(p => p.Localizacao)
+            .IsRequired()
+            .HasColumnName("LOCALIZACAO");
+
+        builder
             .Property(p => p.FilialId)
             .HasColumnName("ID_FILIAL")
             .IsRequired();
 
-        builder
-                .HasOne(p => p.Regiao)
-                .WithOne(r => r.Patio)
-                .HasForeignKey<Patio>(f => f.RegiaoId)
-                .OnDelete(DeleteBehavior.Restrict);
     }
 }

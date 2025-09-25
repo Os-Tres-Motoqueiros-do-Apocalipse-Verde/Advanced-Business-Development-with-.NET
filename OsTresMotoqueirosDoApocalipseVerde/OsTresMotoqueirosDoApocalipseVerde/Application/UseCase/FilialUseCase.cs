@@ -1,5 +1,4 @@
-﻿using GB1.Infrastructure.Repositories;
-using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
+﻿using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
 using OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context;
@@ -63,7 +62,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 
             foreach (var filial in filiais)
             {
-                var endereco = await _enderecoRepository.GetByIdAsync(filial.EnderecoId.Value);
+                var endereco = await _enderecoRepository.GetByIdAsync(filial.EnderecoId);
 
                 response.Add(new CreateFilialResponse
                 {
@@ -89,7 +88,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             var filial = await _filialRepository.GetByIdAsync(id);
             if (filial == null) return null;
 
-            var endereco = await _enderecoRepository.GetByIdAsync(filial.EnderecoId.Value);
+            var endereco = await _enderecoRepository.GetByIdAsync(filial.EnderecoId);
 
             return new CreateFilialResponse
             {
@@ -112,7 +111,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             var filial = await _filialRepository.GetByIdAsync(id);
             if (filial == null) return false;
 
-            var endereco = await _enderecoRepository.GetByIdAsync(filial.EnderecoId.Value);
+            var endereco = await _enderecoRepository.GetByIdAsync(filial.EnderecoId);
             if (endereco == null) return false;
 
             filial.Atualizar(request.NomeFilial, filial.EnderecoId);
@@ -144,17 +143,15 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             _filialRepository.Delete(filial);
             await _filialRepository.SaveChangesAsync();
 
-            if (enderecoId.HasValue)
+            var endereco = await _enderecoRepository.GetByIdAsync(enderecoId);
+            if (endereco != null)
             {
-                var endereco = await _enderecoRepository.GetByIdAsync(enderecoId.Value);
-                if (endereco != null)
-                {
-                    _enderecoRepository.Delete(endereco);
-                    await _enderecoRepository.SaveChangesAsync();
-                }
+                _enderecoRepository.Delete(endereco);
+                await _enderecoRepository.SaveChangesAsync();
             }
 
             return true;
         }
+
     }
 }

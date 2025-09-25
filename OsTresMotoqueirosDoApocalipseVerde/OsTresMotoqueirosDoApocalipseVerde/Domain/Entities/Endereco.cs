@@ -9,7 +9,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
     {
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Id { get; set; }
 
 

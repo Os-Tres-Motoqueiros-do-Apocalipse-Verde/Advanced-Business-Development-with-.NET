@@ -10,7 +10,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request
         [EnumDataType(typeof(Cargo))]
         public Cargo Cargo { get; set; }
 
-        public long? FilialId { get; set; }
+        public long FilialId { get; set; }
 
     }
 }

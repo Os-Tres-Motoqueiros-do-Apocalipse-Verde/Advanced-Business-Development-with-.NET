@@ -7,7 +7,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
     public class Moto
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Id { get; set; }
 
         public string Placa { get; set; }
@@ -15,25 +15,25 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
 
         public string Condicao { get; set; }
         
-        public Point LocalizacaoMoto { get; set; }
+        public string LocalizacaoMoto { get; set; }
 
 
         // Chaves estrangeiras
-        public long? MotoristaId { get; set; }
+        public long MotoristaId { get; set; }
         public virtual Motorista Motorista { get; set; }
 
-        public long? ModeloId { get; set; }
+        public long ModeloId { get; set; }
         public virtual Modelo Modelo { get; set; }
 
-        public long? SetorId { get; set; }
+        public long SetorId { get; set; }
         public virtual Setor Setor { get; set; }
 
-        public long? SituacaoId { get; set; }
+        public long SituacaoId { get; set; }
         public virtual Situacao Situacao { get; set; }
 
 
 
-        private Moto(string placa, string chassi, string condicao, Point localizacaoMoto, long? motoristaId, long? modeloId, long? setorId, long? situacaoId)
+        private Moto(string placa, string chassi, string condicao, string localizacaoMoto, long motoristaId, long modeloId, long setorId, long situacaoId)
         {
             Placa = placa;
             Chassi = chassi;
@@ -45,7 +45,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
             SituacaoId = situacaoId;
         }
 
-        public void Atualizar(string placa, string chassi, string condicao, Point localizacaoMoto, long? motoristaId, long? modeloId, long? setorId, long? situacaoId)
+        public void Atualizar(string placa, string chassi, string condicao, string localizacaoMoto, long motoristaId, long modeloId, long setorId, long situacaoId)
         {
             Placa = placa;
             Chassi = chassi;
@@ -58,7 +58,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entities
         }
 
 
-        internal static Moto Create(string placa, string chassi, string condicao, Point localizacaoMoto, long? motoristaId, long? modeloId, long? setorId, long? situacaoId)
+        internal static Moto Create(string placa, string chassi, string condicao, string localizacaoMoto, long motoristaId, long modeloId, long setorId, long situacaoId)
         {
             return new Moto(placa, chassi, condicao, localizacaoMoto, motoristaId, setorId, situacaoId, modeloId);
         }

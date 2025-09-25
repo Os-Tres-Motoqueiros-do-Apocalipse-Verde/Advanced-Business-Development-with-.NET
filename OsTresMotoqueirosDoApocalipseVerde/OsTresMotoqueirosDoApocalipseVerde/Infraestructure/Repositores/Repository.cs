@@ -2,7 +2,7 @@
 using OsTresMotoqueirosDoApocalipseVerde.Infraestructure;
 using OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context;
 
-namespace GB1.Infrastructure.Repositories
+namespace OsTresMotoqueirosDoApocalipseVerde
 {
     public class Repository<T> : IRepository<T> where T : class
     {

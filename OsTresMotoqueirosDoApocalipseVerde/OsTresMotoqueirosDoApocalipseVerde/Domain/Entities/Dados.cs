@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 public class Dados
 {
     [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
     public long Id { get; set; }
     public string CPF { get; set; }
     public string Telefone { get; set; }

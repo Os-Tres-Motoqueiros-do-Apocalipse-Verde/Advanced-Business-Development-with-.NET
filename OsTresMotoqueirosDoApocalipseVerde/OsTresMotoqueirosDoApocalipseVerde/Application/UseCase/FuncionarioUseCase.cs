@@ -1,4 +1,4 @@
-﻿using GB1.Infrastructure.Repositories;
+﻿
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
@@ -62,7 +62,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 
             foreach (var funcionario in funcionarios)
             {
-                var dados = await _dadosRepository.GetByIdAsync(funcionario.DadosId.Value);
+                var dados = await _dadosRepository.GetByIdAsync(funcionario.DadosId);
 
                 response.Add(new CreateFuncionarioResponse
                 {
@@ -88,7 +88,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             var funcionario = await _funcionarioRepository.GetByIdAsync(id);
             if (funcionario == null) return null;
 
-            var dados = await _dadosRepository.GetByIdAsync(funcionario.DadosId.Value);
+            var dados = await _dadosRepository.GetByIdAsync(funcionario.DadosId);
 
             return new CreateFuncionarioResponse
             {
@@ -111,7 +111,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             var funcionario = await _funcionarioRepository.GetByIdAsync(id);
             if (funcionario == null) return false;
 
-            var dados = await _dadosRepository.GetByIdAsync(funcionario.DadosId.Value);
+            var dados = await _dadosRepository.GetByIdAsync(funcionario.DadosId);
             if (dados == null) return false;
 
             funcionario.Atualizar(request.Cargo, request.FilialId, dados.Id);
@@ -142,14 +142,11 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             _funcionarioRepository.Delete(funcionario);
             await _funcionarioRepository.SaveChangesAsync();
 
-            if (dadosId.HasValue)
+            var dados = await _dadosRepository.GetByIdAsync(dadosId);
+            if (dados != null)
             {
-                var dados = await _dadosRepository.GetByIdAsync(dadosId.Value);
-                if (dados != null)
-                {
-                    _dadosRepository.Delete(dados);
-                    await _dadosRepository.SaveChangesAsync();
-                }
+                _dadosRepository.Delete(dados);
+                await _dadosRepository.SaveChangesAsync();
             }
 
             return true;

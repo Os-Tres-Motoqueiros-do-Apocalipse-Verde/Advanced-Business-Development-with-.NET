@@ -39,10 +39,10 @@ public class SetorMapping : IEntityTypeConfiguration<Setor>
             .HasColumnName("DESCRICAO");
 
         builder
-                .HasOne(s => s.Regiao)
-                .WithOne(r => r.Setor)
-                .HasForeignKey<Setor>(s => s.RegiaoId)
-                .OnDelete(DeleteBehavior.Restrict);
+            .Property(s => s.Localizacao)
+            .HasMaxLength(255)
+            .IsRequired()
+            .HasColumnName("LOCALIZACAO");
 
         builder
                 .Property(s => s.PatioId)

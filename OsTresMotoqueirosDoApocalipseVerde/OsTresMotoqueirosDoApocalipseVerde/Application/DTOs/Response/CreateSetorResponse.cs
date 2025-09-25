@@ -2,7 +2,7 @@
 {
     public class CreateSetorResponse
     {
-        public long? Id { get; set; }
+        public long Id { get; set; }
         public string NomeSetor { get; set; }
 
         public int QtdMoto { get; set; }
@@ -11,8 +11,8 @@
         public string Descricao { get; set; }
         public string Cor { get; set; }
 
-        public CreateRegiaoResponse Regiao { get; set; }
+        public string Localizacao { get; set; }
 
-        public long? PatioId { get; set; }
+        public long PatioId { get; set; }
     }
 }

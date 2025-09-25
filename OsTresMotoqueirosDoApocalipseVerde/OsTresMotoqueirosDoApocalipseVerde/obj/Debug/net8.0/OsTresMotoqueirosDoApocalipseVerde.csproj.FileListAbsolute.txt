@@ -1231,7 +1231,6 @@ D:\2TDSPX\Luiz\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocal
 D:\2TDSPX\Luiz\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\staticwebassets.build.json.cache
 D:\2TDSPX\Luiz\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\staticwebassets.development.json
 D:\2TDSPX\Luiz\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\2TDSPX\Luiz\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\2TDSPX\Luiz\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\OsTresMo.9C979A00.Up2Date
 D:\2TDSPX\Luiz\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\OsTresMotoqueirosDoApocalipseVerde.dll
 D:\2TDSPX\Luiz\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\refint\OsTresMotoqueirosDoApocalipseVerde.dll
@@ -1484,3 +1483,4 @@ D:\2TDSPX\Luiz\net\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoAp
 D:\2TDSPX\Luiz\net\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\OsTresMo.9C979A00.Up2Date
 D:\2TDSPX\Luiz\net\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\OsTresMotoqueirosDoApocalipseVerde.genruntimeconfig.cache
 D:\2TDSPX\Luiz\net\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\ref\OsTresMotoqueirosDoApocalipseVerde.dll
+D:\2TDSPX\Luiz\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\bin\Debug\net8.0\NetTopologySuite.dll

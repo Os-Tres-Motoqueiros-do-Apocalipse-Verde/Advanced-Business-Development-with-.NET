@@ -1,8 +1,6 @@
-﻿using System;
-
-public class Class1
+﻿namespace OsTresMotoqueirosDoApocalipseVerde.Application.Validators
 {
-	public Class1()
-	{
-	}
+    public class CreateEnderecoDtoValidator
+    {
+    }
 }

@@ -1,4 +1,4 @@
-﻿namespace GB1.Infrastructure.Repositories
+﻿namespace OsTresMotoqueirosDoApocalipseVerde
 {
     public interface IRepository<T> where T : class
     {

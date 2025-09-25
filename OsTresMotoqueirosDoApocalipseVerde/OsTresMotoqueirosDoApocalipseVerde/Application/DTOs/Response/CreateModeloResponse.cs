@@ -5,7 +5,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response
 {
     public class CreateModeloResponse
     {
-        public long? Id { get; set; }
+        public long Id { get; set; }
         public string NomeModelo { get; set; }
 
         [EnumDataType(typeof(Frenagem))]

@@ -5,9 +5,8 @@
         public int TotalMotos { get; set; }
         public int CapacidadeMoto {  get; set; }
 
-        //chave estrangeira
-        public CreateRegiaoRequest Regiao { get; set; }
+        public string Localizacao { get; set; }
 
-        public long? FilialId { get; set; }
+        public long FilialId { get; set; }
     }
 }

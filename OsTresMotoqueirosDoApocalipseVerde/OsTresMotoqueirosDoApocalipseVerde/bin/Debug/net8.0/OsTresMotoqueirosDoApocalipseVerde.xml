@@ -4,5 +4,17 @@
         <name>OsTresMotoqueirosDoApocalipseVerde</name>
     </assembly>
     <members>
+        <member name="T:OsTresMotoqueirosDoApocalipseVerde.Migrations.MottuMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Migrations.MottuMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Migrations.MottuMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Migrations.MottuMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

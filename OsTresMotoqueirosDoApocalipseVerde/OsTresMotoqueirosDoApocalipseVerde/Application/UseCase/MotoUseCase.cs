@@ -1,4 +1,4 @@
-﻿using GB1.Infrastructure.Repositories;
+﻿
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Entities;
@@ -80,7 +80,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 
             foreach (var moto in motos)
             {
-                var modelo = await _modeloRepository.GetByIdAsync(moto.ModeloId.Value);
+                var modelo = await _modeloRepository.GetByIdAsync(moto.ModeloId);
 
                 response.Add(new CreateMotoResponse
                 {
@@ -112,7 +112,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             var moto = await _motoRepository.GetByIdAsync(id);
             if (moto == null) return null;
 
-            var modelo = await _modeloRepository.GetByIdAsync(moto.ModeloId.Value);
+            var modelo = await _modeloRepository.GetByIdAsync(moto.ModeloId);
 
             return new CreateMotoResponse
             {
@@ -140,7 +140,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             var moto = await _motoRepository.GetByIdAsync(id);
             if (moto == null) return false;
 
-            var modelo = await _modeloRepository.GetByIdAsync(moto.ModeloId.Value);
+            var modelo = await _modeloRepository.GetByIdAsync(moto.ModeloId);
             if (modelo == null) return false;
 
             modelo.Atualizar(
@@ -182,14 +182,11 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             _motoRepository.Delete(moto);
             await _motoRepository.SaveChangesAsync();
 
-            if (modeloId.HasValue)
+            var modelo = await _modeloRepository.GetByIdAsync(modeloId);
+            if (modelo != null)
             {
-                var modelo = await _modeloRepository.GetByIdAsync(modeloId.Value);
-                if (modelo != null)
-                {
-                    _modeloRepository.Delete(modelo);
-                    await _modeloRepository.SaveChangesAsync();
-                }
+                _modeloRepository.Delete(modelo);
+                await _modeloRepository.SaveChangesAsync();
             }
 
             return true;
