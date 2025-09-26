@@ -1,0 +1,6 @@
+@OsTresMotoqueirosDoApocalipseVerde_HostAddress = http://localhost:5207
+
+GET {{OsTresMotoqueirosDoApocalipseVerde_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
