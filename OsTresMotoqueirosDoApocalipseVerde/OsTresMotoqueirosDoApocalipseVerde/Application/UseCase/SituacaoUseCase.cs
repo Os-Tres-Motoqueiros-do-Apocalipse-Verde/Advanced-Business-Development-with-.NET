@@ -6,76 +6,81 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 {
     public class SituacaoUseCase
     {
-        private readonly IRepository<Filial> _repository;
+        private readonly IRepository<Situacao> _repository;
 
-        public FilialUseCase(IRepository<Filial> repository)
+        public SituacaoUseCase(IRepository<Situacao> repository)
         {
             _repository = repository;
         }
 
-        public async Task<CreateFilialResponse> CreateFilialAsync(CreateFilialRequest request)
+        public async Task<CreateSituacaoResponse> CreateSituacaoAsync(CreateSituacaoRequest request)
         {
-            var filial = Filial.Create(
-                request.NomeFilial,
-                request.EnderecoId
+            var situacao = Situacao.Create(
+                request.Nome,
+                request.Descricao,
+                request.Status
             );
 
-            await _repository.AddAsync(filial);
+            await _repository.AddAsync(situacao);
             await _repository.SaveChangesAsync();
 
-            return new CreateFilialResponse
+            return new CreateSituacaoResponse
             {
-                Id = filial.Id,
-                NomeFilial = filial.NomeFilial,
-                EnderecoId = filial.EnderecoId
+                Id = situacao.Id,
+                Nome = situacao.Nome,
+                Descricao = situacao.Descricao,
+                Status = situacao.Status
             };
         }
 
-        public async Task<List<CreateFilialResponse>> GetAllFilialAsync()
+        public async Task<List<CreateSituacaoResponse>> GetAllSituacaoAsync()
         {
             var filiais = await _repository.GetAllAsync();
-            return filiais.Select(u => new CreateFilialResponse
+            return filiais.Select(u => new CreateSituacaoResponse
             {
                 Id = u.Id,
-                NomeFilial = u.NomeFilial,
-                EnderecoId = u.EnderecoId
+                Nome = u.Nome,
+                Descricao = u.Descricao,
+                Status = u.Status
             }).ToList();
         }
 
-        public async Task<CreateFilialResponse?> GetByIdAsync(long id)
+        public async Task<CreateSituacaoResponse?> GetByIdAsync(long id)
         {
-            var filial = await _repository.GetByIdAsync(id);
-            if (filial == null) return null;
+            var situacao = await _repository.GetByIdAsync(id);
+            if (situacao == null) return null;
 
-            return new CreateFilialResponse
+            return new CreateSituacaoResponse
             {
-                Id = filial.Id,
-                NomeFilial = filial.NomeFilial,
-                EnderecoId = filial.EnderecoId
+                Id = situacao.Id,
+                Nome = situacao.Nome,
+                Descricao = situacao.Descricao,
+                Status = situacao.Status
             };
         }
 
-        public async Task<bool> UpdateFilialAsync(long id, CreateFilialRequest request)
+        public async Task<bool> UpdateSituacaoAsync(long id, CreateSituacaoRequest request)
         {
-            var filial = await _repository.GetByIdAsync(id);
-            if (filial == null) return false;
+            var situacao = await _repository.GetByIdAsync(id);
+            if (situacao == null) return false;
 
-            filial.Atualizar(
-                request.NomeFilial,
-                request.EnderecoId
+            situacao.Atualizar(
+                request.Nome,
+                request.Descricao,
+                request.Status
             );
-            _repository.Update(filial);
+            _repository.Update(situacao);
             await _repository.SaveChangesAsync();
             return true;
         }
 
 
-        public async Task<bool> DeleteFilialAsync(long id)
+        public async Task<bool> DeleteSituacaoAsync(long id)
         {
-            var filial = await _repository.GetByIdAsync(id);
-            if (filial == null) return false;
+            var situacao = await _repository.GetByIdAsync(id);
+            if (situacao == null) return false;
 
-            _repository.Delete(filial);
+            _repository.Delete(situacao);
             await _repository.SaveChangesAsync();
             return true;
         }

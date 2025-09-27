@@ -6,76 +6,86 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 {
     public class PatioUseCase
     {
-        private readonly IRepository<Filial> _repository;
+        private readonly IRepository<Patio> _repository;
 
-        public FilialUseCase(IRepository<Filial> repository)
+        public PatioUseCase(IRepository<Patio> repository)
         {
             _repository = repository;
         }
 
-        public async Task<CreateFilialResponse> CreateFilialAsync(CreateFilialRequest request)
+        public async Task<CreatePatioResponse> CreatePatioAsync(CreatePatioRequest request)
         {
-            var filial = Filial.Create(
-                request.NomeFilial,
-                request.EnderecoId
+            var patio = Patio.Create(
+                request.TotalMotos,
+                request.CapacidadeMoto,
+                request.Localizacao,
+                request.FilialId
             );
 
-            await _repository.AddAsync(filial);
+            await _repository.AddAsync(patio);
             await _repository.SaveChangesAsync();
 
-            return new CreateFilialResponse
+            return new CreatePatioResponse
             {
-                Id = filial.Id,
-                NomeFilial = filial.NomeFilial,
-                EnderecoId = filial.EnderecoId
+                Id = patio.Id,
+                TotalMotos = patio.TotalMotos,
+                CapacidadeMoto = patio.CapacidadeMoto,
+                Localizacao = patio.Localizacao,
+                FilialId = patio.FilialId
             };
         }
 
-        public async Task<List<CreateFilialResponse>> GetAllFilialAsync()
+        public async Task<List<CreatePatioResponse>> GetAllPatioAsync()
         {
-            var filiais = await _repository.GetAllAsync();
-            return filiais.Select(u => new CreateFilialResponse
+            var patios = await _repository.GetAllAsync();
+            return patios.Select(u => new CreatePatioResponse
             {
                 Id = u.Id,
-                NomeFilial = u.NomeFilial,
-                EnderecoId = u.EnderecoId
+                TotalMotos = u.TotalMotos,
+                CapacidadeMoto = u.CapacidadeMoto,
+                Localizacao = u.Localizacao,
+                FilialId= u.FilialId
             }).ToList();
         }
 
-        public async Task<CreateFilialResponse?> GetByIdAsync(long id)
+        public async Task<CreatePatioResponse?> GetByIdAsync(long id)
         {
-            var filial = await _repository.GetByIdAsync(id);
-            if (filial == null) return null;
+            var patio = await _repository.GetByIdAsync(id);
+            if (patio == null) return null;
 
-            return new CreateFilialResponse
+            return new CreatePatioResponse
             {
-                Id = filial.Id,
-                NomeFilial = filial.NomeFilial,
-                EnderecoId = filial.EnderecoId
+                Id = patio.Id,
+                TotalMotos = patio.TotalMotos,
+                CapacidadeMoto = patio.CapacidadeMoto,
+                Localizacao = patio.Localizacao,
+                FilialId = patio.FilialId
             };
         }
 
-        public async Task<bool> UpdateFilialAsync(long id, CreateFilialRequest request)
+        public async Task<bool> UpdatePatioAsync(long id, CreatePatioRequest request)
         {
-            var filial = await _repository.GetByIdAsync(id);
-            if (filial == null) return false;
+            var patio = await _repository.GetByIdAsync(id);
+            if (patio == null) return false;
 
-            filial.Atualizar(
-                request.NomeFilial,
-                request.EnderecoId
+            patio.Atualizar(
+                request.TotalMotos,
+                request.CapacidadeMoto,
+                request.Localizacao,
+                request.FilialId
             );
-            _repository.Update(filial);
+            _repository.Update(patio);
             await _repository.SaveChangesAsync();
             return true;
         }
 
 
-        public async Task<bool> DeleteFilialAsync(long id)
+        public async Task<bool> DeletePatioAsync(long id)
         {
-            var filial = await _repository.GetByIdAsync(id);
-            if (filial == null) return false;
+            var patio = await _repository.GetByIdAsync(id);
+            if (patio == null) return false;
 
-            _repository.Delete(filial);
+            _repository.Delete(patio);
             await _repository.SaveChangesAsync();
             return true;
         }

@@ -26,7 +26,7 @@ public class SetorMapping : IEntityTypeConfiguration<Setor>
         builder
             .Property(s => s.Capacidade)
             .IsRequired()
-            .HasColumnName("CAPACIDADE_MOTO");
+            .HasColumnName("CAPACIDADE");
 
         builder
             .Property(s => s.NomeSetor)
@@ -39,6 +39,12 @@ public class SetorMapping : IEntityTypeConfiguration<Setor>
             .HasColumnName("DESCRICAO");
 
         builder
+            .Property(s => s.Cor)
+            .HasMaxLength(20)
+            .IsRequired()
+            .HasColumnName("COR");
+
+        builder
             .Property(s => s.Localizacao)
             .HasMaxLength(255)
             .IsRequired()
@@ -46,7 +52,7 @@ public class SetorMapping : IEntityTypeConfiguration<Setor>
 
         builder
                 .Property(s => s.PatioId)
-                .HasColumnName("PATIO_ID");
+                .HasColumnName("ID_PATIO");
 
         builder
             .HasOne(s => s.Patio)

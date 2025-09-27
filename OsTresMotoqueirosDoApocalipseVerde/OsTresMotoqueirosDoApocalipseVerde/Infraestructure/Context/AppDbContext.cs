@@ -11,11 +11,17 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context
 
         public DbSet<Dados> Dados { get; set; }
         public DbSet<Moto> Moto { get; set; }
+        public DbSet<Endereco> Endereco { get; set; }
+        public DbSet<Filial> Filial { get; set; }
+        public DbSet<Modelo> Modelo { get; set; }
+        public DbSet<Motorista> Motorista { get; set; }
+        public DbSet<Patio> Patio { get; set; }
+        public DbSet<Setor> Setor { get; set; }
+        public DbSet<Situacao> Situacao { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasSequence<long>("USUARIO_SEQ").StartsAt(10).IncrementsBy(1);
-            modelBuilder.HasSequence<long>("DESASTRE_SEQ").StartsAt(10).IncrementsBy(1);
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
         }

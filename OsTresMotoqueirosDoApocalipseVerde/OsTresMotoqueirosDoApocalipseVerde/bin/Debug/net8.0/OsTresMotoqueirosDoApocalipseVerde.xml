@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OsTresMotoqueirosDoApocalipseVerde</name>
+    </assembly>
+    <members>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController.GetDados">
+            <summary>
+            Get all Dados
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController.GetDados(System.Int64)">
+            <summary>
+            Get Dados por ID
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController.PostDados(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateDadosRequest)">
+            <summary>
+            Cria um novo Dados
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController.PutDados(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateDadosRequest)">
+            <summary>
+            Atualiza um Dados existente
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController.DeleteDados(System.Int64)">
+            <summary>
+            Deleta um Dados
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.FuncionarioController.GetFuncionario">
+            <summary>
+            Get all Funcionarios
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.FuncionarioController.GetFuncionario(System.Int64)">
+            <summary>
+            Get Funcionario por ID
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.FuncionarioController.PostFuncionario(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateFuncionarioRequest)">
+            <summary>
+            Cria um novo Funcionario
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.FuncionarioController.PutFuncionario(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateFuncionarioRequest)">
+            <summary>
+            Atualiza um Funcionario existente
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.FuncionarioController.DeleteFuncionario(System.Int64)">
+            <summary>
+            Deleta um Funcionario
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.GetMotorista">
+            <summary>
+            Get all Motoristas
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.GetMotorista(System.Int64)">
+            <summary>
+            Get Motorista por ID
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.PostMotorista(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateMotoristaRequest)">
+            <summary>
+            Cria um novo Motorista
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.PutMotorista(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateMotoristaRequest)">
+            <summary>
+            Atualiza um Motorista existente
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.DeleteMotorista(System.Int64)">
+            <summary>
+            Deleta um Motorista
+            </summary>
+        </member>
+        <member name="T:OsTresMotoqueirosDoApocalipseVerde.Migrations.MottuMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Migrations.MottuMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Migrations.MottuMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Migrations.MottuMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

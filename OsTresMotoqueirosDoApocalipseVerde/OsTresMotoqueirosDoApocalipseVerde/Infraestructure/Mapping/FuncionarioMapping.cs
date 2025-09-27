@@ -40,11 +40,11 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
 
             builder
                 .Property(f => f.FilialId)
-                .HasColumnName("FILIAL_ID");
+                .HasColumnName("ID_FILIAL");
 
             builder
                 .HasOne(f => f.Filial)
-                .WithMany()
+                .WithMany(filial => filial.Funcionarios)
                 .HasForeignKey(f => f.FilialId)
                 .OnDelete(DeleteBehavior.Restrict);
         }

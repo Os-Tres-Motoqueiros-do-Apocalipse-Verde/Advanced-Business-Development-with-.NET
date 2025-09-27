@@ -6,76 +6,106 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 {
     public class MotoUseCase
     {
-        private readonly IRepository<Filial> _repository;
+        private readonly IRepository<Moto> _repository;
 
-        public FilialUseCase(IRepository<Filial> repository)
+        public MotoUseCase(IRepository<Moto> repository)
         {
             _repository = repository;
         }
 
-        public async Task<CreateFilialResponse> CreateFilialAsync(CreateFilialRequest request)
+        public async Task<CreateMotoResponse> CreateMotoAsync(CreateMotoRequest request)
         {
-            var filial = Filial.Create(
-                request.NomeFilial,
-                request.EnderecoId
+            var moto = Moto.Create(
+                request.Placa,
+                request.Chassi,
+                request.Condicao,
+                request.LocalizacaoMoto,
+                request.ModeloId,
+                request.MotoristaId,
+                request.SetorId,
+                request.SituacaoId
             );
 
-            await _repository.AddAsync(filial);
+            await _repository.AddAsync(moto);
             await _repository.SaveChangesAsync();
 
-            return new CreateFilialResponse
+            return new CreateMotoResponse
             {
-                Id = filial.Id,
-                NomeFilial = filial.NomeFilial,
-                EnderecoId = filial.EnderecoId
+                Id = moto.Id,
+                Placa = moto.Placa,
+                Chassi = moto.Chassi,
+                Condicao = moto.Condicao,
+                LocalizacaoMoto = moto.LocalizacaoMoto,
+                ModeloId = moto.ModeloId,
+                MotoristaId = moto.MotoristaId,
+                SetorId = moto.SetorId,
+                SituacaoId = moto.SituacaoId
             };
         }
 
-        public async Task<List<CreateFilialResponse>> GetAllFilialAsync()
+        public async Task<List<CreateMotoResponse>> GetAllMotoAsync()
         {
-            var filiais = await _repository.GetAllAsync();
-            return filiais.Select(u => new CreateFilialResponse
+            var motos = await _repository.GetAllAsync();
+            return motos.Select(u => new CreateMotoResponse
             {
                 Id = u.Id,
-                NomeFilial = u.NomeFilial,
-                EnderecoId = u.EnderecoId
+                Placa = u.Placa,
+                Chassi = u.Chassi,
+                Condicao = u.Condicao,
+                LocalizacaoMoto= u.LocalizacaoMoto,
+                ModeloId = u.ModeloId,
+                MotoristaId = u.MotoristaId,
+                SetorId = u.SetorId,
+                SituacaoId= u.SituacaoId
             }).ToList();
         }
 
-        public async Task<CreateFilialResponse?> GetByIdAsync(long id)
+        public async Task<CreateMotoResponse?> GetByIdAsync(long id)
         {
-            var filial = await _repository.GetByIdAsync(id);
-            if (filial == null) return null;
+            var moto = await _repository.GetByIdAsync(id);
+            if (moto == null) return null;
 
-            return new CreateFilialResponse
+            return new CreateMotoResponse
             {
-                Id = filial.Id,
-                NomeFilial = filial.NomeFilial,
-                EnderecoId = filial.EnderecoId
+                Id = moto.Id,
+                Placa = moto.Placa,
+                Chassi = moto.Chassi,
+                Condicao = moto.Condicao,
+                LocalizacaoMoto = moto.LocalizacaoMoto,
+                ModeloId = moto.ModeloId,
+                MotoristaId = moto.MotoristaId,
+                SetorId = moto.SetorId,
+                SituacaoId = moto.SituacaoId
             };
         }
 
-        public async Task<bool> UpdateFilialAsync(long id, CreateFilialRequest request)
+        public async Task<bool> UpdateMotoAsync(long id, CreateMotoRequest request)
         {
-            var filial = await _repository.GetByIdAsync(id);
-            if (filial == null) return false;
+            var moto = await _repository.GetByIdAsync(id);
+            if (moto == null) return false;
 
-            filial.Atualizar(
-                request.NomeFilial,
-                request.EnderecoId
+            moto.Atualizar(
+                request.Placa,
+                request.Chassi,
+                request.Condicao,
+                request.LocalizacaoMoto,
+                request.ModeloId,
+                request.MotoristaId,
+                request.SetorId,
+                request.SituacaoId
             );
-            _repository.Update(filial);
+            _repository.Update(moto);
             await _repository.SaveChangesAsync();
             return true;
         }
 
 
-        public async Task<bool> DeleteFilialAsync(long id)
+        public async Task<bool> DeleteMotoAsync(long id)
         {
-            var filial = await _repository.GetByIdAsync(id);
-            if (filial == null) return false;
+            var moto = await _repository.GetByIdAsync(id);
+            if (moto == null) return false;
 
-            _repository.Delete(filial);
+            _repository.Delete(moto);
             await _repository.SaveChangesAsync();
             return true;
         }

@@ -3,7 +3,7 @@
     public enum Cargo
     {
         Gerente,
-        Mecânico,
+        Mecanico,
         Vendedor,
         Auxiliar,
         Analista

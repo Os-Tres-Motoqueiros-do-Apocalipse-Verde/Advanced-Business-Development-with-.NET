@@ -6,76 +6,101 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 {
     public class SetorUseCase
     {
-        private readonly IRepository<Filial> _repository;
+        private readonly IRepository<Setor> _repository;
 
-        public FilialUseCase(IRepository<Filial> repository)
+        public SetorUseCase(IRepository<Setor> repository)
         {
             _repository = repository;
         }
 
-        public async Task<CreateFilialResponse> CreateFilialAsync(CreateFilialRequest request)
+        public async Task<CreateSetorResponse> CreateSetorAsync(CreateSetorRequest request)
         {
-            var filial = Filial.Create(
-                request.NomeFilial,
-                request.EnderecoId
+            var setor = Setor.Create(
+                request.NomeSetor,
+                request.QtdMoto,
+                request.Capacidade,
+                request.Descricao,
+                request.Cor,
+                request.Localizacao,
+                request.PatioId
             );
 
-            await _repository.AddAsync(filial);
+            await _repository.AddAsync(setor);
             await _repository.SaveChangesAsync();
 
-            return new CreateFilialResponse
+            return new CreateSetorResponse
             {
-                Id = filial.Id,
-                NomeFilial = filial.NomeFilial,
-                EnderecoId = filial.EnderecoId
+                Id = setor.Id,
+                NomeSetor = setor.NomeSetor,
+                QtdMoto = setor.QtdMoto,
+                Capacidade = setor.Capacidade,
+                Descricao = setor.Descricao,
+                Cor = setor.Cor,
+                Localizacao = setor.Localizacao,
+                PatioId = setor.PatioId
             };
         }
 
-        public async Task<List<CreateFilialResponse>> GetAllFilialAsync()
+        public async Task<List<CreateSetorResponse>> GetAllSetorAsync()
         {
-            var filiais = await _repository.GetAllAsync();
-            return filiais.Select(u => new CreateFilialResponse
+            var setores = await _repository.GetAllAsync();
+            return setores.Select(u => new CreateSetorResponse
             {
                 Id = u.Id,
-                NomeFilial = u.NomeFilial,
-                EnderecoId = u.EnderecoId
+                NomeSetor = u.NomeSetor,
+                QtdMoto = u.QtdMoto,
+                Capacidade = u.Capacidade,
+                Descricao = u.Descricao,
+                Cor = u.Cor,
+                Localizacao=u.Localizacao,
+                PatioId = u.PatioId
             }).ToList();
         }
 
-        public async Task<CreateFilialResponse?> GetByIdAsync(long id)
+        public async Task<CreateSetorResponse?> GetByIdAsync(long id)
         {
-            var filial = await _repository.GetByIdAsync(id);
-            if (filial == null) return null;
+            var setor = await _repository.GetByIdAsync(id);
+            if (setor == null) return null;
 
-            return new CreateFilialResponse
+            return new CreateSetorResponse
             {
-                Id = filial.Id,
-                NomeFilial = filial.NomeFilial,
-                EnderecoId = filial.EnderecoId
+                Id = setor.Id,
+                NomeSetor = setor.NomeSetor,
+                QtdMoto = setor.QtdMoto,
+                Capacidade = setor.Capacidade,
+                Descricao = setor.Descricao,
+                Cor = setor.Cor,
+                Localizacao = setor.Localizacao,
+                PatioId = setor.PatioId
             };
         }
 
-        public async Task<bool> UpdateFilialAsync(long id, CreateFilialRequest request)
+        public async Task<bool> UpdateSetorAsync(long id, CreateSetorRequest request)
         {
-            var filial = await _repository.GetByIdAsync(id);
-            if (filial == null) return false;
+            var setor = await _repository.GetByIdAsync(id);
+            if (setor == null) return false;
 
-            filial.Atualizar(
-                request.NomeFilial,
-                request.EnderecoId
+            setor.Atualizar(
+                request.NomeSetor,
+                request.QtdMoto,
+                request.Capacidade,
+                request.Descricao,
+                request.Cor,
+                request.Localizacao,
+                request.PatioId
             );
-            _repository.Update(filial);
+            _repository.Update(setor);
             await _repository.SaveChangesAsync();
             return true;
         }
 
 
-        public async Task<bool> DeleteFilialAsync(long id)
+        public async Task<bool> DeleteSetorAsync(long id)
         {
-            var filial = await _repository.GetByIdAsync(id);
-            if (filial == null) return false;
+            var setor = await _repository.GetByIdAsync(id);
+            if (setor == null) return false;
 
-            _repository.Delete(filial);
+            _repository.Delete(setor);
             await _repository.SaveChangesAsync();
             return true;
         }

@@ -6,76 +6,96 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 {
     public class ModeloUseCase
     {
-        private readonly IRepository<Filial> _repository;
+        private readonly IRepository<Modelo> _repository;
 
-        public FilialUseCase(IRepository<Filial> repository)
+        public ModeloUseCase(IRepository<Modelo> repository)
         {
             _repository = repository;
         }
 
-        public async Task<CreateFilialResponse> CreateFilialAsync(CreateFilialRequest request)
+        public async Task<CreateModeloResponse> CreateModeloAsync(CreateModeloRequest request)
         {
-            var filial = Filial.Create(
-                request.NomeFilial,
-                request.EnderecoId
+            var modelo = Modelo.Create(
+                request.NomeModelo,
+                request.Frenagem,
+                request.SistemaPartida,
+                request.Tanque,
+                request.TipoCombustivel,
+                request.Consumo
             );
 
-            await _repository.AddAsync(filial);
+            await _repository.AddAsync(modelo);
             await _repository.SaveChangesAsync();
 
-            return new CreateFilialResponse
+            return new CreateModeloResponse
             {
-                Id = filial.Id,
-                NomeFilial = filial.NomeFilial,
-                EnderecoId = filial.EnderecoId
+                Id = modelo.Id,
+                NomeModelo = modelo.NomeModelo,
+                Frenagem = modelo.Frenagem,
+                SistemaPartida = modelo.SistemaPartida,
+                Tanque = modelo.Tanque,
+                TipoCombustivel = modelo.TipoCombustivel,
+                Consumo = modelo.Consumo
             };
         }
 
-        public async Task<List<CreateFilialResponse>> GetAllFilialAsync()
+        public async Task<List<CreateModeloResponse>> GetAllModeloAsync()
         {
-            var filiais = await _repository.GetAllAsync();
-            return filiais.Select(u => new CreateFilialResponse
+            var modelos = await _repository.GetAllAsync();
+            return modelos.Select(u => new CreateModeloResponse
             {
                 Id = u.Id,
-                NomeFilial = u.NomeFilial,
-                EnderecoId = u.EnderecoId
+                NomeModelo = u.NomeModelo,
+                Frenagem = u.Frenagem,
+                SistemaPartida=u.SistemaPartida,
+                Tanque = u.Tanque,
+                TipoCombustivel=u.TipoCombustivel,
+                Consumo = u.Consumo
             }).ToList();
         }
 
-        public async Task<CreateFilialResponse?> GetByIdAsync(long id)
+        public async Task<CreateModeloResponse?> GetByIdAsync(long id)
         {
-            var filial = await _repository.GetByIdAsync(id);
-            if (filial == null) return null;
+            var modelo = await _repository.GetByIdAsync(id);
+            if (modelo == null) return null;
 
-            return new CreateFilialResponse
+            return new CreateModeloResponse
             {
-                Id = filial.Id,
-                NomeFilial = filial.NomeFilial,
-                EnderecoId = filial.EnderecoId
+                Id = modelo.Id,
+                NomeModelo = modelo.NomeModelo,
+                Frenagem = modelo.Frenagem,
+                SistemaPartida = modelo.SistemaPartida,
+                Tanque = modelo.Tanque,
+                TipoCombustivel = modelo.TipoCombustivel,
+                Consumo = modelo.Consumo
             };
         }
 
-        public async Task<bool> UpdateFilialAsync(long id, CreateFilialRequest request)
+        public async Task<bool> UpdateModeloAsync(long id, CreateModeloRequest request)
         {
-            var filial = await _repository.GetByIdAsync(id);
-            if (filial == null) return false;
+            var modelo = await _repository.GetByIdAsync(id);
+            if (modelo == null) return false;
 
-            filial.Atualizar(
-                request.NomeFilial,
-                request.EnderecoId
+            modelo.Atualizar(
+                request.NomeModelo,
+                request.Frenagem,
+                request.SistemaPartida,
+                request.Tanque,
+                request.TipoCombustivel,
+                request.Consumo
             );
-            _repository.Update(filial);
+            _repository.Update(modelo);
             await _repository.SaveChangesAsync();
             return true;
         }
 
 
-        public async Task<bool> DeleteFilialAsync(long id)
+        public async Task<bool> DeleteModeloAsync(long id)
         {
-            var filial = await _repository.GetByIdAsync(id);
-            if (filial == null) return false;
+            var modelo = await _repository.GetByIdAsync(id);
+            if (modelo == null) return false;
 
-            _repository.Delete(filial);
+            _repository.Delete(modelo);
             await _repository.SaveChangesAsync();
             return true;
         }

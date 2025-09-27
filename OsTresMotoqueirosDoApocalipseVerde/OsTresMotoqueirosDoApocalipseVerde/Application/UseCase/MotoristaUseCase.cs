@@ -6,76 +6,76 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 {
     public class MotoristaUseCase
     {
-        private readonly IRepository<Filial> _repository;
+        private readonly IRepository<Motorista> _repository;
 
-        public FilialUseCase(IRepository<Filial> repository)
+        public MotoristaUseCase(IRepository<Motorista> repository)
         {
             _repository = repository;
         }
 
-        public async Task<CreateFilialResponse> CreateFilialAsync(CreateFilialRequest request)
+        public async Task<CreateMotoristaResponse> CreateMotoristaAsync(CreateMotoristaRequest request)
         {
-            var filial = Filial.Create(
-                request.NomeFilial,
-                request.EnderecoId
+            var motorista = Motorista.Create(
+                request.Plano,
+                request.DadosId
             );
 
-            await _repository.AddAsync(filial);
+            await _repository.AddAsync(motorista);
             await _repository.SaveChangesAsync();
 
-            return new CreateFilialResponse
+            return new CreateMotoristaResponse
             {
-                Id = filial.Id,
-                NomeFilial = filial.NomeFilial,
-                EnderecoId = filial.EnderecoId
+                Id = motorista.Id,
+                Plano = motorista.Plano,
+                DadosId = motorista.DadosId
             };
         }
 
-        public async Task<List<CreateFilialResponse>> GetAllFilialAsync()
+        public async Task<List<CreateMotoristaResponse>> GetAllMotoristaAsync()
         {
-            var filiais = await _repository.GetAllAsync();
-            return filiais.Select(u => new CreateFilialResponse
+            var motoristas = await _repository.GetAllAsync();
+            return motoristas.Select(u => new CreateMotoristaResponse
             {
                 Id = u.Id,
-                NomeFilial = u.NomeFilial,
-                EnderecoId = u.EnderecoId
+                Plano = u.Plano,
+                DadosId = u.DadosId
             }).ToList();
         }
 
-        public async Task<CreateFilialResponse?> GetByIdAsync(long id)
+        public async Task<CreateMotoristaResponse?> GetByIdAsync(long id)
         {
-            var filial = await _repository.GetByIdAsync(id);
-            if (filial == null) return null;
+            var motorista = await _repository.GetByIdAsync(id);
+            if (motorista == null) return null;
 
-            return new CreateFilialResponse
+            return new CreateMotoristaResponse
             {
-                Id = filial.Id,
-                NomeFilial = filial.NomeFilial,
-                EnderecoId = filial.EnderecoId
+                Id = motorista.Id,
+                Plano = motorista.Plano,
+                DadosId = motorista.DadosId
             };
         }
 
-        public async Task<bool> UpdateFilialAsync(long id, CreateFilialRequest request)
+        public async Task<bool> UpdateMotoristaAsync(long id, CreateMotoristaRequest request)
         {
-            var filial = await _repository.GetByIdAsync(id);
-            if (filial == null) return false;
+            var motorista = await _repository.GetByIdAsync(id);
+            if (motorista == null) return false;
 
-            filial.Atualizar(
-                request.NomeFilial,
-                request.EnderecoId
+            motorista.Atualizar(
+                request.Plano,
+                request.DadosId
             );
-            _repository.Update(filial);
+            _repository.Update(motorista);
             await _repository.SaveChangesAsync();
             return true;
         }
 
 
-        public async Task<bool> DeleteFilialAsync(long id)
+        public async Task<bool> DeleteMotoristaAsync(long id)
         {
-            var filial = await _repository.GetByIdAsync(id);
-            if (filial == null) return false;
+            var motorista = await _repository.GetByIdAsync(id);
+            if (motorista == null) return false;
 
-            _repository.Delete(filial);
+            _repository.Delete(motorista);
             await _repository.SaveChangesAsync();
             return true;
         }
