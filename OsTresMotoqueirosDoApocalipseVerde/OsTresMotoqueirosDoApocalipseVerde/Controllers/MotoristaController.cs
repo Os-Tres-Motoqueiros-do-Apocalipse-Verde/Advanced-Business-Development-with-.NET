@@ -23,34 +23,71 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         }
 
         /// <summary>
-        /// Get all Motoristas
+        /// Retorna todos os Motorista com paginação.
         /// </summary>
+        /// <param name="page">Número da página (default = 1)</param>
+        /// <param name="pageSize">Quantidade de itens por página (default = 10)</param>
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<CreateMotoristaResponse>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetMotorista()
+        public async Task<IActionResult> GetMotorista([FromQuery] int page = 1, [FromQuery] int pageSize = 4)
         {
-            var motoristas = await _motoristaUseCase.GetAllMotoristaAsync();
-            return Ok(motoristas);
+            var motorista = await _motoristaUseCase.GetAllPagedAsync(page, pageSize);
+
+            var result = motorista.Select(d => new
+            {
+                d.Id,
+                d.Plano,
+                d.DadosId,
+                links = new
+                {
+                    self = Url.Action(nameof(GetMotoristaById), new { id = d.Id }),
+                    update = Url.Action(nameof(PutMotorista), new { id = d.Id }),
+                    delete = Url.Action(nameof(DeleteMotorista), new { id = d.Id })
+                }
+            });
+
+            return Ok(new
+            {
+                page,
+                pageSize,
+                totalItems = motorista.Count(),
+                items = result
+            });
         }
 
         /// <summary>
-        /// Get Motorista por ID
+        /// Retorna um Motorista pelo ID.
         /// </summary>
+        /// <param name="id">ID do registro</param>
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(CreateMotoristaResponse), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        public async Task<IActionResult> GetMotorista(long id)
+        public async Task<IActionResult> GetMotoristaById(long id)
         {
-            var motoristas = await _motoristaUseCase.GetByIdAsync(id);
-            if (motoristas == null)
+            var motorista = await _motoristaUseCase.GetByIdAsync(id);
+            if (motorista == null)
                 return NotFound();
 
-            return Ok(motoristas);
+            var result = new
+            {
+                motorista.Id,
+                motorista.Plano,
+                motorista.DadosId,
+                links = new
+                {
+                    all = Url.Action(nameof(GetMotorista)),
+                    update = Url.Action(nameof(PutMotorista), new { id = motorista.Id }),
+                    delete = Url.Action(nameof(DeleteMotorista), new { id = motorista.Id })
+                }
+            };
+
+            return Ok(result);
         }
 
         /// <summary>
-        /// Cria um novo Motorista
+        /// Cria um novo Motorista.
         /// </summary>
+        /// <param name="request">Payload para criação</param>
         [HttpPost]
         [ProducesResponseType(typeof(CreateMotoristaResponse), (int)HttpStatusCode.Created)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
@@ -59,12 +96,14 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
             _validationMotorista.ValidateAndThrow(request);
 
             var motoristaResponse = await _motoristaUseCase.CreateMotoristaAsync(request);
-            return CreatedAtAction(nameof(GetMotorista), new { id = motoristaResponse.Id }, motoristaResponse);
+            return CreatedAtAction(nameof(GetMotoristaById), new { id = motoristaResponse.Id }, motoristaResponse);
         }
 
         /// <summary>
-        /// Atualiza um Motorista existente
+        /// Atualiza um Motorista existente.
         /// </summary>
+        /// <param name="id">ID do registro</param>
+        /// <param name="request">Payload para atualização</param>
         [HttpPut("{id}")]
         [ProducesResponseType((int)HttpStatusCode.NoContent)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
@@ -79,8 +118,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         }
 
         /// <summary>
-        /// Deleta um Motorista
+        /// Deleta um Motorista existente.
         /// </summary>
+        /// <param name="id">ID do registro</param>
         [HttpDelete("{id}")]
         [ProducesResponseType((int)HttpStatusCode.NoContent)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]

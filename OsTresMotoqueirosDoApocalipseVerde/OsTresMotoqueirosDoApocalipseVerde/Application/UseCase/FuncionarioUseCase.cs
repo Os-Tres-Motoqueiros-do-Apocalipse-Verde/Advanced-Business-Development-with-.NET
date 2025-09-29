@@ -35,14 +35,36 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 
         public async Task<List<CreateFuncionarioResponse>> GetAllFuncionarioAsync()
         {
-            var funcionarios = await _repository.GetAllAsync();
-            return funcionarios.Select(u => new CreateFuncionarioResponse
+            var funcionario = await _repository.GetAllAsync();
+            return funcionario.Select(u => new CreateFuncionarioResponse
             {
                 Id = u.Id,
                 Cargo = u.Cargo,
                 DadosId = u.DadosId,
                 FilialId = u.FilialId
             }).ToList();
+        }
+
+        /// <summary>
+        /// Retorna os Funcionario paginados.
+        /// </summary>
+        public async Task<List<CreateFuncionarioResponse>> GetAllPagedAsync(int page, int pageSize)
+        {
+            var funcionario = await _repository.GetAllAsync();
+
+            var paged = funcionario
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .Select(u => new CreateFuncionarioResponse
+                {
+                    Id = u.Id,
+                    Cargo = u.Cargo,
+                    DadosId = u.DadosId,
+                    FilialId = u.FilialId
+                })
+                .ToList();
+
+            return paged;
         }
 
         public async Task<CreateFuncionarioResponse?> GetByIdAsync(long id)
@@ -73,7 +95,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             await _repository.SaveChangesAsync();
             return true;
         }
-
 
         public async Task<bool> DeleteFuncionarioAsync(long id)
         {

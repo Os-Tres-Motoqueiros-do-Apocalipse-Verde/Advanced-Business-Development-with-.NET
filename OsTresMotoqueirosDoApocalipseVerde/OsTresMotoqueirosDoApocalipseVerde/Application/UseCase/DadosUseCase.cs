@@ -51,6 +51,30 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             }).ToList();
         }
 
+        /// <summary>
+        /// Retorna os Dados paginados.
+        /// </summary>
+        public async Task<List<CreateDadosResponse>> GetAllPagedAsync(int page, int pageSize)
+        {
+            var dados = await _repository.GetAllAsync();
+
+            var paged = dados
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .Select(u => new CreateDadosResponse
+                {
+                    Id = u.Id,
+                    Nome = u.Nome,
+                    CPF = u.CPF,
+                    Telefone = u.Telefone,
+                    Email = u.Email,
+                    Senha = u.Senha
+                })
+                .ToList();
+
+            return paged;
+        }
+
         public async Task<CreateDadosResponse?> GetByIdAsync(long id)
         {
             var dados = await _repository.GetByIdAsync(id);
@@ -84,7 +108,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             return true;
         }
 
-
         public async Task<bool> DeleteDadosAsync(long id)
         {
             var dados = await _repository.GetByIdAsync(id);
@@ -95,5 +118,4 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             return true;
         }
     }
-
 }

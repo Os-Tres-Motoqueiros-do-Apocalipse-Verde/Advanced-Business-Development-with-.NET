@@ -12,7 +12,7 @@ using OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context;
 namespace OsTresMotoqueirosDoApocalipseVerde.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250927014407_MottuMigration")]
+    [Migration("20250929230203_MottuMigration")]
     partial class MottuMigration
     {
         /// <inheritdoc />

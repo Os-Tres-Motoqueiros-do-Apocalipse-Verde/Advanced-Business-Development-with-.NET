@@ -41,8 +41,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 
         public async Task<List<CreateEnderecoResponse>> GetAllEnderecoAsync()
         {
-            var enderecos = await _repository.GetAllAsync();
-            return enderecos.Select(u => new CreateEnderecoResponse
+            var endereco = await _repository.GetAllAsync();
+            return endereco.Select(u => new CreateEnderecoResponse
             {
                 Id = u.Id,
                 Numero = u.Numero,
@@ -52,6 +52,31 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
                 Complemento = u.Complemento,
                 Rua = u.Rua
             }).ToList();
+        }
+
+        /// <summary>
+        /// Retorna os Endereco paginados.
+        /// </summary>
+        public async Task<List<CreateEnderecoResponse>> GetAllPagedAsync(int page, int pageSize)
+        {
+            var endereco = await _repository.GetAllAsync();
+
+            var paged = endereco
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .Select(u => new CreateEnderecoResponse
+                {
+                    Id = u.Id,
+                    Numero = u.Numero,
+                    Estado = u.Estado,
+                    CodigoPais = u.CodigoPais,
+                    CodigoPostal = u.CodigoPostal,
+                    Complemento = u.Complemento,
+                    Rua = u.Rua
+                })
+                .ToList();
+
+            return paged;
         }
 
         public async Task<CreateEnderecoResponse?> GetByIdAsync(long id)
@@ -88,7 +113,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             await _repository.SaveChangesAsync();
             return true;
         }
-
 
         public async Task<bool> DeleteEnderecoAsync(long id)
         {

@@ -15,7 +15,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         public string Estado { get; set; }
         public string CodigoPais { get; set; }
         public string CodigoPostal { get; set; }
-        public string Complemento { get; set; }
+        public string? Complemento { get; set; }
         public string Rua { get; set; }
 
         public virtual Filial Filial { get; set; }

@@ -61,7 +61,7 @@
             },
             "FluentValidation": {
               "target": "Package",
-              "version": "[11.3.0, )"
+              "version": "[12.0.0, )"
             },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",

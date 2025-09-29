@@ -33,13 +33,34 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 
         public async Task<List<CreateFilialResponse>> GetAllFilialAsync()
         {
-            var filiais = await _repository.GetAllAsync();
-            return filiais.Select(u => new CreateFilialResponse
+            var filial = await _repository.GetAllAsync();
+            return filial.Select(u => new CreateFilialResponse
             {
                 Id = u.Id,
                 NomeFilial = u.NomeFilial,
                 EnderecoId = u.EnderecoId
             }).ToList();
+        }
+
+        /// <summary>
+        /// Retorna os Filial paginados.
+        /// </summary>
+        public async Task<List<CreateFilialResponse>> GetAllPagedAsync(int page, int pageSize)
+        {
+            var filial = await _repository.GetAllAsync();
+
+            var paged = filial
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .Select(u => new CreateFilialResponse
+                {
+                    Id = u.Id,
+                    NomeFilial = u.NomeFilial,
+                    EnderecoId = u.EnderecoId
+                })
+                .ToList();
+
+            return paged;
         }
 
         public async Task<CreateFilialResponse?> GetByIdAsync(long id)
@@ -68,7 +89,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             await _repository.SaveChangesAsync();
             return true;
         }
-
 
         public async Task<bool> DeleteFilialAsync(long id)
         {

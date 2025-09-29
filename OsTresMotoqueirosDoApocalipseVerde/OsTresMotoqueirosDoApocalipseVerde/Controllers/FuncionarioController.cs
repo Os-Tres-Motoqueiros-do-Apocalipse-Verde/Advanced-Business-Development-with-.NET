@@ -23,34 +23,73 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         }
 
         /// <summary>
-        /// Get all Funcionarios
+        /// Retorna todos os Funcionario com paginação.
         /// </summary>
+        /// <param name="page">Número da página (default = 1)</param>
+        /// <param name="pageSize">Quantidade de itens por página (default = 10)</param>
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<CreateFuncionarioResponse>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetFuncionario()
+        public async Task<IActionResult> GetFuncionario([FromQuery] int page = 1, [FromQuery] int pageSize = 4)
         {
-            var funcionarios = await _funcionarioUseCase.GetAllFuncionarioAsync();
-            return Ok(funcionarios);
+            var funcionario = await _funcionarioUseCase.GetAllPagedAsync(page, pageSize);
+
+            var result = funcionario.Select(d => new
+            {
+                d.Id,
+                d.Cargo,
+                d.DadosId,
+                d.FilialId,
+                links = new
+                {
+                    self = Url.Action(nameof(GetFuncionarioById), new { id = d.Id }),
+                    update = Url.Action(nameof(PutFuncionario), new { id = d.Id }),
+                    delete = Url.Action(nameof(DeleteFuncionario), new { id = d.Id })
+                }
+            });
+
+            return Ok(new
+            {
+                page,
+                pageSize,
+                totalItems = funcionario.Count(),
+                items = result
+            });
         }
 
         /// <summary>
-        /// Get Funcionario por ID
+        /// Retorna um Funcionario pelo ID.
         /// </summary>
+        /// <param name="id">ID do registro</param>
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(CreateFuncionarioResponse), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        public async Task<IActionResult> GetFuncionario(long id)
+        public async Task<IActionResult> GetFuncionarioById(long id)
         {
-            var funcionarios = await _funcionarioUseCase.GetByIdAsync(id);
-            if (funcionarios == null)
+            var funcionario = await _funcionarioUseCase.GetByIdAsync(id);
+            if (funcionario == null)
                 return NotFound();
 
-            return Ok(funcionarios);
+            var result = new
+            {
+                funcionario.Id,
+                funcionario.Cargo,
+                funcionario.DadosId,
+                funcionario.FilialId,
+                links = new
+                {
+                    all = Url.Action(nameof(GetFuncionario)),
+                    update = Url.Action(nameof(PutFuncionario), new { id = funcionario.Id }),
+                    delete = Url.Action(nameof(DeleteFuncionario), new { id = funcionario.Id })
+                }
+            };
+
+            return Ok(result);
         }
 
         /// <summary>
-        /// Cria um novo Funcionario
+        /// Cria um novo Funcionario.
         /// </summary>
+        /// <param name="request">Payload para criação</param>
         [HttpPost]
         [ProducesResponseType(typeof(CreateFuncionarioResponse), (int)HttpStatusCode.Created)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
@@ -59,12 +98,14 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
             _validationFuncionario.ValidateAndThrow(request);
 
             var funcionarioResponse = await _funcionarioUseCase.CreateFuncionarioAsync(request);
-            return CreatedAtAction(nameof(GetFuncionario), new { id = funcionarioResponse.Id }, funcionarioResponse);
+            return CreatedAtAction(nameof(GetFuncionarioById), new { id = funcionarioResponse.Id }, funcionarioResponse);
         }
 
         /// <summary>
-        /// Atualiza um Funcionario existente
+        /// Atualiza um Funcionario existente.
         /// </summary>
+        /// <param name="id">ID do registro</param>
+        /// <param name="request">Payload para atualização</param>
         [HttpPut("{id}")]
         [ProducesResponseType((int)HttpStatusCode.NoContent)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
@@ -79,8 +120,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         }
 
         /// <summary>
-        /// Deleta um Funcionario
+        /// Deleta um Funcionario existente.
         /// </summary>
+        /// <param name="id">ID do registro</param>
         [HttpDelete("{id}")]
         [ProducesResponseType((int)HttpStatusCode.NoContent)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]

@@ -23,34 +23,71 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         }
 
         /// <summary>
-        /// Get all Dados
+        /// Retorna todos os Dados com paginação.
         /// </summary>
+        /// <param name="page">Número da página (default = 1)</param>
+        /// <param name="pageSize">Quantidade de itens por página (default = 10)</param>
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<CreateDadosResponse>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetDados()
+        public async Task<IActionResult> GetDados([FromQuery] int page = 1, [FromQuery] int pageSize = 4)
         {
-            var dados = await _dadosUseCase.GetAllDadosAsync();
-            return Ok(dados);
+            var dados = await _dadosUseCase.GetAllPagedAsync(page, pageSize);
+
+            var result = dados.Select(d => new
+            {
+                d.Id,
+                d.Nome,
+                d.Email,
+                links = new
+                {
+                    self = Url.Action(nameof(GetDadosById), new { id = d.Id }),
+                    update = Url.Action(nameof(PutDados), new { id = d.Id }),
+                    delete = Url.Action(nameof(DeleteDados), new { id = d.Id })
+                }
+            });
+
+            return Ok(new
+            {
+                page,
+                pageSize,
+                totalItems = dados.Count(),
+                items = result
+            });
         }
 
         /// <summary>
-        /// Get Dados por ID
+        /// Retorna um Dados pelo ID.
         /// </summary>
+        /// <param name="id">ID do registro</param>
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(CreateDadosResponse), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        public async Task<IActionResult> GetDados(long id)
+        public async Task<IActionResult> GetDadosById(long id)
         {
             var dados = await _dadosUseCase.GetByIdAsync(id);
             if (dados == null)
                 return NotFound();
 
-            return Ok(dados);
+            var result = new
+            {
+                dados.Id,
+                dados.Nome,
+                dados.Email,
+                links = new
+                {
+                    all = Url.Action(nameof(GetDados)),
+                    update = Url.Action(nameof(PutDados), new { id = dados.Id }),
+                    delete = Url.Action(nameof(DeleteDados), new { id = dados.Id })
+                }
+            };
+
+            return Ok(result);
         }
 
         /// <summary>
-        /// Cria um novo Dados
+        /// Cria um novo Dados.
         /// </summary>
+        /// <param name="request">Payload para criação</param>
         [HttpPost]
         [ProducesResponseType(typeof(CreateDadosResponse), (int)HttpStatusCode.Created)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
@@ -59,12 +96,14 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
             _validationDados.ValidateAndThrow(request);
 
             var dadosResponse = await _dadosUseCase.CreateDadosAsync(request);
-            return CreatedAtAction(nameof(GetDados), new { id = dadosResponse.Id }, dadosResponse);
+            return CreatedAtAction(nameof(GetDadosById), new { id = dadosResponse.Id }, dadosResponse);
         }
 
         /// <summary>
-        /// Atualiza um Dados existente
+        /// Atualiza um Dados existente.
         /// </summary>
+        /// <param name="id">ID do registro</param>
+        /// <param name="request">Payload para atualização</param>
         [HttpPut("{id}")]
         [ProducesResponseType((int)HttpStatusCode.NoContent)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
@@ -79,8 +118,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         }
 
         /// <summary>
-        /// Deleta um Dados
+        /// Deleta um Dados existente.
         /// </summary>
+        /// <param name="id">ID do registro</param>
         [HttpDelete("{id}")]
         [ProducesResponseType((int)HttpStatusCode.NoContent)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]

@@ -40,6 +40,8 @@ builder.Services.AddScoped<IRepository<Situacao>, Repository<Situacao>>();
 builder.Services.AddScoped<CreateDadosRequestValidator>();
 builder.Services.AddScoped<CreateFuncionarioRequestValidator>();
 builder.Services.AddScoped<CreateMotoristaRequestValidator>();
+builder.Services.AddScoped<CreateFilialRequestValidator>();
+builder.Services.AddScoped<CreateEnderecoRequestValidator>();
 
 builder.Services.AddScoped<DadosUseCase>();
 builder.Services.AddScoped<FuncionarioUseCase>();

@@ -33,13 +33,34 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 
         public async Task<List<CreateMotoristaResponse>> GetAllMotoristaAsync()
         {
-            var motoristas = await _repository.GetAllAsync();
-            return motoristas.Select(u => new CreateMotoristaResponse
+            var motorista = await _repository.GetAllAsync();
+            return motorista.Select(u => new CreateMotoristaResponse
             {
                 Id = u.Id,
                 Plano = u.Plano,
                 DadosId = u.DadosId
             }).ToList();
+        }
+
+        /// <summary>
+        /// Retorna os Motorista paginados.
+        /// </summary>
+        public async Task<List<CreateMotoristaResponse>> GetAllPagedAsync(int page, int pageSize)
+        {
+            var motorista = await _repository.GetAllAsync();
+
+            var paged = motorista
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .Select(u => new CreateMotoristaResponse
+                {
+                    Id = u.Id,
+                    Plano = u.Plano,
+                    DadosId = u.DadosId
+                })
+                .ToList();
+
+            return paged;
         }
 
         public async Task<CreateMotoristaResponse?> GetByIdAsync(long id)
@@ -68,7 +89,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             await _repository.SaveChangesAsync();
             return true;
         }
-
 
         public async Task<bool> DeleteMotoristaAsync(long id)
         {

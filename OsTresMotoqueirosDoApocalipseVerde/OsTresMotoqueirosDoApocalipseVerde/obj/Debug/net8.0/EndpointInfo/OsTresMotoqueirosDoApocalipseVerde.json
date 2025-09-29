@@ -14,7 +14,29 @@
         "tags": [
           "CRUD Dados"
         ],
-        "summary": "Get all Dados",
+        "summary": "Retorna todos os Dados com paginação.",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Número da página (default = 1)",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Quantidade de itens por página (default = 10)",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 4
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -51,8 +73,9 @@
         "tags": [
           "CRUD Dados"
         ],
-        "summary": "Cria um novo Dados",
+        "summary": "Cria um novo Dados.",
         "requestBody": {
+          "description": "Payload para criação",
           "content": {
             "application/json": {
               "schema": {
@@ -120,11 +143,12 @@
         "tags": [
           "CRUD Dados"
         ],
-        "summary": "Get Dados por ID",
+        "summary": "Retorna um Dados pelo ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "ID do registro",
             "required": true,
             "schema": {
               "type": "integer",
@@ -179,11 +203,12 @@
         "tags": [
           "CRUD Dados"
         ],
-        "summary": "Atualiza um Dados existente",
+        "summary": "Atualiza um Dados existente.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "ID do registro",
             "required": true,
             "schema": {
               "type": "integer",
@@ -192,6 +217,7 @@
           }
         ],
         "requestBody": {
+          "description": "Payload para atualização",
           "content": {
             "application/json": {
               "schema": {
@@ -260,11 +286,646 @@
         "tags": [
           "CRUD Dados"
         ],
-        "summary": "Deleta um Dados",
+        "summary": "Deleta um Dados existente.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "ID do registro",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Endereco": {
+      "get": {
+        "tags": [
+          "CRUD Endereco"
+        ],
+        "summary": "Retorna todos os Endereco com paginação.",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Número da página (default = 1)",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Quantidade de itens por página (default = 10)",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 4
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CreateEnderecoResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CreateEnderecoResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CreateEnderecoResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CRUD Endereco"
+        ],
+        "summary": "Cria um novo Endereco.",
+        "requestBody": {
+          "description": "Payload para criação",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEnderecoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEnderecoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEnderecoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateEnderecoResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateEnderecoResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateEnderecoResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Endereco/{id}": {
+      "get": {
+        "tags": [
+          "CRUD Endereco"
+        ],
+        "summary": "Retorna um Endereco pelo ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateEnderecoResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateEnderecoResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateEnderecoResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "CRUD Endereco"
+        ],
+        "summary": "Atualiza um Endereco existente.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Payload para atualização",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEnderecoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEnderecoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEnderecoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CRUD Endereco"
+        ],
+        "summary": "Deleta um Endereco existente.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Filial": {
+      "get": {
+        "tags": [
+          "CRUD Filial"
+        ],
+        "summary": "Retorna todos os Filial com paginação.",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Número da página (default = 1)",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Quantidade de itens por página (default = 10)",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 4
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CreateFilialResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CreateFilialResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CreateFilialResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CRUD Filial"
+        ],
+        "summary": "Cria um novo Filial.",
+        "requestBody": {
+          "description": "Payload para criação",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFilialRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFilialRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFilialRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateFilialResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateFilialResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateFilialResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Filial/{id}": {
+      "get": {
+        "tags": [
+          "CRUD Filial"
+        ],
+        "summary": "Retorna um Filial pelo ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateFilialResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateFilialResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateFilialResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "CRUD Filial"
+        ],
+        "summary": "Atualiza um Filial existente.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Payload para atualização",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFilialRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFilialRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFilialRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CRUD Filial"
+        ],
+        "summary": "Deleta um Filial existente.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do registro",
             "required": true,
             "schema": {
               "type": "integer",
@@ -304,7 +965,29 @@
         "tags": [
           "CRUD Funcionario"
         ],
-        "summary": "Get all Funcionarios",
+        "summary": "Retorna todos os Funcionario com paginação.",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Número da página (default = 1)",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Quantidade de itens por página (default = 10)",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 4
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -341,8 +1024,9 @@
         "tags": [
           "CRUD Funcionario"
         ],
-        "summary": "Cria um novo Funcionario",
+        "summary": "Cria um novo Funcionario.",
         "requestBody": {
+          "description": "Payload para criação",
           "content": {
             "application/json": {
               "schema": {
@@ -410,11 +1094,12 @@
         "tags": [
           "CRUD Funcionario"
         ],
-        "summary": "Get Funcionario por ID",
+        "summary": "Retorna um Funcionario pelo ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "ID do registro",
             "required": true,
             "schema": {
               "type": "integer",
@@ -469,11 +1154,12 @@
         "tags": [
           "CRUD Funcionario"
         ],
-        "summary": "Atualiza um Funcionario existente",
+        "summary": "Atualiza um Funcionario existente.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "ID do registro",
             "required": true,
             "schema": {
               "type": "integer",
@@ -482,6 +1168,7 @@
           }
         ],
         "requestBody": {
+          "description": "Payload para atualização",
           "content": {
             "application/json": {
               "schema": {
@@ -550,11 +1237,12 @@
         "tags": [
           "CRUD Funcionario"
         ],
-        "summary": "Deleta um Funcionario",
+        "summary": "Deleta um Funcionario existente.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "ID do registro",
             "required": true,
             "schema": {
               "type": "integer",
@@ -594,7 +1282,29 @@
         "tags": [
           "CRUD Motorista"
         ],
-        "summary": "Get all Motoristas",
+        "summary": "Retorna todos os Motorista com paginação.",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Número da página (default = 1)",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Quantidade de itens por página (default = 10)",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 4
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -631,8 +1341,9 @@
         "tags": [
           "CRUD Motorista"
         ],
-        "summary": "Cria um novo Motorista",
+        "summary": "Cria um novo Motorista.",
         "requestBody": {
+          "description": "Payload para criação",
           "content": {
             "application/json": {
               "schema": {
@@ -700,11 +1411,12 @@
         "tags": [
           "CRUD Motorista"
         ],
-        "summary": "Get Motorista por ID",
+        "summary": "Retorna um Motorista pelo ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "ID do registro",
             "required": true,
             "schema": {
               "type": "integer",
@@ -759,11 +1471,12 @@
         "tags": [
           "CRUD Motorista"
         ],
-        "summary": "Atualiza um Motorista existente",
+        "summary": "Atualiza um Motorista existente.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "ID do registro",
             "required": true,
             "schema": {
               "type": "integer",
@@ -772,6 +1485,7 @@
           }
         ],
         "requestBody": {
+          "description": "Payload para atualização",
           "content": {
             "application/json": {
               "schema": {
@@ -840,11 +1554,12 @@
         "tags": [
           "CRUD Motorista"
         ],
-        "summary": "Deleta um Motorista",
+        "summary": "Deleta um Motorista existente.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "ID do registro",
             "required": true,
             "schema": {
               "type": "integer",
@@ -944,6 +1659,102 @@
           "senha": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateEnderecoRequest": {
+        "type": "object",
+        "properties": {
+          "numero": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoPais": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoPostal": {
+            "type": "string",
+            "nullable": true
+          },
+          "complemento": {
+            "type": "string",
+            "nullable": true
+          },
+          "rua": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateEnderecoResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "numero": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoPais": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoPostal": {
+            "type": "string",
+            "nullable": true
+          },
+          "complemento": {
+            "type": "string",
+            "nullable": true
+          },
+          "rua": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateFilialRequest": {
+        "type": "object",
+        "properties": {
+          "nomeFilial": {
+            "type": "string",
+            "nullable": true
+          },
+          "enderecoId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateFilialResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "nomeFilial": {
+            "type": "string",
+            "nullable": true
+          },
+          "enderecoId": {
+            "type": "integer",
+            "format": "int64"
           }
         },
         "additionalProperties": false
