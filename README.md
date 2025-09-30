@@ -36,22 +36,32 @@ Todas as rotas estão disponíveis no controlador, por Exemplo:
 
 ---
 
+## 🏗️ Justificativa da Arquitetura
+
+O projeto foi desenvolvido utilizando **arquitetura em camadas**, com inspiração em **Clean Architecture**, para garantir separação de responsabilidades, fácil manutenção e escalabilidade:
+
+- **Domain** → contém as entidades, enums e regras de negócio principais.  
+- **Application** → concentra os DTOs, validações com FluentValidation e casos de uso (Use Cases).  
+- **Infrastructure** → responsável pela persistência dos dados, configuração do **Entity Framework Core** e integração com **Oracle Database**.  
+- **API** → camada de apresentação, expondo os endpoints REST por meio de controllers.  
+
+Essa abordagem permite **maior testabilidade**, **baixo acoplamento** e facilita futuras mudanças ou integrações.
+
+---
+
 ## 🧰 Tecnologias Utilizadas
 
-- **ASP.NET Core 8**
+- **.NET 8.0**
 - **Entity Framework Core 8**
   - `Microsoft.EntityFrameworkCore`
   - `Microsoft.EntityFrameworkCore.Design`
   - `Microsoft.EntityFrameworkCore.Tools`
   - `Microsoft.EntityFrameworkCore.Proxies`
-- **Oracle.EntityFrameworkCore** — Suporte ao Oracle Database
-- **FluentValidation.AspNetCore** — Validação de dados via FluentValidation
-- **Swagger (Swashbuckle.AspNetCore)** — Documentação da API REST
-- **Camadas de arquitetura**:
-  - `Domain` (entidades e regras de negócio)
-  - `Application` (DTOs, casos de uso)
-  - `Infrastructure` (acesso a dados, contexto EF)
-  - `API` (controllers e endpoints)
+- **Oracle.EntityFrameworkCore** — Suporte ao Oracle Database  
+- **FluentValidation.AspNetCore** — Validação de dados  
+- **Swagger (Swashbuckle.AspNetCore + Filters + Annotations)** — Documentação da API  
+- **AutoMapper** — Mapeamento entre entidades e DTOs  
+
 
 ---
 
