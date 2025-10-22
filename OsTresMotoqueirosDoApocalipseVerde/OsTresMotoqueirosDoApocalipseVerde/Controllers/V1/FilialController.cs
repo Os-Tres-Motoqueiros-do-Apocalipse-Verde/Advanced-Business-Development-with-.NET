@@ -6,7 +6,7 @@ using OsTresMotoqueirosDoApocalipseVerde.Application.UseCase;
 using OsTresMotoqueirosDoApocalipseVerde.Application.Validators;
 using System.Net;
 
-namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
+namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V1
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -1,6 +1,32 @@
 [
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.AuthController",
+    "Method": "GetDadosProtegidos",
+    "RelativePath": "api/Auth/dados-protegidos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "OsTresMotoqueirosDoApocalipseVerde.Controllers.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.DadosController",
     "Method": "GetDados",
     "RelativePath": "api/Dados",
     "HttpMethod": "GET",
@@ -34,7 +60,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.DadosController",
     "Method": "PostDados",
     "RelativePath": "api/Dados",
     "HttpMethod": "POST",
@@ -72,7 +98,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.DadosController",
     "Method": "GetDadosById",
     "RelativePath": "api/Dados/{id}",
     "HttpMethod": "GET",
@@ -110,7 +136,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.DadosController",
     "Method": "PutDados",
     "RelativePath": "api/Dados/{id}",
     "HttpMethod": "PUT",
@@ -158,7 +184,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.DadosController",
     "Method": "DeleteDados",
     "RelativePath": "api/Dados/{id}",
     "HttpMethod": "DELETE",
@@ -192,7 +218,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.EnderecoController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.EnderecoController",
     "Method": "GetEndereco",
     "RelativePath": "api/Endereco",
     "HttpMethod": "GET",
@@ -226,7 +252,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.EnderecoController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.EnderecoController",
     "Method": "PostEndereco",
     "RelativePath": "api/Endereco",
     "HttpMethod": "POST",
@@ -264,7 +290,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.EnderecoController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.EnderecoController",
     "Method": "GetEnderecoById",
     "RelativePath": "api/Endereco/{id}",
     "HttpMethod": "GET",
@@ -302,7 +328,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.EnderecoController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.EnderecoController",
     "Method": "PutEndereco",
     "RelativePath": "api/Endereco/{id}",
     "HttpMethod": "PUT",
@@ -350,7 +376,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.EnderecoController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.EnderecoController",
     "Method": "DeleteEndereco",
     "RelativePath": "api/Endereco/{id}",
     "HttpMethod": "DELETE",
@@ -384,7 +410,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.FilialController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FilialController",
     "Method": "GetFilial",
     "RelativePath": "api/Filial",
     "HttpMethod": "GET",
@@ -418,7 +444,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.FilialController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FilialController",
     "Method": "PostFilial",
     "RelativePath": "api/Filial",
     "HttpMethod": "POST",
@@ -456,7 +482,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.FilialController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FilialController",
     "Method": "GetFilialById",
     "RelativePath": "api/Filial/{id}",
     "HttpMethod": "GET",
@@ -494,7 +520,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.FilialController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FilialController",
     "Method": "PutFilial",
     "RelativePath": "api/Filial/{id}",
     "HttpMethod": "PUT",
@@ -542,7 +568,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.FilialController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FilialController",
     "Method": "DeleteFilial",
     "RelativePath": "api/Filial/{id}",
     "HttpMethod": "DELETE",
@@ -576,7 +602,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.FuncionarioController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FuncionarioController",
     "Method": "GetFuncionario",
     "RelativePath": "api/Funcionario",
     "HttpMethod": "GET",
@@ -610,7 +636,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.FuncionarioController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FuncionarioController",
     "Method": "PostFuncionario",
     "RelativePath": "api/Funcionario",
     "HttpMethod": "POST",
@@ -648,7 +674,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.FuncionarioController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FuncionarioController",
     "Method": "GetFuncionarioById",
     "RelativePath": "api/Funcionario/{id}",
     "HttpMethod": "GET",
@@ -686,7 +712,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.FuncionarioController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FuncionarioController",
     "Method": "PutFuncionario",
     "RelativePath": "api/Funcionario/{id}",
     "HttpMethod": "PUT",
@@ -734,7 +760,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.FuncionarioController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FuncionarioController",
     "Method": "DeleteFuncionario",
     "RelativePath": "api/Funcionario/{id}",
     "HttpMethod": "DELETE",
@@ -768,7 +794,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.MotoristaController",
     "Method": "GetMotorista",
     "RelativePath": "api/Motorista",
     "HttpMethod": "GET",
@@ -802,7 +828,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.MotoristaController",
     "Method": "PostMotorista",
     "RelativePath": "api/Motorista",
     "HttpMethod": "POST",
@@ -840,7 +866,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.MotoristaController",
     "Method": "GetMotoristaById",
     "RelativePath": "api/Motorista/{id}",
     "HttpMethod": "GET",
@@ -878,7 +904,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.MotoristaController",
     "Method": "PutMotorista",
     "RelativePath": "api/Motorista/{id}",
     "HttpMethod": "PUT",
@@ -926,7 +952,7 @@
     ]
   },
   {
-    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController",
+    "ContainingType": "OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.MotoristaController",
     "Method": "DeleteMotorista",
     "RelativePath": "api/Motorista/{id}",
     "HttpMethod": "DELETE",

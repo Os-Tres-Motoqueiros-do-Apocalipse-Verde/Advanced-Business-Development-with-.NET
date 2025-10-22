@@ -29,161 +29,176 @@
             Retorna os Motorista paginados.
             </summary>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController.GetDados(System.Int32,System.Int32)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.AuthController.Login(OsTresMotoqueirosDoApocalipseVerde.Controllers.LoginRequest)">
+            <summary>
+            Endpoint de login (gera o token JWT)
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.AuthController.GetDadosProtegidos">
+            <summary>
+            Endpoint protegido por JWT
+            </summary>
+        </member>
+        <member name="T:OsTresMotoqueirosDoApocalipseVerde.Controllers.LoginRequest">
+            <summary>
+            Modelo usado para login
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.DadosController.GetDados(System.Int32,System.Int32)">
             <summary>
             Retorna todos os Dados com paginação.
             </summary>
             <param name="page">Número da página (default = 1)</param>
             <param name="pageSize">Quantidade de itens por página (default = 10)</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController.GetDadosById(System.Int64)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.DadosController.GetDadosById(System.Int64)">
             <summary>
             Retorna um Dados pelo ID.
             </summary>
             <param name="id">ID do registro</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController.PostDados(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateDadosRequest)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.DadosController.PostDados(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateDadosRequest)">
             <summary>
             Cria um novo Dados.
             </summary>
             <param name="request">Payload para criação</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController.PutDados(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateDadosRequest)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.DadosController.PutDados(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateDadosRequest)">
             <summary>
             Atualiza um Dados existente.
             </summary>
             <param name="id">ID do registro</param>
             <param name="request">Payload para atualização</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.DadosController.DeleteDados(System.Int64)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.DadosController.DeleteDados(System.Int64)">
             <summary>
             Deleta um Dados existente.
             </summary>
             <param name="id">ID do registro</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.EnderecoController.GetEndereco(System.Int32,System.Int32)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.EnderecoController.GetEndereco(System.Int32,System.Int32)">
             <summary>
             Retorna todos os Endereco com paginação.
             </summary>
             <param name="page">Número da página (default = 1)</param>
             <param name="pageSize">Quantidade de itens por página (default = 10)</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.EnderecoController.GetEnderecoById(System.Int64)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.EnderecoController.GetEnderecoById(System.Int64)">
             <summary>
             Retorna um Endereco pelo ID.
             </summary>
             <param name="id">ID do registro</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.EnderecoController.PostEndereco(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateEnderecoRequest)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.EnderecoController.PostEndereco(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateEnderecoRequest)">
             <summary>
             Cria um novo Endereco.
             </summary>
             <param name="request">Payload para criação</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.EnderecoController.PutEndereco(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateEnderecoRequest)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.EnderecoController.PutEndereco(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateEnderecoRequest)">
             <summary>
             Atualiza um Endereco existente.
             </summary>
             <param name="id">ID do registro</param>
             <param name="request">Payload para atualização</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.EnderecoController.DeleteEndereco(System.Int64)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.EnderecoController.DeleteEndereco(System.Int64)">
             <summary>
             Deleta um Endereco existente.
             </summary>
             <param name="id">ID do registro</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.FilialController.GetFilial(System.Int32,System.Int32)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FilialController.GetFilial(System.Int32,System.Int32)">
             <summary>
             Retorna todos os Filial com paginação.
             </summary>
             <param name="page">Número da página (default = 1)</param>
             <param name="pageSize">Quantidade de itens por página (default = 10)</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.FilialController.GetFilialById(System.Int64)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FilialController.GetFilialById(System.Int64)">
             <summary>
             Retorna um Filial pelo ID.
             </summary>
             <param name="id">ID do registro</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.FilialController.PostFilial(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateFilialRequest)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FilialController.PostFilial(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateFilialRequest)">
             <summary>
             Cria um novo Filial.
             </summary>
             <param name="request">Payload para criação</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.FilialController.PutFilial(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateFilialRequest)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FilialController.PutFilial(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateFilialRequest)">
             <summary>
             Atualiza um Filial existente.
             </summary>
             <param name="id">ID do registro</param>
             <param name="request">Payload para atualização</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.FilialController.DeleteFilial(System.Int64)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FilialController.DeleteFilial(System.Int64)">
             <summary>
             Deleta um Filial existente.
             </summary>
             <param name="id">ID do registro</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.FuncionarioController.GetFuncionario(System.Int32,System.Int32)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FuncionarioController.GetFuncionario(System.Int32,System.Int32)">
             <summary>
             Retorna todos os Funcionario com paginação.
             </summary>
             <param name="page">Número da página (default = 1)</param>
             <param name="pageSize">Quantidade de itens por página (default = 10)</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.FuncionarioController.GetFuncionarioById(System.Int64)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FuncionarioController.GetFuncionarioById(System.Int64)">
             <summary>
             Retorna um Funcionario pelo ID.
             </summary>
             <param name="id">ID do registro</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.FuncionarioController.PostFuncionario(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateFuncionarioRequest)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FuncionarioController.PostFuncionario(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateFuncionarioRequest)">
             <summary>
             Cria um novo Funcionario.
             </summary>
             <param name="request">Payload para criação</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.FuncionarioController.PutFuncionario(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateFuncionarioRequest)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FuncionarioController.PutFuncionario(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateFuncionarioRequest)">
             <summary>
             Atualiza um Funcionario existente.
             </summary>
             <param name="id">ID do registro</param>
             <param name="request">Payload para atualização</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.FuncionarioController.DeleteFuncionario(System.Int64)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.FuncionarioController.DeleteFuncionario(System.Int64)">
             <summary>
             Deleta um Funcionario existente.
             </summary>
             <param name="id">ID do registro</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.GetMotorista(System.Int32,System.Int32)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.MotoristaController.GetMotorista(System.Int32,System.Int32)">
             <summary>
             Retorna todos os Motorista com paginação.
             </summary>
             <param name="page">Número da página (default = 1)</param>
             <param name="pageSize">Quantidade de itens por página (default = 10)</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.GetMotoristaById(System.Int64)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.MotoristaController.GetMotoristaById(System.Int64)">
             <summary>
             Retorna um Motorista pelo ID.
             </summary>
             <param name="id">ID do registro</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.PostMotorista(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateMotoristaRequest)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.MotoristaController.PostMotorista(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateMotoristaRequest)">
             <summary>
             Cria um novo Motorista.
             </summary>
             <param name="request">Payload para criação</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.PutMotorista(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateMotoristaRequest)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.MotoristaController.PutMotorista(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateMotoristaRequest)">
             <summary>
             Atualiza um Motorista existente.
             </summary>
             <param name="id">ID do registro</param>
             <param name="request">Payload para atualização</param>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoristaController.DeleteMotorista(System.Int64)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.MotoristaController.DeleteMotorista(System.Int64)">
             <summary>
             Deleta um Motorista existente.
             </summary>

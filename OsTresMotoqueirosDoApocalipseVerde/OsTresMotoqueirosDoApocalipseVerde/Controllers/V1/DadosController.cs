@@ -5,9 +5,12 @@ using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
 using OsTresMotoqueirosDoApocalipseVerde.Application.UseCase;
 using OsTresMotoqueirosDoApocalipseVerde.Application.Validators;
 using System.Net;
+using Microsoft.AspNetCore.Authorization;
 
-namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
+
+namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V1
 {
+
     [Route("api/[controller]")]
     [ApiController]
     [Tags("CRUD Dados")]
@@ -28,6 +31,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         /// <param name="page">Número da página (default = 1)</param>
         /// <param name="pageSize">Quantidade de itens por página (default = 10)</param>
         [HttpGet]
+        [AllowAnonymous]
         [ProducesResponseType(typeof(IEnumerable<CreateDadosResponse>), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> GetDados([FromQuery] int page = 1, [FromQuery] int pageSize = 4)
         {
@@ -60,6 +64,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         /// </summary>
         /// <param name="id">ID do registro</param>
         [HttpGet("{id}")]
+        [AllowAnonymous]
         [ProducesResponseType(typeof(CreateDadosResponse), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         public async Task<IActionResult> GetDadosById(long id)
@@ -89,6 +94,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         /// </summary>
         /// <param name="request">Payload para criação</param>
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         [ProducesResponseType(typeof(CreateDadosResponse), (int)HttpStatusCode.Created)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> PostDados([FromBody] CreateDadosRequest request)
@@ -105,6 +111,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         /// <param name="id">ID do registro</param>
         /// <param name="request">Payload para atualização</param>
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         [ProducesResponseType((int)HttpStatusCode.NoContent)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
@@ -122,6 +129,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
         /// </summary>
         /// <param name="id">ID do registro</param>
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         [ProducesResponseType((int)HttpStatusCode.NoContent)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         public async Task<IActionResult> DeleteDados(long id)
