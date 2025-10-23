@@ -84,7 +84,25 @@ git clone https://github.com/Os-Tres-Motoqueiros-do-Apocalipse-Verde/Advanced-Bu
 cd Advanced-Business-Development-with-.NET
 ```
 
+---
 
+### Entrar no visual studio e selecionar o projeto
+
+- Apertar run para executar o projeto
+
+- Selecionar a versão que você deseja testar
+
+- O projeto possui nivel de acessos então para algumas coisas você precisa ter autorização de Admin
+
+- Selecione o post do crud de Usuarios
+ ```bash
+  username: "Admin"
+  password: "Admin123"
+```
+
+- A resposta sera um token você copia ele e cola para se cadastrar no swagger
+
+- Após isso você pode utilizar qualquer Crud de forma livre
 
 ### Nosso Professor:
 
