@@ -35,7 +35,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Migrations
                     ESTADO = table.Column<string>(type: "NVARCHAR2(30)", maxLength: 30, nullable: false),
                     CODIGO_PAIS = table.Column<string>(type: "NVARCHAR2(50)", maxLength: 50, nullable: false),
                     CODIGO_POSTAL = table.Column<string>(type: "NVARCHAR2(50)", maxLength: 50, nullable: false),
-                    COMPLEMENTO = table.Column<string>(type: "NVARCHAR2(150)", maxLength: 150, nullable: false),
+                    COMPLEMENTO = table.Column<string>(type: "NVARCHAR2(150)", maxLength: 150, nullable: true),
                     RUA = table.Column<string>(type: "NVARCHAR2(100)", maxLength: 100, nullable: false)
                 },
                 constraints: table =>
@@ -72,6 +72,20 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_SITUACAO", x => x.ID_SITUACAO);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "USUARIOS",
+                columns: table => new
+                {
+                    ID_USER = table.Column<long>(type: "NUMBER(19)", nullable: false, defaultValueSql: "USUARIOS_SEQ.NEXTVAL"),
+                    USERNAME = table.Column<string>(type: "NVARCHAR2(150)", maxLength: 150, nullable: false),
+                    PASSWORD = table.Column<string>(type: "NVARCHAR2(200)", maxLength: 200, nullable: false),
+                    ROLE = table.Column<string>(type: "NVARCHAR2(10)", maxLength: 10, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_USUARIOS", x => x.ID_USER);
                 });
 
             migrationBuilder.CreateTable(
@@ -303,6 +317,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Migrations
 
             migrationBuilder.DropTable(
                 name: "MOTO");
+
+            migrationBuilder.DropTable(
+                name: "USUARIOS");
 
             migrationBuilder.DropTable(
                 name: "MODELO");

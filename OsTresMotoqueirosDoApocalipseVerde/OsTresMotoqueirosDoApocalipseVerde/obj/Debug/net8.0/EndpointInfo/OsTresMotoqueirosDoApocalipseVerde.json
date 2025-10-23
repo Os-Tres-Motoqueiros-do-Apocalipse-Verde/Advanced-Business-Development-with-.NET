@@ -46,7 +46,7 @@
         "tags": [
           "Auth"
         ],
-        "summary": "Endpoint protegido por JWT",
+        "summary": "Endpoint protegido com JWT",
         "responses": {
           "200": {
             "description": "OK"
@@ -1884,8 +1884,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": false,
-        "description": "Modelo usado para login"
+        "additionalProperties": false
       },
       "Plano": {
         "enum": [

@@ -86,7 +86,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Migrations
                         .HasColumnName("CODIGO_POSTAL");
 
                     b.Property<string>("Complemento")
-                        .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("NVARCHAR2(150)")
                         .HasColumnName("COMPLEMENTO");
@@ -422,6 +421,37 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("SITUACAO", (string)null);
+                });
+
+            modelBuilder.Entity("OsTresMotoqueirosDoApocalipseVerde.Domain.Entity.Usuarios", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("NUMBER(19)")
+                        .HasColumnName("ID_USER")
+                        .HasDefaultValueSql("USUARIOS_SEQ.NEXTVAL");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("NVARCHAR2(200)")
+                        .HasColumnName("PASSWORD");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("NVARCHAR2(10)")
+                        .HasColumnName("ROLE");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("NVARCHAR2(150)")
+                        .HasColumnName("USERNAME");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("USUARIOS", (string)null);
                 });
 
             modelBuilder.Entity("OsTresMotoqueirosDoApocalipseVerde.Domain.Entity.Filial", b =>

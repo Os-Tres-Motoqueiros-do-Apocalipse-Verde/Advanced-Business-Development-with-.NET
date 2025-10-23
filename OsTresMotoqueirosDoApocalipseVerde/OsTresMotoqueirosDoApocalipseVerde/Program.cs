@@ -45,12 +45,15 @@ builder.Services.AddScoped<IRepository<Moto>, Repository<Moto>>();
 builder.Services.AddScoped<IRepository<Patio>, Repository<Patio>>();
 builder.Services.AddScoped<IRepository<Setor>, Repository<Setor>>();
 builder.Services.AddScoped<IRepository<Situacao>, Repository<Situacao>>();
+builder.Services.AddScoped<IRepository<Usuarios>, Repository<Usuarios>>();
 
 builder.Services.AddScoped<CreateDadosRequestValidator>();
 builder.Services.AddScoped<CreateFuncionarioRequestValidator>();
 builder.Services.AddScoped<CreateMotoristaRequestValidator>();
 builder.Services.AddScoped<CreateFilialRequestValidator>();
 builder.Services.AddScoped<CreateEnderecoRequestValidator>();
+builder.Services.AddScoped<CreateUsuariosRequestValidator>();
+
 
 builder.Services.AddScoped<DadosUseCase>();
 builder.Services.AddScoped<FuncionarioUseCase>();
@@ -62,6 +65,7 @@ builder.Services.AddScoped<MotoUseCase>();
 builder.Services.AddScoped<PatioUseCase>();
 builder.Services.AddScoped<SetorUseCase>();
 builder.Services.AddScoped<SituacaoUseCase>();
+builder.Services.AddScoped<UsuariosUseCase>();
 
 // Configuração para remover a validação automática do ModelState
 builder.Services.Configure<ApiBehaviorOptions>(options =>

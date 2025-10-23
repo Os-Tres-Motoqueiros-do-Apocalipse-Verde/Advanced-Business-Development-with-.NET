@@ -29,19 +29,19 @@
             Retorna os Motorista paginados.
             </summary>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.AuthController.Login(OsTresMotoqueirosDoApocalipseVerde.Controllers.LoginRequest)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Application.UseCase.UsuariosUseCase.GetAllPagedAsync(System.Int32,System.Int32)">
+            <summary>
+            Retorna os Usuarios paginados.
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.AuthController.Login(OsTresMotoqueirosDoApocalipseVerde.Controllers.AuthController.LoginRequest)">
             <summary>
             Endpoint de login (gera o token JWT)
             </summary>
         </member>
         <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.AuthController.GetDadosProtegidos">
             <summary>
-            Endpoint protegido por JWT
-            </summary>
-        </member>
-        <member name="T:OsTresMotoqueirosDoApocalipseVerde.Controllers.LoginRequest">
-            <summary>
-            Modelo usado para login
+            Endpoint protegido com JWT
             </summary>
         </member>
         <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V1.DadosController.GetDados(System.Int32,System.Int32)">

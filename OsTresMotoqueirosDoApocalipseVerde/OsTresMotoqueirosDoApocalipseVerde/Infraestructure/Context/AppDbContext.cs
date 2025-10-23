@@ -18,6 +18,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context
         public DbSet<Patio> Patio { get; set; }
         public DbSet<Setor> Setor { get; set; }
         public DbSet<Situacao> Situacao { get; set; }
+        public DbSet<Usuarios> Usuarios { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
