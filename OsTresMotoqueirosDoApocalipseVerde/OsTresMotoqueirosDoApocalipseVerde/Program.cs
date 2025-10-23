@@ -1,15 +1,19 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using OsTresMotoqueirosDoApocalipseVerde;
+using OsTresMotoqueirosDoApocalipseVerde.Application.Swagger;
 using OsTresMotoqueirosDoApocalipseVerde.Application.UseCase;
 using OsTresMotoqueirosDoApocalipseVerde.Application.Validators;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Entity;
 using OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context;
 using OsTresMotoqueirosDoApocalipseVerde.Services;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Reflection;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -73,24 +77,30 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
     options.SuppressModelStateInvalidFilter = true;
 });
 
-// Swagger/OpenAPI
-builder.Services.AddSwaggerGen(swagger =>
+// Versionamento
+builder.Services.AddApiVersioning(o =>
 {
-    swagger.SwaggerDoc("v1", new OpenApiInfo
-    {
-        Title = builder.Configuration["Swagger:Title"] ?? "API de Desastres Ambientais",
-        Description = "Um informativo de desastres",
-        Contact = new OpenApiContact
-        {
-            Email = "luizhneri12@gmail.com",
-            Name = "Luiz Henrique Neri Reimberg"
-        }
-    });
+    o.AssumeDefaultVersionWhenUnspecified = true;
+    o.DefaultApiVersion = new ApiVersion(1, 0);
+});
+
+builder.Services.AddVersionedApiExplorer(setup =>
+{
+    setup.GroupNameFormat = "'v'VVV";
+    setup.SubstituteApiVersionInUrl = true;
+});
+
+
+
+// Swagger/OpenAPI
+builder.Services.AddSwaggerGen(options =>
+{
+    options.OperationFilter<SwaggerDefaultValues>();
 
     // Inclusão do arquivo XML para documentação Swagger
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-    swagger.IncludeXmlComments(xmlPath);
+    options.IncludeXmlComments(xmlPath);
 
     // Mostrar enums como string no Swagger
     var enumTypes = Assembly
@@ -100,7 +110,7 @@ builder.Services.AddSwaggerGen(swagger =>
 
     foreach (var enumType in enumTypes)
     {
-        swagger.MapType(enumType, () => new OpenApiSchema
+        options.MapType(enumType, () => new OpenApiSchema
         {
             Type = "string",
             Enum = Enum.GetNames(enumType)
@@ -111,7 +121,7 @@ builder.Services.AddSwaggerGen(swagger =>
     }
 
     // Suporte ao JWT Bearer no Swagger
-    swagger.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
         Type = SecuritySchemeType.Http,
@@ -121,7 +131,7 @@ builder.Services.AddSwaggerGen(swagger =>
         Description = "Insira o token JWT desta forma: Bearer {seu_token}"
     });
 
-    swagger.AddSecurityRequirement(new OpenApiSecurityRequirement
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
             new OpenApiSecurityScheme
@@ -138,6 +148,7 @@ builder.Services.AddSwaggerGen(swagger =>
 });
 
 
+builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerGenOptions>();
 
 builder.Services.AddSingleton<TokenService>();
 
@@ -166,11 +177,20 @@ builder.Services.AddAuthorization();
 
 
 var app = builder.Build();
+var versionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+
 
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(options =>
+    {
+        foreach (var description in versionDescriptionProvider.ApiVersionDescriptions)
+        {
+            options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json",
+                $"Web APi - {description.GroupName.ToUpper()}");
+        }
+    });
 }
 
 app.UseHttpsRedirection();

@@ -5,10 +5,11 @@ using OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context;
 using OsTresMotoqueirosDoApocalipseVerde.Services;
 using System.Security.Claims;
 
-namespace OsTresMotoqueirosDoApocalipseVerde.Controllers
+namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.v1
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
+    [ApiVersion("1.0")]
     public class AuthController : ControllerBase
     {
         private readonly TokenService _tokenService;

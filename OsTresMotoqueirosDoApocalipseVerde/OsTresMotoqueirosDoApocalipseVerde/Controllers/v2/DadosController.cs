@@ -8,11 +8,11 @@ using System.Net;
 using Microsoft.AspNetCore.Authorization;
 
 
-namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.v1
+namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
 {
 
     [Route("api/v{version:apiVersion}/[controller]")]
-    [ApiVersion("1.0")]
+    [ApiVersion("2.0")]
     [ApiController]
     [Tags("CRUD Dados")]
     public class DadosController : ControllerBase

@@ -6,9 +6,10 @@ using OsTresMotoqueirosDoApocalipseVerde.Application.UseCase;
 using OsTresMotoqueirosDoApocalipseVerde.Application.Validators;
 using System.Net;
 
-namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V1
+namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
+    [ApiVersion("2.0")]
     [ApiController]
     [Tags("CRUD Funcionario")]
     public class FuncionarioController : ControllerBase

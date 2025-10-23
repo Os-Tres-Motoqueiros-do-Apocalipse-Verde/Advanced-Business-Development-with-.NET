@@ -257,3 +257,5 @@ D:\2TDSPX\Luiz\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocal
 D:\2TDSPX\Luiz\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 D:\2TDSPX\Luiz\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 D:\2TDSPX\Luiz\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\2TDSPX\Luiz\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+D:\2TDSPX\Luiz\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll

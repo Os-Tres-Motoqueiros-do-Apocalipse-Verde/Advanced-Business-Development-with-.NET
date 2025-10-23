@@ -19,6 +19,8 @@
 		<PackageReference Include="FluentValidation" Version="12.0.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.10" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.4" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.13" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.13">
 			<PrivateAssets>all</PrivateAssets>
@@ -35,6 +37,10 @@
 		<PackageReference Include="Oracle.ManagedDataAccess" Version="23.7.0" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
 		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.14.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Application\Swagger\" />
 	</ItemGroup>
 
 </Project>
