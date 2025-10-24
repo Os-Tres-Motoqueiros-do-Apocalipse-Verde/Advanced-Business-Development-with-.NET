@@ -45,9 +45,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             }).ToList();
         }
 
-        /// <summary>
-        /// Retorna os Funcionario paginados.
-        /// </summary>
         public async Task<List<CreateFuncionarioResponse>> GetAllPagedAsync(int page, int pageSize)
         {
             var funcionario = await _repository.GetAllAsync();

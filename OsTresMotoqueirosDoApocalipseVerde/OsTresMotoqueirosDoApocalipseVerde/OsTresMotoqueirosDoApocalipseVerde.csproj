@@ -32,6 +32,10 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.14.0" />
+		<PackageReference Include="Microsoft.ML" Version="4.0.2" />
+		<PackageReference Include="Microsoft.ML.AutoML" Version="0.22.2" />
+		<PackageReference Include="Microsoft.ML.DataView" Version="4.0.2" />
+		<PackageReference Include="Microsoft.ML.FastTree" Version="4.0.2" />
 		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
 		<PackageReference Include="Oracle.EntityFrameworkCore" Version="8.23.70" />
 		<PackageReference Include="Oracle.ManagedDataAccess" Version="23.7.0" />

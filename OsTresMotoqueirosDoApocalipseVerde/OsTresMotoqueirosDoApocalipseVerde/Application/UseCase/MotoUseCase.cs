@@ -45,19 +45,40 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 
         public async Task<List<CreateMotoResponse>> GetAllMotoAsync()
         {
-            var motos = await _repository.GetAllAsync();
-            return motos.Select(u => new CreateMotoResponse
+            var moto = await _repository.GetAllAsync();
+            return moto.Select(u => new CreateMotoResponse
             {
                 Id = u.Id,
                 Placa = u.Placa,
                 Chassi = u.Chassi,
                 Condicao = u.Condicao,
-                LocalizacaoMoto= u.LocalizacaoMoto,
+                LocalizacaoMoto = u.LocalizacaoMoto,
                 ModeloId = u.ModeloId,
                 MotoristaId = u.MotoristaId,
                 SetorId = u.SetorId,
-                SituacaoId= u.SituacaoId
+                SituacaoId = u.SituacaoId
             }).ToList();
+        }
+
+        /// <summary>
+        /// Retorna os Moto paginados.
+        /// </summary>
+        public async Task<List<CreateMotoResponse>> GetAllPagedAsync(int page, int pageSize)
+        {
+            var moto = await _repository.GetAllAsync();
+
+            var paged = moto
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .Select(u => new CreateMotoResponse
+                {
+                    Id = u.Id,
+                    Placa = u.Placa,
+                    Chassi = u.Chassi
+                })
+                .ToList();
+
+            return paged;
         }
 
         public async Task<CreateMotoResponse?> GetByIdAsync(long id)
@@ -98,7 +119,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             await _repository.SaveChangesAsync();
             return true;
         }
-
 
         public async Task<bool> DeleteMotoAsync(long id)
         {

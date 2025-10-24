@@ -70,7 +70,7 @@
           {
             "name": "pageSize",
             "in": "query",
-            "description": "Quantidade de itens por página (default = 10)",
+            "description": "Quantidade de itens por página (default = 4)",
             "schema": {
               "type": "integer",
               "format": "int32",

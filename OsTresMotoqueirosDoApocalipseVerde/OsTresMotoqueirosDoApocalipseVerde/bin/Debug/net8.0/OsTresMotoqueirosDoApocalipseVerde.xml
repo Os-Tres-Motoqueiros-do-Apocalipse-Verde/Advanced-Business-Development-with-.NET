@@ -19,14 +19,14 @@
             Retorna os Filial paginados.
             </summary>
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Application.UseCase.FuncionarioUseCase.GetAllPagedAsync(System.Int32,System.Int32)">
-            <summary>
-            Retorna os Funcionario paginados.
-            </summary>
-        </member>
         <member name="M:OsTresMotoqueirosDoApocalipseVerde.Application.UseCase.MotoristaUseCase.GetAllPagedAsync(System.Int32,System.Int32)">
             <summary>
             Retorna os Motorista paginados.
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Application.UseCase.MotoUseCase.GetAllPagedAsync(System.Int32,System.Int32)">
+            <summary>
+            Retorna os Moto paginados.
             </summary>
         </member>
         <member name="M:OsTresMotoqueirosDoApocalipseVerde.Application.UseCase.UsuariosUseCase.GetAllPagedAsync(System.Int32,System.Int32)">
@@ -49,7 +49,7 @@
             Retorna todos os Dados com paginação.
             </summary>
             <param name="page">Número da página (default = 1)</param>
-            <param name="pageSize">Quantidade de itens por página (default = 10)</param>
+            <param name="pageSize">Quantidade de itens por página (default = 4)</param>
         </member>
         <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.v1.DadosController.GetDadosById(System.Int64)">
             <summary>
@@ -91,7 +91,7 @@
             Retorna todos os Dados com paginação.
             </summary>
             <param name="page">Número da página (default = 1)</param>
-            <param name="pageSize">Quantidade de itens por página (default = 10)</param>
+            <param name="pageSize">Quantidade de itens por página (default = 4)</param>
         </member>
         <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.DadosController.GetDadosById(System.Int64)">
             <summary>
@@ -214,6 +214,38 @@
             </summary>
             <param name="id">ID do registro</param>
         </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.MotoController.GetMoto(System.Int32,System.Int32)">
+            <summary>
+            Retorna todos os Moto com paginação.
+            </summary>
+            <param name="page">Número da página (default = 1)</param>
+            <param name="pageSize">Quantidade de itens por página (default = 10)</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.MotoController.GetMotoById(System.Int64)">
+            <summary>
+            Retorna um Moto pelo ID.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.MotoController.PostMoto(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateMotoRequest)">
+            <summary>
+            Cria um novo Moto.
+            </summary>
+            <param name="request">Payload para criação</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.MotoController.PutMoto(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateMotoRequest)">
+            <summary>
+            Atualiza um Moto existente.
+            </summary>
+            <param name="id">ID do registro</param>
+            <param name="request">Payload para atualização</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.MotoController.DeleteMoto(System.Int64)">
+            <summary>
+            Deleta um Moto existente.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
         <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.MotoristaController.GetMotorista(System.Int32,System.Int32)">
             <summary>
             Retorna todos os Motorista com paginação.
@@ -245,6 +277,30 @@
             Deleta um Motorista existente.
             </summary>
             <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoMLController.TreinarModelo">
+            <summary>
+            Treina o modelo de Machine Learning com base nas motos cadastradas no banco de dados.
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoMLController.PreverCondicao(OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoPrevisaoRequest)">
+            <summary>
+            Faz uma previsão da condição da moto com base em ModeloId, SetorId e SituacaoId.
+            </summary>
+        </member>
+        <member name="T:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoPrevisaoRequest">
+            <summary>
+            DTO de entrada para o endpoint de previsão.
+            </summary>
+        </member>
+        <member name="P:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoPrevisaoRequest.ModeloId">
+            <example>1</example>
+        </member>
+        <member name="P:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoPrevisaoRequest.SetorId">
+            <example>2</example>
+        </member>
+        <member name="P:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoPrevisaoRequest.SituacaoId">
+            <example>3</example>
         </member>
         <member name="T:OsTresMotoqueirosDoApocalipseVerde.Migrations.MottuMigration">
             <inheritdoc />

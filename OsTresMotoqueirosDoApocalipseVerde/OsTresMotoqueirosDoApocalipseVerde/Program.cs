@@ -57,6 +57,7 @@ builder.Services.AddScoped<CreateMotoristaRequestValidator>();
 builder.Services.AddScoped<CreateFilialRequestValidator>();
 builder.Services.AddScoped<CreateEnderecoRequestValidator>();
 builder.Services.AddScoped<CreateUsuariosRequestValidator>();
+builder.Services.AddScoped<CreateMotoRequestValidator>();
 
 
 builder.Services.AddScoped<DadosUseCase>();
@@ -70,6 +71,8 @@ builder.Services.AddScoped<PatioUseCase>();
 builder.Services.AddScoped<SetorUseCase>();
 builder.Services.AddScoped<SituacaoUseCase>();
 builder.Services.AddScoped<UsuariosUseCase>();
+
+builder.Services.AddScoped<MotoPredictionUseCase>();
 
 // Configuração para remover a validação automática do ModelState
 builder.Services.Configure<ApiBehaviorOptions>(options =>
