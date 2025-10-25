@@ -96,8 +96,10 @@ cd Advanced-Business-Development-with-.NET
 
 - Selecione o post do crud de Usuarios
  ```bash
-  username: "Admin"
-  password: "Admin123"
+ {
+  "username": "Admin",
+  "password": "Admin123"
+}
 ```
 
 - A resposta sera um token você copia ele e cola para se cadastrar no swagger
