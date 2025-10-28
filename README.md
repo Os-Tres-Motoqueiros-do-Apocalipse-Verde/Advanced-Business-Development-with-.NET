@@ -106,6 +106,16 @@ cd Advanced-Business-Development-with-.NET
 
 - Após isso você pode utilizar qualquer Crud de forma livre
 
+- Para utilizar o Health Check você pode rodar a API e colocar na aba de pesquisa:
+ ```bash
+    http://localhost:5207/health-ui
+```
+
+-Ou 
+ ```bash
+    http://localhost:5207/health
+```
+
 ### Nosso Professor:
 
 ###### Thiago Keller Torquato Vicco	
