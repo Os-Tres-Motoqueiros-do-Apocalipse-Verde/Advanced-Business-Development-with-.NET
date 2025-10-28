@@ -17,6 +17,8 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Reflection;
 using System.Text;
 using System.Text.Json.Serialization;
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 
 
 
@@ -151,6 +153,24 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 
+builder.Services.AddHealthChecks()
+    .AddOracle(
+        builder.Configuration.GetConnectionString("OracleMottu"),
+        name: "oracle",
+        failureStatus: Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus.Unhealthy,
+        tags: new[] { "db", "oracle" }
+    );
+
+builder.Services.AddHealthChecksUI(opt =>
+{
+    opt.SetEvaluationTimeInSeconds(10); // Atualiza a cada 10s
+    opt.MaximumHistoryEntriesPerEndpoint(60);
+    opt.AddHealthCheckEndpoint("API Health", "/health");
+})
+.AddInMemoryStorage();
+
+
+
 builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerGenOptions>();
 
 builder.Services.AddSingleton<TokenService>();
@@ -199,5 +219,16 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
+
+
+app.MapHealthChecks("/health", new HealthCheckOptions
+{
+    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+});
+
+app.MapHealthChecksUI(options =>
+{
+    options.UIPath = "/health-ui";
+});
 
 app.Run();
