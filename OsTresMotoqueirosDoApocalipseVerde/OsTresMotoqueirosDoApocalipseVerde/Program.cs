@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
@@ -17,12 +19,10 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Reflection;
 using System.Text;
 using System.Text.Json.Serialization;
-using HealthChecks.UI.Client;
-using Microsoft.AspNetCore.Diagnostics.HealthChecks;
-
-
 
 var builder = WebApplication.CreateBuilder(args);
+
+// JWT
 var jwtKey = builder.Configuration["Jwt:Key"];
 var jwtIssuer = builder.Configuration["Jwt:Issuer"];
 var jwtAudience = builder.Configuration["Jwt:Audience"];
@@ -53,6 +53,7 @@ builder.Services.AddScoped<IRepository<Setor>, Repository<Setor>>();
 builder.Services.AddScoped<IRepository<Situacao>, Repository<Situacao>>();
 builder.Services.AddScoped<IRepository<Usuarios>, Repository<Usuarios>>();
 
+// Validators
 builder.Services.AddScoped<CreateDadosRequestValidator>();
 builder.Services.AddScoped<CreateFuncionarioRequestValidator>();
 builder.Services.AddScoped<CreateMotoristaRequestValidator>();
@@ -61,7 +62,7 @@ builder.Services.AddScoped<CreateEnderecoRequestValidator>();
 builder.Services.AddScoped<CreateUsuariosRequestValidator>();
 builder.Services.AddScoped<CreateMotoRequestValidator>();
 
-
+// UseCases
 builder.Services.AddScoped<DadosUseCase>();
 builder.Services.AddScoped<FuncionarioUseCase>();
 builder.Services.AddScoped<MotoristaUseCase>();
@@ -73,10 +74,9 @@ builder.Services.AddScoped<PatioUseCase>();
 builder.Services.AddScoped<SetorUseCase>();
 builder.Services.AddScoped<SituacaoUseCase>();
 builder.Services.AddScoped<UsuariosUseCase>();
-
 builder.Services.AddScoped<MotoPredictionUseCase>();
 
-// Configuração para remover a validação automática do ModelState
+// Configuração do comportamento API
 builder.Services.Configure<ApiBehaviorOptions>(options =>
 {
     options.SuppressModelStateInvalidFilter = true;
@@ -95,37 +95,15 @@ builder.Services.AddVersionedApiExplorer(setup =>
     setup.SubstituteApiVersionInUrl = true;
 });
 
-
-
-// Swagger/OpenAPI
+// Swagger
 builder.Services.AddSwaggerGen(options =>
 {
     options.OperationFilter<SwaggerDefaultValues>();
 
-    // Inclusão do arquivo XML para documentação Swagger
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     options.IncludeXmlComments(xmlPath);
 
-    // Mostrar enums como string no Swagger
-    var enumTypes = Assembly
-        .GetExecutingAssembly()
-        .GetTypes()
-        .Where(t => t.IsEnum && t.Namespace != null && t.Namespace.Contains("GB1.Domain.Enums"));
-
-    foreach (var enumType in enumTypes)
-    {
-        options.MapType(enumType, () => new OpenApiSchema
-        {
-            Type = "string",
-            Enum = Enum.GetNames(enumType)
-                       .Select(name => new OpenApiString(name))
-                       .Cast<IOpenApiAny>()
-                       .ToList()
-        });
-    }
-
-    // Suporte ao JWT Bearer no Swagger
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -147,34 +125,26 @@ builder.Services.AddSwaggerGen(options =>
                     Id = "Bearer"
                 }
             },
-            new string[] {}
+            Array.Empty<string>()
         }
     });
 });
 
-
+// HealthChecks
 builder.Services.AddHealthChecks()
-    .AddOracle(
-        builder.Configuration.GetConnectionString("OracleMottu"),
-        name: "oracle",
-        failureStatus: Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus.Unhealthy,
-        tags: new[] { "db", "oracle" }
-    );
+    .AddOracle(builder.Configuration.GetConnectionString("OracleMottu"), name: "oracle");
 
 builder.Services.AddHealthChecksUI(opt =>
 {
-    opt.SetEvaluationTimeInSeconds(10); // Atualiza a cada 10s
+    opt.SetEvaluationTimeInSeconds(10);
     opt.MaximumHistoryEntriesPerEndpoint(60);
     opt.AddHealthCheckEndpoint("API Health", "/health");
-})
-.AddInMemoryStorage();
-
-
+}).AddInMemoryStorage();
 
 builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerGenOptions>();
-
 builder.Services.AddSingleton<TokenService>();
 
+// JWT Authentication
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -182,26 +152,19 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         {
             ValidateIssuerSigningKey = true,
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)),
-
             ValidateIssuer = true,
             ValidIssuer = jwtIssuer,
-
             ValidateAudience = true,
             ValidAudience = jwtAudience,
-
             ValidateLifetime = true,
-
             ClockSkew = TimeSpan.Zero
         };
     });
 
 builder.Services.AddAuthorization();
 
-
-
 var app = builder.Build();
 var versionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
-
 
 if (app.Environment.IsDevelopment())
 {
@@ -211,24 +174,26 @@ if (app.Environment.IsDevelopment())
         foreach (var description in versionDescriptionProvider.ApiVersionDescriptions)
         {
             options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json",
-                $"Web APi - {description.GroupName.ToUpper()}");
+                $"Web API - {description.GroupName.ToUpper()}");
         }
     });
 }
 
 app.UseHttpsRedirection();
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
-
 
 app.MapHealthChecks("/health", new HealthCheckOptions
 {
     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
 });
-
 app.MapHealthChecksUI(options =>
 {
     options.UIPath = "/health-ui";
 });
 
 app.Run();
+
+// Para o WebApplicationFactory nos testes
+public partial class Program { }

@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OsTresMotoqueirosDoApocalipseVerde</name>
+    </assembly>
+    <members>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Application.UseCase.DadosUseCase.GetAllPagedAsync(System.Int32,System.Int32)">
+            <summary>
+            Retorna os Dados paginados.
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Application.UseCase.EnderecoUseCase.GetAllPagedAsync(System.Int32,System.Int32)">
+            <summary>
+            Retorna os Endereco paginados.
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Application.UseCase.FilialUseCase.GetAllPagedAsync(System.Int32,System.Int32)">
+            <summary>
+            Retorna os Filial paginados.
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Application.UseCase.MotoristaUseCase.GetAllPagedAsync(System.Int32,System.Int32)">
+            <summary>
+            Retorna os Motorista paginados.
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Application.UseCase.MotoUseCase.GetAllPagedAsync(System.Int32,System.Int32)">
+            <summary>
+            Retorna os Moto paginados.
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Application.UseCase.UsuariosUseCase.GetAllPagedAsync(System.Int32,System.Int32)">
+            <summary>
+            Retorna os Usuarios paginados.
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.v1.AuthController.Login(OsTresMotoqueirosDoApocalipseVerde.Controllers.v1.AuthController.LoginRequest)">
+            <summary>
+            Endpoint de login (gera o token JWT)
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.v1.AuthController.GetDadosProtegidos">
+            <summary>
+            Endpoint protegido com JWT
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.v1.DadosController.GetDados(System.Int32,System.Int32)">
+            <summary>
+            Retorna todos os Dados com paginação.
+            </summary>
+            <param name="page">Número da página (default = 1)</param>
+            <param name="pageSize">Quantidade de itens por página (default = 4)</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.v1.DadosController.GetDadosById(System.Int64)">
+            <summary>
+            Retorna um Dados pelo ID.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.v1.DadosController.PostDados(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateDadosRequest)">
+            <summary>
+            Cria um novo Dados.
+            </summary>
+            <param name="request">Payload para criação</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.v1.DadosController.PutDados(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateDadosRequest)">
+            <summary>
+            Atualiza um Dados existente.
+            </summary>
+            <param name="id">ID do registro</param>
+            <param name="request">Payload para atualização</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.v1.DadosController.DeleteDados(System.Int64)">
+            <summary>
+            Deleta um Dados existente.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.v2.AuthController.Login(OsTresMotoqueirosDoApocalipseVerde.Controllers.v2.AuthController.LoginRequest)">
+            <summary>
+            Endpoint de login (gera o token JWT)
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.v2.AuthController.GetDadosProtegidos">
+            <summary>
+            Endpoint protegido com JWT
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.DadosController.GetDados(System.Int32,System.Int32)">
+            <summary>
+            Retorna todos os Dados com paginação.
+            </summary>
+            <param name="page">Número da página (default = 1)</param>
+            <param name="pageSize">Quantidade de itens por página (default = 4)</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.DadosController.GetDadosById(System.Int64)">
+            <summary>
+            Retorna um Dados pelo ID.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.DadosController.PostDados(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateDadosRequest)">
+            <summary>
+            Cria um novo Dados.
+            </summary>
+            <param name="request">Payload para criação</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.DadosController.PutDados(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateDadosRequest)">
+            <summary>
+            Atualiza um Dados existente.
+            </summary>
+            <param name="id">ID do registro</param>
+            <param name="request">Payload para atualização</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.DadosController.DeleteDados(System.Int64)">
+            <summary>
+            Deleta um Dados existente.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.EnderecoController.GetEndereco(System.Int32,System.Int32)">
+            <summary>
+            Retorna todos os Endereco com paginação.
+            </summary>
+            <param name="page">Número da página (default = 1)</param>
+            <param name="pageSize">Quantidade de itens por página (default = 10)</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.EnderecoController.GetEnderecoById(System.Int64)">
+            <summary>
+            Retorna um Endereco pelo ID.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.EnderecoController.PostEndereco(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateEnderecoRequest)">
+            <summary>
+            Cria um novo Endereco.
+            </summary>
+            <param name="request">Payload para criação</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.EnderecoController.PutEndereco(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateEnderecoRequest)">
+            <summary>
+            Atualiza um Endereco existente.
+            </summary>
+            <param name="id">ID do registro</param>
+            <param name="request">Payload para atualização</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.EnderecoController.DeleteEndereco(System.Int64)">
+            <summary>
+            Deleta um Endereco existente.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.FilialController.GetFilial(System.Int32,System.Int32)">
+            <summary>
+            Retorna todos os Filial com paginação.
+            </summary>
+            <param name="page">Número da página (default = 1)</param>
+            <param name="pageSize">Quantidade de itens por página (default = 10)</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.FilialController.GetFilialById(System.Int64)">
+            <summary>
+            Retorna um Filial pelo ID.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.FilialController.PostFilial(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateFilialRequest)">
+            <summary>
+            Cria um novo Filial.
+            </summary>
+            <param name="request">Payload para criação</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.FilialController.PutFilial(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateFilialRequest)">
+            <summary>
+            Atualiza um Filial existente.
+            </summary>
+            <param name="id">ID do registro</param>
+            <param name="request">Payload para atualização</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.FilialController.DeleteFilial(System.Int64)">
+            <summary>
+            Deleta um Filial existente.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.FuncionarioController.GetFuncionario(System.Int32,System.Int32)">
+            <summary>
+            Retorna todos os Funcionario com paginação.
+            </summary>
+            <param name="page">Número da página (default = 1)</param>
+            <param name="pageSize">Quantidade de itens por página (default = 10)</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.FuncionarioController.GetFuncionarioById(System.Int64)">
+            <summary>
+            Retorna um Funcionario pelo ID.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.FuncionarioController.PostFuncionario(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateFuncionarioRequest)">
+            <summary>
+            Cria um novo Funcionario.
+            </summary>
+            <param name="request">Payload para criação</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.FuncionarioController.PutFuncionario(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateFuncionarioRequest)">
+            <summary>
+            Atualiza um Funcionario existente.
+            </summary>
+            <param name="id">ID do registro</param>
+            <param name="request">Payload para atualização</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.FuncionarioController.DeleteFuncionario(System.Int64)">
+            <summary>
+            Deleta um Funcionario existente.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.MotoController.GetMoto(System.Int32,System.Int32)">
+            <summary>
+            Retorna todos os Moto com paginação.
+            </summary>
+            <param name="page">Número da página (default = 1)</param>
+            <param name="pageSize">Quantidade de itens por página (default = 10)</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.MotoController.GetMotoById(System.Int64)">
+            <summary>
+            Retorna um Moto pelo ID.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.MotoController.PostMoto(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateMotoRequest)">
+            <summary>
+            Cria um novo Moto.
+            </summary>
+            <param name="request">Payload para criação</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.MotoController.PutMoto(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateMotoRequest)">
+            <summary>
+            Atualiza um Moto existente.
+            </summary>
+            <param name="id">ID do registro</param>
+            <param name="request">Payload para atualização</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.MotoController.DeleteMoto(System.Int64)">
+            <summary>
+            Deleta um Moto existente.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.MotoristaController.GetMotorista(System.Int32,System.Int32)">
+            <summary>
+            Retorna todos os Motorista com paginação.
+            </summary>
+            <param name="page">Número da página (default = 1)</param>
+            <param name="pageSize">Quantidade de itens por página (default = 10)</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.MotoristaController.GetMotoristaById(System.Int64)">
+            <summary>
+            Retorna um Motorista pelo ID.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.MotoristaController.PostMotorista(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateMotoristaRequest)">
+            <summary>
+            Cria um novo Motorista.
+            </summary>
+            <param name="request">Payload para criação</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.MotoristaController.PutMotorista(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateMotoristaRequest)">
+            <summary>
+            Atualiza um Motorista existente.
+            </summary>
+            <param name="id">ID do registro</param>
+            <param name="request">Payload para atualização</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.MotoristaController.DeleteMotorista(System.Int64)">
+            <summary>
+            Deleta um Motorista existente.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoMLController.TreinarModelo">
+            <summary>
+            Treina o modelo de Machine Learning com base nas motos cadastradas no banco de dados.
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoMLController.PreverCondicao(OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoPrevisaoRequest)">
+            <summary>
+            Faz uma previsão da condição da moto com base em ModeloId, SetorId e SituacaoId.
+            </summary>
+        </member>
+        <member name="T:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoPrevisaoRequest">
+            <summary>
+            DTO de entrada para o endpoint de previsão.
+            </summary>
+        </member>
+        <member name="P:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoPrevisaoRequest.ModeloId">
+            <example>1</example>
+        </member>
+        <member name="P:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoPrevisaoRequest.SetorId">
+            <example>2</example>
+        </member>
+        <member name="P:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoPrevisaoRequest.SituacaoId">
+            <example>3</example>
+        </member>
+        <member name="T:OsTresMotoqueirosDoApocalipseVerde.Migrations.MottuMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Migrations.MottuMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Migrations.MottuMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Migrations.MottuMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

@@ -25,6 +25,7 @@
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.4" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
+		<PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.9.2" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.13" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.13">
 			<PrivateAssets>all</PrivateAssets>
@@ -51,5 +52,10 @@
 	<ItemGroup>
 	  <Folder Include="Application\Swagger\" />
 	</ItemGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="OsTresMotoqueirosDoApocalipseVerde.Tests" />
+	</ItemGroup>
+
 
 </Project>

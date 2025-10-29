@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\OsTresMotoqueirosDoApocalipseVerde",
+    "\\OsTresMotoqueirosDoApocalipseVerde.Tests",
     "\\OsTresMotoqueirosDoApocalipseVerde\\Controllers"
   ],
-  "SelectedNode": "\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+  "SelectedNode": "\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
   "PreviewInSolutionExplorer": false
 }
