@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oOy0AY8Dhh8=",
+  "dgSpecHash": "DgPNKH3B2oU=",
   "success": true,
-  "projectFilePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
+  "projectFilePath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\labsfiap\\.nuget\\packages\\aspnetcore.healthchecks.oracle\\9.0.0\\aspnetcore.healthchecks.oracle.9.0.0.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\aspnetcore.healthchecks.ui\\9.0.0\\aspnetcore.healthchecks.ui.9.0.0.nupkg.sha512",
@@ -94,6 +94,7 @@
     "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.codeanalysis.razor\\6.0.24\\microsoft.codeanalysis.razor.6.0.24.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.codeanalysis.scripting.common\\4.8.0\\microsoft.codeanalysis.scripting.common.4.8.0.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.codeanalysis.workspaces.common\\4.8.0\\microsoft.codeanalysis.workspaces.common.4.8.0.nupkg.sha512",
+    "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.codecoverage\\17.11.1\\microsoft.codecoverage.17.11.1.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.diasymreader\\2.0.0\\microsoft.diasymreader.2.0.0.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.dotnet.scaffolding.shared\\8.0.7\\microsoft.dotnet.scaffolding.shared.8.0.7.nupkg.sha512",
@@ -165,8 +166,11 @@
     "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.ml.torchsharp\\0.22.2\\microsoft.ml.torchsharp.0.22.2.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.ml.vision\\4.0.2\\microsoft.ml.vision.4.0.2.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.net.stringtools\\17.8.3\\microsoft.net.stringtools.17.8.3.nupkg.sha512",
+    "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.net.test.sdk\\17.11.1\\microsoft.net.test.sdk.17.11.1.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
+    "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.11.1\\microsoft.testplatform.objectmodel.17.11.1.nupkg.sha512",
+    "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.testplatform.testhost\\17.11.1\\microsoft.testplatform.testhost.17.11.1.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\8.0.7\\microsoft.visualstudio.web.codegeneration.8.0.7.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\8.0.7\\microsoft.visualstudio.web.codegeneration.core.8.0.7.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.design\\8.0.7\\microsoft.visualstudio.web.codegeneration.design.8.0.7.nupkg.sha512",
@@ -175,6 +179,7 @@
     "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.utils\\8.0.7\\microsoft.visualstudio.web.codegeneration.utils.8.0.7.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\8.0.7\\microsoft.visualstudio.web.codegenerators.mvc.8.0.7.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\mono.texttemplating\\2.3.1\\mono.texttemplating.2.3.1.nupkg.sha512",
+    "C:\\Users\\labsfiap\\.nuget\\packages\\moq\\4.20.69\\moq.4.20.69.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\nuget.common\\6.11.0\\nuget.common.6.11.0.nupkg.sha512",
@@ -250,9 +255,9 @@
       "code": "NU1608",
       "level": "Warning",
       "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Features 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.9.2 was resolved.",
-      "projectPath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
+      "projectPath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
+      "filePath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
       "libraryId": "Microsoft.CodeAnalysis.Common",
       "targetGraphs": [
         "net8.0"
@@ -262,9 +267,9 @@
       "code": "NU1608",
       "level": "Warning",
       "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Features 4.8.0 requires Microsoft.CodeAnalysis.CSharp (= 4.8.0) but version Microsoft.CodeAnalysis.CSharp 4.9.2 was resolved.",
-      "projectPath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
+      "projectPath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
+      "filePath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
       "libraryId": "Microsoft.CodeAnalysis.CSharp",
       "targetGraphs": [
         "net8.0"
@@ -274,9 +279,9 @@
       "code": "NU1608",
       "level": "Warning",
       "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.Features 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.9.2 was resolved.",
-      "projectPath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
+      "projectPath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
+      "filePath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
       "libraryId": "Microsoft.CodeAnalysis.Common",
       "targetGraphs": [
         "net8.0"
@@ -286,9 +291,9 @@
       "code": "NU1608",
       "level": "Warning",
       "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.Workspaces.Common 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.9.2 was resolved.",
-      "projectPath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
+      "projectPath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
+      "filePath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
       "libraryId": "Microsoft.CodeAnalysis.Common",
       "targetGraphs": [
         "net8.0"
@@ -298,9 +303,9 @@
       "code": "NU1608",
       "level": "Warning",
       "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Workspaces 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.9.2 was resolved.",
-      "projectPath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
+      "projectPath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
+      "filePath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
       "libraryId": "Microsoft.CodeAnalysis.Common",
       "targetGraphs": [
         "net8.0"
@@ -310,9 +315,9 @@
       "code": "NU1608",
       "level": "Warning",
       "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Workspaces 4.8.0 requires Microsoft.CodeAnalysis.CSharp (= 4.8.0) but version Microsoft.CodeAnalysis.CSharp 4.9.2 was resolved.",
-      "projectPath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
+      "projectPath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
+      "filePath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
       "libraryId": "Microsoft.CodeAnalysis.CSharp",
       "targetGraphs": [
         "net8.0"
@@ -322,9 +327,9 @@
       "code": "NU1608",
       "level": "Warning",
       "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.Scripting.Common 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.9.2 was resolved.",
-      "projectPath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
+      "projectPath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
+      "filePath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
       "libraryId": "Microsoft.CodeAnalysis.Common",
       "targetGraphs": [
         "net8.0"
@@ -334,9 +339,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "Package 'Oracle.ManagedDataAccess 23.7.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
-      "projectPath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
+      "projectPath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
+      "filePath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.Tests\\OsTresMotoqueirosDoApocalipseVerde.Tests.csproj",
       "libraryId": "Oracle.ManagedDataAccess",
       "targetGraphs": [
         "net8.0"

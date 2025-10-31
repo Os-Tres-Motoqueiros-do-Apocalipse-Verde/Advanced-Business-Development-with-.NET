@@ -19,7 +19,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Tests.Integration
         public async Task Get_DeveRetornarOk()
         {
             // Act
-            var response = await _httpClient.GetAsync("/api/dados");
+            var response = await _httpClient.GetAsync("/api/v2/dados");
 
             // Assert
             response.StatusCode.Should().Be(HttpStatusCode.OK);

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PCaZGLniWsM=",
+  "dgSpecHash": "ZHH/6Q04elE=",
   "success": true,
-  "projectFilePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+  "projectFilePath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\labsfiap\\.nuget\\packages\\aspnetcore.healthchecks.oracle\\9.0.0\\aspnetcore.healthchecks.oracle.9.0.0.nupkg.sha512",
     "C:\\Users\\labsfiap\\.nuget\\packages\\aspnetcore.healthchecks.ui\\9.0.0\\aspnetcore.healthchecks.ui.9.0.0.nupkg.sha512",
@@ -228,9 +228,9 @@
       "code": "NU1608",
       "level": "Warning",
       "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Workspaces 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.9.2 was resolved.",
-      "projectPath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+      "projectPath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+      "filePath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
       "libraryId": "Microsoft.CodeAnalysis.Common",
       "targetGraphs": [
         "net8.0"
@@ -240,9 +240,9 @@
       "code": "NU1608",
       "level": "Warning",
       "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Workspaces 4.8.0 requires Microsoft.CodeAnalysis.CSharp (= 4.8.0) but version Microsoft.CodeAnalysis.CSharp 4.9.2 was resolved.",
-      "projectPath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+      "projectPath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+      "filePath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
       "libraryId": "Microsoft.CodeAnalysis.CSharp",
       "targetGraphs": [
         "net8.0"
@@ -251,22 +251,10 @@
     {
       "code": "NU1608",
       "level": "Warning",
-      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.Workspaces.Common 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.9.2 was resolved.",
-      "projectPath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
-      "warningLevel": 1,
-      "filePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
-      "libraryId": "Microsoft.CodeAnalysis.Common",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1608",
-      "level": "Warning",
       "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Features 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.9.2 was resolved.",
-      "projectPath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+      "projectPath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+      "filePath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
       "libraryId": "Microsoft.CodeAnalysis.Common",
       "targetGraphs": [
         "net8.0"
@@ -276,9 +264,9 @@
       "code": "NU1608",
       "level": "Warning",
       "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Features 4.8.0 requires Microsoft.CodeAnalysis.CSharp (= 4.8.0) but version Microsoft.CodeAnalysis.CSharp 4.9.2 was resolved.",
-      "projectPath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+      "projectPath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+      "filePath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
       "libraryId": "Microsoft.CodeAnalysis.CSharp",
       "targetGraphs": [
         "net8.0"
@@ -287,10 +275,22 @@
     {
       "code": "NU1608",
       "level": "Warning",
-      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.Features 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.9.2 was resolved.",
-      "projectPath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.Workspaces.Common 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.9.2 was resolved.",
+      "projectPath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+      "filePath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+      "libraryId": "Microsoft.CodeAnalysis.Common",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.Features 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.9.2 was resolved.",
+      "projectPath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
       "libraryId": "Microsoft.CodeAnalysis.Common",
       "targetGraphs": [
         "net8.0"
@@ -300,9 +300,9 @@
       "code": "NU1608",
       "level": "Warning",
       "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.Scripting.Common 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.9.2 was resolved.",
-      "projectPath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+      "projectPath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+      "filePath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
       "libraryId": "Microsoft.CodeAnalysis.Common",
       "targetGraphs": [
         "net8.0"
@@ -312,9 +312,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "Package 'Oracle.ManagedDataAccess 23.7.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
-      "projectPath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+      "projectPath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\2TDSPX\\Luiz\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+      "filePath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
       "libraryId": "Oracle.ManagedDataAccess",
       "targetGraphs": [
         "net8.0"
