@@ -116,6 +116,14 @@ cd Advanced-Business-Development-with-.NET
     http://localhost:5207/health
 ```
 
+- Para rodar os teste é preciso fazer isso
+
+  <img width="934" height="736" alt="image" src="https://github.com/user-attachments/assets/5d7f7366-1a98-44c4-aa3a-b33a979a6efb" />
+- Ou rodar 
+ ```bash
+    dotnet test
+```
+
 ### Nosso Professor:
 
 ###### Thiago Keller Torquato Vicco	
