@@ -19,45 +19,41 @@ public class SetorMapping : IEntityTypeConfiguration<Setor>
             .IsRequired();
 
         builder
+            .Property(s => s.NomeSetor)
+            .HasColumnName("NOME_SETOR")
+            .IsRequired();
+
+        builder
             .Property(s => s.QtdMoto)
-            .IsRequired()
-            .HasColumnName("QTD_MOTO");
+            .HasColumnName("QTD_MOTO")
+            .IsRequired();
 
         builder
             .Property(s => s.Capacidade)
-            .IsRequired()
-            .HasColumnName("CAPACIDADE");
-
-        builder
-            .Property(s => s.NomeSetor)
-            .HasMaxLength(250)
-            .HasColumnName("NOME_SETOR");
+            .HasColumnName("CAPACIDADE")
+            .IsRequired();
 
         builder
             .Property(s => s.Descricao)
-            .HasMaxLength(250)
             .HasColumnName("DESCRICAO");
 
         builder
             .Property(s => s.Cor)
-            .HasMaxLength(20)
-            .IsRequired()
             .HasColumnName("COR");
 
         builder
             .Property(s => s.Localizacao)
-            .HasMaxLength(255)
-            .IsRequired()
             .HasColumnName("LOCALIZACAO");
 
         builder
-                .Property(s => s.PatioId)
-                .HasColumnName("ID_PATIO");
+            .Property(s => s.PatioId)
+            .HasColumnName("ID_PATIO")
+            .IsRequired();
 
         builder
             .HasOne(s => s.Patio)
-            .WithMany()
+            .WithMany(p => p.Setores)
             .HasForeignKey(s => s.PatioId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.Restrict); 
     }
 }

@@ -20,6 +20,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         public string Localizacao { get; set; }
 
         // Chave estrangeira
+        [Column("ID_PATIO")]
         public long PatioId { get; set; }
         public virtual Patio Patio { get; set; }
 

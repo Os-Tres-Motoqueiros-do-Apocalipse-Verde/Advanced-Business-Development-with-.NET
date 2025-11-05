@@ -35,14 +35,36 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 
         public async Task<List<CreateSituacaoResponse>> GetAllSituacaoAsync()
         {
-            var filiais = await _repository.GetAllAsync();
-            return filiais.Select(u => new CreateSituacaoResponse
+            var situacao = await _repository.GetAllAsync();
+            return situacao.Select(u => new CreateSituacaoResponse
             {
                 Id = u.Id,
                 Nome = u.Nome,
                 Descricao = u.Descricao,
                 Status = u.Status
             }).ToList();
+        }
+
+        /// <summary>
+        /// Retorna os Situacao paginados.
+        /// </summary>
+        public async Task<List<CreateSituacaoResponse>> GetAllPagedAsync(int page, int pageSize)
+        {
+            var situacao = await _repository.GetAllAsync();
+
+            var paged = situacao
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .Select(u => new CreateSituacaoResponse
+                {
+                    Id = u.Id,
+                    Nome = u.Nome,
+                    Descricao = u.Descricao,
+                    Status = u.Status
+                })
+                .ToList();
+
+            return paged;
         }
 
         public async Task<CreateSituacaoResponse?> GetByIdAsync(long id)
@@ -73,7 +95,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             await _repository.SaveChangesAsync();
             return true;
         }
-
 
         public async Task<bool> DeleteSituacaoAsync(long id)
         {

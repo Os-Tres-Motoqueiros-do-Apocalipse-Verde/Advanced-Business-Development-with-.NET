@@ -37,15 +37,38 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 
         public async Task<List<CreatePatioResponse>> GetAllPatioAsync()
         {
-            var patios = await _repository.GetAllAsync();
-            return patios.Select(u => new CreatePatioResponse
+            var patio = await _repository.GetAllAsync();
+            return patio.Select(u => new CreatePatioResponse
             {
                 Id = u.Id,
                 TotalMotos = u.TotalMotos,
                 CapacidadeMoto = u.CapacidadeMoto,
                 Localizacao = u.Localizacao,
-                FilialId= u.FilialId
+                FilialId = u.FilialId
             }).ToList();
+        }
+
+        /// <summary>
+        /// Retorna os Patio paginados.
+        /// </summary>
+        public async Task<List<CreatePatioResponse>> GetAllPagedAsync(int page, int pageSize)
+        {
+            var patio = await _repository.GetAllAsync();
+
+            var paged = patio
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .Select(u => new CreatePatioResponse
+                {
+                    Id = u.Id,
+                    TotalMotos = u.TotalMotos,
+                    CapacidadeMoto = u.CapacidadeMoto,
+                    Localizacao = u.Localizacao,
+                    FilialId = u.FilialId
+                })
+                .ToList();
+
+            return paged;
         }
 
         public async Task<CreatePatioResponse?> GetByIdAsync(long id)
@@ -78,7 +101,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             await _repository.SaveChangesAsync();
             return true;
         }
-
 
         public async Task<bool> DeletePatioAsync(long id)
         {

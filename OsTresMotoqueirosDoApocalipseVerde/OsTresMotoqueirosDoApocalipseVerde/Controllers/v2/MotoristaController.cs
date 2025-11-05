@@ -41,9 +41,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
                 d.DadosId,
                 links = new
                 {
-                    self = Url.Action(nameof(GetMotoristaById), new { id = d.Id }),
-                    update = Url.Action(nameof(PutMotorista), new { id = d.Id }),
-                    delete = Url.Action(nameof(DeleteMotorista), new { id = d.Id })
+                    self = Url.Action(nameof(GetMotoristaById), new { id = d.Id })
                 }
             });
 

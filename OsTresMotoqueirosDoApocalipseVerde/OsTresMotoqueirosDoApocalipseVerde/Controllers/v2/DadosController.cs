@@ -46,8 +46,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
                 links = new
                 {
                     self = Url.Action(nameof(GetDadosById), new { id = d.Id }),
-                    update = Url.Action(nameof(PutDados), new { id = d.Id }),
-                    delete = Url.Action(nameof(DeleteDados), new { id = d.Id })
                 }
             });
 
@@ -74,20 +72,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
             if (dados == null)
                 return NotFound();
 
-            var result = new
-            {
-                dados.Id,
-                dados.Nome,
-                dados.Email,
-                links = new
-                {
-                    all = Url.Action(nameof(GetDados)),
-                    update = Url.Action(nameof(PutDados), new { id = dados.Id }),
-                    delete = Url.Action(nameof(DeleteDados), new { id = dados.Id })
-                }
-            };
-
-            return Ok(result);
+            return Ok(dados);
         }
 
         /// <summary>

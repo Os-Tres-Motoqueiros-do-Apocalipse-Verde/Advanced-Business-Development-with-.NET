@@ -19,6 +19,11 @@
             Retorna os Filial paginados.
             </summary>
         </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Application.UseCase.ModeloUseCase.GetAllPagedAsync(System.Int32,System.Int32)">
+            <summary>
+            Retorna os Modelo paginados.
+            </summary>
+        </member>
         <member name="M:OsTresMotoqueirosDoApocalipseVerde.Application.UseCase.MotoristaUseCase.GetAllPagedAsync(System.Int32,System.Int32)">
             <summary>
             Retorna os Motorista paginados.
@@ -27,6 +32,21 @@
         <member name="M:OsTresMotoqueirosDoApocalipseVerde.Application.UseCase.MotoUseCase.GetAllPagedAsync(System.Int32,System.Int32)">
             <summary>
             Retorna os Moto paginados.
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Application.UseCase.PatioUseCase.GetAllPagedAsync(System.Int32,System.Int32)">
+            <summary>
+            Retorna os Patio paginados.
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Application.UseCase.SetorUseCase.GetAllPagedAsync(System.Int32,System.Int32)">
+            <summary>
+            Retorna os Setor paginados.
+            </summary>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Application.UseCase.SituacaoUseCase.GetAllPagedAsync(System.Int32,System.Int32)">
+            <summary>
+            Retorna os Situacao paginados.
             </summary>
         </member>
         <member name="M:OsTresMotoqueirosDoApocalipseVerde.Application.UseCase.UsuariosUseCase.GetAllPagedAsync(System.Int32,System.Int32)">
@@ -214,6 +234,38 @@
             </summary>
             <param name="id">ID do registro</param>
         </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.ModeloController.GetModelo(System.Int32,System.Int32)">
+            <summary>
+            Retorna todos os Modelo com paginação.
+            </summary>
+            <param name="page">Número da página (default = 1)</param>
+            <param name="pageSize">Quantidade de itens por página (default = 4)</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.ModeloController.GetModeloById(System.Int64)">
+            <summary>
+            Retorna um Modelo pelo ID.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.ModeloController.PostModelo(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateModeloRequest)">
+            <summary>
+            Cria um novo Modelo.
+            </summary>
+            <param name="request">Payload para criação</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.ModeloController.PutModelo(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateModeloRequest)">
+            <summary>
+            Atualiza um Modelo existente.
+            </summary>
+            <param name="id">ID do registro</param>
+            <param name="request">Payload para atualização</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.ModeloController.DeleteModelo(System.Int64)">
+            <summary>
+            Deleta um Modelo existente.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
         <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.MotoController.GetMoto(System.Int32,System.Int32)">
             <summary>
             Retorna todos os Moto com paginação.
@@ -275,6 +327,102 @@
         <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.MotoristaController.DeleteMotorista(System.Int64)">
             <summary>
             Deleta um Motorista existente.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.PatioController.GetPatio(System.Int32,System.Int32)">
+            <summary>
+            Retorna todos os Patio com paginação.
+            </summary>
+            <param name="page">Número da página (default = 1)</param>
+            <param name="pageSize">Quantidade de itens por página (default = 4)</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.PatioController.GetPatioById(System.Int64)">
+            <summary>
+            Retorna um Patio pelo ID.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.PatioController.PostPatio(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreatePatioRequest)">
+            <summary>
+            Cria um novo Patio.
+            </summary>
+            <param name="request">Payload para criação</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.PatioController.PutPatio(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreatePatioRequest)">
+            <summary>
+            Atualiza um Patio existente.
+            </summary>
+            <param name="id">ID do registro</param>
+            <param name="request">Payload para atualização</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.PatioController.DeletePatio(System.Int64)">
+            <summary>
+            Deleta um Patio existente.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.SetorController.GetSetor(System.Int32,System.Int32)">
+            <summary>
+            Retorna todos os Setor com paginação.
+            </summary>
+            <param name="page">Número da página (default = 1)</param>
+            <param name="pageSize">Quantidade de itens por página (default = 4)</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.SetorController.GetSetorById(System.Int64)">
+            <summary>
+            Retorna um Setor pelo ID.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.SetorController.PostSetor(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateSetorRequest)">
+            <summary>
+            Cria um novo Setor.
+            </summary>
+            <param name="request">Payload para criação</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.SetorController.PutSetor(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateSetorRequest)">
+            <summary>
+            Atualiza um Setor existente.
+            </summary>
+            <param name="id">ID do registro</param>
+            <param name="request">Payload para atualização</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.SetorController.DeleteSetor(System.Int64)">
+            <summary>
+            Deleta um Setor existente.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.SituacaoController.GetSituacao(System.Int32,System.Int32)">
+            <summary>
+            Retorna todos os Situacao com paginação.
+            </summary>
+            <param name="page">Número da página (default = 1)</param>
+            <param name="pageSize">Quantidade de itens por página (default = 4)</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.SituacaoController.GetSituacaoById(System.Int64)">
+            <summary>
+            Retorna um Situacao pelo ID.
+            </summary>
+            <param name="id">ID do registro</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.SituacaoController.PostSituacao(OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateSituacaoRequest)">
+            <summary>
+            Cria um novo Situacao.
+            </summary>
+            <param name="request">Payload para criação</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.SituacaoController.PutSituacao(System.Int64,OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request.CreateSituacaoRequest)">
+            <summary>
+            Atualiza um Situacao existente.
+            </summary>
+            <param name="id">ID do registro</param>
+            <param name="request">Payload para atualização</param>
+        </member>
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Controllers.V2.SituacaoController.DeleteSituacao(System.Int64)">
+            <summary>
+            Deleta um Situacao existente.
             </summary>
             <param name="id">ID do registro</param>
         </member>

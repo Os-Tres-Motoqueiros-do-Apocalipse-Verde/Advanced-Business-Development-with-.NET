@@ -70,21 +70,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
             if (funcionario == null)
                 return NotFound();
 
-            var result = new
-            {
-                funcionario.Id,
-                funcionario.Cargo,
-                funcionario.DadosId,
-                funcionario.FilialId,
-                links = new
-                {
-                    all = Url.Action(nameof(GetFuncionario)),
-                    update = Url.Action(nameof(PutFuncionario), new { id = funcionario.Id }),
-                    delete = Url.Action(nameof(DeleteFuncionario), new { id = funcionario.Id })
-                }
-            };
 
-            return Ok(result);
+            return Ok(funcionario);
         }
 
         /// <summary>

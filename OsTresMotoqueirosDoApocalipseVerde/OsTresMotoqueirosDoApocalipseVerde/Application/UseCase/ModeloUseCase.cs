@@ -41,17 +41,42 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 
         public async Task<List<CreateModeloResponse>> GetAllModeloAsync()
         {
-            var modelos = await _repository.GetAllAsync();
-            return modelos.Select(u => new CreateModeloResponse
+            var modelo = await _repository.GetAllAsync();
+            return modelo.Select(u => new CreateModeloResponse
             {
                 Id = u.Id,
                 NomeModelo = u.NomeModelo,
                 Frenagem = u.Frenagem,
-                SistemaPartida=u.SistemaPartida,
+                SistemaPartida = u.SistemaPartida,
                 Tanque = u.Tanque,
-                TipoCombustivel=u.TipoCombustivel,
+                TipoCombustivel = u.TipoCombustivel,
                 Consumo = u.Consumo
             }).ToList();
+        }
+
+        /// <summary>
+        /// Retorna os Modelo paginados.
+        /// </summary>
+        public async Task<List<CreateModeloResponse>> GetAllPagedAsync(int page, int pageSize)
+        {
+            var modelo = await _repository.GetAllAsync();
+
+            var paged = modelo
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .Select(u => new CreateModeloResponse
+                {
+                    Id = u.Id,
+                    NomeModelo = u.NomeModelo,
+                    Frenagem = u.Frenagem,
+                    SistemaPartida = u.SistemaPartida,
+                    Tanque = u.Tanque,
+                    TipoCombustivel = u.TipoCombustivel,
+                    Consumo = u.Consumo
+                })
+                .ToList();
+
+            return paged;
         }
 
         public async Task<CreateModeloResponse?> GetByIdAsync(long id)
@@ -88,7 +113,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             await _repository.SaveChangesAsync();
             return true;
         }
-
 
         public async Task<bool> DeleteModeloAsync(long id)
         {

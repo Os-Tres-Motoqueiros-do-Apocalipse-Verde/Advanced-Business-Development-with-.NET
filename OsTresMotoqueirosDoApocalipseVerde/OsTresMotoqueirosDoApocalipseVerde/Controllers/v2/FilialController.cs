@@ -69,20 +69,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
             if (filial == null)
                 return NotFound();
 
-            var result = new
-            {
-                filial.Id,
-                filial.NomeFilial,
-                filial.EnderecoId,
-                links = new
-                {
-                    all = Url.Action(nameof(GetFilial)),
-                    update = Url.Action(nameof(PutFilial), new { id = filial.Id }),
-                    delete = Url.Action(nameof(DeleteFilial), new { id = filial.Id })
-                }
-            };
 
-            return Ok(result);
+            return Ok(filial);
         }
 
         /// <summary>

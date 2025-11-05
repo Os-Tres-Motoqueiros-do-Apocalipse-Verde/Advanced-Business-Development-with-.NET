@@ -43,8 +43,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 
         public async Task<List<CreateSetorResponse>> GetAllSetorAsync()
         {
-            var setores = await _repository.GetAllAsync();
-            return setores.Select(u => new CreateSetorResponse
+            var setor = await _repository.GetAllAsync();
+            return setor.Select(u => new CreateSetorResponse
             {
                 Id = u.Id,
                 NomeSetor = u.NomeSetor,
@@ -52,9 +52,35 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
                 Capacidade = u.Capacidade,
                 Descricao = u.Descricao,
                 Cor = u.Cor,
-                Localizacao=u.Localizacao,
+                Localizacao = u.Localizacao,
                 PatioId = u.PatioId
             }).ToList();
+        }
+
+        /// <summary>
+        /// Retorna os Setor paginados.
+        /// </summary>
+        public async Task<List<CreateSetorResponse>> GetAllPagedAsync(int page, int pageSize)
+        {
+            var setor = await _repository.GetAllAsync();
+
+            var paged = setor
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .Select(u => new CreateSetorResponse
+                {
+                    Id = u.Id,
+                    NomeSetor = u.NomeSetor,
+                    QtdMoto = u.QtdMoto,
+                    Capacidade = u.Capacidade,
+                    Descricao = u.Descricao,
+                    Cor = u.Cor,
+                    Localizacao = u.Localizacao,
+                    PatioId = u.PatioId
+                })
+                .ToList();
+
+            return paged;
         }
 
         public async Task<CreateSetorResponse?> GetByIdAsync(long id)
@@ -93,7 +119,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             await _repository.SaveChangesAsync();
             return true;
         }
-
 
         public async Task<bool> DeleteSetorAsync(long id)
         {

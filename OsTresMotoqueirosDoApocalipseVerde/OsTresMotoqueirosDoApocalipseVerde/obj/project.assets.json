@@ -10348,23 +10348,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\labsfiap\\.nuget\\packages\\": {},
+    "C:\\Users\\Passos Magicos\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+      "projectUniqueName": "C:\\Users\\Passos Magicos\\Documents\\Luiz\\Net\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
       "projectName": "OsTresMotoqueirosDoApocalipseVerde",
-      "projectPath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
-      "packagesPath": "C:\\Users\\labsfiap\\.nuget\\packages\\",
-      "outputPath": "D:\\2TDSPX\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\obj\\",
+      "projectPath": "C:\\Users\\Passos Magicos\\Documents\\Luiz\\Net\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde.csproj",
+      "packagesPath": "C:\\Users\\Passos Magicos\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Passos Magicos\\Documents\\Luiz\\Net\\Advanced-Business-Development-with-.NET\\OsTresMotoqueirosDoApocalipseVerde\\OsTresMotoqueirosDoApocalipseVerde\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\labsfiap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Passos Magicos\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -10373,7 +10373,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -10392,7 +10391,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -10530,7 +10529,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100-rc.2.25502.107/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
@@ -10539,7 +10538,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Workspaces 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.9.2 was resolved.",
+      "message": "Versão detectada do pacote fora da restrição de dependência: Microsoft.CodeAnalysis.CSharp.Workspaces 4.8.0 requer Microsoft.CodeAnalysis.Common (= 4.8.0), mas a versão Microsoft.CodeAnalysis.Common 4.9.2 foi resolvida.",
       "libraryId": "Microsoft.CodeAnalysis.Common",
       "targetGraphs": [
         "net8.0"
@@ -10549,7 +10548,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Workspaces 4.8.0 requires Microsoft.CodeAnalysis.CSharp (= 4.8.0) but version Microsoft.CodeAnalysis.CSharp 4.9.2 was resolved.",
+      "message": "Versão detectada do pacote fora da restrição de dependência: Microsoft.CodeAnalysis.CSharp.Workspaces 4.8.0 requer Microsoft.CodeAnalysis.CSharp (= 4.8.0), mas a versão Microsoft.CodeAnalysis.CSharp 4.9.2 foi resolvida.",
       "libraryId": "Microsoft.CodeAnalysis.CSharp",
       "targetGraphs": [
         "net8.0"
@@ -10559,7 +10558,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Features 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.9.2 was resolved.",
+      "message": "Versão detectada do pacote fora da restrição de dependência: Microsoft.CodeAnalysis.CSharp.Features 4.8.0 requer Microsoft.CodeAnalysis.Common (= 4.8.0), mas a versão Microsoft.CodeAnalysis.Common 4.9.2 foi resolvida.",
       "libraryId": "Microsoft.CodeAnalysis.Common",
       "targetGraphs": [
         "net8.0"
@@ -10569,7 +10568,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Features 4.8.0 requires Microsoft.CodeAnalysis.CSharp (= 4.8.0) but version Microsoft.CodeAnalysis.CSharp 4.9.2 was resolved.",
+      "message": "Versão detectada do pacote fora da restrição de dependência: Microsoft.CodeAnalysis.CSharp.Features 4.8.0 requer Microsoft.CodeAnalysis.CSharp (= 4.8.0), mas a versão Microsoft.CodeAnalysis.CSharp 4.9.2 foi resolvida.",
       "libraryId": "Microsoft.CodeAnalysis.CSharp",
       "targetGraphs": [
         "net8.0"
@@ -10579,7 +10578,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.Workspaces.Common 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.9.2 was resolved.",
+      "message": "Versão detectada do pacote fora da restrição de dependência: Microsoft.CodeAnalysis.Workspaces.Common 4.8.0 requer Microsoft.CodeAnalysis.Common (= 4.8.0), mas a versão Microsoft.CodeAnalysis.Common 4.9.2 foi resolvida.",
       "libraryId": "Microsoft.CodeAnalysis.Common",
       "targetGraphs": [
         "net8.0"
@@ -10589,7 +10588,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.Features 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.9.2 was resolved.",
+      "message": "Versão detectada do pacote fora da restrição de dependência: Microsoft.CodeAnalysis.Features 4.8.0 requer Microsoft.CodeAnalysis.Common (= 4.8.0), mas a versão Microsoft.CodeAnalysis.Common 4.9.2 foi resolvida.",
       "libraryId": "Microsoft.CodeAnalysis.Common",
       "targetGraphs": [
         "net8.0"
@@ -10599,7 +10598,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.Scripting.Common 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.9.2 was resolved.",
+      "message": "Versão detectada do pacote fora da restrição de dependência: Microsoft.CodeAnalysis.Scripting.Common 4.8.0 requer Microsoft.CodeAnalysis.Common (= 4.8.0), mas a versão Microsoft.CodeAnalysis.Common 4.9.2 foi resolvida.",
       "libraryId": "Microsoft.CodeAnalysis.Common",
       "targetGraphs": [
         "net8.0"
@@ -10609,7 +10608,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Oracle.ManagedDataAccess 23.7.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "message": "O pacote 'Oracle.ManagedDataAccess 23.7.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net8.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "Oracle.ManagedDataAccess",
       "targetGraphs": [
         "net8.0"

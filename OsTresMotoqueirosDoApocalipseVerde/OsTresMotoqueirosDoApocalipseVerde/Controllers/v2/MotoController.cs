@@ -79,13 +79,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
                 moto.ModeloId,
                 moto.MotoristaId,
                 moto.SetorId,
-                moto.SituacaoId,
-                links = new
-                {
-                    all = Url.Action(nameof(GetMoto)),
-                    update = Url.Action(nameof(PutMoto), new { id = moto.Id }),
-                    delete = Url.Action(nameof(DeleteMoto), new { id = moto.Id })
-                }
+                moto.SituacaoId
             };
 
             return Ok(result);

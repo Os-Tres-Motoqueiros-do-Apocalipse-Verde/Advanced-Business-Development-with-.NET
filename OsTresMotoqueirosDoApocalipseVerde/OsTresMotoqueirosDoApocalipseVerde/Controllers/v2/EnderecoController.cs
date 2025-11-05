@@ -73,24 +73,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
             if (endereco == null)
                 return NotFound();
 
-            var result = new
-            {
-                endereco.Id,
-                endereco.Numero,
-                endereco.Estado,
-                endereco.CodigoPais,
-                endereco.CodigoPostal,
-                endereco.Complemento,
-                endereco.Rua,
-                links = new
-                {
-                    all = Url.Action(nameof(GetEndereco)),
-                    update = Url.Action(nameof(PutEndereco), new { id = endereco.Id }),
-                    delete = Url.Action(nameof(DeleteEndereco), new { id = endereco.Id })
-                }
-            };
 
-            return Ok(result);
+            return Ok(endereco);
         }
 
         /// <summary>

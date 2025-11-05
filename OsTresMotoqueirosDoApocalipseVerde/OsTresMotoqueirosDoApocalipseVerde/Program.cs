@@ -61,6 +61,10 @@ builder.Services.AddScoped<CreateFilialRequestValidator>();
 builder.Services.AddScoped<CreateEnderecoRequestValidator>();
 builder.Services.AddScoped<CreateUsuariosRequestValidator>();
 builder.Services.AddScoped<CreateMotoRequestValidator>();
+builder.Services.AddScoped<CreateModeloRequestValidator>();
+builder.Services.AddScoped<CreatePatioRequestValidator>();
+builder.Services.AddScoped<CreateSetorRequestValidator>();
+builder.Services.AddScoped<CreateSituacaoRequestValidator>();
 
 // UseCases
 builder.Services.AddScoped<DadosUseCase>();
