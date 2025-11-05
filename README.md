@@ -90,11 +90,15 @@ cd Advanced-Business-Development-with-.NET
 
 - Apertar run para executar o projeto
 
-- Selecionar a versão que você deseja testar
+- Selecionar a versão que você deseja testar, a versão 2 possui todos os Cruds de todas as Entidades
+  <img width="1351" height="104" alt="image" src="https://github.com/user-attachments/assets/cbb2183b-0b96-4b75-b852-d4fe9ef98aa7" />
+
 
 - O projeto possui nivel de acessos então para algumas coisas você precisa ter autorização de Admin
 
 - Selecione o post do crud de Usuarios
+<img width="1325" height="153" alt="image" src="https://github.com/user-attachments/assets/7337adb0-0ebc-4422-b78b-ffb19b2ab914" />
+
  ```bash
  {
   "username": "Admin",
@@ -103,6 +107,7 @@ cd Advanced-Business-Development-with-.NET
 ```
 
 - A resposta sera um token você copia ele e cola para se cadastrar no swagger
+  <img width="1353" height="646" alt="image" src="https://github.com/user-attachments/assets/05861d22-9813-4e75-90d6-9b4db58a66d4" />
 
 - Após isso você pode utilizar qualquer Crud de forma livre
 
@@ -118,7 +123,8 @@ cd Advanced-Business-Development-with-.NET
 
 - Para rodar os teste é preciso fazer isso
 
-  <img width="934" height="736" alt="image" src="https://github.com/user-attachments/assets/5d7f7366-1a98-44c4-aa3a-b33a979a6efb" />
+<img width="934" height="736" alt="image" src="https://github.com/user-attachments/assets/5d7f7366-1a98-44c4-aa3a-b33a979a6efb" />
+
 - Ou rodar 
  ```bash
     dotnet test
