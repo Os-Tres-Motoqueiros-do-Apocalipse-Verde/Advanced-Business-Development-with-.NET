@@ -22,6 +22,12 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
                 .IsRequired();
 
             builder
+                .Property(d => d.Nome)
+                .HasColumnName("NOME")
+                .IsRequired()
+                .HasMaxLength(150);
+
+            builder
                 .Property(d => d.CPF)
                 .IsRequired()
                 .HasColumnName("CPF")
@@ -42,11 +48,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
                 .HasColumnName("SENHA")
                 .HasMaxLength(255);
 
-            builder
-                .Property(d => d.Nome)
-                .HasColumnName("NOME")
-                .IsRequired()
-                .HasMaxLength(150);
 
             builder
                 .HasOne(e => e.Funcionario)

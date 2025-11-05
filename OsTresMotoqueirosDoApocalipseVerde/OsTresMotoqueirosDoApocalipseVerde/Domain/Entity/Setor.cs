@@ -24,7 +24,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
         public long PatioId { get; set; }
         public virtual Patio Patio { get; set; }
 
-        public virtual Moto Moto { get; set; }
+        public virtual ICollection<Moto> Motos { get; private set; } = new List<Moto>();
 
         private Setor(string nomeSetor, int qtdMoto, int capacidade, string descricao, string cor, string localizacao, long patioId)
         {
@@ -32,6 +32,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
             QtdMoto = qtdMoto;
             Capacidade = capacidade;
             Descricao = descricao;
+            Cor = cor;
             Localizacao = localizacao;
             PatioId = patioId;
 
@@ -43,6 +44,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
             QtdMoto = qtdMoto;
             Capacidade = capacidade;
             Descricao = descricao;
+            Cor = cor;
             Localizacao = localizacao;
             PatioId = patioId;
 

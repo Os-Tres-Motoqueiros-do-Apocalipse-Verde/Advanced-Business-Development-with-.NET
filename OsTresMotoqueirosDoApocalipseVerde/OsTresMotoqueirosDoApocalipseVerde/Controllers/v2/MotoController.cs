@@ -76,8 +76,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
                 moto.Chassi,
                 moto.Condicao,
                 moto.LocalizacaoMoto,
-                moto.ModeloId,
                 moto.MotoristaId,
+                moto.ModeloId,
                 moto.SetorId,
                 moto.SituacaoId
             };

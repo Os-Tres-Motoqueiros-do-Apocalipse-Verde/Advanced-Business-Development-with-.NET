@@ -64,6 +64,17 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder
+                .Property(m => m.SetorId)
+                .HasColumnName("ID_SETOR")
+                .IsRequired();
+
+            builder
+                .HasOne(m => m.Setor)
+                .WithMany(m => m.Motos)
+                .HasForeignKey(m => m.SetorId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder
                 .Property(m => m.SituacaoId)
                 .HasColumnName("ID_SITUACAO")
                 .IsRequired();
@@ -74,16 +85,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infrastructure.Mapping
                 .HasForeignKey<Moto>(m => m.SituacaoId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder
-                .Property(m => m.SetorId)
-                .HasColumnName("ID_SETOR")
-                .IsRequired();
 
-            builder
-                .HasOne(m => m.Setor)
-                .WithOne(m => m.Moto)
-                .HasForeignKey<Moto>(m => m.SetorId)
-                .OnDelete(DeleteBehavior.Restrict);
 
         }
     }

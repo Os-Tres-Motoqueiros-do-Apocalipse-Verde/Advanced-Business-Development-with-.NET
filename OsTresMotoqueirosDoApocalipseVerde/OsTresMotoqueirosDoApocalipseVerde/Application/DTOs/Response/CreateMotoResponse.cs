@@ -11,9 +11,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response
         public string LocalizacaoMoto { get; set; }
 
         // chave estrangeira
+        public long MotoristaId { get; set; }
         public long ModeloId { get; set; }
 
-        public long MotoristaId { get; set; }
         public long SetorId { get; set; }
 
         public long SituacaoId { get; set; }

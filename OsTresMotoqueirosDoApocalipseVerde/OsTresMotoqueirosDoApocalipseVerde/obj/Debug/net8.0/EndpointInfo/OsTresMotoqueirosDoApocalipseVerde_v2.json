@@ -3545,11 +3545,11 @@
             "type": "string",
             "nullable": true
           },
-          "modeloId": {
+          "motoristaId": {
             "type": "integer",
             "format": "int64"
           },
-          "motoristaId": {
+          "modeloId": {
             "type": "integer",
             "format": "int64"
           },
@@ -3587,11 +3587,11 @@
             "type": "string",
             "nullable": true
           },
-          "modeloId": {
+          "motoristaId": {
             "type": "integer",
             "format": "int64"
           },
-          "motoristaId": {
+          "modeloId": {
             "type": "integer",
             "format": "int64"
           },

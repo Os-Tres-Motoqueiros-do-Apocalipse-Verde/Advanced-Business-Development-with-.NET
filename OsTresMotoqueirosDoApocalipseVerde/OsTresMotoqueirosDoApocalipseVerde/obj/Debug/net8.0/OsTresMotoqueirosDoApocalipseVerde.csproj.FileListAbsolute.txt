@@ -1120,10 +1120,10 @@ C:\Users\Passos Magicos\Documents\Luiz\Net\Advanced-Business-Development-with-.N
 C:\Users\Passos Magicos\Documents\Luiz\Net\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Passos Magicos\Documents\Luiz\Net\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\Passos Magicos\Documents\Luiz\Net\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\swae.build.ex.cache
-C:\Users\Passos Magicos\Documents\Luiz\Net\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Passos Magicos\Documents\Luiz\Net\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\OsTresMo.9C979A00.Up2Date
 C:\Users\Passos Magicos\Documents\Luiz\Net\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\OsTresMotoqueirosDoApocalipseVerde.dll
 C:\Users\Passos Magicos\Documents\Luiz\Net\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\refint\OsTresMotoqueirosDoApocalipseVerde.dll
 C:\Users\Passos Magicos\Documents\Luiz\Net\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\OsTresMotoqueirosDoApocalipseVerde.pdb
 C:\Users\Passos Magicos\Documents\Luiz\Net\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\OsTresMotoqueirosDoApocalipseVerde.genruntimeconfig.cache
 C:\Users\Passos Magicos\Documents\Luiz\Net\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\ref\OsTresMotoqueirosDoApocalipseVerde.dll
+C:\Users\Passos Magicos\Documents\Luiz\Net\Advanced-Business-Development-with-.NET\OsTresMotoqueirosDoApocalipseVerde\OsTresMotoqueirosDoApocalipseVerde\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

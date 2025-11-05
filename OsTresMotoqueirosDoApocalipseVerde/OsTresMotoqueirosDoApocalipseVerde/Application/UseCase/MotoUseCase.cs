@@ -20,8 +20,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
                 request.Chassi,
                 request.Condicao,
                 request.LocalizacaoMoto,
-                request.ModeloId,
                 request.MotoristaId,
+                request.ModeloId,
                 request.SetorId,
                 request.SituacaoId
             );
@@ -36,8 +36,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
                 Chassi = moto.Chassi,
                 Condicao = moto.Condicao,
                 LocalizacaoMoto = moto.LocalizacaoMoto,
-                ModeloId = moto.ModeloId,
                 MotoristaId = moto.MotoristaId,
+                ModeloId = moto.ModeloId,
                 SetorId = moto.SetorId,
                 SituacaoId = moto.SituacaoId
             };
@@ -53,8 +53,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
                 Chassi = u.Chassi,
                 Condicao = u.Condicao,
                 LocalizacaoMoto = u.LocalizacaoMoto,
-                ModeloId = u.ModeloId,
                 MotoristaId = u.MotoristaId,
+                ModeloId = u.ModeloId,
                 SetorId = u.SetorId,
                 SituacaoId = u.SituacaoId
             }).ToList();
@@ -93,8 +93,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
                 Chassi = moto.Chassi,
                 Condicao = moto.Condicao,
                 LocalizacaoMoto = moto.LocalizacaoMoto,
-                ModeloId = moto.ModeloId,
                 MotoristaId = moto.MotoristaId,
+                ModeloId = moto.ModeloId,
                 SetorId = moto.SetorId,
                 SituacaoId = moto.SituacaoId
             };
@@ -110,8 +110,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
                 request.Chassi,
                 request.Condicao,
                 request.LocalizacaoMoto,
-                request.ModeloId,
                 request.MotoristaId,
+                request.ModeloId,
                 request.SetorId,
                 request.SituacaoId
             );

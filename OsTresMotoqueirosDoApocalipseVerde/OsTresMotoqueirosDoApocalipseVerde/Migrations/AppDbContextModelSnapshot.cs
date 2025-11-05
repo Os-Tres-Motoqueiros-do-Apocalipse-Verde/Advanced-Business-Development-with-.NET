@@ -269,8 +269,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Migrations
                     b.HasIndex("MotoristaId")
                         .IsUnique();
 
-                    b.HasIndex("SetorId")
-                        .IsUnique();
+                    b.HasIndex("SetorId");
 
                     b.HasIndex("SituacaoId")
                         .IsUnique();
@@ -489,8 +488,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Migrations
                         .IsRequired();
 
                     b.HasOne("OsTresMotoqueirosDoApocalipseVerde.Domain.Entity.Setor", "Setor")
-                        .WithOne("Moto")
-                        .HasForeignKey("OsTresMotoqueirosDoApocalipseVerde.Domain.Entity.Moto", "SetorId")
+                        .WithMany("Motos")
+                        .HasForeignKey("SetorId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
@@ -583,8 +582,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Migrations
 
             modelBuilder.Entity("OsTresMotoqueirosDoApocalipseVerde.Domain.Entity.Setor", b =>
                 {
-                    b.Navigation("Moto")
-                        .IsRequired();
+                    b.Navigation("Motos");
                 });
 
             modelBuilder.Entity("OsTresMotoqueirosDoApocalipseVerde.Domain.Entity.Situacao", b =>

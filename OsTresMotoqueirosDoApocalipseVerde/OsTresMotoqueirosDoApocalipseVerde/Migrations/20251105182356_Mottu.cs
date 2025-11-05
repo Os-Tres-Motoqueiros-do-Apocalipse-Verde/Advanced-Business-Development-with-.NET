@@ -15,11 +15,11 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Migrations
                 columns: table => new
                 {
                     ID_DADOS = table.Column<long>(type: "NUMBER(19)", nullable: false, defaultValueSql: "DADOS_SEQ.NEXTVAL"),
+                    NOME = table.Column<string>(type: "NVARCHAR2(150)", maxLength: 150, nullable: false),
                     CPF = table.Column<string>(type: "NVARCHAR2(11)", maxLength: 11, nullable: false),
                     TELEFONE = table.Column<string>(type: "NVARCHAR2(13)", maxLength: 13, nullable: false),
                     EMAIL = table.Column<string>(type: "NVARCHAR2(255)", maxLength: 255, nullable: false),
-                    SENHA = table.Column<string>(type: "NVARCHAR2(255)", maxLength: 255, nullable: false),
-                    NOME = table.Column<string>(type: "NVARCHAR2(150)", maxLength: 150, nullable: false)
+                    SENHA = table.Column<string>(type: "NVARCHAR2(255)", maxLength: 255, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -272,8 +272,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_MOTO_ID_SETOR",
                 table: "MOTO",
-                column: "ID_SETOR",
-                unique: true);
+                column: "ID_SETOR");
 
             migrationBuilder.CreateIndex(
                 name: "IX_MOTO_ID_SITUACAO",

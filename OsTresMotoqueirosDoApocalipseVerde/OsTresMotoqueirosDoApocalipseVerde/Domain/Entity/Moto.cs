@@ -59,7 +59,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Domain.Entity
 
         internal static Moto Create(string placa, string chassi, string condicao, string localizacaoMoto, long motoristaId, long modeloId, long setorId, long situacaoId)
         {
-            return new Moto(placa, chassi, condicao, localizacaoMoto, motoristaId, setorId, situacaoId, modeloId);
+            return new Moto(placa, chassi, condicao, localizacaoMoto, motoristaId, modeloId, setorId, situacaoId);
         }
 
         public Moto() { }
