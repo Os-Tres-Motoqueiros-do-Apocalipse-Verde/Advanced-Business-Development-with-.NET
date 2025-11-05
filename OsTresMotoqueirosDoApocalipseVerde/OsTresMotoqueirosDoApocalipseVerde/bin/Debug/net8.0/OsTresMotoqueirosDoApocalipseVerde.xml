@@ -450,16 +450,16 @@
         <member name="P:OsTresMotoqueirosDoApocalipseVerde.Controllers.MotoPrevisaoRequest.SituacaoId">
             <example>3</example>
         </member>
-        <member name="T:OsTresMotoqueirosDoApocalipseVerde.Migrations.MottuMigration">
+        <member name="T:OsTresMotoqueirosDoApocalipseVerde.Migrations.Mottu">
             <inheritdoc />
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Migrations.MottuMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Migrations.Mottu.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Migrations.MottuMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Migrations.Mottu.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Migrations.MottuMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+        <member name="M:OsTresMotoqueirosDoApocalipseVerde.Migrations.Mottu.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>

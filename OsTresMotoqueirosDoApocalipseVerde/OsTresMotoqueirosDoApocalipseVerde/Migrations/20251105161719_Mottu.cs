@@ -5,7 +5,7 @@
 namespace OsTresMotoqueirosDoApocalipseVerde.Migrations
 {
     /// <inheritdoc />
-    public partial class MottuMigration : Migration
+    public partial class Mottu : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -178,14 +178,13 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Migrations
                 columns: table => new
                 {
                     ID_SETOR = table.Column<long>(type: "NUMBER(19)", nullable: false, defaultValueSql: "SETOR_SEQ.NEXTVAL"),
-                    NOME_SETOR = table.Column<string>(type: "NVARCHAR2(250)", maxLength: 250, nullable: false),
+                    NOME_SETOR = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
                     QTD_MOTO = table.Column<int>(type: "NUMBER(10)", nullable: false),
                     CAPACIDADE = table.Column<int>(type: "NUMBER(10)", nullable: false),
-                    DESCRICAO = table.Column<string>(type: "NVARCHAR2(250)", maxLength: 250, nullable: false),
-                    COR = table.Column<string>(type: "NVARCHAR2(20)", maxLength: 20, nullable: false),
-                    LOCALIZACAO = table.Column<string>(type: "NVARCHAR2(255)", maxLength: 255, nullable: false),
-                    ID_PATIO = table.Column<long>(type: "NUMBER(19)", nullable: false),
-                    PatioId1 = table.Column<long>(type: "NUMBER(19)", nullable: true)
+                    DESCRICAO = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
+                    COR = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
+                    LOCALIZACAO = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
+                    ID_PATIO = table.Column<long>(type: "NUMBER(19)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -196,11 +195,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Migrations
                         principalTable: "PATIO",
                         principalColumn: "ID_PATIO",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_SETOR_PATIO_PatioId1",
-                        column: x => x.PatioId1,
-                        principalTable: "PATIO",
-                        principalColumn: "ID_PATIO");
                 });
 
             migrationBuilder.CreateTable(
@@ -302,11 +296,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Migrations
                 name: "IX_SETOR_ID_PATIO",
                 table: "SETOR",
                 column: "ID_PATIO");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_SETOR_PatioId1",
-                table: "SETOR",
-                column: "PatioId1");
         }
 
         /// <inheritdoc />
