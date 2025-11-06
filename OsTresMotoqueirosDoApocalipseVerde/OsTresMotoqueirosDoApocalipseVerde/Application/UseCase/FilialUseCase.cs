@@ -1,16 +1,20 @@
-﻿using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
+﻿using Microsoft.EntityFrameworkCore;
+using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Entity;
+using OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 {
     public class FilialUseCase
     {
         private readonly IRepository<Filial> _repository;
+        private readonly AppDbContext _context;
 
-        public FilialUseCase(IRepository<Filial> repository)
+        public FilialUseCase(IRepository<Filial> repository, AppDbContext context)
         {
             _repository = repository;
+            _context = context;
         }
 
         public async Task<CreateFilialResponse> CreateFilialAsync(CreateFilialRequest request)
@@ -26,20 +30,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             return new CreateFilialResponse
             {
                 Id = filial.Id,
-                NomeFilial = filial.NomeFilial,
-                EnderecoId = filial.EnderecoId
+                NomeFilial = filial.NomeFilial
             };
-        }
-
-        public async Task<List<CreateFilialResponse>> GetAllFilialAsync()
-        {
-            var filial = await _repository.GetAllAsync();
-            return filial.Select(u => new CreateFilialResponse
-            {
-                Id = u.Id,
-                NomeFilial = u.NomeFilial,
-                EnderecoId = u.EnderecoId
-            }).ToList();
         }
 
         /// <summary>
@@ -55,8 +47,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
                 .Select(u => new CreateFilialResponse
                 {
                     Id = u.Id,
-                    NomeFilial = u.NomeFilial,
-                    EnderecoId = u.EnderecoId
+                    NomeFilial = u.NomeFilial
                 })
                 .ToList();
 
@@ -65,14 +56,26 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 
         public async Task<CreateFilialResponse?> GetByIdAsync(long id)
         {
-            var filial = await _repository.GetByIdAsync(id);
+            var filial = await _context.Filial
+                .Include(m => m.Endereco)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
             if (filial == null) return null;
 
             return new CreateFilialResponse
             {
                 Id = filial.Id,
                 NomeFilial = filial.NomeFilial,
-                EnderecoId = filial.EnderecoId
+                Endereco = filial.Endereco == null ? null : new CreateEnderecoResponse
+                {
+                    Id = filial.Endereco.Id,
+                    Numero = filial.Endereco.Numero,
+                    Estado = filial.Endereco.Estado,
+                    CodigoPais = filial.Endereco.CodigoPais,
+                    CodigoPostal = filial.Endereco.CodigoPostal,
+                    Complemento = filial.Endereco.Complemento,
+                    Rua = filial.Endereco.Rua
+                }
             };
         }
 

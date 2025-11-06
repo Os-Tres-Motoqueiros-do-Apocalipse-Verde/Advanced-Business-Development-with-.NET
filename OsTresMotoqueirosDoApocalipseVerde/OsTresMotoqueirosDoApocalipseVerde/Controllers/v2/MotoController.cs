@@ -30,7 +30,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
         /// <param name="pageSize">Quantidade de itens por página (default = 10)</param>
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<CreateMotoResponse>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetMoto([FromQuery] int page = 1, [FromQuery] int pageSize = 4)
+        public async Task<IActionResult> GetMoto([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
             var moto = await _motoUseCase.GetAllPagedAsync(page, pageSize);
 
@@ -41,9 +41,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
                 d.Chassi,
                 links = new
                 {
-                    self = Url.Action(nameof(GetMotoById), new { id = d.Id }),
-                    update = Url.Action(nameof(PutMoto), new { id = d.Id }),
-                    delete = Url.Action(nameof(DeleteMoto), new { id = d.Id })
+                    self = Url.Action(nameof(GetMotoById), new { id = d.Id })
                 }
             });
 
@@ -69,20 +67,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
             if (moto == null)
                 return NotFound();
 
-            var result = new
-            {
-                moto.Id,
-                moto.Placa,
-                moto.Chassi,
-                moto.Condicao,
-                moto.LocalizacaoMoto,
-                moto.MotoristaId,
-                moto.ModeloId,
-                moto.SetorId,
-                moto.SituacaoId
-            };
-
-            return Ok(result);
+            return Ok(moto);
         }
 
         /// <summary>

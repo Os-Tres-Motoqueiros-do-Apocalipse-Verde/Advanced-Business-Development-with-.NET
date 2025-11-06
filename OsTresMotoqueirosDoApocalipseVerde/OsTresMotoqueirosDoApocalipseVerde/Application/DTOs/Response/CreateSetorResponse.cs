@@ -12,7 +12,6 @@
         public string Cor { get; set; }
 
         public string Localizacao { get; set; }
-
-        public long PatioId { get; set; }
+        public CreatePatioResponse Patio { get; set; }
     }
 }

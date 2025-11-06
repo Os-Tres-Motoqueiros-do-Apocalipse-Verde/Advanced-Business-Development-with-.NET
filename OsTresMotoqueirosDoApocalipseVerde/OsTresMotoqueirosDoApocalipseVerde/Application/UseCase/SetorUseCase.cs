@@ -1,16 +1,20 @@
 ﻿using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Entity;
+using OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 {
     public class SetorUseCase
     {
         private readonly IRepository<Setor> _repository;
+        private readonly AppDbContext _context;
 
-        public SetorUseCase(IRepository<Setor> repository)
+        public SetorUseCase(IRepository<Setor> repository, AppDbContext context)
         {
             _repository = repository;
+            _context = context;
         }
 
         public async Task<CreateSetorResponse> CreateSetorAsync(CreateSetorRequest request)
@@ -36,26 +40,10 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
                 Capacidade = setor.Capacidade,
                 Descricao = setor.Descricao,
                 Cor = setor.Cor,
-                Localizacao = setor.Localizacao,
-                PatioId = setor.PatioId
+                Localizacao = setor.Localizacao
             };
         }
 
-        public async Task<List<CreateSetorResponse>> GetAllSetorAsync()
-        {
-            var setor = await _repository.GetAllAsync();
-            return setor.Select(u => new CreateSetorResponse
-            {
-                Id = u.Id,
-                NomeSetor = u.NomeSetor,
-                QtdMoto = u.QtdMoto,
-                Capacidade = u.Capacidade,
-                Descricao = u.Descricao,
-                Cor = u.Cor,
-                Localizacao = u.Localizacao,
-                PatioId = u.PatioId
-            }).ToList();
-        }
 
         /// <summary>
         /// Retorna os Setor paginados.
@@ -75,8 +63,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
                     Capacidade = u.Capacidade,
                     Descricao = u.Descricao,
                     Cor = u.Cor,
-                    Localizacao = u.Localizacao,
-                    PatioId = u.PatioId
+                    Localizacao = u.Localizacao
                 })
                 .ToList();
 
@@ -85,7 +72,10 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 
         public async Task<CreateSetorResponse?> GetByIdAsync(long id)
         {
-            var setor = await _repository.GetByIdAsync(id);
+            var setor = await _context.Setor
+                .Include(m => m.Patio)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
             if (setor == null) return null;
 
             return new CreateSetorResponse
@@ -97,7 +87,14 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
                 Descricao = setor.Descricao,
                 Cor = setor.Cor,
                 Localizacao = setor.Localizacao,
-                PatioId = setor.PatioId
+                Patio = setor.Patio == null ? null : new CreatePatioResponse
+                {
+                    Id = setor.Patio.Id,
+                    TotalMotos = setor.Patio.TotalMotos,
+                    CapacidadeMoto = setor.Patio.CapacidadeMoto,
+                    Localizacao = setor.Patio.Localizacao,
+                    FilialId = setor.Patio.FilialId
+                }
             };
         }
 

@@ -1,16 +1,20 @@
-﻿using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
+﻿using Microsoft.EntityFrameworkCore;
+using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Entity;
+using OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 {
     public class MotoristaUseCase
     {
         private readonly IRepository<Motorista> _repository;
+        private readonly AppDbContext _context;
 
-        public MotoristaUseCase(IRepository<Motorista> repository)
+        public MotoristaUseCase(IRepository<Motorista> repository, AppDbContext context)
         {
             _repository = repository;
+            _context = context;
         }
 
         public async Task<CreateMotoristaResponse> CreateMotoristaAsync(CreateMotoristaRequest request)
@@ -26,20 +30,8 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             return new CreateMotoristaResponse
             {
                 Id = motorista.Id,
-                Plano = motorista.Plano,
-                DadosId = motorista.DadosId
+                Plano = motorista.Plano
             };
-        }
-
-        public async Task<List<CreateMotoristaResponse>> GetAllMotoristaAsync()
-        {
-            var motorista = await _repository.GetAllAsync();
-            return motorista.Select(u => new CreateMotoristaResponse
-            {
-                Id = u.Id,
-                Plano = u.Plano,
-                DadosId = u.DadosId
-            }).ToList();
         }
 
         /// <summary>
@@ -55,8 +47,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
                 .Select(u => new CreateMotoristaResponse
                 {
                     Id = u.Id,
-                    Plano = u.Plano,
-                    DadosId = u.DadosId
+                    Plano = u.Plano
                 })
                 .ToList();
 
@@ -65,14 +56,26 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 
         public async Task<CreateMotoristaResponse?> GetByIdAsync(long id)
         {
-            var motorista = await _repository.GetByIdAsync(id);
+            var motorista = await _context.Motorista
+                .Include(m => m.Dados)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
             if (motorista == null) return null;
 
             return new CreateMotoristaResponse
             {
                 Id = motorista.Id,
                 Plano = motorista.Plano,
-                DadosId = motorista.DadosId
+
+                Dados = motorista.Dados == null ? null : new CreateDadosResponse
+                {
+                    Id = motorista.Dados.Id,
+                    Nome = motorista.Dados.Nome,
+                    CPF = motorista.Dados.CPF,
+                    Telefone = motorista.Dados.Telefone,
+                    Email = motorista.Dados.Email,
+                    Senha = motorista.Dados.Senha
+                }
             };
         }
 

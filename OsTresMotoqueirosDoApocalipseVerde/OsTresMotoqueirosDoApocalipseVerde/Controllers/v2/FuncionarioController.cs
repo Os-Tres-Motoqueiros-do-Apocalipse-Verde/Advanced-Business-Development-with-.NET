@@ -30,7 +30,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
         /// <param name="pageSize">Quantidade de itens por página (default = 10)</param>
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<CreateFuncionarioResponse>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetFuncionario([FromQuery] int page = 1, [FromQuery] int pageSize = 4)
+        public async Task<IActionResult> GetFuncionario([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
             var funcionario = await _funcionarioUseCase.GetAllPagedAsync(page, pageSize);
 
@@ -38,13 +38,10 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
             {
                 d.Id,
                 d.Cargo,
-                d.DadosId,
                 d.FilialId,
                 links = new
                 {
-                    self = Url.Action(nameof(GetFuncionarioById), new { id = d.Id }),
-                    update = Url.Action(nameof(PutFuncionario), new { id = d.Id }),
-                    delete = Url.Action(nameof(DeleteFuncionario), new { id = d.Id })
+                    self = Url.Action(nameof(GetFuncionarioById), new { id = d.Id })
                 }
             });
 

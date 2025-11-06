@@ -6,6 +6,6 @@
         public string NomeFilial { get; set; }
 
         // chave estrangeira
-        public long EnderecoId { get; set; }
+        public CreateEnderecoResponse Endereco { get; set; }
     }
 }

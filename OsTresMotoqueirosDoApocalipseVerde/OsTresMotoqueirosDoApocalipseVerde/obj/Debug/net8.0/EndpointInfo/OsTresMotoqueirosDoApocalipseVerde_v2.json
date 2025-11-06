@@ -708,7 +708,7 @@
             "schema": {
               "type": "integer",
               "format": "int32",
-              "default": 4
+              "default": 10
             }
           }
         ],
@@ -1025,7 +1025,7 @@
             "schema": {
               "type": "integer",
               "format": "int32",
-              "default": 4
+              "default": 10
             }
           }
         ],
@@ -1659,7 +1659,7 @@
             "schema": {
               "type": "integer",
               "format": "int32",
-              "default": 4
+              "default": 10
             }
           }
         ],
@@ -1976,7 +1976,7 @@
             "schema": {
               "type": "integer",
               "format": "int32",
-              "default": 4
+              "default": 10
             }
           }
         ],
@@ -3423,9 +3423,8 @@
             "type": "string",
             "nullable": true
           },
-          "enderecoId": {
-            "type": "integer",
-            "format": "int64"
+          "endereco": {
+            "$ref": "#/components/schemas/CreateEnderecoResponse"
           }
         },
         "additionalProperties": false
@@ -3457,9 +3456,8 @@
           "cargo": {
             "$ref": "#/components/schemas/Cargo"
           },
-          "dadosId": {
-            "type": "integer",
-            "format": "int64"
+          "dados": {
+            "$ref": "#/components/schemas/CreateDadosResponse"
           },
           "filialId": {
             "type": "integer",
@@ -3587,21 +3585,17 @@
             "type": "string",
             "nullable": true
           },
-          "motoristaId": {
-            "type": "integer",
-            "format": "int64"
+          "motorista": {
+            "$ref": "#/components/schemas/CreateMotoristaResponse"
           },
-          "modeloId": {
-            "type": "integer",
-            "format": "int64"
+          "modelo": {
+            "$ref": "#/components/schemas/CreateModeloResponse"
           },
-          "setorId": {
-            "type": "integer",
-            "format": "int64"
+          "setor": {
+            "$ref": "#/components/schemas/CreateSetorResponse"
           },
-          "situacaoId": {
-            "type": "integer",
-            "format": "int64"
+          "situacao": {
+            "$ref": "#/components/schemas/CreateSituacaoResponse"
           }
         },
         "additionalProperties": false
@@ -3629,9 +3623,8 @@
           "plano": {
             "$ref": "#/components/schemas/Plano"
           },
-          "dadosId": {
-            "type": "integer",
-            "format": "int64"
+          "dados": {
+            "$ref": "#/components/schemas/CreateDadosResponse"
           }
         },
         "additionalProperties": false
@@ -3749,9 +3742,8 @@
             "type": "string",
             "nullable": true
           },
-          "patioId": {
-            "type": "integer",
-            "format": "int64"
+          "patio": {
+            "$ref": "#/components/schemas/CreatePatioResponse"
           }
         },
         "additionalProperties": false

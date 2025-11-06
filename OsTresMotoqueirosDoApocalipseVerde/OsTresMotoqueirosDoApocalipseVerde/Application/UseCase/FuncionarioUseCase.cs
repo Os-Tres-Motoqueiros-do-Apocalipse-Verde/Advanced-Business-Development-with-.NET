@@ -1,16 +1,20 @@
-﻿using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
+﻿using Microsoft.EntityFrameworkCore;
+using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Request;
 using OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response;
 using OsTresMotoqueirosDoApocalipseVerde.Domain.Entity;
+using OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 {
     public class FuncionarioUseCase
     {
         private readonly IRepository<Funcionario> _repository;
-
-        public FuncionarioUseCase(IRepository<Funcionario> repository)
+        private readonly AppDbContext _context;
+        public FuncionarioUseCase(IRepository<Funcionario> repository, AppDbContext context)
         {
             _repository = repository;
+            _context = context;
         }
 
         public async Task<CreateFuncionarioResponse> CreateFuncionarioAsync(CreateFuncionarioRequest request)
@@ -28,22 +32,10 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
             {
                 Id = funcionario.Id,
                 Cargo = funcionario.Cargo,
-                DadosId = funcionario.DadosId,
                 FilialId = funcionario.FilialId
             };
         }
 
-        public async Task<List<CreateFuncionarioResponse>> GetAllFuncionarioAsync()
-        {
-            var funcionario = await _repository.GetAllAsync();
-            return funcionario.Select(u => new CreateFuncionarioResponse
-            {
-                Id = u.Id,
-                Cargo = u.Cargo,
-                DadosId = u.DadosId,
-                FilialId = u.FilialId
-            }).ToList();
-        }
 
         public async Task<List<CreateFuncionarioResponse>> GetAllPagedAsync(int page, int pageSize)
         {
@@ -56,7 +48,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
                 {
                     Id = u.Id,
                     Cargo = u.Cargo,
-                    DadosId = u.DadosId,
                     FilialId = u.FilialId
                 })
                 .ToList();
@@ -66,14 +57,25 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.UseCase
 
         public async Task<CreateFuncionarioResponse?> GetByIdAsync(long id)
         {
-            var funcionario = await _repository.GetByIdAsync(id);
+            var funcionario = await _context.Funcionario
+                .Include(m => m.Dados)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
             if (funcionario == null) return null;
 
             return new CreateFuncionarioResponse
             {
                 Id = funcionario.Id,
                 Cargo = funcionario.Cargo,
-                DadosId = funcionario.DadosId,
+                Dados = funcionario.Dados == null ? null : new CreateDadosResponse
+                {
+                    Id = funcionario.Dados.Id,
+                    Nome = funcionario.Dados.Nome,
+                    CPF = funcionario.Dados.CPF,
+                    Telefone = funcionario.Dados.Telefone,
+                    Email = funcionario.Dados.Email,
+                    Senha = funcionario.Dados.Senha
+                },
                 FilialId = funcionario.FilialId
             };
         }

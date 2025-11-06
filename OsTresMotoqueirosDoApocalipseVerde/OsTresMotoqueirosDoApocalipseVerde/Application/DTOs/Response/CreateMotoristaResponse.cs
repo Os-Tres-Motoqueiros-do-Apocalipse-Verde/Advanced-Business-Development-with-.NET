@@ -10,6 +10,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response
         [EnumDataType(typeof(Plano))]
         public Plano Plano { get; set; }
 
-        public long DadosId { get; set; }
+
+        public CreateDadosResponse Dados { get; set; }
     }
 }

@@ -30,7 +30,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
         /// <param name="pageSize">Quantidade de itens por página (default = 10)</param>
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<CreateFilialResponse>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetFilial([FromQuery] int page = 1, [FromQuery] int pageSize = 4)
+        public async Task<IActionResult> GetFilial([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
             var filial = await _filialUseCase.GetAllPagedAsync(page, pageSize);
 
@@ -38,12 +38,9 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
             {
                 d.Id,
                 d.NomeFilial,
-                d.EnderecoId,
                 links = new
                 {
-                    self = Url.Action(nameof(GetFilialById), new { id = d.Id }),
-                    update = Url.Action(nameof(PutFilial), new { id = d.Id }),
-                    delete = Url.Action(nameof(DeleteFilial), new { id = d.Id })
+                    self = Url.Action(nameof(GetFilialById), new { id = d.Id })
                 }
             });
 

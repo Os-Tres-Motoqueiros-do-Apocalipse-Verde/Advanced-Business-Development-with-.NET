@@ -12,6 +12,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Infraestructure.Context
         public DbSet<Dados> Dados { get; set; }
         public DbSet<Moto> Moto { get; set; }
         public DbSet<Endereco> Endereco { get; set; }
+        public DbSet<Funcionario> Funcionario { get; set; }
         public DbSet<Filial> Filial { get; set; }
         public DbSet<Modelo> Modelo { get; set; }
         public DbSet<Motorista> Motorista { get; set; }

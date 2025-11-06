@@ -10,7 +10,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Application.DTOs.Response
         [EnumDataType(typeof(Cargo))]
         public Cargo Cargo { get; set; }
 
-        public long DadosId { get; set; }
+        public CreateDadosResponse Dados { get; set; }
 
         public long FilialId { get; set; }
     }

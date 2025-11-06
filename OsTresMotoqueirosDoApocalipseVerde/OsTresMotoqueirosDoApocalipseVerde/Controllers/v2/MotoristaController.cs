@@ -30,7 +30,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
         /// <param name="pageSize">Quantidade de itens por página (default = 10)</param>
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<CreateMotoristaResponse>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetMotorista([FromQuery] int page = 1, [FromQuery] int pageSize = 4)
+        public async Task<IActionResult> GetMotorista([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
             var motorista = await _motoristaUseCase.GetAllPagedAsync(page, pageSize);
 
@@ -38,7 +38,6 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
             {
                 d.Id,
                 d.Plano,
-                d.DadosId,
                 links = new
                 {
                     self = Url.Action(nameof(GetMotoristaById), new { id = d.Id })
@@ -67,20 +66,7 @@ namespace OsTresMotoqueirosDoApocalipseVerde.Controllers.V2
             if (motorista == null)
                 return NotFound();
 
-            var result = new
-            {
-                motorista.Id,
-                motorista.Plano,
-                motorista.DadosId,
-                links = new
-                {
-                    all = Url.Action(nameof(GetMotorista)),
-                    update = Url.Action(nameof(PutMotorista), new { id = motorista.Id }),
-                    delete = Url.Action(nameof(DeleteMotorista), new { id = motorista.Id })
-                }
-            };
-
-            return Ok(result);
+            return Ok(motorista);
         }
 
         /// <summary>
