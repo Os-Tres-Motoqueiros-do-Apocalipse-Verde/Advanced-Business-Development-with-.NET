@@ -97,14 +97,14 @@ cd Advanced-Business-Development-with-.NET
 - O projeto possui nivel de acessos então para algumas coisas você precisa ter autorização de Admin
 
 - Selecione o post do crud de Usuarios
-<img width="1325" height="153" alt="image" src="https://github.com/user-attachments/assets/7337adb0-0ebc-4422-b78b-ffb19b2ab914" />
-
- ```bash
- {
-  "username": "Admin",
-  "password": "Admin123"
-}
-```
+  <img width="1325" height="153" alt="image" src="https://github.com/user-attachments/assets/7337adb0-0ebc-4422-b78b-ffb19b2ab914" />
+  
+   ```bash
+   {
+    "username": "Admin",
+    "password": "Admin123"
+  }
+  ```
 
 - A resposta sera um token você copia ele e cola para se cadastrar no swagger
   <img width="1353" height="646" alt="image" src="https://github.com/user-attachments/assets/05861d22-9813-4e75-90d6-9b4db58a66d4" />
